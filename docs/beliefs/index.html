@@ -62,7 +62,9 @@
 #sbl .sec{padding:clamp(72px,9vw,120px) 0}
 #sbl .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
 #sbl .sec-h p{color:var(--ink-2);max-width:36em}
-#sbl .sec-h .meta{margin-top:10px;font:600 14px/1.4 var(--hd);letter-spacing:.02em;color:var(--ink-3)}
+#sbl .sec-h.one{display:block}
+#sbl .sec-h.one .meta{margin-top:12px}
+#sbl .sec-h .meta{font:600 14px/1.4 var(--hd);letter-spacing:.02em;color:var(--ink-3)}
 
 /* ---------- hero ---------- */
 #sbl .top{position:relative;isolation:isolate;padding:var(--top) 0 clamp(64px,8vw,104px);background:#111;color:#fff}
@@ -128,7 +130,6 @@
 #sbl .ask .h2{margin-bottom:20px}
 #sbl .ask-in>div>p{color:var(--ink-2);max-width:32em}
 #sbl .ask-in>div>p+p{margin-top:14px}
-#sbl .ask .fine{font-size:16px;color:var(--ink-3)}
 #sbl .go{display:grid;gap:12px}
 #sbl .go a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 18px;padding:22px 24px;border-radius:16px;background:#fff;transition:box-shadow .25s,transform .25s var(--ease);-webkit-tap-highlight-color:transparent}
 #sbl .go b{font:600 19px/1.25 var(--hd);color:var(--ink)}
@@ -221,11 +222,9 @@ html.sbl-lock{overflow:hidden}
   <!-- the Statement of Faith: contents rail (sticky on desktop, a "Contents" bar on phones) + one article per doctrine -->
   <section class="sec" id="sbl-statement" aria-labelledby="sbl-statement-h">
     <div class="wrap">
-      <div class="sec-h">
+      <div class="sec-h one">
         <h2 class="h2" id="sbl-statement-h">Statement of Faith</h2>
         <div>
-          <p><span class="tbd">What we believe about God, Scripture, salvation and the church. Read it straight through, or jump to any belief.</span></p>
-          <p class="meta"><span class="tbd">15 beliefs · <span data-words="2064">About a 9-minute read</span></span></p>
         </div>
       </div>
 
@@ -359,13 +358,12 @@ html.sbl-lock{overflow:hidden}
     <div class="wrap ask-in">
       <div class="rv">
         <h2 class="h2" id="sbl-ask-h">Questions About What We Believe?</h2>
-        <p><span class="tbd">We’d love to talk about any of it. Send us an email, or sit down with someone from our team over coffee before service on a Sunday.</span></p>
-        <p class="fine"><span class="tbd">This is the same Statement of Faith our Volunteer Application asks people to agree with, and our group leaders agree with our doctrine too.</span></p>
+        <p><span class="tbd">Volunteers and group leaders at Springs agree to this Statement of Faith.</span></p>
       </div>
       <ul class="go rv" style="--d:1">
         <li><a href="mailto:info@springs.church?subject=Question%20About%20Our%20Beliefs"><b>Email Us</b><span>info@springs.church</span><svg aria-hidden="true"><use href="#sbl-arr"/></svg></a></li>
-        <li><a href="https://springschurch.ccbchurch.com/goto/forms/578/responses/new" data-form><b>Connect Over Coffee</b><span>Before service on Sunday morning. <span class="tbd">The form opens right here.</span></span><svg aria-hidden="true"><use href="#sbl-arr"/></svg></a></li>
-        <li><a href="../about/"><b>Who We Are</b><span><span class="tbd">Our story, vision and calling.</span></span><svg aria-hidden="true"><use href="#sbl-arr"/></svg></a></li>
+        <li><a href="https://springschurch.ccbchurch.com/goto/forms/578/responses/new" data-form><b>Connect Over Coffee</b><span>Before service on Sunday morning.</span><svg aria-hidden="true"><use href="#sbl-arr"/></svg></a></li>
+        <li><a href="../about/"><b>Who We Are</b><svg aria-hidden="true"><use href="#sbl-arr"/></svg></a></li>
       </ul>
     </div>
   </section>

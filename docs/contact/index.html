@@ -69,7 +69,6 @@
 #sct .top-in>*{min-width:0}
 #sct .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
 #sct .top .lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:rgba(255,255,255,.88);max-width:30em}
-#sct .top .lede+.lede{margin-top:12px;font-size:clamp(17px,1.45vw,19px);color:rgba(255,255,255,.64)}
 #sct .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,18px);margin-top:clamp(44px,5.5vw,72px)}
 #sct .tile{display:flex;flex-direction:column;padding:clamp(24px,2.4vw,30px);border-radius:20px;background:var(--sand);min-width:0}
 #sct .tile-h{display:flex;align-items:center;gap:10px;margin-bottom:18px}
@@ -97,9 +96,6 @@
 #sct .msg-l .h2{margin-bottom:20px}
 #sct .msg-l p{color:var(--ink-2);max-width:30em}
 #sct .msg-l p+p{margin-top:14px}
-#sct .how{margin-top:28px;border-top:1px solid var(--line)}
-#sct .how li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5;color:var(--ink-2)}
-#sct .how svg{width:18px;height:18px;margin-top:3px;color:var(--gold-t)}
 #sct .cmp{padding:clamp(22px,3vw,36px);border-radius:20px;background:var(--sand)}
 #sct .fld{display:grid;gap:8px}
 #sct .fld+.fld{margin-top:18px}
@@ -209,7 +205,6 @@
         <h1>Have a Question?</h1>
         <div>
           <p class="lede">We’re here to listen, help, and connect with you.</p>
-          <p class="lede"><span class="tbd">Call or stop by during office hours, email us anytime, or send a message straight to the right person below.</span></p>
         </div>
       </div>
 
@@ -225,7 +220,6 @@
         <article class="tile" style="--n:1">
           <div class="tile-h"><svg aria-hidden="true"><use href="#sct-mail"/></svg><h3>Email</h3></div>
           <a class="big" href="mailto:info@springs.church">info@springs.church</a>
-          <p><span class="tbd">Write anytime. We’ll get your note to the right person.</span></p>
           <div class="tile-act"><a class="btn" href="mailto:info@springs.church">Email Us</a><button class="tl" type="button" data-copy="info@springs.church">Copy Address</button></div>
         </article>
         <article class="tile" style="--n:2">
@@ -243,12 +237,7 @@
     <div class="wrap msg-in">
       <div class="msg-l rv">
         <h2 class="h2" id="sct-message-h">Send Us a Message</h2>
-        <p><span class="tbd">Tell us what it’s about and we’ll point your message to the right inbox.</span></p>
-        <ul class="how">
-          <li><svg aria-hidden="true"><use href="#sct-mail"/></svg><span><span class="tbd">This opens the email app on your phone or computer with your message ready to go.</span></span></li>
-          <li><svg aria-hidden="true"><use href="#sct-ok"/></svg><span><span class="tbd">Nothing is sent until you press send there, and this page doesn’t collect or store anything.</span></span></li>
-          <li><svg aria-hidden="true"><use href="#sct-arr"/></svg><span><span class="tbd">Prayer requests, care and serving have their own forms, and we’ll take you there.</span></span></li>
-        </ul>
+        <p><span class="tbd">This opens your email app with the message addressed to the right ministry.</span></p>
       </div>
 
       <form class="cmp rv" style="--d:1" novalidate aria-labelledby="sct-message-h">
@@ -288,22 +277,22 @@
             <button class="btn" type="submit">Open in Email</button>
             <button class="btn line" type="button" data-copy-msg>Copy Message</button>
           </div>
-          <p class="fine"><span class="tbd">Opens your email app. No email app set up? Copy the message and the address and paste them into your email.</span></p>
+          <p class="fine"><span class="tbd">No email app? Copy the message and paste it into an email to the address above.</span></p>
           <p class="sent" data-sent aria-live="polite"></p>
         </div>
 
         <div class="away" data-away-panel="prayer">
-          <h3><span class="tbd">Prayer Has Its Own Form</span></h3>
-          <p><span class="tbd">Share your request on our Prayer page so it goes straight to our prayer team. You can also pray with us Wednesdays at 6:30PM.</span></p>
+          <h3>Prayer Requests</h3>
+          <p><span class="tbd">Our Prayer page has a request form that goes to our prayer team. We also pray together Wednesdays at 6:30PM.</span></p>
           <div class="acts"><a class="btn" href="../prayer/">Go to Prayer</a><button class="tl" type="button" data-pick="general">Email Us Instead</button></div>
         </div>
         <div class="away" data-away-panel="care">
-          <h3><span class="tbd">We’re Here for Hard Seasons</span></h3>
-          <p><span class="tbd">Our Care page has the forms that reach our Care Team directly, so the right people can follow up with you.</span></p>
+          <h3>Care and Hard Seasons</h3>
+          <p><span class="tbd">Our Care page has the forms that reach our Care Team.</span></p>
           <div class="acts"><a class="btn" href="../care/">Go to Care</a><button class="tl" type="button" data-pick="general">Email Us Instead</button></div>
         </div>
         <div class="away" data-away-panel="serve">
-          <h3><span class="tbd">Ready to Serve?</span></h3>
+          <h3>Serving</h3>
           <p><span class="tbd">Every volunteer team and the Volunteer Application are on our Serve page.</span></p>
           <div class="acts"><a class="btn" href="../serve/">Go to Serve</a><button class="tl" type="button" data-pick="general">Email Us Instead</button></div>
         </div>
@@ -316,10 +305,9 @@
     <div class="wrap">
       <div class="sec-h rv">
         <h2 class="h2" id="sct-people-h">Find the Right Person</h2>
-        <p><span class="tbd">Each ministry has its own inbox, so your question lands with someone who can answer it.</span></p>
       </div>
       <ul class="dir">
-        <li><div><h3>General Questions</h3><p><span class="tbd">Anything about Springs. Not sure who to ask? Start here.</span></p></div>
+        <li><div><h3>General Questions</h3><p><span class="tbd">If you’re not sure who to ask, start here.</span></p></div>
           <div class="to"><a href="mailto:info@springs.church">info@springs.church</a></div></li>
         <li><div><h3>Springs Kids</h3><p>Babies through grade 5, Sundays at 10AM and Wednesdays at 6:30PM.</p></div>
           <div class="to"><a href="mailto:kids@springs.church">kids@springs.church</a><a href="https://kids.springs.church" target="_blank" rel="noopener">Kids Site <svg aria-hidden="true"><use href="#sct-out"/></svg></a></div></li>
@@ -329,9 +317,9 @@
           <div class="to"><a href="mailto:YA@springs.church">YA@springs.church</a><a href="https://ya.springs.church" target="_blank" rel="noopener">Young Adults Site <svg aria-hidden="true"><use href="#sct-out"/></svg></a></div></li>
         <li><div><h3>Marriage</h3><p><span class="tbd">Premarital preparation through our Marriage Ministry.</span></p></div>
           <div class="to"><a href="mailto:marriage@springs.church">marriage@springs.church</a></div></li>
-        <li><div><h3>Prayer</h3><p><span class="tbd">Send a prayer request anytime, or pray with us Wednesdays at 6:30PM.</span></p></div>
+        <li><div><h3>Prayer</h3><p><span class="tbd">Send a request anytime. Prayer night is Wednesdays at 6:30PM.</span></p></div>
           <div class="to"><a href="../prayer/">Prayer Page <svg aria-hidden="true"><use href="#sct-arr"/></svg></a></div></li>
-        <li><div><h3>Care and Hard Seasons</h3><p><span class="tbd">Care, support and next steps from our Care Team.</span></p></div>
+        <li><div><h3>Care and Hard Seasons</h3><p><span class="tbd">Help in a hard season and men’s mentorship, from our Care Team.</span></p></div>
           <div class="to"><a href="../care/">Care Page <svg aria-hidden="true"><use href="#sct-arr"/></svg></a></div></li>
         <li><div><h3>Serving</h3><p><span class="tbd">Every volunteer team and the Volunteer Application.</span></p></div>
           <div class="to"><a href="../serve/">Serve Page <svg aria-hidden="true"><use href="#sct-arr"/></svg></a></div></li>
@@ -345,7 +333,7 @@
     <div class="wrap visit-in">
       <div class="visit-l">
         <h2 class="h2" id="sct-visit-h">Come See Us</h2>
-        <p>Join us in person or online. <span class="tbd">Our building is in the Briargate neighborhood, and the office is open Tuesday–Thursday, 9AM–5PM.</span></p>
+        <p>Join us in person or online. <span class="tbd">We’re in the Briargate neighborhood.</span></p>
         <div class="acts">
           <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
           <a class="btn line" href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Watch Online</a>

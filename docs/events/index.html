@@ -14,19 +14,19 @@
       <button class="sc-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sc-menu"><i></i><i></i></button>
       <nav class="sc-nav" aria-label="Main, left"><a href="../about/">About</a><a href="https://www.springs.church/media">Media</a></nav>
     </div>
-    <a class="sc-mark" href="../home/" aria-label="Springs Church home"><img src="../_chrome/mark-white.png" alt=""></a>
+    <a class="sc-mark" href="../" aria-label="Springs Church home"><img src="../_chrome/mark-white.png" alt=""></a>
     <div class="sc-r">
       <nav class="sc-nav" aria-label="Main, right"><a href="../events/">Events</a><a href="../give/">Give</a></nav>
-      <a class="sc-cta" href="../visit/">Plan a Visit</a>
+      <a class="sc-cta" href="../plan-a-visit/">Plan a Visit</a>
     </div>
   </div>
 </header>
 <div class="sc-menu" id="sc-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="sc-in sc-menu-in">
-    <div class="sc-menu-top"><a class="sc-mark" href="../home/" aria-label="Springs Church home"><img src="../_chrome/mark-white.png" alt=""></a><button class="sc-close" type="button">Close</button></div>
+    <div class="sc-menu-top"><a class="sc-mark" href="../" aria-label="Springs Church home"><img src="../_chrome/mark-white.png" alt=""></a><button class="sc-close" type="button">Close</button></div>
     <div class="sc-menu-grid">
       <nav class="sc-main" aria-label="Menu">
-        <a style="--i:0" href="../visit/">Plan a Visit</a>
+        <a style="--i:0" href="../plan-a-visit/">Plan a Visit</a>
         <a style="--i:1" href="../about/">About</a>
         <a style="--i:2" href="https://www.springs.church/media">Media</a>
         <a style="--i:3" href="../events/">Events</a>
@@ -35,7 +35,7 @@
         <a style="--i:6" href="../give/">Give</a>
       </nav>
       <div class="sc-aside">
-        <div><h4>About</h4><a href="../about/">Who We Are</a><a href="../beliefs/">Our Beliefs</a><a href="../team/">Our Team</a></div>
+        <div><h4>About</h4><a href="../about/">Who We Are</a><a href="../our-beliefs/">Our Beliefs</a><a href="../our-staff/">Our Team</a></div>
         <div><h4>Media</h4><a href="https://www.springs.church/sermons">Sermons</a><a href="https://www.springs.church/podcasts">Podcasts</a><a href="https://www.springs.church/stories">Stories</a><a href="https://www.springs.church/youversion">Bible App</a></div>
         <div><h4>Connect</h4><a href="../groups/">Groups</a><a href="../serve/">Serve</a><a href="https://kids.springs.church">Kids</a><a href="https://youth.springs.church">Youth</a><a href="https://ya.springs.church">Young Adults</a><a href="../missions/">Missions</a><a href="../care/">Care</a></div>
         <div><h4>Visit</h4><p>Sundays 10AM<br>Wednesdays 6:30PM<br>1515 Auto Mall Loop</p></div>
@@ -90,7 +90,7 @@
 #sev .btn.line:hover,#sev .btn.line[aria-expanded="true"]{background:var(--ink);color:#fff}
 #sev .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
 #sev .tl:hover{text-decoration-color:currentColor}
-#sev :is(.btn,.tl,.go a,.pill,.chips button,.ev h4 a,.nx-t a,.cal-m a,.wk-f a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+#sev :is(.btn,.tl,.go a,.pill,.chips button,.ev h4 a,.nx-t a,.cal-m a,.news a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
 
 /* one section-header pattern: uppercase H2 left, intro right */
 #sev .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
@@ -98,36 +98,43 @@
 #sev .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
 #sev .sec-h p{color:var(--ink-2);max-width:36em}
 
-/* ---------- hero + next up ---------- */
-#sev .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
-#sev .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(120px,14vw,190px);background:#fff;z-index:-1}
-#sev .top-in{display:grid;grid-template-columns:1.1fr 1fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+/* ---------- hero: filters on the left, the next event on the right ---------- */
+#sev .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111;color:#fff}
+#sev .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(90px,10vw,140px);background:#fff;z-index:-1}
+#sev .top-in{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:32px clamp(32px,5vw,72px);align-items:start}
 #sev .top-in>*{min-width:0}
-#sev .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
-#sev .top .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.82);margin-bottom:28px;max-width:34em}
+#sev .top-l{padding-top:clamp(8px,2vw,28px)}
+#sev .top h1{font:600 clamp(52px,7vw,96px)/.92 var(--hd);letter-spacing:-.03em;color:#fff}
+#sev .top .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.8);margin:18px 0 30px;max-width:26em}
 #sev .acts{display:flex;flex-wrap:wrap;gap:12px}
-#sev .next{margin-top:clamp(44px,5.5vw,72px)}
-#sev .nx{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(12px,1.2vw,16px) clamp(20px,3.4vw,48px) clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px);border-radius:24px;background:#fff;box-shadow:0 0 0 1px rgba(14,14,14,.05),0 34px 70px -38px rgba(0,0,0,.6)}
-#sev .nx>*{min-width:0}
-#sev .nx-pic{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--soft);isolation:isolate}
+#sev .flt b{display:block;font:600 13px/1.3 var(--hd);color:rgba(255,255,255,.62);margin-bottom:12px}
+#sev .chips{display:flex;flex-wrap:wrap;gap:8px}
+#sev .chips button{min-height:40px;padding:0 15px;border:0;border-radius:999px;background:rgba(255,255,255,.1);font:600 14px/1 var(--hd);letter-spacing:.01em;color:#fff;cursor:pointer;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+#sev .chips button:hover{background:rgba(255,255,255,.2)}
+#sev .chips button[aria-pressed="true"]{background:#fff;color:var(--ink)}
+#sev .top-l .count{margin-top:18px;font-size:15px;color:rgba(255,255,255,.55)}
+#sev .nx{position:relative;display:flex;flex-direction:column;border-radius:24px;background:#fff;color:var(--ink);overflow:visible;box-shadow:0 0 0 1px rgba(14,14,14,.05),0 34px 70px -38px rgba(0,0,0,.6)}
+#sev .nx-pic{position:relative;aspect-ratio:16/8;border-radius:24px 24px 0 0;overflow:hidden;background:var(--soft);isolation:isolate}
 #sev .nx-pic img{width:100%;height:100%;object-fit:cover}
-#sev .nx-pic figcaption{position:absolute;left:12px;top:12px;z-index:2;padding:9px 13px;border-radius:999px;background:rgba(14,14,14,.7);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
+#sev .nx-pic figcaption{position:absolute;left:14px;top:14px;z-index:2;padding:9px 13px;border-radius:999px;background:rgba(14,14,14,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
 #sev .nx-ph{position:absolute;inset:0;display:grid;place-content:center;text-align:center;background:var(--sand);color:var(--gold-t)}
 #sev .nx-ph b{display:block;font:600 clamp(64px,7vw,96px)/.9 var(--hd);letter-spacing:-.04em;color:var(--ink)}
 #sev .nx-ph span{display:block;margin-top:8px;font:600 16px/1 var(--hd)}
-#sev .nx-b{padding:clamp(6px,1vw,12px) 0}
-#sev .nx-t{font:600 clamp(28px,3vw,42px)/1.06 var(--hd);letter-spacing:-.022em;color:var(--ink);text-wrap:balance}
+#sev .nx-b{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 24px;align-items:end;padding:clamp(20px,2.4vw,28px) clamp(20px,2.6vw,32px) clamp(22px,2.6vw,30px)}
+#sev .nx-t{font:600 clamp(26px,2.6vw,36px)/1.08 var(--hd);letter-spacing:-.022em;color:var(--ink);text-wrap:balance}
 #sev .nx-t a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--ease)}
 #sev .nx-t a:hover{background-size:100% 1.5px}
-#sev .nx .tag{margin-top:12px}
-#sev .nx-dl{display:grid;gap:9px;margin:20px 0 24px}
-#sev .nx-dl dd{display:flex;align-items:flex-start;gap:12px;font-size:17px;line-height:1.45;color:var(--ink-2)}
-#sev .nx-dl svg{width:18px;height:18px;flex:none;margin-top:1px;color:var(--gold-t)}
-#sev .nx-dl .rel{color:var(--ink);font-weight:600}
-#sev .nx-d{font-size:17px;line-height:1.55;color:var(--ink-2);margin:-8px 0 22px;max-width:32em}
-#sev .nx-empty{grid-template-columns:1fr;padding:clamp(28px,4vw,52px)}
+#sev .nx-dl{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:12px}
+#sev .nx-dl dd{display:flex;align-items:center;gap:8px;font-size:16px;line-height:1.4;color:var(--ink-2)}
+#sev .nx-dl svg{width:16px;height:16px;flex:none;color:var(--gold-t)}
+#sev .nx .acts{flex-direction:column;align-items:stretch;gap:10px}
+#sev .nx .acts .btn{min-width:200px}
+#sev .nx .tag{margin-bottom:10px}
+#sev .nx-d{grid-column:1/-1;font-size:16px;line-height:1.55;color:var(--ink-2);max-width:40em;margin-top:-4px}
+#sev .nx-empty{padding:clamp(28px,4vw,48px)}
 #sev .nx-empty .nx-t{margin-bottom:12px}
 #sev .nx-empty p{color:var(--ink-2);max-width:36em;margin-bottom:24px}
+#sev .nx-empty .acts{flex-direction:row}
 #sev .nx-empty small{display:block;margin-top:18px;font-size:15px;color:var(--ink-3)}
 
 /* category pill (one style everywhere) */
@@ -145,83 +152,70 @@
 @media (prefers-reduced-motion:no-preference){#sev .cal-m:not([hidden]){animation:sev-pop .22s var(--ease)}}
 @keyframes sev-pop{from{opacity:0;transform:translateY(-4px) scale(.98)}}
 
-/* ---------- the calendar ---------- */
-#sev .cal-sec{padding-top:clamp(64px,8vw,104px)}
-#sev .chips{display:flex;flex-wrap:wrap;gap:8px;margin:-12px 0 clamp(28px,3.4vw,40px)}
-#sev .chips button{min-height:40px;padding:0 16px;border:0;border-radius:999px;background:var(--soft);font:600 14px/1 var(--hd);letter-spacing:.01em;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
-#sev .chips button:hover{background:#e9e9e7}
-#sev .chips button[aria-pressed="true"]{background:var(--ink);color:#fff}
-#sev .mo+.mo{margin-top:clamp(40px,4.6vw,60px)}
-#sev .mo-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
-#sev .mo-h h3{font:600 clamp(21px,1.9vw,24px)/1.2 var(--hd);letter-spacing:-.015em}
-#sev .mo-h small{font-size:15px;color:var(--ink-3);white-space:nowrap}
-#sev .ev{position:relative;display:grid;grid-template-columns:78px minmax(0,1fr) 208px;gap:clamp(16px,2.4vw,32px);align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
-#sev .tile{display:flex;flex-direction:column;align-items:center;justify-content:center;width:78px;height:78px;border-radius:14px;background:var(--sand);text-align:center;transition:background .25s}
-#sev .tile .wd{font:600 13px/1 var(--hd);color:var(--gold-t)}
-#sev .tile .dn{margin-top:6px;font:600 30px/1 var(--hd);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-#sev .tile.wide .dn{font-size:21px;letter-spacing:-.02em}
-#sev .ev h4{font:600 clamp(19px,1.7vw,22px)/1.25 var(--hd);letter-spacing:-.012em;text-wrap:balance}
-#sev .ev h4 a::after{content:"";position:absolute;inset:0;z-index:1}
-#sev .ev h4 a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--ease)}
-#sev .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:8px;font-size:16px;line-height:1.4;color:var(--ink-2)}
-#sev .meta>span:not(.tag):not(.vh){display:inline-flex;align-items:center;gap:7px}
-#sev .meta svg{width:15px;height:15px;color:var(--gold-t)}
-#sev .ev-a{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:14px;width:max-content;max-width:100%}
+/* ---------- the calendar: month by month, as a card grid ---------- */
+#sev .cal-sec{padding:clamp(64px,7vw,96px) 0 clamp(72px,8vw,104px)}
+#sev .grid-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:12px;margin-bottom:20px;border-bottom:1px solid var(--ink)}
+#sev .grid-h h2{font:600 clamp(22px,2vw,26px)/1.2 var(--hd);letter-spacing:-.015em}
+#sev .grid-h small{font-size:15px;color:var(--ink-3);white-space:nowrap}
+#sev .none{padding:8px 0 4px;font-size:17px;color:var(--ink-2)}
+#sev .rows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,22px)}
+#sev .ev{position:relative;display:flex;flex-direction:column;border-radius:18px;background:#fff;box-shadow:0 0 0 1px var(--line);transition:box-shadow .3s,transform .35s var(--ease)}
+#sev .ev-pic{position:relative;aspect-ratio:16/10;border-radius:18px 18px 0 0;overflow:hidden;background:var(--soft)}
+#sev .ev-pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+#sev .ev-pic .ph{position:absolute;inset:0;background:var(--sand)}
+#sev .badge{position:absolute;left:12px;top:12px;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:58px;padding:8px 10px 9px;border-radius:12px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);text-align:center}
+#sev .badge .wd{font:600 11px/1 var(--hd);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-t)}
+#sev .badge .dn{margin-top:4px;font:600 26px/1 var(--hd);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--ink)}
+#sev .badge.wide .dn{font-size:19px}
+#sev .ev-b{display:flex;flex-direction:column;flex:1;padding:16px 18px 18px}
+#sev .ev h4{font:600 19px/1.25 var(--hd);letter-spacing:-.012em;text-wrap:balance}
+#sev .ev h4 a::after{content:"";position:absolute;inset:0;z-index:1;border-radius:18px}
+#sev .meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin-top:8px;font-size:15px;line-height:1.4;color:var(--ink-2)}
+#sev .meta>span:not(.tag):not(.vh){display:inline-flex;align-items:center;gap:6px}
+#sev .meta svg{width:14px;height:14px;color:var(--gold-t)}
+#sev .ev .tag{margin-bottom:10px;align-self:flex-start}
+#sev .ev-a{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:16px}
 #sev .ev-a .tl{font-size:15px}
-#sev .th{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:var(--soft);transition:transform .6s var(--ease)}
-#sev .th-w{border-radius:12px;overflow:hidden}
 @media (hover:hover){
-  #sev .ev:hover h4 a{background-size:100% 1.5px}
-  #sev .ev:hover .tile{background:var(--gold)}
-  #sev .ev:hover .th{transform:scale(1.03)}
+  #sev .ev:hover{box-shadow:0 0 0 1px rgba(14,14,14,.18),0 18px 40px -22px rgba(0,0,0,.35);transform:translateY(-2px)}
+  #sev .ev:hover .ev-pic img{transform:scale(1.03)}
 }
 #sev .agenda[aria-busy="true"] .ev{pointer-events:none}
 #sev .sk{background:#ecebe8;border-radius:10px}
-#sev .sk.l1{height:34px;width:78%}
-#sev .sk.l2{height:18px;width:52%;margin-top:18px}
-#sev .sk.l3{height:18px;width:40%;margin-top:12px}
-#sev .sk.l4{height:46px;width:58%;margin-top:28px}
-#sev .ev .sk.l1{height:22px;width:60%}
-#sev .ev .sk.l2{width:36%;margin-top:12px}
+#sev .sk.l1{height:30px;width:78%}
+#sev .sk.l2{height:16px;width:52%;margin-top:14px}
+#sev .sk.l3{height:16px;width:40%;margin-top:10px}
+#sev .sk.l4{height:46px;width:200px}
+#sev .ev .sk.l1{height:20px;width:70%}
+#sev .ev .sk.l2{width:46%;margin-top:12px}
 @media (prefers-reduced-motion:no-preference){#sev .sk{animation:sev-pulse 1.6s ease-in-out infinite}}
 @keyframes sev-pulse{50%{opacity:.5}}
 
-/* ---------- every week (the one dark band) ---------- */
-#sev .week{background:#111;color:#fff}
-#sev .week .h2{color:#fff}
-#sev .week .sec-h p{color:rgba(255,255,255,.72)}
-#sev .wks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
-#sev .wk{display:flex;flex-direction:column;min-width:0}
-#sev .wk img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;background:#222;margin-bottom:22px}
-#sev .wk:nth-child(1) img{object-position:50% 40%}
-#sev .wk:nth-child(3) img{object-position:50% 70%}
-#sev .wk h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,.22);font:600 clamp(22px,2vw,26px)/1.15 var(--hd);letter-spacing:-.015em}
-#sev .wk h3 b{font:600 clamp(22px,2vw,26px)/1 var(--hd);color:var(--gold);font-variant-numeric:tabular-nums;white-space:nowrap}
-#sev .wk p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.78);margin-bottom:20px}
-#sev .go{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}
-#sev .go a{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.1);font:600 13px/1 var(--hd);letter-spacing:.02em;color:#fff;transition:background .2s,color .2s}
-#sev .go a svg{width:12px;height:12px;transition:transform .3s var(--ease)}
-@media (hover:hover){#sev .go a:hover{background:#fff;color:var(--ink)}#sev .go a:hover svg{transform:translateX(2px)}}
-#sev .wk-f{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:clamp(36px,4.4vw,56px);padding-top:22px;border-top:1px solid rgba(255,255,255,.22);font-size:16px;color:rgba(255,255,255,.62)}
-#sev .wk-f a{font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.35)}
-#sev .wk-f a:hover{text-decoration-color:currentColor}
-
-/* ---------- newsletter ---------- */
-#sev .news{background:var(--sand);padding:clamp(56px,7vw,88px) 0}
-#sev .news-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px clamp(32px,6vw,96px);align-items:center}
-#sev .news .h2{margin-bottom:14px}
-#sev .news p{color:var(--ink-2);max-width:34em}
-#sev .news small{display:block;margin-top:14px;font-size:15px;color:var(--ink-3)}
-#sev .news small a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+/* ---------- every week + newsletter: one compact sand band ---------- */
+#sev .week{background:var(--sand);padding:clamp(56px,6vw,80px) 0}
+#sev .week-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:12px;margin-bottom:8px;border-bottom:1px solid var(--ink)}
+#sev .week-h small{font-size:15px;color:var(--ink-3)}
+#sev .wks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(20px,3vw,40px)}
+#sev .wk{padding:22px 0 4px}
+#sev .wk h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font:600 22px/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:8px}
+#sev .wk h3 b{font:600 22px/1 var(--hd);color:var(--gold-t);font-variant-numeric:tabular-nums;white-space:nowrap}
+#sev .wk p{font-size:16px;line-height:1.55;color:var(--ink-2);margin-bottom:14px}
+#sev .go{display:flex;flex-wrap:wrap;gap:6px 16px}
+#sev .go a{display:inline-flex;align-items:center;gap:6px;font:600 14px/1.3 var(--hd);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(14,14,14,.3)}
+#sev .go a svg{width:12px;height:12px}
+#sev .go a:hover{text-decoration-color:currentColor}
+#sev .news{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 32px;align-items:center;margin-top:clamp(32px,4vw,44px);padding:clamp(20px,2.6vw,28px) clamp(22px,2.8vw,32px);border-radius:18px;background:#fff}
+#sev .news b{display:block;font:600 20px/1.2 var(--hd);margin-bottom:4px}
+#sev .news p{font-size:16px;color:var(--ink-2)}
+#sev .news p a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
 
 /* empty calendar: the hero card says so, the list section steps aside */
-#sev.is-empty .cal-sec,#sev.is-empty .to-cal{display:none}
-#sev.is-empty .top{padding-bottom:clamp(64px,8vw,104px)}
+#sev.is-empty .cal-sec,#sev.is-empty .flt,#sev.is-empty .top-l .count{display:none}
 
 /* ---------- motion ---------- */
 @media (prefers-reduced-motion:no-preference){
   #sev.js .top-in>*{animation:sev-up .9s var(--ease) both}
-  #sev.js .top-in>*:nth-child(2){animation-delay:.08s}
+  #sev.js .top-in>*:nth-child(2){animation-delay:.1s}
   #sev.js .nx{animation:sev-up .85s var(--ease) both .1s}
   #sev.js .mo{animation:sev-fade .6s ease both}
   #sev.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
@@ -231,32 +225,42 @@
 @keyframes sev-fade{from{opacity:0}}
 
 /* ---------- responsive ---------- */
-@media (max-width:900px){
-  #sev .top-in,#sev .sec-h,#sev .nx,#sev .news-in{grid-template-columns:1fr}
-  #sev .sec-h{align-items:start}
-  #sev .nx{padding:12px 12px 22px}
-  #sev .nx-b{padding:4px 8px 0}
-  #sev .ev{grid-template-columns:78px minmax(0,1fr) 150px}
+@media (max-width:1000px){
+  #sev .rows{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media (max-width:760px){
-  #sev .wks{grid-template-columns:1fr;gap:28px}
-  #sev .wk{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0 20px;align-items:start}
-  #sev .wk img{grid-row:1/4;aspect-ratio:1;margin:0;border-radius:14px}
-  #sev .ev{grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:start;padding:20px 0}
-  #sev .th-w{display:none}
-  #sev .tile{width:64px;height:68px;border-radius:12px}
-  #sev .tile .dn{font-size:26px}
-  #sev .tile.wide .dn{font-size:17px}
+@media (max-width:900px){
+  #sev .top-in{grid-template-columns:1fr}
+  #sev .top-l{padding-top:0}
+  #sev .wks{grid-template-columns:1fr}
+  #sev .wk{display:grid;grid-template-columns:minmax(150px,.6fr) minmax(0,1.4fr);gap:4px 24px;padding:18px 0;border-bottom:1px solid rgba(14,14,14,.12)}
+  #sev .wk h3{display:block}
+  #sev .wk h3 b{display:block;margin-top:6px}
+  #sev .wk .go{grid-column:2}
 }
 @media (max-width:640px){
   #sev{--top:128px}
-  #sev .acts .btn{flex:1 1 auto}
-  #sev .nx .acts{flex-direction:column;align-items:stretch}
-  #sev .nx .acts .cal,#sev .nx .acts .cal .btn{width:100%}
-  #sev .wk{grid-template-columns:104px minmax(0,1fr);gap:0 16px}
-  #sev .wk h3{flex-wrap:wrap;gap:2px 12px}
-  #sev .wk p{font-size:16px}
-  #sev .wk .go{grid-column:1/-1;margin-top:14px}
+  #sev .chips{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(var(--pad) * -1);padding:0 var(--pad) 4px;scrollbar-width:none}
+  #sev .chips::-webkit-scrollbar{display:none}
+  #sev .chips button{flex:none}
+  #sev .nx-pic{aspect-ratio:16/10}
+  #sev .nx-b{grid-template-columns:1fr}
+  #sev .nx .acts .btn,#sev .nx .acts .cal{width:100%}
+  #sev .nx-empty .acts{flex-direction:column}
+  #sev .rows{grid-template-columns:1fr;gap:12px}
+  #sev .ev{display:grid;grid-template-columns:112px minmax(0,1fr);border-radius:16px}
+  #sev .ev-pic{aspect-ratio:auto;height:100%;min-height:128px;border-radius:16px 0 0 16px}
+  #sev .badge{left:8px;top:8px;min-width:48px;padding:6px 8px 7px;border-radius:10px}
+  #sev .badge .dn{font-size:21px}
+  #sev .badge.wide .dn{font-size:15px}
+  #sev .ev-b{padding:12px 14px 14px}
+  #sev .ev h4{font-size:17px}
+  #sev .ev .tag{display:none}
+  #sev .meta{font-size:14px;gap:2px 12px}
+  #sev .ev-a{padding-top:10px}
+  #sev .ev .atc{display:none}
+  #sev .wk{grid-template-columns:1fr}
+  #sev .wk .go{grid-column:1}
+  #sev .news{grid-template-columns:1fr}
   #sev .news .btn{width:100%}
 }
 </style>
@@ -269,74 +273,53 @@
     <symbol id="sev-i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></g></symbol>
   </svg>
 
-  <!-- hero: the plain promise from the Trello audit, then the soonest event (drawn from ChurchCo's Events block) -->
+  <!-- hero: the plain promise from the Trello audit + filters on the left, the soonest event on the right (drawn from ChurchCo's Events block) -->
   <header class="top">
-    <div class="wrap">
-      <div class="top-in">
+    <div class="wrap top-in">
+      <div class="top-l">
         <h1>Events</h1>
-        <div>
-          <p class="lede">See what’s coming up and register.</p>
-          <div class="acts">
-            <a class="btn light to-cal" href="#sev-i-cal">See All Events</a>
-            <a class="btn ghost" href="#sev-week">Every Week</a>
-          </div>
-        </div>
+        <p class="lede">See what’s coming up and register.</p>
+        <div class="flt" hidden><b id="sev-flt-l">Show</b><div class="chips" role="group" aria-labelledby="sev-flt-l"></div></div>
+        <p class="count" id="sev-count" aria-hidden="true"></p>
       </div>
       <div class="next" id="sev-next" aria-live="polite"></div>
     </div>
   </header>
 
-  <!-- the calendar: month by month, with filters when there's more than one kind of event -->
-  <section class="sec cal-sec" id="sev-cal" aria-labelledby="sev-cal-h">
+  <!-- the calendar: month by month, as cards -->
+  <section class="sec cal-sec" id="sev-cal">
     <div class="wrap">
-      <div class="sec-h">
-        <h2 class="h2" id="sev-cal-h">Upcoming Events</h2>
-      </div>
-      <div class="chips" role="group" aria-label="Show events for" hidden></div>
-      <div class="agenda" aria-busy="true"></div>
+      <div class="grid-h"><h2 id="sev-more-h">More Events</h2><small id="sev-more-n"></small></div>
+      <div class="agenda" aria-busy="true" aria-labelledby="sev-more-h"></div>
       <p class="vh" id="sev-status" aria-live="polite"></p>
     </div>
   </section>
 
-  <!-- every week: the standing gatherings that never show up in the events feed -->
-  <section class="sec week" id="sev-week" aria-labelledby="sev-week-h">
+  <!-- every week: the standing gatherings that never show up in the events feed, plus the newsletter (link now https) -->
+  <section class="week" id="sev-week" aria-labelledby="sev-week-h">
     <div class="wrap">
-      <div class="sec-h rv">
-        <h2 class="h2" id="sev-week-h">Every Week</h2>
-      </div>
+      <div class="week-h rv"><h2 class="h2" id="sev-week-h">Every Week</h2><small>1515 Auto Mall Loop · <a class="tl" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get directions</a></small></div>
       <ul class="wks">
         <li class="wk rv" style="--d:0">
-          <img src="img/events-sunday.jpg" alt="The worship team leads on a stage lit blue and purple, with a cross behind them" loading="lazy">
           <h3>Sundays <b>10AM</b></h3>
           <p>Worship and teaching. Springs Kids for babies through grade 5.</p>
           <div class="go"><a href="https://kids.springs.church">Springs Kids <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a><a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Watch Online <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a></div>
         </li>
         <li class="wk rv" style="--d:1">
-          <img src="img/events-wednesday.jpg" alt="People at Springs praying together with hands on shoulders" loading="lazy">
           <h3>Wednesdays <b>6:30PM</b></h3>
-          <p>Prayer night. Awaken for kids in grades 1–5, Rooted for middle school in the Kids Auditorium and Anthem for high school in the Tent.</p>
+          <p>Prayer night. Awaken for kids in grades <span style="white-space:nowrap">1–5</span>, Rooted for middle school and Anthem for high school.</p>
           <div class="go"><a href="../prayer/">Prayer <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a><a href="https://kids.springs.church">Kids <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a><a href="https://youth.springs.church">Youth <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a></div>
         </li>
         <li class="wk rv" style="--d:2">
-          <img src="img/events-friday.jpg" alt="Three young women smiling together in the church parking lot at night" loading="lazy">
           <h3>Fridays <b>7PM</b></h3>
           <p>Young Adults in the Garage. Life’s better with you in it.</p>
           <div class="go"><a href="https://ya.springs.church">Young Adults <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a></div>
         </li>
       </ul>
-      <p class="wk-f rv"><span>1515 Auto Mall Loop, Colorado Springs, CO 80920</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get directions</a></p>
-    </div>
-  </section>
-
-  <!-- newsletter: live copy, link now https (Trello audit) -->
-  <section class="news" id="sev-news" aria-labelledby="sev-news-h">
-    <div class="wrap news-in rv">
-      <div>
-        <h2 class="h2" id="sev-news-h">Weekly Newsletter</h2>
-        <p>Get the latest news and events from Springs Church.</p>
-        <small><span class="tbd">Questions about an event?</span> Call <a href="tel:+17194888331">(719) 488-8331</a> or email <a href="mailto:info@springs.church">info@springs.church</a>.</small>
+      <div class="news rv">
+        <div><b id="sev-news-h">Weekly Newsletter</b><p>Get the latest news and events from Springs Church. <span class="tbd">Questions about an event?</span> Call <a href="tel:+17194888331">(719) 488-8331</a> or email <a href="mailto:info@springs.church">info@springs.church</a>.</p></div>
+        <a class="btn" href="https://eepurl.com/iUfGPA" target="_blank" rel="noopener">Sign Up</a>
       </div>
-      <a class="btn" href="https://eepurl.com/iUfGPA" target="_blank" rel="noopener">Sign Up</a>
     </div>
   </section>
 </div>
@@ -593,7 +576,9 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const icon = id => `<svg class="i" aria-hidden="true"><use href="#sev-i-${id}"/></svg>`;
   const isExt = u => /^https?:/i.test(u) && !/^https?:\/\/(www\.)?springs\.church/i.test(u);
-  const linkAttrs = u => `href="${esc(u)}"` + (isExt(u) ? ' target="_blank" rel="noopener"' : '');
+  const ON_SITE = /(^|\.)springs\.church$/i.test(location.hostname);
+  const evHref = u => (/^https?:/i.test(u) || ON_SITE) ? u : SITE + (u.startsWith('/') ? u : '/' + u);   // event pages live on springs.church
+  const linkAttrs = u => { const h = evHref(u); return `href="${esc(h)}"` + (isExt(h) || !ON_SITE ? ' target="_blank" rel="noopener"' : ''); };
   let cat = '', menus = 0, rendered = false;
 
   function dateLine(ev, now) {
@@ -620,7 +605,7 @@
   function calMenu(ev, cls) {
     const id = 'sev-m' + (++menus);
     const file = ((ev.url || '').replace(/[?#].*$/, '').split('/').filter(Boolean).pop() || 'springs-event').replace(/[^a-z0-9-]/gi, '').toLowerCase() + '.ics';
-    return `<div class="cal"><button type="button" class="${cls} cal-b" aria-expanded="false" aria-controls="${id}">${icon('cal')}Add to Calendar</button>` +
+    return `<div class="cal"><button type="button" class="${cls} cal-b" aria-expanded="false" aria-controls="${id}">${icon('cal')}<span><span class="atc">Add to </span>Calendar</span></button>` +
       `<div class="cal-m" id="${id}" hidden><a href="${esc(gcalUrl(ev))}" target="_blank" rel="noopener">Google Calendar</a>` +
       `<a href="data:text/calendar;charset=utf-8,${encodeURIComponent(icsText(ev))}" download="${esc(file)}">Apple or Outlook <small>.ics file</small></a></div></div>`;
   }
@@ -632,54 +617,62 @@
     nextEl.innerHTML = `<article class="nx" aria-labelledby="sev-nx-t">
       <figure class="nx-pic">${pic}<figcaption>Next Up · ${esc(relLabel(ev, now))}</figcaption></figure>
       <div class="nx-b">
-        <h2 class="nx-t" id="sev-nx-t">${ev.url ? `<a ${linkAttrs(ev.url)}>${esc(ev.name)}</a>` : esc(ev.name)}</h2>
-        ${ev.cat ? `<span class="tag">${esc(ev.cat)}</span>` : ''}
-        <dl class="nx-dl">
-          <dt class="vh">Date</dt><dd>${icon('cal')}<span>${esc(dateLine(ev, now))}</span></dd>
-          <dt class="vh">Time</dt><dd>${icon('clock')}<span>${esc(timeLine(ev))}</span></dd>
-          ${ev.venue ? `<dt class="vh">Where</dt><dd>${icon('pin')}<span>${esc(ev.venue)}</span></dd>` : ''}
-        </dl>
-        ${ev.desc ? `<p class="nx-d">${esc(ev.desc.length > 240 ? ev.desc.slice(0, 237).replace(/\s+\S*$/, '') + '…' : ev.desc)}</p>` : ''}
+        <div>
+          ${ev.cat ? `<span class="tag">${esc(ev.cat)}</span>` : ''}
+          <h2 class="nx-t" id="sev-nx-t">${ev.url ? `<a ${linkAttrs(ev.url)}>${esc(ev.name)}</a>` : esc(ev.name)}</h2>
+          <dl class="nx-dl">
+            <dt class="vh">Date</dt><dd>${icon('cal')}<span>${esc(dateLine(ev, now))}</span></dd>
+            <dt class="vh">Time</dt><dd>${icon('clock')}<span>${esc(timeLine(ev))}</span></dd>
+            ${ev.venue ? `<dt class="vh">Where</dt><dd>${icon('pin')}<span>${esc(ev.venue)}</span></dd>` : ''}
+          </dl>
+        </div>
         <div class="acts">${ev.url ? `<a class="btn" ${linkAttrs(ev.url)}>Details</a>` : ''}${calMenu(ev, 'btn line')}</div>
+        ${ev.desc ? `<p class="nx-d">${esc(ev.desc.length > 200 ? ev.desc.slice(0, 197).replace(/\s+\S*$/, '') + '…' : ev.desc)}</p>` : ''}
       </div>
     </article>`;
   }
   function tile(ev) {
     const a = tzParts(ev.start), b = ev.end ? tzParts(ev.end) : null;
-    if (b && dayDiff(ev.start, ev.end) > 0 && a.mo === b.mo) return { wd: `${WD[a.wd]}–${WD[b.wd]}`, dn: `${a.d}–${b.d}`, wide: true };
-    return { wd: WD[a.wd], dn: String(a.d), wide: false };
+    const m = MONL[a.mo].slice(0, 3);
+    if (b && dayDiff(ev.start, ev.end) > 0 && a.mo === b.mo) return { wd: m, dn: `${a.d}–${b.d}`, wide: true };
+    return { wd: m, dn: String(a.d), wide: false };
   }
   function row(ev, now) {
     const t = tile(ev);
     return `<li class="ev" data-cat="${esc(ev.cat)}">
-      <div class="tile${t.wide ? ' wide' : ''}" aria-hidden="true"><span class="wd">${t.wd}</span><span class="dn">${t.dn}</span></div>
+      <div class="ev-pic">${ev.img ? `<img src="${esc(ev.img)}" alt="" loading="lazy">` : '<div class="ph"></div>'}
+        <div class="badge${t.wide ? ' wide' : ''}" aria-hidden="true"><span class="wd">${t.wd}</span><span class="dn">${t.dn}</span></div></div>
       <div class="ev-b">
+        ${ev.cat ? `<span class="tag">${esc(ev.cat)}</span>` : ''}
         <h4>${ev.url ? `<a ${linkAttrs(ev.url)}>${esc(ev.name)}</a>` : esc(ev.name)}</h4>
-        <p class="meta"><span class="vh">${esc(dateLine(ev, now))}, </span><span>${icon('clock')}${esc(timeLine(ev))}</span>${ev.venue ? `<span>${icon('pin')}${esc(ev.venue)}</span>` : ''}${ev.cat ? `<span class="tag">${esc(ev.cat)}</span>` : ''}</p>
-        <div class="ev-a">${calMenu(ev, 'pill')}${ev.url ? `<a class="tl" ${linkAttrs(ev.url)}>Details</a>` : ''}</div>
+        <p class="meta"><span class="vh">${esc(dateLine(ev, now))}, </span><span>${icon('clock')}${esc((tile(ev).wide ? '' : WD[tzParts(ev.start).wd] + ' · ') + timeLine(ev))}</span>${ev.venue ? `<span>${icon('pin')}${esc(ev.venue)}</span>` : ''}</p>
+        <div class="ev-a">${ev.url ? `<a class="tl" ${linkAttrs(ev.url)}>Details</a>` : '<span></span>'}${calMenu(ev, 'pill')}</div>
       </div>
-      ${ev.img ? `<div class="th-w"><img class="th" src="${esc(ev.img)}" alt="" loading="lazy"></div>` : ''}
     </li>`;
   }
   function renderChips(list) {
     const seen = [...new Set(list.map(e => e.cat).filter(Boolean))];
     const cats = ORDER.filter(c => seen.includes(c)).concat(seen.filter(c => !ORDER.includes(c)).sort());
-    if (cats.length < 2) { chipsEl.hidden = true; chipsEl.innerHTML = ''; cat = ''; return; }
+    if (cats.length < 2) { chipsEl.closest('.flt').hidden = true; chipsEl.innerHTML = ''; cat = ''; return; }
     if (cat && !cats.includes(cat)) cat = '';
     chipsEl.innerHTML = ['', ...cats].map(c => `<button type="button" data-cat="${esc(c)}" aria-pressed="${c === cat}">${c ? esc(c) : 'All Events'}</button>`).join('');
-    chipsEl.hidden = false;
+    chipsEl.closest('.flt').hidden = false;
   }
+  let all = [];
   function applyFilter(announce) {
-    let total = 0;
     $$('.chips button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === cat)));
-    $$('.agenda .mo').forEach(m => {
-      let n = 0;
-      m.querySelectorAll('.ev').forEach(li => { const on = !cat || li.dataset.cat === cat; li.hidden = !on; if (on) n++; });
-      m.hidden = !n;
-      m.querySelector('.mo-h small').textContent = n + (n === 1 ? ' event' : ' events');
-      total += n;
-    });
-    if (announce) statusEl.textContent = `Showing ${total} ${total === 1 ? 'event' : 'events'}${cat ? ' for ' + cat : ''}.`;
+    const now = new Date();
+    const list = cat ? all.filter(e => e.cat === cat) : all;
+    menus = 0;
+    renderNext(list[0], now);
+    const rest = list.slice(1);
+    $('#sev-more-n').textContent = rest.length ? rest.length + (rest.length === 1 ? ' event' : ' events') : '';
+    agendaEl.innerHTML = rest.length
+      ? `<ol class="rows">${rest.map(e => row(e, now)).join('')}</ol>`
+      : `<p class="none">${cat ? 'Nothing else for ' + esc(cat) + ' right now.' : 'That’s everything on the calendar right now.'}</p>`;
+    const line = `${list.length} ${list.length === 1 ? 'event' : 'events'}${cat ? ' for ' + cat : ' coming up'}`;
+    $('#sev-count').textContent = line;
+    if (announce) statusEl.textContent = 'Showing ' + line + '.';
   }
   function render(events) {
     const now = new Date();
@@ -689,28 +682,19 @@
       .map(e => Object.assign({}, e, category(e.title)));
     if (!list.length) { if (!rendered) showEmpty(); return; }
     rendered = true;
-    menus = 0;
     root.classList.remove('is-empty');
-    renderNext(list[0], now);
+    all = list;
     renderChips(list);
-    const groups = [];
-    list.forEach(ev => {
-      const p = tzParts(ev.start), k = p.y * 12 + p.mo;
-      let g = groups[groups.length - 1];
-      if (!g || g.k !== k) groups.push(g = { k, y: p.y, mo: p.mo, items: [] });
-      g.items.push(ev);
-    });
-    agendaEl.innerHTML = groups.map(g => `<section class="mo" aria-labelledby="sev-mo-${g.k}"><div class="mo-h"><h3 id="sev-mo-${g.k}">${MONL[g.mo]} ${g.y}</h3><small></small></div><ol class="rows">${g.items.map(e => row(e, now)).join('')}</ol></section>`).join('');
     agendaEl.removeAttribute('aria-busy');
     applyFilter(false);
   }
   function showLoading() {
-    nextEl.innerHTML = `<div class="nx" aria-hidden="true"><div class="nx-pic sk"></div><div class="nx-b"><div class="sk l1"></div><div class="sk l2"></div><div class="sk l3"></div><div class="sk l4"></div></div></div><p class="vh">Loading events…</p>`;
-    agendaEl.innerHTML = `<div class="mo" aria-hidden="true"><div class="mo-h"><div class="sk" style="height:24px;width:180px"></div></div><ol class="rows">${'<li class="ev"><div class="tile sk"></div><div class="ev-b"><div class="sk l1"></div><div class="sk l2"></div></div><div class="th-w"><div class="th sk"></div></div></li>'.repeat(3)}</ol></div>`;
+    nextEl.innerHTML = `<div class="nx" aria-hidden="true"><div class="nx-pic sk"></div><div class="nx-b"><div><div class="sk l1"></div><div class="sk l2"></div></div><div class="sk l4"></div></div></div><p class="vh">Loading events…</p>`;
+    agendaEl.innerHTML = `<ol class="rows" aria-hidden="true">${'<li class="ev"><div class="ev-pic sk"></div><div class="ev-b"><div class="sk l1"></div><div class="sk l2"></div></div></li>'.repeat(3)}</ol>`;
   }
   function showEmpty() {
     root.classList.add('is-empty');
-    chipsEl.hidden = true;
+    chipsEl.closest('.flt').hidden = true;
     agendaEl.innerHTML = '';
     agendaEl.removeAttribute('aria-busy');
     const editorNote = window.self !== window.top && !root.classList.contains('has-src')
@@ -835,13 +819,13 @@
         <a class="sc-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
       </div>
       <div class="sc-cols">
-        <div><h4>About</h4><ul><li><a href="../about/">Who We Are</a></li><li><a href="../beliefs/">Our Beliefs</a></li><li><a href="../team/">Our Team</a></li><li><a href="https://www.springs.church/stories">Stories</a></li></ul></div>
+        <div><h4>About</h4><ul><li><a href="../about/">Who We Are</a></li><li><a href="../our-beliefs/">Our Beliefs</a></li><li><a href="../our-staff/">Our Team</a></li><li><a href="https://www.springs.church/stories">Stories</a></li></ul></div>
         <div><h4>Get Involved</h4><ul><li><a href="../groups/">Groups</a></li><li><a href="../serve/">Serve</a></li><li><a href="../missions/">Missions</a></li><li><a href="../prayer/">Prayer</a></li><li><a href="../care/">Care</a></li></ul></div>
-        <div><h4>Stay Connected</h4><ul><li><a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/springs__church/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/springschurch.co/" target="_blank" rel="noopener">Facebook</a></li><li><a href="../app/">The App</a></li></ul></div>
+        <div><h4>Stay Connected</h4><ul><li><a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/springs__church/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/springschurch.co/" target="_blank" rel="noopener">Facebook</a></li><li><a href="../download-app/">The App</a></li></ul></div>
       </div>
     </div>
     <p class="sc-wordmark" aria-hidden="true"></p>
-    <div class="sc-legal"><span>© 2026 Springs Church</span><nav aria-label="Footer"><a href="../contact/">Contact</a><a href="https://springschurch.ccbchurch.com/goto/login" target="_blank" rel="noopener">iConnect</a><a href="../give/">Give</a><a href="https://www.springs.church/privacy">Privacy</a></nav></div>
+    <div class="sc-legal"><span>© 2026 Springs Church</span><nav aria-label="Footer"><a href="../contact-us/">Contact</a><a href="https://springschurch.ccbchurch.com/goto/login" target="_blank" rel="noopener">iConnect</a><a href="../give/">Give</a><a href="https://www.springs.church/privacy">Privacy</a></nav></div>
   </div>
 </footer>
 <script src="../_chrome/chrome.js"></script></body></html>

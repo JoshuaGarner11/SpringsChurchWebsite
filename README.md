@@ -1,20 +1,20 @@
-# Springs site review (all redesigned pages in one place)
+# New springs.church, assembled as one site (draft for staff review)
 
-`python3 build.py` collects every page under review from its Desktop project into `docs/` (static HTML, no build tools):
-the hub page (`docs/index.html`), one folder per page with its preview and images, noindex on every page, robots.txt that
-blocks crawlers, and a key/token scan that stops the build if anything secret shows up. Local preview:
-launch.json "springs-new-pages" → http://localhost:5220/review/ (the scratchpad web root links `review` → `docs/`).
-
-Started 11/15/2026 after Josh asked about putting the whole site under review up on GitHub so people could review it.
-Published 11/15/2026 to GitHub Pages from https://github.com/JoshuaGarner11/SpringsChurchWebsite (main, /docs).
-Review site: https://joshuagarner11.github.io/SpringsChurchWebsite/
+`python3 build.py` builds the whole redesigned site from the page projects on the Desktop into `docs/`, which GitHub Pages serves:
+https://joshuagarner11.github.io/SpringsChurchWebsite/ (repo https://github.com/JoshuaGarner11/SpringsChurchWebsite, main:/docs).
+It opens on the Home page (Option I) and every page sits at its real springs.church address (/about/, /plan-a-visit/, /events/ …),
+joined by the shared header and footer in `chrome/` (Option I menu + SPRINGS. footer, Springs mark centered). Pages that are already
+live and unchanged (Sermons, Podcasts, Stories, Media, Bible App, Kids/Youth/YA sites) link to the real ones. noindex on every page,
+robots.txt blocks crawlers, a 404 page, and a key/token scan that stops the build if anything secret shows up.
+Local preview: launch.json "springs-new-pages" → http://localhost:5220/review/ (scratchpad web root links `review` → `docs/`).
+History: started 11/15/2026 as a review hub; Josh asked the same night to "put the site together as if it was whole," so the hub is gone.
 
 ## Pages
-The page list (title, source project, status) is `PAGES` in build.py. Trello card links are in NOTES.local.md, which stays off GitHub.
+The page list (site folder, source project, entry file) is `PAGES` in build.py. Trello card links are in NOTES.local.md (kept off GitHub).
 
 ## How the build treats links
-`href="/groups"` style site links point at the review copy when one exists (`../groups/`), otherwise at the live page
-(`https://www.springs.church/sermons`). The Team mock's `/contributor/<slug>` stubs are copied in and its fetch path made relative.
+`href="/groups"` and `https://www.springs.church/groups` links point inside the site when the page is part of the redesign
+(`../groups/`), otherwise at the live page (`https://www.springs.church/sermons`). Option I's link map in shared.js gets the same treatment. The Team mock's `/contributor/<slug>` stubs are copied in and its fetch path made relative.
 Fonts: the Typekit kit (ktn0utw) is domain-locked, so on a new domain Gotham/Proxima fall back to Montserrat/system fonts
 unless the review domain is added to the kit's allowed domains in Adobe Fonts.
 

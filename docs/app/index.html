@@ -1,0 +1,332 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download App | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sap').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/download-app ("Download App") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live page untouched.
+     Source of truth: ~/Desktop/springs-app-site/churchco/app-block.html (preview: preview-live.html via build-preview.py).
+     Built from the Creative Board card "Download App Page" (Website Updates, audit Oct 29): says what's in the app (matched only to the real
+     App Store screenshots: Featured, Connect, Give, Media, More), shows two real screenshots in plain CSS frames, explains the Springs app
+     vs. the Bible App (YouVersion, under Media), and keeps both store links (tested 11/15: both HTTP 200). The visitor's store is
+     emphasized (iPhone: App Store, Android: Google Play, computer: both + "open this on your phone"). Official badges are the ones
+     already on ChurchCo media. <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook. -->
+<style>
+.tcc-block:has(#sap){padding:0!important;background:#111!important}
+.tcc-block:has(#sap) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sap) .row-defaults{padding:0!important}
+.tcc-block:has(#sap) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sap{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  --skirt:clamp(90px,11vw,150px);
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sap *{box-sizing:border-box}
+#sap :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sap ul,#sap ol{list-style:none}
+#sap a{color:inherit;text-decoration:none}
+#sap img{display:block;max-width:100%}
+#sap button{font:inherit;color:inherit}
+#sap ::selection{background:var(--gold);color:var(--ink)}
+#sap .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sap svg.i{width:16px;height:16px;flex:none}
+#sap .tbd{transition:background .2s}
+#sap.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#sap :is(p,li,dd){text-wrap:pretty}
+#sap [id^="sap-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+
+/* buttons + links: one set (same as /about, /servecopy, /missionscopy) */
+#sap .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sap .btn:hover{background:#333}
+#sap .btn:active{transform:scale(.98)}
+#sap .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sap .btn.line:hover{background:var(--ink);color:#fff}
+#sap .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sap .tl:hover{text-decoration-color:currentColor}
+#sap :is(.btn,.tl,.store,.pill,.other a,.help a):focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+#sap .cmp :is(.btn,.tl,.help a):focus-visible,#sap .inside :focus-visible{outline-color:var(--gold-t)}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sap .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink);text-wrap:balance}
+#sap .sec{padding:clamp(72px,9vw,120px) 0}
+#sap .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sap .sec-h p{color:var(--ink-2);max-width:36em}
+
+/* ---------- hero: words + stores left, two real screens right ---------- */
+#sap .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111;color:#fff}
+#sap .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:var(--skirt);background:#fff;z-index:-1}
+#sap .top-in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px clamp(32px,6vw,96px);align-items:end}
+#sap .top-l{padding-bottom:calc(var(--skirt) + clamp(28px,3vw,44px))}
+#sap .top h1{font:600 clamp(46px,6vw,84px)/.96 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance;margin-bottom:24px}
+#sap .top .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.82);max-width:30em;margin-bottom:30px}
+#sap .stores{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+#sap .store{display:block;border-radius:12px;transition:transform .25s var(--ease),opacity .2s;-webkit-tap-highlight-color:transparent}
+#sap .store img{height:54px;width:auto}
+#sap .store:hover{transform:translateY(-2px)}
+#sap .store:active{transform:scale(.98)}
+#sap[data-os="ios"] .store.android,#sap[data-os="android"] .store.ios{display:none}
+#sap[data-os="ios"] .store img,#sap[data-os="android"] .store img{height:62px}
+#sap .other,#sap .desk{display:none}
+#sap[data-os="ios"] .other.for-ios,#sap[data-os="android"] .other.for-android{display:block}
+#sap[data-os="desktop"] .desk{display:block}
+#sap .other{margin-top:16px;font-size:16px;color:rgba(255,255,255,.66)}
+#sap .other a{font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.35)}
+#sap .other a:hover{text-decoration-color:currentColor}
+#sap .desk{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);max-width:34em}
+#sap .desk p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.7)}
+#sap .desk p b{font-weight:600;color:#fff}
+#sap .desk-a{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+#sap .pill{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:0;border-radius:999px;background:rgba(255,255,255,.1);font:600 13px/1 var(--hd);letter-spacing:.02em;color:#fff;cursor:pointer;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+#sap .pill svg{width:14px;height:14px}
+#sap .pill:hover{background:#fff;color:var(--ink)}
+#sap .find{margin-top:20px;font-size:15px;color:rgba(255,255,255,.56)}
+#sap .phones{display:flex;justify-content:center;align-items:flex-start;gap:clamp(14px,2vw,26px)}
+#sap .phone{position:relative;flex:none;width:clamp(150px,19vw,262px);padding:clamp(7px,.7vw,9px);border-radius:clamp(28px,3.4vw,44px);background:linear-gradient(160deg,#2b2b2b,#0b0b0b 60%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 0 0 1px rgba(0,0,0,.55),0 44px 80px -34px rgba(0,0,0,.7)}
+#sap .phone img{width:100%;aspect-ratio:600/1298;object-fit:cover;object-position:top;border-radius:clamp(21px,2.7vw,35px);background:#fff}
+#sap .phone:nth-child(2){margin-top:clamp(36px,4.4vw,64px)}
+@media (prefers-reduced-motion:no-preference){
+  #sap.js .top-l>*{animation:sap-up .9s var(--ease) both}
+  #sap.js .top-l>*:nth-child(2){animation-delay:.06s}
+  #sap.js .top-l>*:nth-child(3){animation-delay:.12s}
+  #sap.js .phone{opacity:0;transform:translateY(40px)}
+  #sap.js.ready .phone{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1.2s var(--ease);transition-delay:calc(var(--n) * 110ms + 120ms)}
+}
+@keyframes sap-up{from{opacity:0;transform:translateY(18px)}}
+
+/* ---------- what's inside ---------- */
+#sap .inside{padding-top:clamp(104px,11vw,150px)}
+#sap .feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,18px)}
+#sap .feat{display:flex;flex-direction:column;padding:clamp(22px,2.2vw,28px);border-radius:20px;background:var(--sand);min-width:0}
+#sap .feat h3{font:600 clamp(21px,1.9vw,24px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:10px}
+#sap .feat p{font-size:17px;line-height:1.55;color:var(--ink-2);margin-bottom:20px}
+#sap .where{margin-top:auto;padding-top:14px;border-top:1px solid rgba(125,106,63,.22);font:600 13px/1.3 var(--hd);letter-spacing:.02em;color:var(--gold-t)}
+
+/* ---------- springs app or bible app ---------- */
+#sap .cmp{background:var(--sand)}
+#sap .vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+#sap .vs>div{display:flex;flex-direction:column;padding:clamp(24px,2.8vw,36px);border-radius:20px;background:#fff;min-width:0}
+#sap .vs h3{font:600 clamp(22px,2.1vw,28px)/1.12 var(--hd);letter-spacing:-.02em;margin-bottom:8px}
+#sap .vs .for{font-size:17px;color:var(--ink-2);margin-bottom:18px}
+#sap .vs ul{display:grid;gap:10px;margin-bottom:26px}
+#sap .vs li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.45;color:var(--ink)}
+#sap .vs li svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--gold-t)}
+#sap .vs .acts{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px}
+#sap .help{margin-top:clamp(28px,3vw,40px);font-size:16px;color:var(--ink-2)}
+#sap .help a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #sap.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+  #sap.js .rv.in{opacity:1;transform:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  #sap .feats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  #sap .top-in,#sap .sec-h{grid-template-columns:1fr}
+  #sap .sec-h{align-items:start}
+  #sap .top-l{padding-bottom:8px}
+  #sap .phones{justify-content:flex-start}
+}
+@media (max-width:640px){
+  #sap{--top:128px;--skirt:110px}
+  #sap .phones{justify-content:center;gap:12px}
+  #sap .phone{width:calc((100% - 12px) / 2);max-width:200px;border-radius:30px;padding:7px}
+  #sap .phone img{border-radius:23px}
+  #sap .phone:nth-child(2){margin-top:32px}
+  #sap .feats,#sap .vs{grid-template-columns:1fr}
+  #sap .feats{gap:0;border-top:1px solid var(--line)}
+  #sap .feat{padding:18px 0 20px;border-radius:0;background:none;border-bottom:1px solid var(--line)}
+  #sap .feat h3{font-size:20px;margin-bottom:6px}
+  #sap .feat p{font-size:16px;margin-bottom:8px}
+  #sap .where{padding-top:0;border-top:0}
+  #sap .vs .acts .btn{flex:1 1 auto}
+  #sap .store img{height:50px}
+  #sap[data-os="ios"] .store img,#sap[data-os="android"] .store img{height:58px}
+  #sap .inside{padding-top:88px}
+}
+</style>
+
+<div id="sap">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sap-i-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sap-i-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sap-i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="11" height="11" rx="2.5"/><path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></g></symbol>
+    <symbol id="sap-i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="M4 7l8 6 8-6"/></g></symbol>
+  </svg>
+
+  <!-- hero: plain-words H1 (new), the live line, the visitor's store first -->
+  <header class="top">
+    <div class="wrap top-in">
+      <div class="top-l">
+        <h1><span class="tbd">Get the Springs Church App</span></h1>
+        <p class="lede">Download our app to access sermons, events, and resources that help you stay connected anytime, anywhere.</p>
+        <div class="get" id="sap-get">
+          <div class="stores">
+            <a class="store ios" href="https://apps.apple.com/us/app/springs-church-co/id1527155815" target="_blank" rel="noopener"><img src="https://media.thechurchcoassets.com/accounts/4185/5418d361-ca8e-468b-8d36-c4301127c6d6-./Download%20on%20App%20Store%201.png" alt="Download on the App Store" width="161" height="54"></a>
+            <a class="store android" href="https://play.google.com/store/apps/details?id=io.pushpay.springschurchcoloradosprings" target="_blank" rel="noopener"><img src="https://media.thechurchcoassets.com/accounts/4185/f83a346b-e653-4f4d-a30b-adb16c14fd02-./Download%20on%20Google%20Play%201.png" alt="Get it on Google Play" width="179" height="54"></a>
+          </div>
+          <p class="other for-ios">On Android? <a href="https://play.google.com/store/apps/details?id=io.pushpay.springschurchcoloradosprings" target="_blank" rel="noopener">Get it on Google Play</a></p>
+          <p class="other for-android">On an iPhone? <a href="https://apps.apple.com/us/app/springs-church-co/id1527155815" target="_blank" rel="noopener">Get it on the App Store</a></p>
+          <div class="desk">
+            <p><b><span class="tbd">On a computer?</span></b> <span class="tbd">Open this page on your phone to download the app, or send yourself the link.</span></p>
+            <div class="desk-a">
+              <button class="pill" type="button" data-copy><svg aria-hidden="true"><use href="#sap-i-copy"/></svg><span>Copy Link</span></button>
+              <a class="pill" href="mailto:?subject=Springs%20Church%20app&amp;body=Get%20the%20Springs%20Church%20app%3A%20https%3A%2F%2Fwww.springs.church%2Fdownload-app"><svg aria-hidden="true"><use href="#sap-i-mail"/></svg>Email Me the Link</a>
+            </div>
+          </div>
+          <p class="find"><span class="tbd">In the store it’s “Springs Church - CO” from The Springs Church, inc.</span></p>
+        </div>
+      </div>
+      <div class="phones">
+        <figure class="phone" style="--n:0"><img src="img/app-screen-media.jpg" alt="The app’s Media tab: Watch Online, Sunday Service live every Sunday at 10AM MT, Wednesday Prayer at 6:30PM MT and the Sermon Podcast" fetchpriority="high"></figure>
+        <figure class="phone" style="--n:1"><img src="img/app-screen-connect.jpg" alt="The app’s Connect tab: New Here?, Ministries, Upcoming Events and Groups"></figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- what's inside: only what the real screenshots show (Featured, Connect, Give, Media tabs) -->
+  <section class="sec inside" id="sap-inside" aria-labelledby="sap-inside-h">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2 class="h2" id="sap-inside-h">What’s Inside</h2>
+      </div>
+      <ul class="feats">
+        <li class="feat rv" style="--d:0">
+          <h3>Sunday Service</h3>
+          <p>Join us live every Sunday at 10AM MT for spirit-filled worship and a powerful message.</p>
+          <span class="where">Media tab</span>
+        </li>
+        <li class="feat rv" style="--d:1">
+          <h3>Sermons</h3>
+          <p><span class="tbd">Watch online or listen to the Sermon Podcast.</span></p>
+          <span class="where">Media tab</span>
+        </li>
+        <li class="feat rv" style="--d:2">
+          <h3>Events</h3>
+          <p><span class="tbd">See featured events and RSVP.</span></p>
+          <span class="where">Featured and Connect tabs</span>
+        </li>
+        <li class="feat rv" style="--d:3">
+          <h3>Groups and Ministries</h3>
+          <p><span class="tbd">Find a group or a ministry to join.</span></p>
+          <span class="where">Connect tab</span>
+        </li>
+        <li class="feat rv" style="--d:4">
+          <h3>Give</h3>
+          <p><span class="tbd">Give through Pushpay, the same system as our Give page.</span></p>
+          <span class="where">Give tab</span>
+        </li>
+        <li class="feat rv" style="--d:5">
+          <h3>New Here?</h3>
+          <p>Discover who we are and where our heart is.</p>
+          <span class="where">Connect tab</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- springs app or bible app: the menu has both (Download App, and Media > Bible App) -->
+  <section class="sec cmp" id="sap-vs" aria-labelledby="sap-vs-h">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2 class="h2" id="sap-vs-h">Springs App or Bible App?</h2>
+      </div>
+      <div class="vs">
+        <div class="rv" style="--d:0">
+          <h3>Springs Church App</h3>
+          <p class="for"><span class="tbd">Made by Springs Church.</span></p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg>Watch Sunday service live</li>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg>Sermons and the Sermon Podcast</li>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg>Events and RSVP</li>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg>Groups and ministries</li>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg>Giving</li>
+          </ul>
+          <div class="acts"><a class="btn" href="#sap-get">Get the App</a></div>
+        </div>
+        <div class="rv" style="--d:1">
+          <h3>Bible App (YouVersion)</h3>
+          <p class="for"><span class="tbd">The YouVersion Bible App.</span></p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg><span class="tbd">The Bible in many translations</span></li>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg><span class="tbd">Daily devotionals and reading plans</span></li>
+            <li><svg aria-hidden="true"><use href="#sap-i-ok"/></svg><span class="tbd">Springs Church as your community in the app</span></li>
+          </ul>
+          <div class="acts"><a class="btn line" href="https://www.springs.church/youversion">Bible App</a></div>
+        </div>
+      </div>
+      <p class="help rv"><span class="tbd">Questions about the app?</span> Email <a href="mailto:info@springs.church">info@springs.church</a> or call <a href="tel:+17194888331">(719) 488-8331</a>.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sap');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  root.classList.add('js');
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const PAGE = 'https://www.springs.church/download-app';
+
+  /* which store to put first: iPhone/iPad -> App Store, Android -> Google Play, anything else -> both + "open this on your phone".
+     ?os=ios|android|desktop previews each one. */
+  const ua = navigator.userAgent || '';
+  const forced = (new URLSearchParams(location.search).get('os') || '').toLowerCase();
+  const os = ['ios', 'android', 'desktop'].includes(forced) ? forced
+    : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1) ? 'ios'
+    : /Android/i.test(ua) ? 'android' : 'desktop';
+  root.dataset.os = os;
+
+  /* copy the page link (for someone on a computer) */
+  const copyBtn = $('[data-copy]');
+  copyBtn.addEventListener('click', async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(PAGE); ok = true; } catch (_) {
+      const i = document.createElement('textarea');
+      i.value = PAGE; i.setAttribute('readonly', ''); i.style.cssText = 'position:absolute;left:-9999px';
+      root.appendChild(i); i.select();
+      try { ok = document.execCommand('copy'); } catch (_) {}
+      i.remove();
+    }
+    const label = copyBtn.querySelector('span');
+    label.textContent = ok ? 'Link Copied' : 'springs.church/download-app';
+    setTimeout(() => { label.textContent = 'Copy Link'; }, 2400);
+  });
+
+  /* in-page links */
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sap-"]');
+    if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'center' });
+    const first = el.querySelector('a.store:not([style*="none"])');
+    if (first && getComputedStyle(first).display !== 'none') setTimeout(() => first.focus({ preventScroll: true }), reduceMotion.matches ? 0 : 500);
+  });
+
+  /* reveals */
+  const rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+
+  /* screens rise in once loaded (or after 1.5s) */
+  const imgs = $$('.phone img');
+  let left = imgs.length, done = false;
+  const ready = () => { if (done) return; done = true; requestAnimationFrame(() => root.classList.add('ready')); };
+  imgs.forEach(i => i.complete ? (--left <= 0 && ready()) : (i.addEventListener('load', () => --left <= 0 && ready()), i.addEventListener('error', () => --left <= 0 && ready())));
+  setTimeout(ready, 1500);
+})();
+</script>
+</section></main><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

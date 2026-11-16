@@ -1,0 +1,581 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('scn').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/connect ("Get Connected") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /connect untouched.
+     Source of truth: ~/Desktop/springs-connect-site/churchco/connect-block.html (preview: preview-live.html via build-preview.py).
+     Built from the Trello audit card for /connect (Website Updates, audit Oct 29): Kids, Youth and Young Adults now go to
+     kids. / youth. / ya.springs.church like the menu, the card is called "Kids" like the menu (Springs Kids named in its line),
+     the taglines are each new site's own headline, and a Plan a Visit bar (Sundays 10AM, Wednesdays 6:30PM, address + directions)
+     sits in the hero. Adds an "I'm looking for..." chooser, Care and Prayer cards, and Next Steps (Connect Over Coffee = CCB form #578
+     opening in place, Membership Class, Contact Us). Words are the church's own (live /connect, /about, the ministry sites).
+     <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook (10AM, 6:30PM). -->
+<style>
+.tcc-block:has(#scn){padding:0!important;background:#111!important}
+.tcc-block:has(#scn) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#scn) .row-defaults{padding:0!important}
+.tcc-block:has(#scn) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#scn{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#scn *{box-sizing:border-box}
+#scn :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#scn ul,#scn ol{list-style:none}
+#scn a{color:inherit;text-decoration:none}
+#scn img{display:block;max-width:100%}
+#scn button{font:inherit;color:inherit}
+#scn ::selection{background:var(--gold);color:var(--ink)}
+#scn .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#scn svg.i{width:16px;height:16px;flex:none}
+#scn .tbd{transition:background .2s}
+#scn.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#scn :is(p,li,dd){text-wrap:pretty}
+#scn [id^="scn-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+
+/* buttons + links: one set (same as /about, /servecopy, /missionscopy) */
+#scn .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#scn .btn:hover{background:#333}
+#scn .btn:active{transform:scale(.98)}
+#scn .btn.light{background:#fff;color:var(--ink)}
+#scn .btn.light:hover{background:var(--gold)}
+#scn .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#scn .btn.ghost:hover{background:#fff;color:var(--ink)}
+#scn .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#scn .btn.line:hover{background:var(--ink);color:#fff}
+#scn .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#scn .tl:hover{text-decoration-color:currentColor}
+#scn button.tl{background:none;border:0;padding:0;cursor:pointer}
+#scn :is(.btn,.tl,.chip,.path>a,.x,.step a,.plan a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+#scn .top :is(.btn,.tl):focus-visible{outline-color:var(--gold)}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#scn .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#scn .sec{padding:clamp(72px,9vw,120px) 0}
+#scn .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#scn .sec-h p{color:var(--ink-2);max-width:36em}
+
+/* ---------- hero: headline, Plan a Visit bar, and the chooser card riding the white skirt ---------- */
+#scn .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111;color:#fff}
+#scn .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(64px,6vw,88px);background:#fff;z-index:-1}
+#scn .top-in{display:grid;grid-template-columns:1.1fr 1fr;gap:24px clamp(32px,6vw,96px);align-items:end}
+#scn .top-in>*{min-width:0}
+#scn .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+#scn .top h1 i{font-style:normal;color:var(--gold)}
+#scn .top .lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:rgba(255,255,255,.84);max-width:26em;padding-bottom:6px}
+
+#scn .plan{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:stretch;margin-top:clamp(44px,5.5vw,72px);border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}
+#scn .plan h2{align-self:center;padding:22px clamp(18px,2.4vw,32px) 22px 0;font:600 18px/1.15 var(--hd);letter-spacing:.04em;text-transform:uppercase;color:#fff;white-space:nowrap}
+#scn .plan dl{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,.9fr) minmax(0,1.2fr)}
+#scn .plan dl>div{padding:22px clamp(16px,2vw,28px);border-left:1px solid rgba(255,255,255,.14);min-width:0}
+#scn .plan dt{font-size:15px;line-height:1.3;color:rgba(255,255,255,.62);margin-bottom:6px}
+#scn .plan dd b{display:block;font:600 22px/1.15 var(--hd);color:#fff;font-variant-numeric:tabular-nums}
+#scn .plan dd span{display:block;margin-top:5px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.62)}
+#scn .plan-go{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:18px 0 18px clamp(16px,2vw,28px);border-left:1px solid rgba(255,255,255,.14)}
+#scn .plan-go .tl{color:#fff;font-size:15px;text-decoration-color:rgba(255,255,255,.35)}
+
+#scn .pick{position:relative;display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,1fr);gap:16px clamp(24px,3vw,48px);align-items:center;margin-top:clamp(36px,4.5vw,56px);padding:clamp(22px,2.6vw,32px);border-radius:20px;background:#fff;color:var(--ink);box-shadow:0 30px 70px -24px rgba(0,0,0,.5),0 0 0 1px rgba(14,14,14,.06)}
+#scn .pick-t{font:600 clamp(22px,2vw,26px)/1.2 var(--hd);letter-spacing:-.015em;margin-bottom:6px}
+#scn .pick-s{font-size:16px;color:var(--ink-2)}
+#scn .chips{display:flex;flex-wrap:wrap;gap:10px}
+#scn .chip{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border:0;border-radius:999px;background:var(--soft);box-shadow:inset 0 0 0 1px rgba(14,14,14,.08);font:600 15px/1.1 var(--hd);color:var(--ink);cursor:pointer;text-align:left;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#scn .chip svg{width:14px;height:14px;flex:none;display:none}
+#scn .chip:active{transform:scale(.97)}
+#scn .chip[aria-pressed="true"]{background:var(--ink);color:#fff;box-shadow:none}
+#scn .chip[aria-pressed="true"] svg{display:block}
+@media (hover:hover){#scn .chip:hover{background:#ebe9e4}#scn .chip[aria-pressed="true"]:hover{background:#333}}
+
+/* ---------- pathways: one card component ---------- */
+#scn .path-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;min-height:28px;margin:-16px 0 20px;font-size:16px;color:var(--ink-2)}
+#scn .path-bar:empty{min-height:0;margin:0}
+#scn .path-bar b{font-weight:600;color:var(--ink)}
+#scn .paths{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,18px);scroll-margin-top:calc(var(--hdr) + 20px)}
+#scn .path{min-width:0;scroll-margin-top:calc(var(--hdr) + 20px);transition:opacity .5s var(--ease),filter .5s var(--ease)}
+#scn .path>a{display:flex;flex-direction:column;height:100%;padding:10px 10px 22px;border-radius:20px;background:var(--sand);transition:box-shadow .35s var(--ease),background .2s;-webkit-tap-highlight-color:transparent}
+#scn .path .ph{aspect-ratio:4/3;border-radius:13px;overflow:hidden;background:var(--shot);margin-bottom:18px}
+#scn .path img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+#scn .path .tx{display:flex;flex-direction:column;flex:1;padding:0 10px}
+#scn .path h3{font:600 clamp(21px,1.9vw,24px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:8px}
+#scn .path p{font-size:17px;line-height:1.5;color:var(--ink-2);margin-bottom:16px}
+#scn .when{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+#scn .when li{display:inline-flex;align-items:center;min-height:30px;padding:0 11px;border-radius:999px;background:#fff;font:600 13px/1.1 var(--hd);letter-spacing:.01em;color:var(--ink)}
+#scn .path .more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase}
+#scn .path .more svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+@media (hover:hover){#scn .path>a:hover img{transform:scale(1.04)}#scn .path>a:hover .more svg{transform:translateX(3px)}}
+#scn .paths.picking .path:not(.hit){opacity:.36;filter:grayscale(.7)}
+#scn .path.hit>a{box-shadow:0 0 0 3px var(--gold-t)}
+
+/* ---------- what to expect (the one dark band) ---------- */
+#scn .expect{background:#111;color:#fff}
+#scn .expect .h2{color:#fff}
+#scn .expect .sec-h p{color:rgba(255,255,255,.74)}
+#scn .exp-in{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:stretch}
+#scn .exp-pic{position:relative;min-height:380px;border-radius:20px;overflow:hidden;background:#222}
+#scn .exp-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+#scn .exp-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,44px)}
+#scn .exp-list li{padding:22px 0 28px;border-top:1px solid rgba(255,255,255,.22)}
+#scn .exp-list h3{font:600 20px/1.2 var(--hd);letter-spacing:-.01em;margin-bottom:8px}
+#scn .exp-list p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.76)}
+
+/* ---------- next steps ---------- */
+#scn .coffee-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center}
+#scn .coffee-pic{aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--shot)}
+#scn .coffee-pic img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+#scn .coffee h3{font:600 clamp(26px,2.6vw,34px)/1.1 var(--hd);letter-spacing:-.02em;margin-bottom:16px}
+#scn .coffee p{color:var(--ink-2);max-width:32em}
+#scn .coffee .acts{display:flex;flex-wrap:wrap;margin-top:28px;align-items:center;gap:14px 22px}
+#scn .coffee small{display:block;margin-top:14px;font-size:15px;color:var(--ink-3)}
+#scn .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px clamp(24px,5vw,72px);margin-top:clamp(56px,7vw,96px)}
+#scn .step{display:flex;flex-direction:column;align-items:flex-start;padding-top:24px;border-top:1px solid var(--ink)}
+#scn .step h3{font:600 clamp(22px,2vw,26px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:10px}
+#scn .step p{color:var(--ink-2);max-width:32em}
+#scn .step dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 18px;margin:18px 0 24px;font-size:17px;line-height:1.45}
+#scn .step dt{font:600 15px/1.45 var(--hd);color:var(--ink)}
+#scn .step dd{color:var(--ink-2)}
+#scn .step dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#scn .step dd a:hover{text-decoration-color:currentColor}
+#scn .step .btn{margin-top:auto}
+
+/* ---------- app band (slim) ---------- */
+#scn .app{background:var(--sand);padding:clamp(40px,5vw,60px) 0}
+#scn .app-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px 40px}
+#scn .app-in>div:first-child{flex:1 1 380px;min-width:0}
+#scn .app .h2{font-size:clamp(24px,2.4vw,30px);margin-bottom:8px}
+#scn .app p{color:var(--ink-2);max-width:34em}
+#scn .app .acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #scn.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+  #scn.js .rv.in{opacity:1;transform:none}
+  #scn.js .top-in>*,#scn.js .plan,#scn.js .pick{opacity:0;transform:translateY(18px)}
+  #scn.js.ready .top-in>*,#scn.js.ready .plan,#scn.js.ready .pick{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--n,0) * 90ms + 80ms)}
+}
+@media (prefers-reduced-motion:reduce){#scn .path{transition:none}}
+
+/* ---------- form dialog (CCB #578) ---------- */
+html.scn-lock{overflow:hidden}
+#scn dialog{border:0;padding:0;margin:auto;width:min(720px,calc(100vw - 16px));height:min(900px,calc(100dvh - 16px));max-height:none;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+#scn dialog[open]{display:flex;flex-direction:column;animation:scn-in .45s var(--ease)}
+#scn dialog::backdrop{background:rgba(8,8,8,.62)}
+@keyframes scn-in{from{opacity:0;transform:translateY(14px) scale(.985)}}
+#scn .dlg-h{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border-bottom:1px solid var(--line)}
+#scn .dlg-h b{flex:1;min-width:0;font:600 17px/1.3 var(--hd)}
+#scn .dlg-h .tl{font-size:14px;white-space:nowrap}
+#scn .x{all:unset;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--soft);cursor:pointer;transition:background .2s}
+#scn .x:hover{background:#e9e9e7}
+#scn .x svg{width:18px;height:18px}
+#scn dialog iframe{flex:1;width:100%;border:0;background:#fff}
+#scn .thanks{display:none;padding:clamp(32px,5vw,52px) clamp(22px,4vw,44px);text-align:center}
+#scn dialog.done .thanks{display:block}
+#scn dialog.done iframe,#scn dialog.done .dlg-h .tl{display:none}
+#scn dialog.done{height:auto}
+#scn .thanks .ok{width:54px;height:54px;margin:0 auto 18px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--gold-t)}
+#scn .thanks .ok svg{width:24px;height:24px}
+#scn .thanks h3{font:600 24px/1.25 var(--hd);margin-bottom:10px;outline:0}
+#scn .thanks p{color:var(--ink-2);max-width:28em;margin:0 auto 24px}
+#scn .thanks .acts{display:flex;justify-content:center}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  #scn .plan{grid-template-columns:minmax(0,1fr) auto}
+  #scn .plan h2{grid-column:1/-1;padding:20px 0 0}
+  #scn .plan dl>div:first-child{border-left:0;padding-left:0}
+}
+@media (max-width:1000px){
+  #scn .paths{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #scn .exp-in{grid-template-columns:1fr}
+  #scn .exp-pic{min-height:0;aspect-ratio:16/9}
+}
+@media (max-width:900px){
+  #scn .top-in,#scn .sec-h,#scn .coffee-in{grid-template-columns:1fr}
+  #scn .sec-h{align-items:start}
+  #scn .coffee-pic{aspect-ratio:16/10}
+  #scn .plan{grid-template-columns:1fr}
+  #scn .pick{grid-template-columns:1fr}
+  #scn .plan dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #scn .plan dl>div{padding:18px 16px 18px 0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  #scn .plan dl>div:nth-child(2){padding-left:16px;border-left:1px solid rgba(255,255,255,.14)}
+  #scn .plan dl>div:nth-child(3){grid-column:1/-1}
+  #scn .plan h2{padding:20px 0 16px}
+  #scn .plan-go{flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:18px 0 22px;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+}
+@media (max-width:640px){
+  #scn{--top:128px}
+  #scn .top h1{font-size:clamp(46px,13vw,60px)}
+  #scn .plan dd b{font-size:20px}
+  #scn .plan-go .btn{flex:1 1 100%}
+  #scn .pick{margin-left:calc(var(--pad) * -.4);margin-right:calc(var(--pad) * -.4)}
+  #scn .chip{min-height:44px;padding:0 15px;font-size:14px}
+  #scn .paths{grid-template-columns:1fr;gap:10px}
+  #scn .path>a{display:grid;grid-template-columns:104px minmax(0,1fr);gap:0 14px;padding:10px 12px 10px 10px;align-items:start}
+  #scn .path .ph{aspect-ratio:1;margin:0;border-radius:11px;grid-row:1/3}
+  #scn .path .tx{padding:4px 0 6px}
+  #scn .path h3{font-size:20px;margin-bottom:4px}
+  #scn .path p{font-size:16px;margin-bottom:10px}
+  #scn .when li{min-height:26px;padding:0 9px;font-size:12px}
+  #scn .path .more{margin-top:12px}
+  #scn .exp-list{grid-template-columns:1fr}
+  #scn .exp-list li{padding:18px 0 20px}
+  #scn .steps{grid-template-columns:1fr;gap:40px}
+  #scn .step dl{grid-template-columns:1fr;gap:2px}
+  #scn .step dd+dt{margin-top:10px}
+  #scn .coffee .acts .btn,#scn .app .acts .btn{flex:1 1 auto}
+  #scn .dlg-h{padding-left:16px;gap:8px}
+}
+</style>
+
+<div id="scn">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="scn-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="scn-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="scn-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- hero: the live headline + line, Plan a Visit (Trello: no service times or address on the page), and the chooser -->
+  <header class="top">
+    <div class="wrap">
+      <div class="top-in">
+        <h1 style="--n:0">A Place For <i>You</i></h1>
+        <p class="lede" style="--n:1">No matter where you are in your faith journey, you can find a place to belong, grow, and serve.</p>
+      </div>
+
+      <section class="plan" id="scn-visit" aria-labelledby="scn-visit-h" style="--n:2">
+        <h2 id="scn-visit-h">Plan a Visit</h2>
+        <dl>
+          <div><dt>Sundays</dt><dd><b>10AM</b><span>Worship and teaching, plus Springs Kids</span></dd></div>
+          <div><dt>Wednesdays</dt><dd><b>6:30PM</b><span>Prayer night, kids and youth</span></dd></div>
+          <div><dt>Find Us</dt><dd><b>1515 Auto Mall Loop</b><span>Colorado Springs, CO 80920</span></dd></div>
+        </dl>
+        <div class="plan-go">
+          <a class="btn light" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
+          <a class="tl" href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Or watch online</a>
+        </div>
+      </section>
+
+      <div class="pick" role="group" aria-labelledby="scn-pick-t" style="--n:3">
+        <div>
+          <p class="pick-t" id="scn-pick-t">I’m looking for…</p>
+        </div>
+        <div class="chips">
+          <button class="chip" type="button" aria-pressed="false" data-pick="kids"><svg aria-hidden="true"><use href="#scn-ok"/></svg>Something for My Kids</button>
+          <button class="chip" type="button" aria-pressed="false" data-pick="students"><svg aria-hidden="true"><use href="#scn-ok"/></svg>Something for Students</button>
+          <button class="chip" type="button" aria-pressed="false" data-pick="age"><svg aria-hidden="true"><use href="#scn-ok"/></svg>People My Age</button>
+          <button class="chip" type="button" aria-pressed="false" data-pick="group"><svg aria-hidden="true"><use href="#scn-ok"/></svg>A Small Group</button>
+          <button class="chip" type="button" aria-pressed="false" data-pick="serve"><svg aria-hidden="true"><use href="#scn-ok"/></svg>A Place to Serve</button>
+          <button class="chip" type="button" aria-pressed="false" data-pick="care"><svg aria-hidden="true"><use href="#scn-ok"/></svg>Prayer or Care</button>
+          <button class="chip" type="button" aria-pressed="false" data-pick="missions"><svg aria-hidden="true"><use href="#scn-ok"/></svg>Missions</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- pathways: Groups, Serve, Kids, Youth, Young Adults, Missions (the menu), plus Care and Prayer. data-tags = chooser keys -->
+  <section class="sec" id="scn-paths" aria-labelledby="scn-paths-h" style="padding-top:clamp(56px,6vw,84px)">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="scn-paths-h">Get Connected</h2>
+      </div>
+      <p class="path-bar" id="scn-path-bar" role="status" aria-live="polite"></p>
+      <ul class="paths">
+        <li class="path rv" style="--d:0" data-tags="group age">
+          <a href="../groups/">
+            <div class="ph"><img src="img/scn-groups.jpg" alt="A circle of adults praying together in the auditorium, hands on one another’s shoulders" loading="lazy"></div>
+            <div class="tx">
+              <h3>Groups</h3>
+              <p>Join a small group today to build community and grow deeper in your faith with others.</p>
+              <ul class="when"><li><span class="tbd">Days vary by group</span></li><li><span class="tbd">Homes + the church</span></li></ul>
+              <span class="more">Find a Group <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:1" data-tags="serve">
+          <a href="../serve/">
+            <div class="ph"><img src="img/scn-serve.jpg" alt="A volunteer in a blue lanyard smiles as she carries bags of food to a car at a drive-thru food distribution" loading="lazy"></div>
+            <div class="tx">
+              <h3>Serve</h3>
+              <p>Find meaningful ways to serve and make a difference in your church family.</p>
+              <ul class="when"><li><span class="tbd">Sundays + Wednesdays</span></li><li><span class="tbd">Local outreach</span></li></ul>
+              <span class="more">Find a Team <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:2" data-tags="kids">
+          <a href="https://kids.springs.church">
+            <div class="ph"><img src="img/scn-kids.jpg" alt="A Springs Kids volunteer reads a picture book in the toddler room" loading="lazy"></div>
+            <div class="tx">
+              <h3>Kids</h3>
+              <p>Where your kids are known, safe, and loved. <span class="tbd">Springs Kids is for babies through grade 5.</span></p>
+              <ul class="when"><li>Sundays 10AM</li><li>Wednesdays 6:30PM</li></ul>
+              <span class="more">Visit Springs Kids <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:3" data-tags="students">
+          <a href="https://youth.springs.church">
+            <div class="ph"><img src="img/scn-youth.jpg" alt="Students fill the auditorium before a youth night, with a countdown on the screen" loading="lazy"></div>
+            <div class="tx">
+              <h3>Youth</h3>
+              <p>Faith for real life. <span class="tbd">Rooted for middle school and Anthem for high school.</span></p>
+              <ul class="when"><li>Wednesdays 6:30PM</li><li>Rooted + Anthem</li></ul>
+              <span class="more">Visit Youth <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:0" data-tags="age group">
+          <a href="https://ya.springs.church">
+            <div class="ph"><img src="img/scn-ya.jpg" alt="Three young adults smile together in the church parking lot at night" loading="lazy" style="object-position:50% 70%"></div>
+            <div class="tx">
+              <h3>Young Adults</h3>
+              <p>Life’s better with you in it. <span class="tbd">Fridays in the Garage, plus coffee, hiking, books, board games and supper clubs.</span></p>
+              <ul class="when"><li>Fridays 7PM</li><li>The Garage</li></ul>
+              <span class="more">Visit Young Adults <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:1" data-tags="missions serve">
+          <a href="../missions/">
+            <div class="ph"><img src="img/scn-missions.jpg" alt="A mission team builds a home with metal roofing panels under palm trees" loading="lazy"></div>
+            <div class="tx">
+              <h3>Missions</h3>
+              <p>Making an impact locally and globally.</p>
+              <ul class="when"><li><span class="tbd">Colorado Springs</span></li><li><span class="tbd">Around the world</span></li></ul>
+              <span class="more">See Missions <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:2" data-tags="care">
+          <a href="../care/">
+            <div class="ph"><img src="img/scn-care.jpg" alt="A husband and wife lean into each other with their eyes closed" loading="lazy" style="object-position:40% 40%"></div>
+            <div class="tx">
+              <h3>Care</h3>
+              <p><span class="tbd">From new babies to hospital stays, our church family walks with one another through every season.</span></p>
+              <ul class="when"><li><span class="tbd">Meals, visits + prayer</span></li></ul>
+              <span class="more">Ask for Care <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+        <li class="path rv" style="--d:3" data-tags="care">
+          <a href="../prayer/">
+            <div class="ph"><img src="img/scn-prayer.jpg" alt="A man lays a hand on another man’s shoulder and prays for him during service" loading="lazy" style="object-position:62% 40%"></div>
+            <div class="tx">
+              <h3>Prayer</h3>
+              <p><span class="tbd">Whatever you’re carrying, you don’t have to carry it alone.</span></p>
+              <ul class="when"><li>Wednesdays 6:30PM</li><li><span class="tbd">Sundays at the altar</span></li></ul>
+              <span class="more">Pray With Us <svg aria-hidden="true"><use href="#scn-arr"/></svg></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- what to expect: the six live items, word for word -->
+  <section class="sec expect" id="scn-expect" aria-labelledby="scn-expect-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="scn-expect-h">What to Expect</h2>
+        <p>An opportunity to meet new friends, draw closer to Jesus and be encouraged to live more passionately for God.</p>
+      </div>
+      <div class="exp-in">
+        <div class="exp-pic rv"><img src="img/scn-worship.jpg" alt="The worship team leads the church on stage under blue and gold lights" loading="lazy"></div>
+        <ul class="exp-list">
+          <li class="rv" style="--d:0"><h3>A Warm Welcome</h3><p>Friendly faces ready to greet you and help you feel at home.</p></li>
+          <li class="rv" style="--d:1"><h3>Biblical Teaching</h3><p>Christ-centered messages you can apply to daily life.</p></li>
+          <li class="rv" style="--d:0"><h3>Engaging Worship</h3><p>Spirit-filled praise that draws your heart closer to God.</p></li>
+          <li class="rv" style="--d:1"><h3>Dynamic Prayer</h3><p>Talking to God by aligning our faith with his promises.</p></li>
+          <li class="rv" style="--d:0"><h3>Authentic Community</h3><p>Connect with others and build meaningful relationships.</p></li>
+          <li class="rv" style="--d:1"><h3>Safe Kids Ministry</h3><p>A fun and secure place for children to learn about Jesus.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- next steps: Connect Over Coffee (form #578 opens in place), Membership Class, Contact Us -->
+  <section class="sec" id="scn-next" aria-labelledby="scn-next-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="scn-next-h">Next Steps</h2>
+      </div>
+      <div class="coffee coffee-in" id="scn-coffee">
+        <div class="coffee-pic rv"><img src="img/scn-coffee.jpg" alt="A barista hands a coffee across the counter at the Springs coffee bar" loading="lazy"></div>
+        <div class="rv" style="--d:1">
+          <h3>Connect Over Coffee</h3>
+          <p>Let’s Connect Over Coffee before service on Sunday morning. If you’ve been here for ten days, ten months or even ten years, we invite everyone at Springs Church to join us for a cup of brew!</p>
+          <div class="acts">
+            <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/578/responses/new" data-form>Let’s Chat</a>
+            <a class="tl" href="../care/">Need care now? <svg class="i" aria-hidden="true"><use href="#scn-arr"/></svg></a>
+          </div>
+          <small><span class="tbd">Someone from our team will reach out to set a time.</span></small>
+        </div>
+      </div>
+      <div class="steps">
+        <article class="step rv" aria-labelledby="scn-member-h">
+          <h3 id="scn-member-h">Membership Class</h3>
+          <p><span class="tbd">For anyone ready to make Springs their home church. Membership is also required to lead a group.</span></p>
+          <dl>
+            <dt>Next Class</dt><dd><span data-next-class="2026-12-09">Wednesday, December 9</span>, 6:30PM</dd>
+            <dt>Where</dt><dd>The Green Room</dd>
+            <dt>Meets</dt><dd><span class="tbd">2nd Wednesday of each month</span></dd>
+          </dl>
+          <a class="btn line" href="https://www.springs.church/event/membership-class">Event Details</a>
+        </article>
+        <article class="step rv" style="--d:1" aria-labelledby="scn-contact-h">
+          <h3 id="scn-contact-h">Contact Us</h3>
+          <p><span class="tbd">Not sure where to start? Call or email the church office.</span></p>
+          <dl>
+            <dt>Call</dt><dd><a href="tel:+17194888331">(719) 488-8331</a></dd>
+            <dt>Email</dt><dd><a href="mailto:info@springs.church">info@springs.church</a></dd>
+            <dt>Office</dt><dd>Tuesday–Thursday, 9AM–5PM</dd>
+          </dl>
+          <a class="btn line" href="../contact/">Contact Us</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- the app: slim band -->
+  <section class="app" aria-labelledby="scn-app-h">
+    <div class="wrap app-in">
+      <div>
+        <h2 class="h2" id="scn-app-h">Get Connected Anywhere</h2>
+        <p>Download our app to access sermons, events, and resources that help you stay connected anytime, anywhere.</p>
+      </div>
+      <div class="acts">
+        <a class="btn" href="https://apps.apple.com/us/app/springs-church-co/id1527155815" target="_blank" rel="noopener">App Store</a>
+        <a class="btn line" href="https://play.google.com/store/apps/details?id=io.pushpay.springschurchcoloradosprings" target="_blank" rel="noopener">Google Play</a>
+        <a class="tl" href="../app/">About the App <svg class="i" aria-hidden="true"><use href="#scn-arr"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="scn-dlg" aria-labelledby="scn-dlg-t">
+    <div class="dlg-h"><b id="scn-dlg-t">Connect Over Coffee</b><a class="tl" href="https://springschurch.ccbchurch.com/goto/forms/578/responses/new" target="_blank" rel="noopener">Open in New Tab</a><button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#scn-x"/></svg></button></div>
+    <iframe id="scn-dlg-f" title="Connect Over Coffee form"></iframe>
+    <div class="thanks">
+      <div class="ok"><svg aria-hidden="true"><use href="#scn-ok"/></svg></div>
+      <h3 tabindex="-1">Thanks. We’ll see you for coffee.</h3>
+      <p><span class="tbd">Someone from our team will reach out soon to find a Sunday that works.</span></p>
+      <div class="acts"><button class="btn" type="button" data-close>Done</button></div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('scn');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  root.classList.add('js');
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const phone = matchMedia('(max-width: 640px)');
+  const go = (el, block) => el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: block || 'start' });
+
+  /* in-page links */
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#scn-"]');
+    if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    go(el);
+    history.replaceState(null, '', a.getAttribute('href'));
+  });
+
+  /* reveals */
+  const rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+
+  /* "I'm looking for..." chooser: one chip at a time (press again to clear). Matching cards stay bright, the rest step back,
+     the page glides to the cards and focus lands on the first match so keyboard and screen reader users arrive with it. */
+  const chips = $$('.chip'), cards = $$('.path'), grid = $('.paths'), bar = $('#scn-path-bar');
+  const nameOf = c => c.querySelector('h3').textContent.trim();
+  const listOf = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+  function clearPick(focusChip) {
+    const was = chips.find(c => c.getAttribute('aria-pressed') === 'true');
+    chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+    grid.classList.remove('picking');
+    cards.forEach(c => c.classList.remove('hit'));
+    bar.textContent = '';
+    if (focusChip && was) was.focus({ preventScroll: true }), go(root.querySelector('.pick'), 'center');
+  }
+  function pick(chip) {
+    if (chip.getAttribute('aria-pressed') === 'true') return clearPick(false);
+    chips.forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+    const key = chip.dataset.pick;
+    const hits = cards.filter(c => c.dataset.tags.split(' ').includes(key));
+    cards.forEach(c => c.classList.toggle('hit', hits.includes(c)));
+    grid.classList.add('picking');
+    bar.textContent = '';
+    const msg = document.createElement('span');
+    const b = document.createElement('b');
+    b.textContent = chip.textContent.trim();
+    msg.append(b, ': start with ' + listOf(hits.map(nameOf)) + '.');
+    const back = document.createElement('button');
+    back.type = 'button'; back.className = 'tl'; back.textContent = 'Show All';
+    back.addEventListener('click', () => clearPick(true));
+    bar.append(msg, back);
+    const first = hits[0];
+    if (!first) return;
+    first.querySelector('a').focus({ preventScroll: true });
+    go(phone.matches ? first : bar, 'start');
+  }
+  chips.forEach(c => c.addEventListener('click', () => pick(c)));
+
+  /* Membership Class: the events calendar lists Wed Dec 9, 2026. After that date passes, roll forward to the next
+     2nd Wednesday (Colorado time) so the page never shows a past class. ?now=YYYY-MM-DD previews another day. */
+  const nc = $('[data-next-class]');
+  if (nc) {
+    const pad = n => String(n).padStart(2, '0');
+    const q = new URLSearchParams(location.search).get('now');
+    const today = /^\d{4}-\d{2}-\d{2}$/.test(q || '') ? q : new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    const secondWed = (y, m) => { const first = new Date(Date.UTC(y, m - 1, 1)).getUTCDay(); return `${y}-${pad(m)}-${pad(1 + ((3 - first + 7) % 7) + 7)}`; };
+    let next = nc.dataset.nextClass;
+    if (today > next) {
+      let [y, m] = today.split('-').map(Number);
+      for (let k = 0; k < 3; k++) { const d = secondWed(y, m); if (d >= today) { next = d; break; } if (++m > 12) { m = 1; y++; } }
+      nc.textContent = new Date(next + 'T12:00:00Z').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
+    }
+  }
+
+  /* Connect Over Coffee: CCB form #578 in a dialog; CCB sends people to springs.church after submit, so catch that and say thanks */
+  const dlg = $('#scn-dlg'), frame = $('#scn-dlg-f');
+  const FORM = 'https://springschurch.ccbchurch.com/goto/forms/578/responses/new';
+  const landedHome = fr => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  root.addEventListener('click', e => {
+    const b = e.target.closest('[data-form]');
+    if (!b || typeof dlg.showModal !== 'function' || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    dlg.classList.remove('done');
+    if (frame.getAttribute('src') !== FORM) frame.src = FORM;
+    dlg.showModal();
+    dlg.querySelector('.x').focus();
+    document.documentElement.classList.add('scn-lock');
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+  dlg.addEventListener('close', () => {
+    document.documentElement.classList.remove('scn-lock');
+    if (dlg.classList.contains('done')) { dlg.classList.remove('done'); frame.removeAttribute('src'); }
+  });
+  frame.addEventListener('load', () => {
+    if (!landedHome(frame)) return;
+    frame.src = 'about:blank';
+    dlg.classList.add('done');
+    dlg.querySelector('.thanks h3').focus();
+  });
+
+  /* hero load-in */
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
+})();
+</script>
+</section></main><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

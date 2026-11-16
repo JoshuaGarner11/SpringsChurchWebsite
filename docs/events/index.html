@@ -1,0 +1,792 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sev').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/events ("Events") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /events untouched.
+     Source of truth: ~/Desktop/springs-events-site/churchco/events-block.html (preview: preview-live.html via build-preview.py).
+     Built from the Creative Board card "Events Page" (Website Updates, audit Oct 29): newsletter Sign Up is https now, the intro reads
+     "See what's coming up and register.", and the calendar keeps itself current: this block READS ChurchCo's own Events block placed
+     AFTER it on the same page and draws its own layout from it (staff keep adding events in ChurchCo as they do now). The native block is
+     hidden only on springs.church / localhost and never inside an iframe (ChurchCo's editor), so editors still see and edit it.
+     It never calls ChurchCo's API and never reads a page or session token: it only reads what the native block already put on the page.
+     Event loading sits behind one small adapter (loaders return plain events, render() draws them) so the page can run without ChurchCo later.
+     <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook (10AM, 6:30PM). -->
+<style>
+.tcc-block:has(#sev){padding:0!important;background:#111!important}
+.tcc-block:has(#sev) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sev) .row-defaults{padding:0!important}
+.tcc-block:has(#sev) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sev{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sev *{box-sizing:border-box}
+#sev :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sev ul,#sev ol{list-style:none}
+#sev a{color:inherit;text-decoration:none}
+#sev img{display:block;max-width:100%}
+#sev button{font:inherit;color:inherit}
+#sev ::selection{background:var(--gold);color:var(--ink)}
+#sev [hidden]{display:none!important}
+#sev .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sev svg.i{width:16px;height:16px;flex:none}
+#sev .vh{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+#sev .tbd{transition:background .2s}
+#sev.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#sev :is(p,li,dd){text-wrap:pretty}
+#sev [id^="sev-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+
+/* buttons + links: one set (same as /about, /servecopy, /missionscopy) */
+#sev .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sev .btn:hover{background:#333}
+#sev .btn:active{transform:scale(.98)}
+#sev .btn.light{background:#fff;color:var(--ink)}
+#sev .btn.light:hover{background:var(--gold)}
+#sev .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#sev .btn.ghost:hover{background:#fff;color:var(--ink)}
+#sev .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sev .btn.line:hover,#sev .btn.line[aria-expanded="true"]{background:var(--ink);color:#fff}
+#sev .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sev .tl:hover{text-decoration-color:currentColor}
+#sev :is(.btn,.tl,.go a,.pill,.chips button,.ev h4 a,.nx-t a,.cal-m a,.wk-f a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sev .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#sev .sec{padding:clamp(72px,9vw,120px) 0}
+#sev .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sev .sec-h p{color:var(--ink-2);max-width:36em}
+
+/* ---------- hero + next up ---------- */
+#sev .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
+#sev .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(120px,14vw,190px);background:#fff;z-index:-1}
+#sev .top-in{display:grid;grid-template-columns:1.1fr 1fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+#sev .top-in>*{min-width:0}
+#sev .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+#sev .top .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.82);margin-bottom:28px;max-width:34em}
+#sev .acts{display:flex;flex-wrap:wrap;gap:12px}
+#sev .next{margin-top:clamp(44px,5.5vw,72px)}
+#sev .nx{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(12px,1.2vw,16px) clamp(20px,3.4vw,48px) clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px);border-radius:24px;background:#fff;box-shadow:0 0 0 1px rgba(14,14,14,.05),0 34px 70px -38px rgba(0,0,0,.6)}
+#sev .nx>*{min-width:0}
+#sev .nx-pic{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--soft);isolation:isolate}
+#sev .nx-pic img{width:100%;height:100%;object-fit:cover}
+#sev .nx-pic figcaption{position:absolute;left:12px;top:12px;z-index:2;padding:9px 13px;border-radius:999px;background:rgba(14,14,14,.7);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
+#sev .nx-ph{position:absolute;inset:0;display:grid;place-content:center;text-align:center;background:var(--sand);color:var(--gold-t)}
+#sev .nx-ph b{display:block;font:600 clamp(64px,7vw,96px)/.9 var(--hd);letter-spacing:-.04em;color:var(--ink)}
+#sev .nx-ph span{display:block;margin-top:8px;font:600 16px/1 var(--hd)}
+#sev .nx-b{padding:clamp(6px,1vw,12px) 0}
+#sev .nx-t{font:600 clamp(28px,3vw,42px)/1.06 var(--hd);letter-spacing:-.022em;color:var(--ink);text-wrap:balance}
+#sev .nx-t a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--ease)}
+#sev .nx-t a:hover{background-size:100% 1.5px}
+#sev .nx .tag{margin-top:12px}
+#sev .nx-dl{display:grid;gap:9px;margin:20px 0 24px}
+#sev .nx-dl dd{display:flex;align-items:flex-start;gap:12px;font-size:17px;line-height:1.45;color:var(--ink-2)}
+#sev .nx-dl svg{width:18px;height:18px;flex:none;margin-top:1px;color:var(--gold-t)}
+#sev .nx-dl .rel{color:var(--ink);font-weight:600}
+#sev .nx-d{font-size:17px;line-height:1.55;color:var(--ink-2);margin:-8px 0 22px;max-width:32em}
+#sev .nx-empty{grid-template-columns:1fr;padding:clamp(28px,4vw,52px)}
+#sev .nx-empty .nx-t{margin-bottom:12px}
+#sev .nx-empty p{color:var(--ink-2);max-width:36em;margin-bottom:24px}
+#sev .nx-empty small{display:block;margin-top:18px;font-size:15px;color:var(--ink-3)}
+
+/* category pill (one style everywhere) */
+#sev .tag{display:inline-flex;align-items:center;min-height:26px;padding:0 10px;border-radius:999px;background:var(--sand);font:600 12px/1 var(--hd);letter-spacing:.02em;color:var(--gold-t)}
+
+/* ---------- add to calendar ---------- */
+#sev .cal{position:relative;display:inline-flex}
+#sev .pill{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 14px;border:0;border-radius:999px;background:var(--soft);font:600 13px/1 var(--hd);letter-spacing:.02em;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+#sev .pill svg{width:14px;height:14px}
+#sev .pill:hover,#sev .pill[aria-expanded="true"]{background:var(--ink);color:#fff}
+#sev .cal-m{position:absolute;left:0;top:calc(100% + 8px);z-index:30;display:flex;flex-direction:column;min-width:250px;padding:6px;border-radius:14px;background:#fff;box-shadow:0 0 0 1px var(--line),0 22px 50px -14px rgba(0,0,0,.35)}
+#sev .cal-m a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;padding:0 12px;border-radius:10px;font:600 15px/1.2 var(--bd);color:var(--ink);transition:background .15s}
+#sev .cal-m a:hover{background:var(--soft)}
+#sev .cal-m small{font-size:13px;font-weight:400;color:var(--ink-3)}
+@media (prefers-reduced-motion:no-preference){#sev .cal-m:not([hidden]){animation:sev-pop .22s var(--ease)}}
+@keyframes sev-pop{from{opacity:0;transform:translateY(-4px) scale(.98)}}
+
+/* ---------- the calendar ---------- */
+#sev .cal-sec{padding-top:clamp(64px,8vw,104px)}
+#sev .chips{display:flex;flex-wrap:wrap;gap:8px;margin:-12px 0 clamp(28px,3.4vw,40px)}
+#sev .chips button{min-height:40px;padding:0 16px;border:0;border-radius:999px;background:var(--soft);font:600 14px/1 var(--hd);letter-spacing:.01em;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+#sev .chips button:hover{background:#e9e9e7}
+#sev .chips button[aria-pressed="true"]{background:var(--ink);color:#fff}
+#sev .mo+.mo{margin-top:clamp(40px,4.6vw,60px)}
+#sev .mo-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+#sev .mo-h h3{font:600 clamp(21px,1.9vw,24px)/1.2 var(--hd);letter-spacing:-.015em}
+#sev .mo-h small{font-size:15px;color:var(--ink-3);white-space:nowrap}
+#sev .ev{position:relative;display:grid;grid-template-columns:78px minmax(0,1fr) 208px;gap:clamp(16px,2.4vw,32px);align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+#sev .tile{display:flex;flex-direction:column;align-items:center;justify-content:center;width:78px;height:78px;border-radius:14px;background:var(--sand);text-align:center;transition:background .25s}
+#sev .tile .wd{font:600 13px/1 var(--hd);color:var(--gold-t)}
+#sev .tile .dn{margin-top:6px;font:600 30px/1 var(--hd);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+#sev .tile.wide .dn{font-size:21px;letter-spacing:-.02em}
+#sev .ev h4{font:600 clamp(19px,1.7vw,22px)/1.25 var(--hd);letter-spacing:-.012em;text-wrap:balance}
+#sev .ev h4 a::after{content:"";position:absolute;inset:0;z-index:1}
+#sev .ev h4 a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--ease)}
+#sev .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:8px;font-size:16px;line-height:1.4;color:var(--ink-2)}
+#sev .meta>span:not(.tag):not(.vh){display:inline-flex;align-items:center;gap:7px}
+#sev .meta svg{width:15px;height:15px;color:var(--gold-t)}
+#sev .ev-a{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:14px;width:max-content;max-width:100%}
+#sev .ev-a .tl{font-size:15px}
+#sev .th{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:var(--soft);transition:transform .6s var(--ease)}
+#sev .th-w{border-radius:12px;overflow:hidden}
+@media (hover:hover){
+  #sev .ev:hover h4 a{background-size:100% 1.5px}
+  #sev .ev:hover .tile{background:var(--gold)}
+  #sev .ev:hover .th{transform:scale(1.03)}
+}
+#sev .agenda[aria-busy="true"] .ev{pointer-events:none}
+#sev .sk{background:#ecebe8;border-radius:10px}
+#sev .sk.l1{height:34px;width:78%}
+#sev .sk.l2{height:18px;width:52%;margin-top:18px}
+#sev .sk.l3{height:18px;width:40%;margin-top:12px}
+#sev .sk.l4{height:46px;width:58%;margin-top:28px}
+#sev .ev .sk.l1{height:22px;width:60%}
+#sev .ev .sk.l2{width:36%;margin-top:12px}
+@media (prefers-reduced-motion:no-preference){#sev .sk{animation:sev-pulse 1.6s ease-in-out infinite}}
+@keyframes sev-pulse{50%{opacity:.5}}
+
+/* ---------- every week (the one dark band) ---------- */
+#sev .week{background:#111;color:#fff}
+#sev .week .h2{color:#fff}
+#sev .week .sec-h p{color:rgba(255,255,255,.72)}
+#sev .wks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+#sev .wk{display:flex;flex-direction:column;min-width:0}
+#sev .wk img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;background:#222;margin-bottom:22px}
+#sev .wk:nth-child(1) img{object-position:50% 40%}
+#sev .wk:nth-child(3) img{object-position:50% 70%}
+#sev .wk h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,.22);font:600 clamp(22px,2vw,26px)/1.15 var(--hd);letter-spacing:-.015em}
+#sev .wk h3 b{font:600 clamp(22px,2vw,26px)/1 var(--hd);color:var(--gold);font-variant-numeric:tabular-nums;white-space:nowrap}
+#sev .wk p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.78);margin-bottom:20px}
+#sev .go{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}
+#sev .go a{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.1);font:600 13px/1 var(--hd);letter-spacing:.02em;color:#fff;transition:background .2s,color .2s}
+#sev .go a svg{width:12px;height:12px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sev .go a:hover{background:#fff;color:var(--ink)}#sev .go a:hover svg{transform:translateX(2px)}}
+#sev .wk-f{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:clamp(36px,4.4vw,56px);padding-top:22px;border-top:1px solid rgba(255,255,255,.22);font-size:16px;color:rgba(255,255,255,.62)}
+#sev .wk-f a{font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.35)}
+#sev .wk-f a:hover{text-decoration-color:currentColor}
+
+/* ---------- newsletter ---------- */
+#sev .news{background:var(--sand);padding:clamp(56px,7vw,88px) 0}
+#sev .news-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px clamp(32px,6vw,96px);align-items:center}
+#sev .news .h2{margin-bottom:14px}
+#sev .news p{color:var(--ink-2);max-width:34em}
+#sev .news small{display:block;margin-top:14px;font-size:15px;color:var(--ink-3)}
+#sev .news small a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+
+/* empty calendar: the hero card says so, the list section steps aside */
+#sev.is-empty .cal-sec,#sev.is-empty .to-cal{display:none}
+#sev.is-empty .top{padding-bottom:clamp(64px,8vw,104px)}
+
+/* ---------- motion ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #sev.js .top-in>*{animation:sev-up .9s var(--ease) both}
+  #sev.js .top-in>*:nth-child(2){animation-delay:.08s}
+  #sev.js .nx{animation:sev-up .85s var(--ease) both .1s}
+  #sev.js .mo{animation:sev-fade .6s ease both}
+  #sev.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
+  #sev.js .rv.in{opacity:1;transform:none}
+}
+@keyframes sev-up{from{opacity:0;transform:translateY(18px)}}
+@keyframes sev-fade{from{opacity:0}}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  #sev .top-in,#sev .sec-h,#sev .nx,#sev .news-in{grid-template-columns:1fr}
+  #sev .sec-h{align-items:start}
+  #sev .nx{padding:12px 12px 22px}
+  #sev .nx-b{padding:4px 8px 0}
+  #sev .ev{grid-template-columns:78px minmax(0,1fr) 150px}
+}
+@media (max-width:760px){
+  #sev .wks{grid-template-columns:1fr;gap:28px}
+  #sev .wk{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0 20px;align-items:start}
+  #sev .wk img{grid-row:1/4;aspect-ratio:1;margin:0;border-radius:14px}
+  #sev .ev{grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:start;padding:20px 0}
+  #sev .th-w{display:none}
+  #sev .tile{width:64px;height:68px;border-radius:12px}
+  #sev .tile .dn{font-size:26px}
+  #sev .tile.wide .dn{font-size:17px}
+}
+@media (max-width:640px){
+  #sev{--top:128px}
+  #sev .acts .btn{flex:1 1 auto}
+  #sev .nx .acts{flex-direction:column;align-items:stretch}
+  #sev .nx .acts .cal,#sev .nx .acts .cal .btn{width:100%}
+  #sev .wk{grid-template-columns:104px minmax(0,1fr);gap:0 16px}
+  #sev .wk h3{flex-wrap:wrap;gap:2px 12px}
+  #sev .wk p{font-size:16px}
+  #sev .wk .go{grid-column:1/-1;margin-top:14px}
+  #sev .news .btn{width:100%}
+}
+</style>
+
+<div id="sev">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sev-i-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sev-i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="sev-i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="sev-i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></g></symbol>
+  </svg>
+
+  <!-- hero: the plain promise from the Trello audit, then the soonest event (drawn from ChurchCo's Events block) -->
+  <header class="top">
+    <div class="wrap">
+      <div class="top-in">
+        <h1>Events</h1>
+        <div>
+          <p class="lede">See what’s coming up and register.</p>
+          <div class="acts">
+            <a class="btn light to-cal" href="#sev-i-cal">See All Events</a>
+            <a class="btn ghost" href="#sev-week">Every Week</a>
+          </div>
+        </div>
+      </div>
+      <div class="next" id="sev-next" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <!-- the calendar: month by month, with filters when there's more than one kind of event -->
+  <section class="sec cal-sec" id="sev-cal" aria-labelledby="sev-cal-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sev-cal-h">Upcoming Events</h2>
+      </div>
+      <div class="chips" role="group" aria-label="Show events for" hidden></div>
+      <div class="agenda" aria-busy="true"></div>
+      <p class="vh" id="sev-status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- every week: the standing gatherings that never show up in the events feed -->
+  <section class="sec week" id="sev-week" aria-labelledby="sev-week-h">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2 class="h2" id="sev-week-h">Every Week</h2>
+      </div>
+      <ul class="wks">
+        <li class="wk rv" style="--d:0">
+          <img src="img/events-sunday.jpg" alt="The worship team leads on a stage lit blue and purple, with a cross behind them" loading="lazy">
+          <h3>Sundays <b>10AM</b></h3>
+          <p>Worship and teaching. Springs Kids for babies through grade 5.</p>
+          <div class="go"><a href="https://kids.springs.church">Springs Kids <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a><a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Watch Online <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a></div>
+        </li>
+        <li class="wk rv" style="--d:1">
+          <img src="img/events-wednesday.jpg" alt="People at Springs praying together with hands on shoulders" loading="lazy">
+          <h3>Wednesdays <b>6:30PM</b></h3>
+          <p>Prayer night. Awaken for kids in grades 1–5, Rooted for middle school in the Kids Auditorium and Anthem for high school in the Tent.</p>
+          <div class="go"><a href="../prayer/">Prayer <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a><a href="https://kids.springs.church">Kids <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a><a href="https://youth.springs.church">Youth <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a></div>
+        </li>
+        <li class="wk rv" style="--d:2">
+          <img src="img/events-friday.jpg" alt="Three young women smiling together in the church parking lot at night" loading="lazy">
+          <h3>Fridays <b>7PM</b></h3>
+          <p>Young Adults in the Garage. Life’s better with you in it.</p>
+          <div class="go"><a href="https://ya.springs.church">Young Adults <svg aria-hidden="true"><use href="#sev-i-arr"/></svg></a></div>
+        </li>
+      </ul>
+      <p class="wk-f rv"><span>1515 Auto Mall Loop, Colorado Springs, CO 80920</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get directions</a></p>
+    </div>
+  </section>
+
+  <!-- newsletter: live copy, link now https (Trello audit) -->
+  <section class="news" id="sev-news" aria-labelledby="sev-news-h">
+    <div class="wrap news-in rv">
+      <div>
+        <h2 class="h2" id="sev-news-h">Weekly Newsletter</h2>
+        <p>Get the latest news and events from Springs Church.</p>
+        <small><span class="tbd">Questions about an event?</span> Call <a href="tel:+17194888331">(719) 488-8331</a> or email <a href="mailto:info@springs.church">info@springs.church</a>.</small>
+      </div>
+      <a class="btn" href="https://eepurl.com/iUfGPA" target="_blank" rel="noopener">Sign Up</a>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sev');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  root.classList.add('js');
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* @pure-start: dates, categories and calendar files. No DOM in here; test/calendar.test.mjs runs this exact code in Node. */
+  const TZ = 'America/Denver', SITE = 'https://www.springs.church';
+  const CAMPUS = 'Springs Church, 1515 Auto Mall Loop, Colorado Springs, CO 80920';
+  const CAMPUS_ROOM = /\b(parking|lot|lobby|sanctuary|auditorium|classroom|room|tent|garage|chapel|caf[eé]|kitchen|nursery|gym)\b/i;
+  const MON = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  const MONL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const WDL = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const CATS = [
+    ['Youth', /\byouth\b|\banthem\b|\brooted\b|middle school|high school/i],
+    ['Kids', /\bkids\b|\bawaken\b|\bvbs\b|\bchildren\b/i],
+    ['Young Adults', /young adults?|\bya\b/i],
+    ['Women', /\bwomen\b|\bladies\b/i],
+    ['Men', /\bmen\b|\bmen['’]s\b/i],
+    ['Moms', /\bmoms?\b|\bmothers?\b/i],
+    ['Membership', /\bmembership\b/i],
+    ['Outreach', /\boutreach\b|\bfeeding\b|\bfood\b/i],
+    ['Prayer', /\bprayer\b/i],
+    ['Missions', /\bmissions?\b/i]
+  ];
+  const pad = n => String(n).padStart(2, '0');
+  const dtf = new Intl.DateTimeFormat('en-US', { timeZone: TZ, hourCycle: 'h23', weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+
+  /* wall-clock parts of an instant, in Colorado time */
+  function tzParts(date) {
+    const p = {};
+    for (const x of dtf.formatToParts(date)) p[x.type] = x.value;
+    return { y: +p.year, mo: +p.month - 1, d: +p.day, h: +p.hour % 24, mi: +p.minute, s: +p.second, wd: WD.indexOf(p.weekday) };
+  }
+  /* a Colorado wall-clock time as a real Date (handles MST/MDT) */
+  function zoned(y, mo, d, h = 0, mi = 0) {
+    const want = Date.UTC(y, mo, d, h, mi);
+    const off = t => { const p = tzParts(new Date(t)); return Date.UTC(p.y, p.mo, p.d, p.h, p.mi, p.s) - t; };
+    let t = want - off(want);
+    const o2 = off(t);
+    if (want - o2 !== t) t = want - o2;
+    return new Date(t);
+  }
+  /* ChurchCo's date line: "November 19, 2026 3:00 PM", "January 15, 2027 5:00 PM - January 17, 2027 12:00 PM",
+     or all-day "January 15, 2027" / "January 15, 2027 - January 17, 2027". It only prints an end when it falls on another day.
+     All-day events: end = the last day (inclusive). Returns { start, end|null, allDay } or null. */
+  function parseChurchCoDate(text) {
+    const s = String(text || '').replace(/\s+/g, ' ').trim();
+    const re = /([A-Za-z]{3,})\.? (\d{1,2}),? (\d{4})(?:,? (?:at )?(\d{1,2})(?::(\d{2}))? ?([AaPp])\.? ?[Mm]\.?)?/g;
+    const hits = [...s.matchAll(re)].map(m => {
+      const mo = MON.indexOf(m[1].slice(0, 3).toLowerCase());
+      if (mo < 0) return null;
+      let h = m[4] ? +m[4] % 12 : 0;
+      if (m[6] && /p/i.test(m[6])) h += 12;
+      return { y: +m[3], mo, d: +m[2], h, mi: m[5] ? +m[5] : 0, timed: !!m[4] };
+    }).filter(Boolean);
+    if (!hits.length) return null;
+    const a = hits[0], b = hits[1], allDay = !a.timed;
+    const start = allDay ? zoned(a.y, a.mo, a.d) : zoned(a.y, a.mo, a.d, a.h, a.mi);
+    let end = null;
+    if (b) end = allDay ? zoned(b.y, b.mo, b.d) : zoned(b.y, b.mo, b.d, b.timed ? b.h : 0, b.timed ? b.mi : 0);
+    if (end && end < start) end = null;
+    return { start, end, allDay };
+  }
+  /* values from a JSON feed: "2027-01-15" (a Colorado date), "2027-01-15T17:00" (Colorado wall time) or any ISO time with an offset */
+  function toDate(v) {
+    if (v instanceof Date) return v;
+    const s = String(v || '').trim();
+    let m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (m) return zoned(+m[1], +m[2] - 1, +m[3]);
+    m = s.match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::\d{2})?$/);
+    if (m) return zoned(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]);
+    const d = s ? new Date(s) : null;
+    return d && !isNaN(d) ? d : null;
+  }
+  /* "Youth | Here I Am Winter Retreat" -> { cat: "Youth", name: "Here I Am Winter Retreat" }; keywords otherwise */
+  function category(title) {
+    const t = String(title || '').trim();
+    const m = t.match(/^([^|]{2,40}?)\s*\|\s*(.+)$/);
+    const hit = s => (CATS.find(c => c[1].test(s)) || [])[0];
+    return { cat: (m && (hit(m[1]) || m[1].trim())) || hit(t) || '', name: m ? m[2].trim() : t };
+  }
+  /* Springs stylebook times: 3PM, 6:30PM, 12PM */
+  function fmtTime(d) {
+    const p = tzParts(d);
+    return (p.h % 12 || 12) + (p.mi ? ':' + pad(p.mi) : '') + (p.h < 12 ? 'AM' : 'PM');
+  }
+  /* whole Colorado calendar days from a to b */
+  function dayDiff(a, b) {
+    const x = tzParts(a), y = tzParts(b);
+    return Math.round((Date.UTC(y.y, y.mo, y.d) - Date.UTC(x.y, x.mo, x.d)) / 864e5);
+  }
+  /* when an event is over: all-day = end of its last day; timed = its end, or one hour after it starts */
+  function endOf(ev) {
+    if (ev.allDay) { const p = tzParts(ev.end || ev.start); return zoned(p.y, p.mo, p.d + 1); }
+    return ev.end || new Date(+ev.start + 36e5);
+  }
+  /* calendar start/end strings; one-hour default when there's no end */
+  function calRange(ev) {
+    const st = p => `${p.y}${pad(p.mo + 1)}${pad(p.d)}T${pad(p.h)}${pad(p.mi)}00`;
+    if (ev.allDay) {
+      const a = tzParts(ev.start), b = tzParts(ev.end || ev.start), nx = new Date(Date.UTC(b.y, b.mo, b.d + 1));
+      return { allDay: true, s: `${a.y}${pad(a.mo + 1)}${pad(a.d)}`, e: `${nx.getUTCFullYear()}${pad(nx.getUTCMonth() + 1)}${pad(nx.getUTCDate())}` };
+    }
+    return { allDay: false, s: st(tzParts(ev.start)), e: st(tzParts(ev.end || new Date(+ev.start + 36e5))) };
+  }
+  function absUrl(u) {
+    try { return new URL(u || '/events', SITE).href; } catch (_) { return SITE + '/events'; }
+  }
+  /* rooms on campus get the church address so maps work; anything else (Camp Elim) stays as written */
+  function where(ev) {
+    const v = String(ev.venue || '').trim();
+    if (!v) return '';
+    return CAMPUS_ROOM.test(v) && !/auto mall/i.test(v) ? `${v}, ${CAMPUS}` : v;
+  }
+  function details(ev) {
+    return (ev.desc ? ev.desc.trim() + '\n\n' : '') + 'Details: ' + absUrl(ev.url);
+  }
+  const icsEsc = s => String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+  /* fold at 75 octets (RFC 5545), never splitting a character */
+  function fold(line) {
+    const enc = new TextEncoder(), out = [];
+    let cur = '', n = 0;
+    for (const ch of line) {
+      const b = enc.encode(ch).length;
+      if (n + b > (out.length ? 74 : 75)) { out.push(cur); cur = ''; n = 0; }
+      cur += ch; n += b;
+    }
+    out.push(cur);
+    return out.join('\r\n ');
+  }
+  const VTZ = ['BEGIN:VTIMEZONE', 'TZID:America/Denver', 'X-LIC-LOCATION:America/Denver',
+    'BEGIN:DAYLIGHT', 'TZOFFSETFROM:-0700', 'TZOFFSETTO:-0600', 'TZNAME:MDT', 'DTSTART:19700308T020000', 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU', 'END:DAYLIGHT',
+    'BEGIN:STANDARD', 'TZOFFSETFROM:-0600', 'TZOFFSETTO:-0700', 'TZNAME:MST', 'DTSTART:19701101T020000', 'RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU', 'END:STANDARD',
+    'END:VTIMEZONE'];
+  function icsText(ev, now = new Date()) {
+    const r = calRange(ev), url = absUrl(ev.url), loc = where(ev);
+    const slug = (url.replace(/[?#].*$/, '').split('/').filter(Boolean).pop() || 'event').replace(/[^a-z0-9-]/gi, '').toLowerCase();
+    const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Springs Church//Events//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+    if (!r.allDay) L.push(...VTZ);
+    L.push('BEGIN:VEVENT', `UID:${slug}-${r.s}@springs.church`, 'DTSTAMP:' + now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''),
+      r.allDay ? `DTSTART;VALUE=DATE:${r.s}` : `DTSTART;TZID=${TZ}:${r.s}`,
+      r.allDay ? `DTEND;VALUE=DATE:${r.e}` : `DTEND;TZID=${TZ}:${r.e}`,
+      'SUMMARY:' + icsEsc(ev.title));
+    if (loc) L.push('LOCATION:' + icsEsc(loc));
+    L.push('DESCRIPTION:' + icsEsc(details(ev)), 'URL:' + url, 'END:VEVENT', 'END:VCALENDAR');
+    return L.map(fold).join('\r\n') + '\r\n';
+  }
+  function gcalUrl(ev) {
+    const r = calRange(ev), loc = where(ev);
+    const q = new URLSearchParams({ action: 'TEMPLATE', text: ev.title, dates: `${r.s}/${r.e}`, details: details(ev) });
+    if (!r.allDay) q.set('ctz', TZ);
+    if (loc) q.set('location', loc);
+    return 'https://calendar.google.com/calendar/render?' + q.toString();
+  }
+  /* @pure-end */
+
+  /* ---------- loaders ----------
+     Each loader hands emit() a plain array of { title, desc, start, end, allDay, venue, img, alt, url } with real Date objects
+     (end = null when unknown). render() never sees ChurchCo markup, so a self-built site only needs a new loader. */
+
+  /* ChurchCo: read the native Events block that sits after this block. ChurchCo fills it in the browser (the server HTML says
+     "No events found" until its own request answers), so watch the page and re-read whenever its items change. */
+  function fromChurchCoBlock(emit) {
+    const host = location.hostname.replace(/^www\./, '');
+    const inFrame = window.self !== window.top;
+    const editor = !!document.getElementById('websiteeditor');
+    const canHide = (host === 'springs.church' || host === 'localhost' || host === '127.0.0.1') && !inFrame && !editor;
+    const txt = el => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+    const cleanHref = u => {
+      if (!u) return '';
+      try {
+        const x = new URL(u, location.href);
+        x.searchParams.delete('systembrowser');
+        return x.origin === location.origin ? x.pathname + x.search + x.hash : x.href;
+      } catch (_) { return u; }
+    };
+    const find = () => {
+      const all = [...document.querySelectorAll('section.block-events')].filter(s => !root.contains(s));
+      const me = root.closest('section') || root;
+      return all.find(s => me.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING) || all[0] || null;
+    };
+    const readItem = item => {
+      const title = txt(item.querySelector('.card-title'));
+      const dateEl = item.querySelector('.card-icon-item.-date') || [...item.querySelectorAll('.card-icon-item')].find(el => /\b\d{4}\b/.test(el.textContent));
+      const when = dateEl && parseChurchCoDate(dateEl.textContent);
+      if (!title || !when) return null; /* skips ChurchCo's loading placeholders */
+      const img = item.querySelector('.feature.image img') || item.querySelector('img');
+      const a = item.querySelector('a.link-overlay') || item.querySelector('a[href]');
+      return {
+        title, desc: txt(item.querySelector('.card-text')),
+        start: when.start, end: when.end, allDay: when.allDay,
+        venue: txt(item.querySelector('.card-icon-item.-venue')),
+        img: img ? img.getAttribute('src') || img.getAttribute('data-src') || '' : '', alt: img ? img.getAttribute('alt') || '' : '',
+        url: a ? cleanHref(a.getAttribute('href')) : ''
+      };
+    };
+    if (canHide && !document.getElementById('sev-hide-native')) {
+      const st = document.createElement('style');
+      st.id = 'sev-hide-native';
+      st.textContent = '.tcc-block:has(#sev) ~ section.block-events{display:none!important}';
+      document.head.appendChild(st);
+    }
+    let last = '', timer = 0, warned = false;
+    const scan = () => {
+      const sec = find();
+      if (!sec) { if (!warned && document.readyState === 'complete') { warned = true; console.warn('Springs events: no native Events block found after the HTML block.'); } return; }
+      root.classList.add('has-src');
+      if (canHide && sec.style.display !== 'none') sec.style.setProperty('display', 'none', 'important');
+      const list = [...sec.querySelectorAll('[data-listitem]')].map(readItem).filter(Boolean);
+      if (!list.length) return; /* still loading, or truly empty: the 8s fallback decides */
+      const sig = JSON.stringify(list.map(e => [e.title, +e.start, e.end && +e.end, e.allDay, e.venue, e.url, e.img, e.desc]));
+      if (sig === last) return;
+      last = sig;
+      emit(list);
+    };
+    const mo = new MutationObserver(recs => {
+      if (!root.isConnected) { mo.disconnect(); return; }
+      if (recs.every(r => root.contains(r.target))) return;
+      clearTimeout(timer);
+      timer = setTimeout(scan, 120);
+    });
+    mo.observe(document.body, { childList: true, subtree: true, characterData: true });
+    scan();
+  }
+
+  /* A static feed for later (a CCB or iCal export turned into JSON). Used only when the root has data-events-src="<url>".
+     Expects [{ title, desc, start, end, allDay, venue, img, alt, url }] with start/end as ISO strings. Not wired to anything yet. */
+  function fromJson(url, emit) {
+    fetch(url, { credentials: 'omit' })
+      .then(r => (r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))))
+      .then(data => {
+        const rows = Array.isArray(data) ? data : (data && (data.events || data.items)) || [];  // CCB sync writes { items: [...] }
+        emit(rows.map(r => ({
+          title: String(r.title || '').trim(), desc: String(r.desc || '').trim(),
+          start: toDate(r.start), end: r.end ? toDate(r.end) : null, allDay: !!r.allDay,
+          venue: String(r.venue || '').trim(), img: r.img || '', alt: r.alt || '', url: r.url || ''
+        })).filter(e => e.title && e.start));
+      })
+      .catch(err => { console.warn('Springs events: feed failed', err); emit([]); });
+  }
+
+  /* ---------- render ---------- */
+  const nextEl = $('#sev-next'), agendaEl = $('.agenda'), chipsEl = $('.chips'), statusEl = $('#sev-status');
+  const ORDER = CATS.map(c => c[0]);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const icon = id => `<svg class="i" aria-hidden="true"><use href="#sev-i-${id}"/></svg>`;
+  const isExt = u => /^https?:/i.test(u) && !/^https?:\/\/(www\.)?springs\.church/i.test(u);
+  const linkAttrs = u => `href="${esc(u)}"` + (isExt(u) ? ' target="_blank" rel="noopener"' : '');
+  let cat = '', menus = 0, rendered = false;
+
+  function dateLine(ev, now) {
+    const a = tzParts(ev.start), b = ev.end ? tzParts(ev.end) : null, cy = tzParts(now).y;
+    const yr = p => (p.y !== cy ? ', ' + p.y : '');
+    if (!b || dayDiff(ev.start, ev.end) === 0) return `${WDL[a.wd]}, ${MONL[a.mo]} ${a.d}${yr(a)}`;
+    if (a.mo === b.mo && a.y === b.y) return `${MONL[a.mo]} ${a.d}–${b.d}${yr(b)}`;
+    return `${MONL[a.mo]} ${a.d} – ${MONL[b.mo]} ${b.d}${yr(b)}`;
+  }
+  function timeLine(ev) {
+    const multi = ev.end && dayDiff(ev.start, ev.end) > 0;
+    if (ev.allDay) return multi ? `${WD[tzParts(ev.start).wd]}–${WD[tzParts(ev.end).wd]}, all day` : 'All day';
+    if (!multi) return fmtTime(ev.start);
+    return `${WD[tzParts(ev.start).wd]} ${fmtTime(ev.start)} – ${WD[tzParts(ev.end).wd]} ${fmtTime(ev.end)}`;
+  }
+  function relLabel(ev, now) {
+    if (ev.start <= now) return 'Happening now';
+    const n = dayDiff(now, ev.start);
+    if (n <= 0) return 'Today';
+    if (n === 1) return 'Tomorrow';
+    if (n < 14) return `In ${n} days`;
+    return `In ${Math.floor(n / 7)} weeks`;
+  }
+  function calMenu(ev, cls) {
+    const id = 'sev-m' + (++menus);
+    const file = ((ev.url || '').replace(/[?#].*$/, '').split('/').filter(Boolean).pop() || 'springs-event').replace(/[^a-z0-9-]/gi, '').toLowerCase() + '.ics';
+    return `<div class="cal"><button type="button" class="${cls} cal-b" aria-expanded="false" aria-controls="${id}">${icon('cal')}Add to Calendar</button>` +
+      `<div class="cal-m" id="${id}" hidden><a href="${esc(gcalUrl(ev))}" target="_blank" rel="noopener">Google Calendar</a>` +
+      `<a href="data:text/calendar;charset=utf-8,${encodeURIComponent(icsText(ev))}" download="${esc(file)}">Apple or Outlook <small>.ics file</small></a></div></div>`;
+  }
+  function renderNext(ev, now) {
+    const p = tzParts(ev.start);
+    const pic = ev.img
+      ? `<img src="${esc(ev.img)}" alt="${esc(ev.alt)}">`
+      : `<div class="nx-ph" aria-hidden="true"><b>${p.d}</b><span>${MONL[p.mo]}</span></div>`;
+    nextEl.innerHTML = `<article class="nx" aria-labelledby="sev-nx-t">
+      <figure class="nx-pic">${pic}<figcaption>Next Up · ${esc(relLabel(ev, now))}</figcaption></figure>
+      <div class="nx-b">
+        <h2 class="nx-t" id="sev-nx-t">${ev.url ? `<a ${linkAttrs(ev.url)}>${esc(ev.name)}</a>` : esc(ev.name)}</h2>
+        ${ev.cat ? `<span class="tag">${esc(ev.cat)}</span>` : ''}
+        <dl class="nx-dl">
+          <dt class="vh">Date</dt><dd>${icon('cal')}<span>${esc(dateLine(ev, now))}</span></dd>
+          <dt class="vh">Time</dt><dd>${icon('clock')}<span>${esc(timeLine(ev))}</span></dd>
+          ${ev.venue ? `<dt class="vh">Where</dt><dd>${icon('pin')}<span>${esc(ev.venue)}</span></dd>` : ''}
+        </dl>
+        ${ev.desc ? `<p class="nx-d">${esc(ev.desc.length > 240 ? ev.desc.slice(0, 237).replace(/\s+\S*$/, '') + '…' : ev.desc)}</p>` : ''}
+        <div class="acts">${ev.url ? `<a class="btn" ${linkAttrs(ev.url)}>Details</a>` : ''}${calMenu(ev, 'btn line')}</div>
+      </div>
+    </article>`;
+  }
+  function tile(ev) {
+    const a = tzParts(ev.start), b = ev.end ? tzParts(ev.end) : null;
+    if (b && dayDiff(ev.start, ev.end) > 0 && a.mo === b.mo) return { wd: `${WD[a.wd]}–${WD[b.wd]}`, dn: `${a.d}–${b.d}`, wide: true };
+    return { wd: WD[a.wd], dn: String(a.d), wide: false };
+  }
+  function row(ev, now) {
+    const t = tile(ev);
+    return `<li class="ev" data-cat="${esc(ev.cat)}">
+      <div class="tile${t.wide ? ' wide' : ''}" aria-hidden="true"><span class="wd">${t.wd}</span><span class="dn">${t.dn}</span></div>
+      <div class="ev-b">
+        <h4>${ev.url ? `<a ${linkAttrs(ev.url)}>${esc(ev.name)}</a>` : esc(ev.name)}</h4>
+        <p class="meta"><span class="vh">${esc(dateLine(ev, now))}, </span><span>${icon('clock')}${esc(timeLine(ev))}</span>${ev.venue ? `<span>${icon('pin')}${esc(ev.venue)}</span>` : ''}${ev.cat ? `<span class="tag">${esc(ev.cat)}</span>` : ''}</p>
+        <div class="ev-a">${calMenu(ev, 'pill')}${ev.url ? `<a class="tl" ${linkAttrs(ev.url)}>Details</a>` : ''}</div>
+      </div>
+      ${ev.img ? `<div class="th-w"><img class="th" src="${esc(ev.img)}" alt="" loading="lazy"></div>` : ''}
+    </li>`;
+  }
+  function renderChips(list) {
+    const seen = [...new Set(list.map(e => e.cat).filter(Boolean))];
+    const cats = ORDER.filter(c => seen.includes(c)).concat(seen.filter(c => !ORDER.includes(c)).sort());
+    if (cats.length < 2) { chipsEl.hidden = true; chipsEl.innerHTML = ''; cat = ''; return; }
+    if (cat && !cats.includes(cat)) cat = '';
+    chipsEl.innerHTML = ['', ...cats].map(c => `<button type="button" data-cat="${esc(c)}" aria-pressed="${c === cat}">${c ? esc(c) : 'All Events'}</button>`).join('');
+    chipsEl.hidden = false;
+  }
+  function applyFilter(announce) {
+    let total = 0;
+    $$('.chips button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === cat)));
+    $$('.agenda .mo').forEach(m => {
+      let n = 0;
+      m.querySelectorAll('.ev').forEach(li => { const on = !cat || li.dataset.cat === cat; li.hidden = !on; if (on) n++; });
+      m.hidden = !n;
+      m.querySelector('.mo-h small').textContent = n + (n === 1 ? ' event' : ' events');
+      total += n;
+    });
+    if (announce) statusEl.textContent = `Showing ${total} ${total === 1 ? 'event' : 'events'}${cat ? ' for ' + cat : ''}.`;
+  }
+  function render(events) {
+    const now = new Date();
+    const list = events
+      .filter(e => e && e.title && e.start instanceof Date && !isNaN(e.start) && endOf(e) > now)
+      .sort((a, b) => a.start - b.start)
+      .map(e => Object.assign({}, e, category(e.title)));
+    if (!list.length) { if (!rendered) showEmpty(); return; }
+    rendered = true;
+    menus = 0;
+    root.classList.remove('is-empty');
+    renderNext(list[0], now);
+    renderChips(list);
+    const groups = [];
+    list.forEach(ev => {
+      const p = tzParts(ev.start), k = p.y * 12 + p.mo;
+      let g = groups[groups.length - 1];
+      if (!g || g.k !== k) groups.push(g = { k, y: p.y, mo: p.mo, items: [] });
+      g.items.push(ev);
+    });
+    agendaEl.innerHTML = groups.map(g => `<section class="mo" aria-labelledby="sev-mo-${g.k}"><div class="mo-h"><h3 id="sev-mo-${g.k}">${MONL[g.mo]} ${g.y}</h3><small></small></div><ol class="rows">${g.items.map(e => row(e, now)).join('')}</ol></section>`).join('');
+    agendaEl.removeAttribute('aria-busy');
+    applyFilter(false);
+  }
+  function showLoading() {
+    nextEl.innerHTML = `<div class="nx" aria-hidden="true"><div class="nx-pic sk"></div><div class="nx-b"><div class="sk l1"></div><div class="sk l2"></div><div class="sk l3"></div><div class="sk l4"></div></div></div><p class="vh">Loading events…</p>`;
+    agendaEl.innerHTML = `<div class="mo" aria-hidden="true"><div class="mo-h"><div class="sk" style="height:24px;width:180px"></div></div><ol class="rows">${'<li class="ev"><div class="tile sk"></div><div class="ev-b"><div class="sk l1"></div><div class="sk l2"></div></div><div class="th-w"><div class="th sk"></div></div></li>'.repeat(3)}</ol></div>`;
+  }
+  function showEmpty() {
+    root.classList.add('is-empty');
+    chipsEl.hidden = true;
+    agendaEl.innerHTML = '';
+    agendaEl.removeAttribute('aria-busy');
+    const editorNote = window.self !== window.top && !root.classList.contains('has-src')
+      ? '<small>Editor note: add ChurchCo’s Events block below this block. This page reads its events from there.</small>' : '';
+    nextEl.innerHTML = `<div class="nx nx-empty">
+      <div class="nx-b">
+        <h2 class="nx-t"><span class="tbd">Nothing on the calendar right now</span></h2>
+        <p><span class="tbd">New events show up here as soon as they’re planned. Get them in your inbox with the weekly newsletter, or join us any week.</span></p>
+        <div class="acts"><a class="btn" href="https://eepurl.com/iUfGPA" target="_blank" rel="noopener">Get the Newsletter</a><a class="btn line" href="#sev-week">Every Week</a></div>
+        ${editorNote}
+      </div>
+    </div>`;
+  }
+
+  /* add to calendar menus: one open at a time; Escape or a click elsewhere closes */
+  let openBtn = null;
+  const closeMenu = () => { if (!openBtn) return; openBtn.setAttribute('aria-expanded', 'false'); const m = document.getElementById(openBtn.getAttribute('aria-controls')); if (m) m.hidden = true; openBtn = null; };
+  root.addEventListener('click', e => {
+    const b = e.target.closest('.cal-b');
+    if (b) {
+      e.preventDefault();
+      const was = openBtn === b;
+      closeMenu();
+      if (!was) { b.setAttribute('aria-expanded', 'true'); document.getElementById(b.getAttribute('aria-controls')).hidden = false; openBtn = b; }
+      return;
+    }
+    if (e.target.closest('.cal-m a')) { setTimeout(closeMenu, 0); return; }
+    if (!e.target.closest('.cal-m')) closeMenu();
+    const c = e.target.closest('.chips button');
+    if (c) { cat = c.dataset.cat; applyFilter(true); }
+  });
+  document.addEventListener('click', e => { if (!root.contains(e.target)) closeMenu(); });
+  root.addEventListener('keydown', e => { if (e.key === 'Escape' && openBtn) { const b = openBtn; closeMenu(); b.focus(); } });
+
+  /* in-page links */
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sev-"]');
+    if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
+  });
+
+  /* reveals */
+  const rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+
+  /* go: loading state, pick a loader, fall back to the empty state after 8s */
+  const emit = list => { if (list && list.length) render(list); else if (!rendered) showEmpty(); };
+  showLoading();
+  if (root.dataset.eventsSrc) fromJson(root.dataset.eventsSrc, emit);
+  else fromChurchCoBlock(emit);
+  setTimeout(() => { if (!rendered) showEmpty(); }, 8000);
+})();
+</script>
+</section><!-- PREVIEW ONLY (never paste into ChurchCo). A stand-in for ChurchCo's native Events block, built from
+     churchco/events-snapshot-2026-11-15.json and matching the live markup (section.tcc-block.block-events, [data-listitem] cards with
+     .feature.image img, .card-title, .card-text, .card-icon-item.-date / .-venue, a.link-overlay). Like the real block it first shows
+     "No events found", then loading placeholders, then the events (~1s), so the HTML block's MutationObserver path really runs.
+     Preview switches: ?mock=empty (never loads: tests the 8s empty state), ?mock=slow (loads after 4s), ?mock=update (adds an event at 3s). -->
+<section class="tcc-block block-events Render-sc-7fdd78d0-0 bg-color color-base align-default -color-match width-full custom-h2 not-in-view" data-block="true" id="mock-native-events">
+  <div class="row-inner"><div data-container="true" class="container">
+    <div class="row-defaults"><div class="row-defaults-wrap"><div class="rich-wrap render-rich-text">
+      <h2><span>MARK YOUR CALENDAR</span></h2><h3>Upcoming Events</h3><p>Find out the latest or register.</p>
+    </div></div></div>
+    <div class="row-content" data-imagelist="true"><div>
+      <div data-list="true" class="ThemedList-sc-27f03d01-0 widget-list smartcolumns-1 shape-landscape columns-none layout-smartcolumns align-default">
+        <div data-edit-list="true"><p>No events found</p></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+<style>
+#mock-native-events{padding:40px 28px;background:#fafafa;font:16px/1.5 proxima-nova,sans-serif;color:#434341}
+#mock-native-events [data-edit-list]{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+#mock-native-events [data-listitem]{position:relative;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.05)}
+#mock-native-events .feature img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+#mock-native-events .content{padding:14px 16px}
+#mock-native-events .card-title{font:600 18px gotham,sans-serif;margin:0 0 6px}
+#mock-native-events .card-icon-item{display:flex;gap:6px;align-items:center;font-size:14px}
+#mock-native-events .card-icon-item svg{width:12px;height:12px}
+#mock-native-events .link-overlay{position:absolute;inset:0}
+#mock-native-events .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+<script>
+(function () {
+  const EVENTS = [{"t":"Feeding Friends","x":"","d":"November 19, 2026 3:00 PM","v":"Main Parking","img":"https://media.thechurchcoassets.com/accounts/4185/5d2671ac-ba68-4ae2-9da0-baba1c354f21-./2c6618fe-fa86-e66e-98f0-443eb7ed9445__postcard__.webp","alt":"Volunteers in a sunny parking lot load bags of groceries and produce from tables into cars lined up for a drive-thru community food distribution event.","h":"/event/feeding-friends"},{"t":"Moms Group","x":"","d":"December 1, 2026 10:00 AM","v":"Kids Auditorium","img":"https://media.thechurchcoassets.com/accounts/4185/37ef36db-90c2-4d29-88f8-83055f4a6592-./og__postcard__.webp","alt":"A group of happy mothers holding their babies and toddlers, laughing together in a sunny park.","h":"/event/moms-group"},{"t":"Springs Men Breakfast","x":"","d":"December 5, 2026 8:00 AM","v":"Classroom 1","img":"https://media.thechurchcoassets.com/accounts/4185/724d369d-9a71-46fb-b136-79bf4737a29f-./Mens%20BRKFST_Springs%20app__postcard__.webp","alt":"An announcement for a men's breakfast with stylized text over a blue-tinted photo of a man in a plaid shirt holding a sandwich.","h":"/event/mens-breakfast"},{"t":"Springs Women | Christmas Tea","x":"","d":"December 5, 2026 1:00 PM","v":"Main Lobby & Sanctuary","img":"https://media.thechurchcoassets.com/accounts/4185/d64d8805-9adf-46be-aff9-47dfa095c683-./womens-christmas-tea-2026__postcard__.webp","alt":"Springs Women Christmas Tea graphic with teacups and holiday treats","h":"/event/springs-women--christmas-tea"},{"t":"Membership Class","x":"","d":"December 9, 2026 6:30 PM","v":"Green Room","img":"https://media.thechurchcoassets.com/accounts/4185/5584f775-0b2d-4524-83cf-3fe1e6ce5c43-./mick-haupt-HahseXFw1M0-unsplash__postcard__.webp","alt":"An old, light-colored, cloth-covered binder titled 'Membership Roll' sits on a rustic wooden chair. The binder has black corners and a metal clasp on the spine.","h":"/event/membership-class"},{"t":"Youth | Here I Am Winter Retreat","x":"","d":"January 15, 2027 5:00 PM - January 17, 2027 12:00 PM","v":"Camp Elim","img":"https://media.thechurchcoassets.com/accounts/4185/21abebc8-a6ce-4092-9eee-e3ead9179f2a-./here-i-am-share__postcard__.webp","alt":"Youth | Here I Am Winter Retreat","h":"/event/youth--here-i-am-winter-retreat"}];
+  /* preview-only extra event for ?mock=update (made up for the test, never shown on the live page) */
+  const EXTRA = {"t":"Preview Test Event","x":"Added by the mock to test live updates.","d":"December 20, 2026 6:00 PM","v":"Green Room","img":"","alt":"","h":"/event/preview-test"};
+  const mode = new URLSearchParams(location.search).get('mock') || '';
+  const list = document.querySelector('#mock-native-events [data-edit-list]');
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const ICON = '<div data-themed-icon="true" data-icon="true" class="ThemedIcon-sc-eddd253e-0"><svg aria-hidden="true" viewBox="0 0 512 512"><path fill="currentColor" d="M0 0h512v512H0z"/></svg></div>';
+  const dateHtml = d => d.split(' - ').map(x => '<span>' + esc(x) + '</span>').join(' - ');
+  const card = e => '<div data-listitem="true" class="shape-landscape align-default layout-smartcolumns ThemedListItem__ThemedListItemShared-sc-e88acacf-0 card">' +
+    (e.img ? '<div class="feature image"><img src="' + esc(e.img) + '" alt="' + esc(e.alt) + '" loading="lazy"></div>' : '') +
+    '<div class="content"><div class="card-body"><h6 class="card-title">' + esc(e.t) + '</h6><div class="card-text">' + esc(e.x) + '</div>' +
+    '<div class="card-icon-item -date">' + ICON + dateHtml(e.d) + '</div>' +
+    (e.v ? '<div class="card-icon-item -venue">' + ICON + '<span>' + esc(e.v) + '</span></div>' : '') +
+    '</div><div class="card-footer"></div></div>' +
+    '<a class="link-overlay" href="' + esc(e.h) + '"><span class="sr-only">Read more about ' + esc(e.t) + '</span></a></div>';
+  const shadow = '<div data-listitem="true" class="card"><div class="feature image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""></div><div class="content"><div class="card-body"><h6 class="card-title"></h6><div class="card-text"></div></div><div class="card-footer"></div></div></div>';
+  if (mode === 'empty') return;
+  const loadAt = mode === 'slow' ? 4000 : 1000;
+  setTimeout(() => { list.innerHTML = shadow.repeat(6); }, 400);
+  setTimeout(() => { list.innerHTML = EVENTS.map(card).join(''); }, loadAt);
+  if (mode === 'update') setTimeout(() => { list.insertAdjacentHTML('beforeend', card(EXTRA)); }, 3000);
+})();
+</script>
+</main><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

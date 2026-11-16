@@ -1,0 +1,480 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sct').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/contact-us ("Contact Us") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /contact-us untouched.
+     Source of truth: ~/Desktop/springs-contact-site/churchco/contact-block.html (preview: preview-live.html via build-preview.py).
+     Built from the Creative Board audit card "Contact Page" (Oct 29): tap-to-call number, office hours in stylebook format
+     (Tuesday–Thursday, 9AM–5PM) with a live open/closed line in Colorado time, and a "Send Us a Message" composer so the page's
+     search description ("send a message") is true. The composer only builds a mailto: link for the visitor's own email app.
+     It collects nothing, stores nothing and sends nothing anywhere. Prayer, care and serving topics point to /prayer, /care and /serve,
+     which have their own forms. Live copy kept: "Have a Question?" / "We’re here to listen, help, and connect with you."
+     <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook (10AM, 6:30PM, 9AM–5PM).
+     QA: ?now=2026-11-17T10:00 previews the office-hours line at a given Colorado time; ?topic=youth preselects a topic. -->
+<style>
+.tcc-block:has(#sct){padding:0!important;background:#111!important}
+.tcc-block:has(#sct) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sct) .row-defaults{padding:0!important}
+.tcc-block:has(#sct) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sct{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;--ok:#2e7d4f;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sct *{box-sizing:border-box}
+#sct :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite,label){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sct ul,#sct ol{list-style:none}
+#sct a{color:inherit;text-decoration:none}
+#sct img{display:block;max-width:100%}
+#sct :is(button,input,select,textarea){font:inherit;color:inherit}
+#sct ::selection{background:var(--gold);color:var(--ink)}
+#sct .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sct svg.i{width:16px;height:16px;flex:none}
+#sct .tbd{transition:background .2s}
+#sct.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#sct :is(p,li,dd){text-wrap:pretty}
+#sct [id^="sct-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+#sct [hidden]{display:none!important}
+#sct .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons + links: one set (same as /about, /servecopy, /missionscopy) */
+#sct .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sct .btn:hover{background:#333}
+#sct .btn:active{transform:scale(.98)}
+#sct .btn.light{background:#fff;color:var(--ink)}
+#sct .btn.light:hover{background:var(--gold)}
+#sct .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#sct .btn.ghost:hover{background:#fff;color:var(--ink)}
+#sct .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sct .btn.line:hover{background:var(--ink);color:#fff}
+#sct .tl{display:inline-flex;align-items:center;gap:6px;padding:0;border:0;background:none;cursor:pointer;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sct .tl:hover{text-decoration-color:currentColor}
+#sct :is(.btn,.tl,.big,.dir a,.x):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sct .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#sct .sec{padding:clamp(72px,9vw,120px) 0}
+#sct .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sct .sec-h p{color:var(--ink-2);max-width:36em}
+
+/* ---------- hero + three ways to reach us ---------- */
+#sct .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
+#sct .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(150px,15vw,190px);background:#fff;z-index:-1}
+#sct .top-in{display:grid;grid-template-columns:1.1fr 1fr;gap:24px clamp(32px,6vw,96px);align-items:end}
+#sct .top-in>*{min-width:0}
+#sct .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+#sct .top .lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:rgba(255,255,255,.88);max-width:30em}
+#sct .top .lede+.lede{margin-top:12px;font-size:clamp(17px,1.45vw,19px);color:rgba(255,255,255,.64)}
+#sct .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,18px);margin-top:clamp(44px,5.5vw,72px)}
+#sct .tile{display:flex;flex-direction:column;padding:clamp(24px,2.4vw,30px);border-radius:20px;background:var(--sand);min-width:0}
+#sct .tile-h{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+#sct .tile-h svg{width:20px;height:20px;color:var(--gold-t)}
+#sct .tile h3{font:600 17px/1.2 var(--hd);color:var(--ink)}
+#sct .big{display:block;font:600 clamp(21px,2.05vw,27px)/1.2 var(--hd);letter-spacing:-.015em;color:var(--ink);overflow-wrap:anywhere}
+#sct a.big{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;text-decoration-thickness:2px;transition:text-decoration-color .2s}
+#sct a.big:hover{text-decoration-color:var(--gold)}
+#sct .big small{display:block;margin-top:4px;font:400 17px/1.4 var(--bd);letter-spacing:normal;color:var(--ink-2)}
+#sct .tile p:not(.big){margin-top:10px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+#sct .now{display:flex;align-items:center;gap:9px;font-weight:600;color:var(--ink)!important}
+#sct .now i{flex:none;width:9px;height:9px;border-radius:50%;background:#9a958b}
+#sct .now.open i{background:var(--ok);box-shadow:0 0 0 4px rgba(46,125,79,.16)}
+#sct .tile-act{margin-top:auto;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+@media (prefers-reduced-motion:no-preference){
+  #sct .top h1,#sct .top .lede{animation:sct-up 1s var(--ease) both}
+  #sct .top .lede{animation-delay:.08s}
+  #sct.js .tile{opacity:0;transform:translateY(26px)}
+  #sct.js.ready .tile{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--n) * 80ms + 120ms)}
+}
+@keyframes sct-up{from{opacity:0;transform:translateY(18px)}}
+
+/* ---------- send us a message (email composer) ---------- */
+#sct .msg-in{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:36px clamp(32px,6vw,96px);align-items:start}
+#sct .msg-l .h2{margin-bottom:20px}
+#sct .msg-l p{color:var(--ink-2);max-width:30em}
+#sct .msg-l p+p{margin-top:14px}
+#sct .how{margin-top:28px;border-top:1px solid var(--line)}
+#sct .how li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5;color:var(--ink-2)}
+#sct .how svg{width:18px;height:18px;margin-top:3px;color:var(--gold-t)}
+#sct .cmp{padding:clamp(22px,3vw,36px);border-radius:20px;background:var(--sand)}
+#sct .fld{display:grid;gap:8px}
+#sct .fld+.fld{margin-top:18px}
+#sct .fld label{font:600 15px/1.3 var(--hd);color:var(--ink)}
+#sct .fld label small{font:400 15px/1.3 var(--bd);color:var(--ink-3)}
+#sct :is(input,select,textarea){width:100%;min-height:52px;padding:12px 16px;border:1.5px solid rgba(14,14,14,.16);border-radius:10px;background:#fff;font-size:17px;line-height:1.45;color:var(--ink);transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+#sct textarea{min-height:150px;resize:vertical}
+#sct :is(input,select,textarea):focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px rgba(216,201,166,.6)}
+#sct .sel{position:relative}
+#sct .sel select{padding-right:44px;cursor:pointer}
+#sct .sel svg{position:absolute;right:16px;top:50%;width:18px;height:18px;transform:translateY(-50%);pointer-events:none}
+#sct .hdrs{margin:18px 0 22px;padding:14px 18px;border-radius:12px;background:#fff;font-size:16px}
+#sct .hdrs div{display:grid;grid-template-columns:70px minmax(0,1fr);gap:4px 12px;align-items:baseline;padding:6px 0}
+#sct .hdrs div+div{border-top:1px solid var(--line)}
+#sct .hdrs dt{font:600 14px/1.4 var(--hd);color:var(--ink-3)}
+#sct .hdrs dd{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;min-width:0;color:var(--ink);overflow-wrap:anywhere}
+#sct .hdrs dd b{font-weight:600}
+#sct .hdrs .tl{font-size:14px}
+#sct .err{display:none;font-size:15px;font-weight:600;color:#a33a2a}
+#sct .err.on{display:block}
+#sct .cmp .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+#sct .fine{margin-top:16px;font-size:15px;line-height:1.5;color:var(--ink-3)}
+#sct .sent{display:none;margin-top:16px;padding:14px 16px;border-radius:12px;background:#fff;font-size:16px;line-height:1.5;color:var(--ink-2)}
+#sct .sent.on{display:block}
+#sct .sent b{color:var(--ink)}
+#sct .away{display:none;margin-top:22px;padding:24px;border-radius:14px;background:#fff}
+#sct .away.on{display:block}
+#sct .away h3{font:600 22px/1.2 var(--hd);margin-bottom:10px}
+#sct .away p{color:var(--ink-2);margin-bottom:20px}
+#sct .away .acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+#sct .cmp.is-away [data-mail]{display:none}
+
+/* ---------- find the right person ---------- */
+#sct .dir{border-top:1px solid var(--ink)}
+#sct .dir li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto);gap:10px clamp(24px,4vw,64px);align-items:center;padding:clamp(20px,2.2vw,26px) 0;border-bottom:1px solid rgba(14,14,14,.16)}
+#sct .dir h3{font:600 clamp(19px,1.7vw,22px)/1.25 var(--hd);color:var(--ink);margin-bottom:4px}
+#sct .dir p{font-size:17px;line-height:1.5;color:var(--ink-2);max-width:36em}
+#sct .dir .to{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+#sct .dir .to a{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:999px;background:var(--soft);font:600 14px/1 var(--hd);letter-spacing:.01em;color:var(--ink);white-space:nowrap;transition:background .2s,color .2s}
+#sct .dir .to a svg{width:13px;height:13px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sct .dir .to a:hover{background:var(--ink);color:#fff}#sct .dir .to a:hover svg{transform:translateX(2px)}}
+#sct .dir-more{margin-top:28px;font-size:17px;color:var(--ink-2)}
+#sct .dir-more .tl{font-size:17px}
+
+/* ---------- visit (sand band) ---------- */
+#sct .visit{background:var(--sand)}
+#sct .visit-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+#sct .visit .h2{margin-bottom:18px}
+#sct .visit-l>p{color:var(--ink-2);max-width:30em}
+#sct .visit .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+#sct .map{margin-top:32px;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#e7e1d4}
+#sct .map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35) contrast(1.02)}
+#sct .facts{border-top:1px solid var(--ink)}
+#sct .facts div{display:grid;grid-template-columns:minmax(130px,.55fr) 1.6fr;gap:4px 24px;padding:20px 0;border-bottom:1px solid rgba(14,14,14,.16)}
+#sct .facts dt{font:600 17px/1.35 var(--hd)}
+#sct .facts dd{font-size:17px;line-height:1.55;color:var(--ink-2)}
+#sct .facts dd b{display:block;font:600 22px/1.2 var(--hd);color:var(--ink);margin-bottom:4px;font-variant-numeric:tabular-nums}
+#sct .facts dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sct .facts dd a:hover{text-decoration-color:currentColor}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #sct.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
+  #sct.js .rv.in{opacity:1;transform:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  #sct .tiles{grid-template-columns:1fr}
+  #sct .tile{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:end}
+  #sct .tile>*{grid-column:1}
+  #sct .tile .tile-act{grid-column:2;grid-row:1/span 5;padding-top:0;justify-content:flex-end}
+}
+@media (max-width:900px){
+  #sct .top-in,#sct .sec-h,#sct .msg-in,#sct .visit-in{grid-template-columns:1fr}
+  #sct .sec-h{align-items:start}
+}
+@media (max-width:640px){
+  #sct{--top:128px}
+  #sct .top::after{height:120px}
+  #sct .tile{display:flex;align-items:stretch}
+  #sct .tile .tile-act{padding-top:22px;justify-content:flex-start}
+  #sct .tile-act .btn{flex:1 1 auto}
+  #sct .dir li{grid-template-columns:1fr}
+  #sct .dir .to{justify-content:flex-start}
+  #sct .facts div{grid-template-columns:1fr}
+  #sct .acts .btn{flex:1 1 auto}
+  #sct .hdrs div{grid-template-columns:60px minmax(0,1fr)}
+}
+</style>
+
+<div id="sct">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sct-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sct-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sct-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sct-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="sct-mail" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5zM3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="sct-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="sct-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- hero: the live page's own words, then three ways to reach us -->
+  <header class="top">
+    <div class="wrap">
+      <div class="top-in">
+        <h1>Have a Question?</h1>
+        <div>
+          <p class="lede">We’re here to listen, help, and connect with you.</p>
+          <p class="lede"><span class="tbd">Call or stop by during office hours, email us anytime, or send a message straight to the right person below.</span></p>
+        </div>
+      </div>
+
+      <section class="tiles" aria-labelledby="sct-ways">
+        <h2 class="sr" id="sct-ways">Ways to Reach Us</h2>
+        <article class="tile" style="--n:0">
+          <div class="tile-h"><svg aria-hidden="true"><use href="#sct-phone"/></svg><h3>Call</h3></div>
+          <a class="big" href="tel:+17194888331">(719) 488-8331</a>
+          <p>Tuesday–Thursday, 9AM–5PM</p>
+          <p class="now" data-now aria-live="polite" hidden><i aria-hidden="true"></i><span></span></p>
+          <div class="tile-act"><a class="btn" href="tel:+17194888331">Call Now</a></div>
+        </article>
+        <article class="tile" style="--n:1">
+          <div class="tile-h"><svg aria-hidden="true"><use href="#sct-mail"/></svg><h3>Email</h3></div>
+          <a class="big" href="mailto:info@springs.church">info@springs.church</a>
+          <p><span class="tbd">Write anytime. We’ll get your note to the right person.</span></p>
+          <div class="tile-act"><a class="btn" href="mailto:info@springs.church">Email Us</a><button class="tl" type="button" data-copy="info@springs.church">Copy Address</button></div>
+        </article>
+        <article class="tile" style="--n:2">
+          <div class="tile-h"><svg aria-hidden="true"><use href="#sct-pin"/></svg><h3>Visit</h3></div>
+          <p class="big">1515 Auto Mall Loop<small>Colorado Springs, CO 80920</small></p>
+          <p>Sundays 10AM · Wednesdays 6:30PM</p>
+          <div class="tile-act"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a><a class="tl" href="#sct-visit">Service Times</a></div>
+        </article>
+      </section>
+    </div>
+  </header>
+
+  <!-- send us a message: picks the right inbox and opens the visitor's own email app (mailto:). Nothing is collected or sent from this page. -->
+  <section class="sec" id="sct-message" aria-labelledby="sct-message-h">
+    <div class="wrap msg-in">
+      <div class="msg-l rv">
+        <h2 class="h2" id="sct-message-h">Send Us a Message</h2>
+        <p><span class="tbd">Tell us what it’s about and we’ll point your message to the right inbox.</span></p>
+        <ul class="how">
+          <li><svg aria-hidden="true"><use href="#sct-mail"/></svg><span><span class="tbd">This opens the email app on your phone or computer with your message ready to go.</span></span></li>
+          <li><svg aria-hidden="true"><use href="#sct-ok"/></svg><span><span class="tbd">Nothing is sent until you press send there, and this page doesn’t collect or store anything.</span></span></li>
+          <li><svg aria-hidden="true"><use href="#sct-arr"/></svg><span><span class="tbd">Prayer requests, care and serving have their own forms, and we’ll take you there.</span></span></li>
+        </ul>
+      </div>
+
+      <form class="cmp rv" style="--d:1" novalidate aria-labelledby="sct-message-h">
+        <div class="fld">
+          <label for="sct-topic">What’s it about?</label>
+          <div class="sel">
+            <select id="sct-topic">
+              <option value="general" data-to="info@springs.church" data-subject="General Question" selected>A General Question</option>
+              <option value="kids" data-to="kids@springs.church" data-subject="Springs Kids Question">Springs Kids</option>
+              <option value="youth" data-to="youth@springs.church" data-subject="Youth Question">Youth</option>
+              <option value="ya" data-to="YA@springs.church" data-subject="Young Adults Question">Young Adults</option>
+              <option value="marriage" data-to="marriage@springs.church" data-subject="Marriage Question">Marriage</option>
+              <option value="prayer" data-away="prayer">A Prayer Request</option>
+              <option value="care" data-away="care">Care or a Hard Season</option>
+              <option value="serve" data-away="serve">Serving or Volunteering</option>
+              <option value="other" data-to="info@springs.church" data-subject="Question">Something Else</option>
+            </select>
+            <svg aria-hidden="true"><use href="#sct-down"/></svg>
+          </div>
+        </div>
+
+        <div data-mail>
+          <dl class="hdrs" aria-live="polite">
+            <div><dt>To</dt><dd><b data-show-to>info@springs.church</b><button class="tl" type="button" data-copy-to>Copy Address</button></dd></div>
+            <div><dt>Subject</dt><dd data-show-subject>General Question from the Springs Website</dd></div>
+          </dl>
+          <div class="fld">
+            <label for="sct-name">Your name <small>(optional)</small></label>
+            <input id="sct-name" type="text" autocomplete="name" maxlength="80">
+          </div>
+          <div class="fld">
+            <label for="sct-msg">Message</label>
+            <textarea id="sct-msg" rows="6" aria-describedby="sct-msg-err"></textarea>
+            <p class="err" id="sct-msg-err" role="alert">Write a message first.</p>
+          </div>
+          <div class="acts">
+            <button class="btn" type="submit">Open in Email</button>
+            <button class="btn line" type="button" data-copy-msg>Copy Message</button>
+          </div>
+          <p class="fine"><span class="tbd">Opens your email app. No email app set up? Copy the message and the address and paste them into your email.</span></p>
+          <p class="sent" data-sent aria-live="polite"></p>
+        </div>
+
+        <div class="away" data-away-panel="prayer">
+          <h3><span class="tbd">Prayer Has Its Own Form</span></h3>
+          <p><span class="tbd">Share your request on our Prayer page so it goes straight to our prayer team. You can also pray with us Wednesdays at 6:30PM.</span></p>
+          <div class="acts"><a class="btn" href="../prayer/">Go to Prayer</a><button class="tl" type="button" data-pick="general">Email Us Instead</button></div>
+        </div>
+        <div class="away" data-away-panel="care">
+          <h3><span class="tbd">We’re Here for Hard Seasons</span></h3>
+          <p><span class="tbd">Our Care page has the forms that reach our Care Team directly, so the right people can follow up with you.</span></p>
+          <div class="acts"><a class="btn" href="../care/">Go to Care</a><button class="tl" type="button" data-pick="general">Email Us Instead</button></div>
+        </div>
+        <div class="away" data-away-panel="serve">
+          <h3><span class="tbd">Ready to Serve?</span></h3>
+          <p><span class="tbd">Every volunteer team and the Volunteer Application are on our Serve page.</span></p>
+          <div class="acts"><a class="btn" href="../serve/">Go to Serve</a><button class="tl" type="button" data-pick="general">Email Us Instead</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- find the right person: the same routing as the composer, as plain rows -->
+  <section class="sec" id="sct-people" aria-labelledby="sct-people-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <h2 class="h2" id="sct-people-h">Find the Right Person</h2>
+        <p><span class="tbd">Each ministry has its own inbox, so your question lands with someone who can answer it.</span></p>
+      </div>
+      <ul class="dir">
+        <li><div><h3>General Questions</h3><p><span class="tbd">Anything about Springs. Not sure who to ask? Start here.</span></p></div>
+          <div class="to"><a href="mailto:info@springs.church">info@springs.church</a></div></li>
+        <li><div><h3>Springs Kids</h3><p>Babies through grade 5, Sundays at 10AM and Wednesdays at 6:30PM.</p></div>
+          <div class="to"><a href="mailto:kids@springs.church">kids@springs.church</a><a href="https://kids.springs.church" target="_blank" rel="noopener">Kids Site <svg aria-hidden="true"><use href="#sct-out"/></svg></a></div></li>
+        <li><div><h3>Youth</h3><p>Middle and high school: Rooted and Anthem, Wednesdays at 6:30PM.</p></div>
+          <div class="to"><a href="mailto:youth@springs.church">youth@springs.church</a><a href="https://youth.springs.church" target="_blank" rel="noopener">Youth Site <svg aria-hidden="true"><use href="#sct-out"/></svg></a></div></li>
+        <li><div><h3>Young Adults</h3><p>Fridays at 7PM in the Garage.</p></div>
+          <div class="to"><a href="mailto:YA@springs.church">YA@springs.church</a><a href="https://ya.springs.church" target="_blank" rel="noopener">Young Adults Site <svg aria-hidden="true"><use href="#sct-out"/></svg></a></div></li>
+        <li><div><h3>Marriage</h3><p><span class="tbd">Premarital preparation through our Marriage Ministry.</span></p></div>
+          <div class="to"><a href="mailto:marriage@springs.church">marriage@springs.church</a></div></li>
+        <li><div><h3>Prayer</h3><p><span class="tbd">Send a prayer request anytime, or pray with us Wednesdays at 6:30PM.</span></p></div>
+          <div class="to"><a href="../prayer/">Prayer Page <svg aria-hidden="true"><use href="#sct-arr"/></svg></a></div></li>
+        <li><div><h3>Care and Hard Seasons</h3><p><span class="tbd">Care, support and next steps from our Care Team.</span></p></div>
+          <div class="to"><a href="../care/">Care Page <svg aria-hidden="true"><use href="#sct-arr"/></svg></a></div></li>
+        <li><div><h3>Serving</h3><p><span class="tbd">Every volunteer team and the Volunteer Application.</span></p></div>
+          <div class="to"><a href="../serve/">Serve Page <svg aria-hidden="true"><use href="#sct-arr"/></svg></a></div></li>
+      </ul>
+      <p class="dir-more"><span class="tbd">Looking for someone specific?</span> <a class="tl" href="../team/">Meet Our Team <svg class="i" aria-hidden="true"><use href="#sct-arr"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- visit -->
+  <section class="sec visit" id="sct-visit" aria-labelledby="sct-visit-h">
+    <div class="wrap visit-in">
+      <div class="visit-l">
+        <h2 class="h2" id="sct-visit-h">Come See Us</h2>
+        <p>Join us in person or online. <span class="tbd">Our building is in the Briargate neighborhood, and the office is open Tuesday–Thursday, 9AM–5PM.</span></p>
+        <div class="acts">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn line" href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Watch Online</a>
+        </div>
+        <div class="map" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7742703143895!2d-104.80077632365287!3d38.951984943480724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87134c2ab7a98667%3A0xa4fc6fb6d4c0222b!2sSprings%20Church!5e0!3m2!1sen!2sus!4v1754926116624!5m2!1sen!2sus"></div>
+      </div>
+      <dl class="facts">
+        <div><dt>Sundays</dt><dd><b>10AM</b>Worship and teaching. Springs Kids for babies through grade 5.</dd></div>
+        <div><dt>Wednesdays</dt><dd><b>6:30PM</b>Prayer night. Awaken for kids, Rooted for middle school and Anthem for high school.</dd></div>
+        <div><dt>Address</dt><dd>1515 Auto Mall Loop<br>Colorado Springs, CO 80920</dd></div>
+        <div><dt>Office</dt><dd><b>9AM–5PM</b>Tuesday–Thursday<br><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <p class="sr" aria-live="polite" data-live></p>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sct');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  root.classList.add('js');
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const qs = new URLSearchParams(location.search);
+  const say = t => { const l = $('[data-live]'); l.textContent = ''; setTimeout(() => { l.textContent = t; }, 30); };
+
+  /* in-page links */
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sct-"]');
+    if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
+  });
+
+  /* reveals */
+  const rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
+
+  /* office hours, live in Colorado time: Tuesday–Thursday, 9AM–5PM (?now=2026-11-17T10:00 previews a Colorado time) */
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const OPEN_DAYS = [2, 3, 4], OPEN = 9 * 60, CLOSE = 17 * 60;
+  const denverNow = () => {
+    const m = /^(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d)/.exec(qs.get('now') || '');
+    if (m) return { day: new Date(+m[1], +m[2] - 1, +m[3]).getDay(), mins: +m[4] * 60 + +m[5] };
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', weekday: 'long', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+    return { day: DAYS.indexOf(p.weekday), mins: (+p.hour % 24) * 60 + +p.minute };
+  };
+  const status = () => {
+    const { day, mins } = denverNow();
+    const isOpen = d => OPEN_DAYS.includes(d);
+    if (isOpen(day) && mins >= OPEN && mins < CLOSE) return [true, 'Open now until 5PM'];
+    if (isOpen(day) && mins < OPEN) return [false, 'Opens today at 9AM'];
+    if (isOpen((day + 1) % 7)) return [false, 'Opens tomorrow at 9AM'];
+    for (let k = 2; k <= 7; k++) if (isOpen((day + k) % 7)) return [false, `Opens ${DAYS[(day + k) % 7]} at 9AM`];
+    return [false, 'Tuesday–Thursday, 9AM–5PM'];
+  };
+  const now = $('[data-now]');
+  const paint = () => { const [open, text] = status(); now.hidden = false; now.classList.toggle('open', open); const s = now.querySelector('span'); if (s.textContent !== text) s.textContent = text; };
+  if (now) { paint(); setInterval(paint, 60000); }
+
+  /* copy helpers */
+  const copy = async t => { try { await navigator.clipboard.writeText(t); return true; } catch (_) { const x = document.createElement('textarea'); x.value = t; x.setAttribute('readonly', ''); x.style.cssText = 'position:absolute;left:-9999px'; document.body.appendChild(x); x.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (_) {} x.remove(); return ok; } };
+  const flash = (b, text) => { const was = b.dataset.label || b.textContent; b.dataset.label = was; b.textContent = text; say(text); clearTimeout(b._t); b._t = setTimeout(() => { b.textContent = was; }, 1800); };
+  root.addEventListener('click', async e => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    if (await copy(b.dataset.copy)) flash(b, 'Copied'); else prompt('Copy this address:', b.dataset.copy);
+  });
+
+  /* send us a message: route by topic, build a mailto: for the visitor's own email app */
+  const form = $('.cmp'), topic = $('#sct-topic'), nameIn = $('#sct-name'), msgIn = $('#sct-msg'), err = $('.err'), sent = $('[data-sent]');
+  const toEl = $('[data-show-to]'), subjEl = $('[data-show-subject]');
+  const opt = () => topic.selectedOptions[0];
+  const subject = () => { const n = nameIn.value.trim().replace(/\s+/g, ' '); return `${opt().dataset.subject} from ${n || 'the Springs Website'}`; };
+  const body = () => {
+    const n = nameIn.value.trim().replace(/\s+/g, ' ');
+    return ['Hi Springs Church,', '', msgIn.value.trim().replace(/\r?\n/g, '\r\n'), '', ...(n ? [n] : []), 'Sent from springs.church/contact-us'].join('\r\n');
+  };
+  const sync = () => {
+    const o = opt(), away = o.dataset.away;
+    form.classList.toggle('is-away', !!away);
+    $$('[data-away-panel]').forEach(p => p.classList.toggle('on', p.dataset.awayPanel === away));
+    if (away) return;
+    toEl.textContent = o.dataset.to;
+    subjEl.textContent = subject();
+  };
+  topic.addEventListener('change', () => { sent.classList.remove('on'); sync(); });
+  nameIn.addEventListener('input', () => { subjEl.textContent = subject(); });
+  msgIn.addEventListener('input', () => { if (msgIn.value.trim()) { err.classList.remove('on'); msgIn.removeAttribute('aria-invalid'); } });
+  const pick = v => { if (![...topic.options].some(o => o.value === v)) return false; topic.value = v; sync(); return true; };
+  root.addEventListener('click', e => { const b = e.target.closest('[data-pick]'); if (b) { pick(b.dataset.pick); topic.focus(); } });
+  const need = () => { if (msgIn.value.trim()) return true; err.classList.add('on'); msgIn.setAttribute('aria-invalid', 'true'); msgIn.focus(); return false; };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (opt().dataset.away || !need()) return;
+    const to = opt().dataset.to;
+    const url = `mailto:${to}?subject=${encodeURIComponent(subject())}&body=${encodeURIComponent(body())}`;
+    sent.innerHTML = '';
+    const b = document.createElement('b'); b.textContent = 'Your email app should open now. ';
+    sent.append(b, document.createTextNode(url.length > 1900
+      ? `This is a long message, so if it arrives cut off, use Copy Message and paste it into an email to ${to}.`
+      : `Didn’t open? Use Copy Message and paste it into an email to ${to}.`));
+    sent.classList.add('on');
+    window.location.href = url;
+  });
+  root.addEventListener('click', async e => {
+    const b = e.target.closest('[data-copy-to],[data-copy-msg]');
+    if (!b) return;
+    if (b.matches('[data-copy-msg]') && !need()) return;
+    const text = b.matches('[data-copy-to]') ? opt().dataset.to : `To: ${opt().dataset.to}\r\nSubject: ${subject()}\r\n\r\n${body()}`;
+    if (await copy(text)) flash(b, 'Copied'); else prompt('Copy this:', text);
+  });
+  if (qs.get('topic')) pick(qs.get('topic').toLowerCase());
+  sync();
+
+  /* map loads when the visit section gets close */
+  const map = $('.map');
+  const loadMap = () => { if (map.firstChild) return; const f = document.createElement('iframe'); f.src = map.dataset.map; f.title = 'Map to Springs Church'; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; map.appendChild(f); };
+  if ('IntersectionObserver' in window) { const mo = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { loadMap(); mo.disconnect(); } }, { rootMargin: '600px 0px' }); mo.observe(map); } else loadMap();
+})();
+</script>
+</section></main><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

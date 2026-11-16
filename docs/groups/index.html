@@ -1,0 +1,426 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groups | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sgr').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/groups ("Following Jesus Together") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /groups untouched.
+     Source of truth: ~/Desktop/springs-groups-site/churchco/groups-block.html (preview: preview-live.html via build-preview.py).
+     Built from the Trello audit card for /groups (Website Updates, audit Oct 29): "All Groups" now goes to the CCB group finder
+     (it went to the events page), the stray link on the "Women" heading is gone (each type is one link now), Men and Women stay
+     on group_type only (with department_id=20 the Women list drops the Moms Group, which CCB files under Adult Ministries; Men is
+     the same either way: checked 11/15), the leader requirements stay word for word but are marked to confirm, and Submit Interest
+     (CCB form #686) opens in place. Group lists open in a dialog (CCB's finder allows framing) with an Open in New Tab escape hatch;
+     no group names are hard-coded here, so nothing goes stale. Words are the church's own (live /groups, FAQ, form #686).
+     <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook (10AM, 6:30PM). -->
+<style>
+.tcc-block:has(#sgr){padding:0!important;background:#111!important}
+.tcc-block:has(#sgr) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sgr) .row-defaults{padding:0!important}
+.tcc-block:has(#sgr) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sgr{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sgr *{box-sizing:border-box}
+#sgr :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite,details,summary){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sgr ul,#sgr ol{list-style:none}
+#sgr a{color:inherit;text-decoration:none}
+#sgr img{display:block;max-width:100%}
+#sgr button{font:inherit;color:inherit}
+#sgr ::selection{background:var(--gold);color:var(--ink)}
+#sgr .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sgr svg.i{width:16px;height:16px;flex:none}
+#sgr .tbd{transition:background .2s}
+#sgr.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#sgr :is(p,li,dd){text-wrap:pretty}
+#sgr [id^="sgr-"],#sgr .old-anchor{scroll-margin-top:calc(var(--hdr) + 20px)}
+#sgr .old-anchor{display:block;height:0}
+
+/* buttons + links: one set (same as /about, /connect, /servecopy) */
+#sgr .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sgr .btn:hover{background:#333}
+#sgr .btn:active{transform:scale(.98)}
+#sgr .btn.light{background:#fff;color:var(--ink)}
+#sgr .btn.light:hover{background:var(--gold)}
+#sgr .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#sgr .btn.ghost:hover{background:#fff;color:var(--ink)}
+#sgr .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sgr .btn.line:hover{background:var(--ink);color:#fff}
+#sgr .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sgr .tl:hover{text-decoration-color:currentColor}
+#sgr :is(.btn,.tl,.gt,.x,summary,.faq-more a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+#sgr :is(.top,.faq-sec) :is(.btn,.tl,summary,a):focus-visible{outline-color:var(--gold)}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sgr .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#sgr .sec{padding:clamp(72px,9vw,120px) 0}
+#sgr .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sgr .sec-h p{color:var(--ink-2);max-width:36em}
+#sgr .sec-h p+p{margin-top:14px}
+#sgr .sec-h .big{margin-top:16px;font-size:clamp(19px,1.6vw,21px);line-height:1.5;color:var(--ink);max-width:22em}
+
+/* ---------- hero ---------- */
+#sgr .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
+#sgr .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(90px,11vw,150px);background:#fff;z-index:-1}
+#sgr .top-in{display:grid;grid-template-columns:1fr 1.05fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+#sgr .top-in>*{min-width:0}
+#sgr .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+#sgr .top h1 i{font-style:normal;color:var(--gold)}
+#sgr .top .lede{font-size:clamp(17px,1.4vw,19px);line-height:1.6;color:rgba(255,255,255,.8);margin-bottom:28px;max-width:34em}
+#sgr .acts{display:flex;flex-wrap:wrap;gap:12px}
+#sgr .trio{display:grid;grid-template-columns:1.35fr 1fr 1.35fr;gap:clamp(8px,1vw,14px);height:clamp(220px,26vw,360px);margin-top:clamp(44px,5.5vw,72px)}
+#sgr .trio figure{position:relative;border-radius:16px;overflow:hidden;background:#222;isolation:isolate}
+#sgr .trio img{width:100%;height:100%;object-fit:cover}
+#sgr .trio figure:nth-child(1) img{object-position:50% 45%}
+#sgr .trio figure:nth-child(2) img{object-position:58% 40%}
+#sgr .trio figure:nth-child(3) img{object-position:50% 40%}
+@media (prefers-reduced-motion:no-preference){
+  #sgr.js .top-in>*{opacity:0;transform:translateY(18px)}
+  #sgr.js.ready .top-in>*{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--n,0) * 90ms + 60ms)}
+  #sgr.js .trio figure{clip-path:inset(100% 0 0 0 round 16px);transform:translateY(28px)}
+  #sgr.js .trio img{transform:scale(1.12)}
+  #sgr.js.ready .trio figure{clip-path:inset(0 0 0 0 round 16px);transform:none;transition:clip-path 1.15s var(--ease),transform 1.15s var(--ease);transition-delay:calc(var(--n) * 90ms + 160ms)}
+  #sgr.js.ready .trio img{transform:none;transition:transform 1.6s var(--ease);transition-delay:calc(var(--n) * 90ms + 160ms)}
+}
+
+/* ---------- group types: one card component ---------- */
+#sgr .types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,18px)}
+#sgr .types>li{min-width:0}
+#sgr .gt{display:flex;flex-direction:column;height:100%;min-height:clamp(176px,14vw,196px);padding:clamp(22px,2.2vw,28px);border-radius:20px;background:var(--sand);color:var(--ink);transition:background .25s,box-shadow .3s var(--ease);-webkit-tap-highlight-color:transparent}
+#sgr .gt h3{font:600 clamp(22px,2vw,26px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:10px}
+#sgr .gt p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:26em}
+#sgr .gt .more{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:22px;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase}
+#sgr .gt .more svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sgr .gt:hover{background:#ece5d6}#sgr .gt:hover .more svg{transform:translateX(3px)}}
+#sgr .types .all{grid-column:1/-1}
+#sgr .all .gt{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;min-height:0}
+#sgr .all .gt>div{flex:1 1 320px;min-width:0}
+#sgr .all .gt .more{margin:0;padding:0 24px;min-height:50px;border-radius:10px;background:var(--ink);color:#fff;transition:background .2s}
+@media (hover:hover){#sgr .all .gt:hover .more{background:#333}}
+
+/* young adults clubs */
+#sgr .ya{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center;margin-top:clamp(56px,7vw,96px)}
+#sgr .ya-pic{aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--shot)}
+#sgr .ya-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+#sgr .ya h3{font:600 clamp(26px,2.6vw,34px)/1.1 var(--hd);letter-spacing:-.02em;margin-bottom:16px}
+#sgr .ya p{color:var(--ink-2);max-width:32em}
+#sgr .ya .clubs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 28px}
+#sgr .ya .clubs li{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border-radius:999px;background:var(--sand);font:600 13px/1 var(--hd);letter-spacing:.01em}
+#sgr .ya .acts{align-items:center;gap:14px 22px}
+
+/* ---------- how groups work (the one dark band) ---------- */
+#sgr .faq-sec{background:#111;color:#fff}
+#sgr .faq-sec .h2{color:#fff}
+#sgr .faq-sec .sec-h p{color:rgba(255,255,255,.74)}
+#sgr .faq{border-top:1px solid rgba(255,255,255,.22)}
+#sgr .faq details{border-bottom:1px solid rgba(255,255,255,.22)}
+#sgr .faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font:600 clamp(19px,1.7vw,22px)/1.3 var(--hd);letter-spacing:-.01em;color:#fff;-webkit-tap-highlight-color:transparent}
+#sgr .faq summary::-webkit-details-marker{display:none}
+#sgr .faq .pm{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35);transition:transform .35s var(--ease),background .2s,color .2s}
+#sgr .faq .pm svg{width:16px;height:16px}
+@media (hover:hover){#sgr .faq summary:hover .pm{background:#fff;color:var(--ink)}}
+#sgr .faq details[open] .pm{transform:rotate(45deg)}
+#sgr .faq .ans{padding:0 0 30px;max-width:46em;color:rgba(255,255,255,.8)}
+@media (prefers-reduced-motion:no-preference){#sgr .faq details[open] .ans{animation:sgr-fade .45s var(--ease)}}
+@keyframes sgr-fade{from{opacity:0;transform:translateY(-6px)}}
+#sgr .faq-more{margin-top:28px;font-size:17px;color:rgba(255,255,255,.72)}
+#sgr .faq-more a{font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.35)}
+#sgr .faq-more a:hover{text-decoration-color:currentColor}
+
+/* ---------- lead a group ---------- */
+#sgr .lead-sec{background:var(--sand)}
+#sgr .lead-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-rows:auto 1fr;gap:0 clamp(32px,6vw,96px);align-items:start}
+#sgr .lead-r{grid-column:2;grid-row:1/3}
+#sgr .lead-sec .h2{margin-bottom:18px}
+#sgr .lead-l>p{color:var(--ink-2);max-width:30em}
+#sgr .lead-sec .acts{margin-top:28px}
+#sgr .lead-sec small,#sgr .lead-sec .acts{max-width:30em}
+#sgr .lead-sec small{display:block;margin-top:14px;font-size:15px;line-height:1.5;color:var(--ink-3);max-width:30em}
+#sgr .lead-sec h3{font:600 clamp(20px,1.8vw,23px)/1.25 var(--hd);letter-spacing:-.01em;margin-bottom:6px}
+#sgr .reqs{border-top:1px solid var(--ink);margin-top:16px}
+#sgr .reqs li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px solid rgba(14,14,14,.16);font-size:17px;line-height:1.55;color:var(--ink-2)}
+#sgr .reqs svg{width:20px;height:20px;margin-top:3px;color:var(--gold-t)}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #sgr.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+  #sgr.js .rv.in{opacity:1;transform:none}
+}
+
+/* ---------- dialog: CCB group lists + form #686 ---------- */
+html.sgr-lock{overflow:hidden}
+#sgr dialog{border:0;padding:0;margin:auto;width:min(720px,calc(100vw - 16px));height:min(900px,calc(100dvh - 16px));max-height:none;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+#sgr dialog.wide{width:min(1040px,calc(100vw - 16px));height:min(940px,calc(100dvh - 16px))}
+#sgr dialog[open]{display:flex;flex-direction:column;animation:sgr-in .45s var(--ease)}
+#sgr dialog::backdrop{background:rgba(8,8,8,.62)}
+@keyframes sgr-in{from{opacity:0;transform:translateY(14px) scale(.985)}}
+#sgr .dlg-h{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 22px;border-bottom:1px solid var(--line)}
+#sgr .dlg-h b{flex:1;min-width:0;font:600 17px/1.3 var(--hd)}
+#sgr .dlg-h .tl{font-size:14px;white-space:nowrap}
+#sgr .x{all:unset;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--soft);cursor:pointer;transition:background .2s}
+#sgr .x:hover{background:#e9e9e7}
+#sgr .x svg{width:18px;height:18px}
+#sgr dialog iframe{flex:1;width:100%;border:0;background:#fff}
+#sgr .thanks{display:none;padding:clamp(32px,5vw,52px) clamp(22px,4vw,44px);text-align:center}
+#sgr dialog.done .thanks{display:block}
+#sgr dialog.done iframe,#sgr dialog.done .dlg-h .tl{display:none}
+#sgr dialog.done{height:auto}
+#sgr .thanks .ok{width:54px;height:54px;margin:0 auto 18px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--gold-t)}
+#sgr .thanks .ok svg{width:24px;height:24px}
+#sgr .thanks h3{font:600 24px/1.25 var(--hd);margin-bottom:10px;outline:0}
+#sgr .thanks p{color:var(--ink-2);max-width:28em;margin:0 auto 24px}
+#sgr .thanks .acts{justify-content:center}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  #sgr .types{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  #sgr .top-in,#sgr .sec-h,#sgr .ya,#sgr .lead-in{grid-template-columns:1fr}
+  #sgr .lead-r{grid-column:auto;grid-row:auto;margin-top:32px}
+  #sgr .lead-go{order:3}
+  #sgr .sec-h{align-items:start}
+  #sgr .ya-pic{aspect-ratio:16/10}
+}
+@media (max-width:640px){
+  #sgr{--top:128px}
+  #sgr .top h1{font-size:clamp(46px,13vw,60px)}
+  #sgr .trio{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:auto;aspect-ratio:1/1.02}
+  #sgr .trio figure:nth-child(1){grid-column:1/3}
+  #sgr .types{grid-template-columns:1fr;gap:10px}
+  #sgr .gt{min-height:0;padding:20px 22px}
+  #sgr .gt h3{font-size:21px;margin-bottom:6px}
+  #sgr .gt p{font-size:16px}
+  #sgr .gt .more{padding-top:16px}
+  #sgr .all .gt .more{flex:1 1 100%;justify-content:center}
+  #sgr .faq summary{padding:20px 0;font-size:18px}
+  #sgr .acts .btn{flex:1 1 auto}
+  #sgr .dlg-h{padding-left:16px;gap:8px}
+}
+</style>
+
+<div id="sgr">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sgr-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sgr-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="sgr-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sgr-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <!-- hero: the live heading + paragraph, Join / Lead -->
+  <header class="top">
+    <div class="wrap">
+      <div class="top-in">
+        <h1 style="--n:0">Following Jesus <i>Together</i></h1>
+        <div style="--n:1">
+          <p class="lede">Walking with Jesus is a lifelong journey best experienced in community. Together, we celebrate victories, share burdens, and encourage one another to keep our eyes on Him. By gathering in worship, studying Scripture, and serving side by side, we grow stronger in faith and in unity, reflecting the love of Christ to the world around us.</p>
+          <div class="acts">
+            <a class="btn light" href="#sgr-join">Join a Group</a>
+            <a class="btn ghost" href="#sgr-lead">Lead a Group</a>
+          </div>
+        </div>
+      </div>
+      <div class="trio">
+        <figure style="--n:0"><img src="img/sgr-prayer.jpg" alt="A circle of adults praying together, hands on one another’s shoulders" fetchpriority="high"></figure>
+        <figure style="--n:1"><img src="img/sgr-coffee.jpg" alt="A barista and a guest share a laugh at the Springs coffee bar"></figure>
+        <figure style="--n:2"><img src="img/sgr-serve.jpg" alt="Two volunteers smile beside boxes of produce at a food drive"></figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- join a group: the live intro, then one card per CCB group type (the lists live in CCB, so they never go stale here) -->
+  <section class="sec" id="sgr-join" aria-labelledby="sgr-join-h">
+    <span class="old-anchor" id="Join-a-Group" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="sec-h">
+        <div>
+          <h2 class="h2" id="sgr-join-h">Join a Group</h2>
+          <p class="big">A place for you and your family to grow in your faith.</p>
+        </div>
+        <div>
+          <p>None of us desires to be an island. Connecting with like-minded friends is vital for our growth as Christ-followers. That’s why we provide a variety of groups from which to choose. Whether you need a small group Bible study, a shared hobby group, somewhere to serve, or an outreach opportunity, we’ve got a place for you. Check out our Connect Groups below and join the rest of us as we walk out this journey together as friends.</p>
+        </div>
+      </div>
+      <ul class="types">
+        <li class="rv" style="--d:0"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=134" target="_blank" rel="noopener" data-list="Adult Groups">
+          <h3>Adult</h3><p><span class="tbd">Home groups, Bible studies and support groups for adults.</span></p>
+          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+        <li class="rv" style="--d:1"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=133" target="_blank" rel="noopener" data-list="Co-Ed Activity Groups">
+          <h3>Co-Ed Activity</h3><p><span class="tbd">Shared hobbies and activities for men and women together.</span></p>
+          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+        <li class="rv" style="--d:2"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=135" target="_blank" rel="noopener" data-list="Family Groups">
+          <h3>Family</h3><p><span class="tbd">Groups for couples, parents and the whole family.</span></p>
+          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+        <li class="rv" style="--d:0"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?group_type=88" target="_blank" rel="noopener" data-list="Men’s Groups">
+          <h3>Men</h3><p><span class="tbd">Prayer, Bible study, mentorship and breakfast with other men.</span></p>
+          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+        <li class="rv" style="--d:1"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?group_type=87" target="_blank" rel="noopener" data-list="Women’s Groups">
+          <h3>Women</h3><p><span class="tbd">Bible studies, home groups and activity groups for women.</span></p>
+          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+        <li class="rv" style="--d:2"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=92" target="_blank" rel="noopener" data-list="Young Adult Groups">
+          <h3>Young Adult</h3><p><span class="tbd">Clubs and groups for young adults, from coffee to hiking.</span></p>
+          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+        <li class="all rv"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public" target="_blank" rel="noopener" data-list="All Connect Groups">
+          <div><h3>All Groups</h3><p><span class="tbd">Browse every Connect Group and filter by meeting day, time and area of town.</span></p></div>
+          <span class="more">View All Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
+      </ul>
+
+      <!-- young adults clubs (ya.springs.church) -->
+      <div class="ya">
+        <div class="ya-pic rv"><img src="img/sgr-ya.jpg" alt="Young adults with golf clubs at a mini golf course, one snapping a selfie up front" loading="lazy"></div>
+        <div class="rv" style="--d:1">
+          <h3>Young Adults Clubs</h3>
+          <p><span class="tbd">Besides Fridays at 7PM in the Garage, Springs Young Adults have clubs you can jump into any time.</span></p>
+          <ul class="clubs" aria-label="Clubs"><li>Coffee</li><li>Hiking</li><li>Books</li><li>Board Games</li><li>Supper Clubs</li></ul>
+          <div class="acts">
+            <a class="btn" href="https://ya.springs.church">Visit Young Adults</a>
+            <a class="tl" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=92" target="_blank" rel="noopener" data-list="Young Adult Groups">View Young Adult Groups <svg class="i" aria-hidden="true"><use href="#sgr-arr"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- how groups work: the live FAQ, word for word (the leader question lives in Lead a Group below) -->
+  <section class="sec faq-sec" id="sgr-faq" aria-labelledby="sgr-faq-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sgr-faq-h">How Groups Work</h2>
+      </div>
+      <div class="faq">
+        <details class="rv" open>
+          <summary>What are Connect Groups?<span class="pm" aria-hidden="true"><svg><use href="#sgr-plus"/></svg></span></summary>
+          <p class="ans">Connect groups are small gatherings of individuals from our congregation who meet regularly for community. They are diverse in their purpose, times/locations, and demographic. Some are focused on Bible study, prayer, and growing in your faith. Others simply provide fellowship through a common hobby or similar interests.</p>
+        </details>
+        <details class="rv">
+          <summary>How do I join a group?<span class="pm" aria-hidden="true"><svg><use href="#sgr-plus"/></svg></span></summary>
+          <p class="ans">Scroll through the various Connect Groups to find what you desire most from a group. Then contact that group leader to see if they have openings and when, where, and how often they meet. It might be in their home, a restaurant, at the church, even in a park. We understand that sometimes you need to visit 3-4 groups to find a good fit before you settle in.</p>
+        </details>
+        <details class="rv">
+          <summary>Can I switch groups or join more than one?<span class="pm" aria-hidden="true"><svg><use href="#sgr-plus"/></svg></span></summary>
+          <p class="ans">Yes, you can switch groups or shop around. We ask that you advise your current group leader so they know you intend to leave. We have many people who belong to more than one small group. Please choose groups that meet at different times so you can be faithful in your attendance.</p>
+        </details>
+        <details class="rv">
+          <summary>Can I bring children or visitors?<span class="pm" aria-hidden="true"><svg><use href="#sgr-plus"/></svg></span></summary>
+          <p class="ans">Check with the specific group leader to see if they provide childcare. Some groups are age-specific or closed to one-time visitors.</p>
+        </details>
+      </div>
+      <p class="faq-more"><span class="tbd">Still have a question? Email <a href="mailto:info@springs.church">info@springs.church</a> or call <a href="tel:+17194888331">(719) 488-8331</a>.</span></p>
+    </div>
+  </section>
+
+  <!-- lead a group: live copy + the FAQ's leader requirements (word for word, to confirm) + form #686 in place -->
+  <section class="sec lead-sec" id="sgr-lead" aria-labelledby="sgr-lead-h">
+    <span class="old-anchor" id="Lead-a-Group" aria-hidden="true"></span>
+    <div class="wrap lead-in">
+      <div class="lead-l">
+        <h2 class="h2" id="sgr-lead-h">Lead a Group</h2>
+        <p>If you feel called to help others grow in their faith, we’d love for you to take the next step in leading a group.</p>
+      </div>
+      <div class="lead-go">
+        <div class="acts">
+          <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/686/responses/new" target="_blank" rel="noopener" data-form>Submit Interest</a>
+        </div>
+        <small><span class="tbd">We’ll reach out to set up a time to meet. Nothing is decided until after that conversation.</span></small>
+      </div>
+      <div class="lead-r rv">
+        <h3>What are the qualifications to lead a group?</h3>
+        <ul class="reqs">
+          <li><svg aria-hidden="true"><use href="#sgr-ok"/></svg><span class="tbd">We ask leaders to make Springs Church your home church where you regularly attend, agree with our doctrine, and support the church through giving.</span></li>
+          <li><svg aria-hidden="true"><use href="#sgr-ok"/></svg><span class="tbd">We like potential leaders to be attending at least six months to a year, depending on the type of group you want to lead.</span></li>
+          <li><svg aria-hidden="true"><use href="#sgr-ok"/></svg><span class="tbd">All leaders need to complete the church membership process.</span></li>
+          <li><svg aria-hidden="true"><use href="#sgr-ok"/></svg><span class="tbd">There is an application and interview that allows you to share your spiritual life and calling with us.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="sgr-dlg" aria-labelledby="sgr-dlg-t">
+    <div class="dlg-h"><b id="sgr-dlg-t">Lead a Group</b><a class="tl" id="sgr-dlg-o" href="https://springschurch.ccbchurch.com/goto/forms/686/responses/new" target="_blank" rel="noopener">Open in New Tab</a><button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#sgr-x"/></svg></button></div>
+    <iframe id="sgr-dlg-f" title="Connect Group Leader Interest form"></iframe>
+    <div class="thanks">
+      <div class="ok"><svg aria-hidden="true"><use href="#sgr-ok"/></svg></div>
+      <h3 tabindex="-1" data-form-t="Thanks for raising your hand." data-list-t="Thanks for reaching out.">Thanks for raising your hand.</h3>
+      <p><span class="tbd" data-form-t="We’ll contact you soon to schedule a time to meet." data-list-t="The group leader will be in touch about next steps.">We’ll contact you soon to schedule a time to meet.</span></p>
+      <div class="acts"><button class="btn" type="button" data-close>Done</button></div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sgr');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  root.classList.add('js');
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* in-page links */
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sgr-"]');
+    if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
+  });
+
+  /* reveals */
+  const rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+
+  /* One dialog for both: CCB group lists (data-list, wide) and the Lead a Group interest form #686 (data-form).
+     CCB sends people back to springs.church after a form is sent, so catch that and say thanks.
+     Cmd/Ctrl/Shift-click keeps the normal new-tab link. */
+  const dlg = $('#sgr-dlg'), frame = $('#sgr-dlg-f'), title = $('#sgr-dlg-t'), out = $('#sgr-dlg-o');
+  const FORM = 'https://springschurch.ccbchurch.com/goto/forms/686/responses/new';
+  const landedHome = fr => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  root.addEventListener('click', e => {
+    const b = e.target.closest('[data-list],[data-form]');
+    if (!b || typeof dlg.showModal !== 'function' || e.metaKey || e.ctrlKey || e.shiftKey || e.button > 0) return;
+    e.preventDefault();
+    const isForm = b.hasAttribute('data-form');
+    const src = isForm ? FORM : b.href;
+    dlg.classList.remove('done');
+    dlg.classList.toggle('wide', !isForm);
+    title.textContent = isForm ? 'Lead a Group' : b.dataset.list;
+    frame.title = isForm ? 'Connect Group Leader Interest form' : b.dataset.list + ' on CCB';
+    out.href = src;
+    dlg.querySelectorAll('[data-form-t]').forEach(el => { el.textContent = isForm ? el.dataset.formT : el.dataset.listT; });
+    if (frame.getAttribute('src') !== src) frame.src = src;
+    dlg.showModal();
+    dlg.querySelector('.x').focus();
+    document.documentElement.classList.add('sgr-lock');
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+  dlg.addEventListener('close', () => {
+    document.documentElement.classList.remove('sgr-lock');
+    if (dlg.classList.contains('done')) { dlg.classList.remove('done'); frame.removeAttribute('src'); }
+  });
+  frame.addEventListener('load', () => {
+    if (!landedHome(frame)) return;
+    frame.src = 'about:blank';
+    dlg.classList.add('done');
+    dlg.querySelector('.thanks h3').focus();
+  });
+
+  /* hero load-in once the photos are ready (or after 1.5s) */
+  const imgs = $$('.trio img');
+  let left = imgs.length, done = false;
+  const ready = () => { if (done) return; done = true; requestAnimationFrame(() => root.classList.add('ready')); };
+  const one = () => { if (--left <= 0) ready(); };
+  imgs.forEach(i => i.complete ? one() : (i.addEventListener('load', one), i.addEventListener('error', one)));
+  setTimeout(ready, 1500);
+})();
+</script>
+</section></main><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

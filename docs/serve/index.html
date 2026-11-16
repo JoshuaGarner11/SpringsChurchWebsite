@@ -48,10 +48,11 @@
 <div class="tcc-block html-takeover"><!-- springs.church/serve · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). Review copy LIVE on /servecopy (11/06); /serve untouched.
      Source of truth: ~/Desktop/springs-serve-site/churchco/serve-block.html (preview: preview-live.html via build-preview.py).
      Idea: a week at Springs as a run of show. Every team sits at the moment it serves (door, room, kids wing, altar, safety,
-     Wednesday, Friday, behind the scenes, city). The team list = the 20 teams on CCB form #241 "Springs Church | Volunteer
+     Wednesday, Friday, behind the scenes, city). The team list = the 23 teams on CCB form #241 "Springs Church | Volunteer
      Application" (one team per application). Team lines start from the live /serve wording. Apply opens #241 in a dialog and
      tells people which box to check (we can't prefill CCB). CCB sends people to springs.church after submit; the dialog
      catches that and shows a thank-you. <span class="tbd"> = new wording or facts to confirm before going live.
+     11/16: Local Outreach / Missions split into Feeding Friends, Prison Ministry, Local Outreach and Missions (queues notify Karen).
      Deep links: ?team=coffee scrolls to and highlights a team (for leaders to text), ?apply=coffee opens its application. -->
 <style>
 .tcc-block:has(#sv){padding:0!important;background:#111!important}
@@ -469,20 +470,21 @@ html.sv-lock{overflow:hidden}
           </ul>
         </article>
 
-        <!-- Out in the City -->
-        <article class="mo solo" id="sv-city" aria-labelledby="sv-city-h" data-cue="Third Thursdays">
+        <!-- Out in the City (11/16: CCB #241 now has Feeding Friends, Prison Ministry, Local Outreach and Missions as separate choices) -->
+        <article class="mo" id="sv-city" aria-labelledby="sv-city-h" data-cue="Third Thursdays">
           <div class="mo-l">
             <h3 id="sv-city-h">Out in the City</h3>
             <p class="when tbd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Every third Thursday, and on outreach days</p>
             <p class="tbd">Colorado Springs is our mission field too. Serve families in our city alongside our missions team.</p>
             <p class="mo-ask"><a href="../missions/">See all of Springs Missions</a></p>
+            <figure class="mo-pic"><img src="img/serve-outreach-car.jpg" alt="A Springs volunteer loading groceries into a family’s car at our food drive" loading="lazy"></figure>
           </div>
-          <div class="mo-r">
           <ul class="teams">
-            <li class="team" id="sv-t-outreach" data-team="outreach" data-form="Local Outreach / Missions"><div><h4>Local Outreach</h4><p class="tbd">Serve at our monthly feeding program and other outreach days around Colorado Springs.</p><div class="chs"><span class="ch tbd">Third Thursdays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Local Outreach" data-apply="outreach">Apply</button></li>
+            <li class="team" id="sv-t-feeding" data-team="feeding" data-form="Feeding Friends"><div><h4>Feeding Friends</h4><p>On the third Thursday of each month, hand out groceries to families in our community who are impacted by rising food costs.</p><div class="chs"><span class="ch">Third Thursdays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Feeding Friends" data-apply="feeding">Apply</button></li>
+            <li class="team" id="sv-t-prison" data-team="prison" data-form="Prison Ministry"><div><h4>Prison Ministry</h4><p>An ongoing ministry bringing the hope of Jesus to people in prison.</p></div><button class="btn line apply" type="button" aria-label="Apply for Prison Ministry" data-apply="prison">Apply</button></li>
+            <li class="team" id="sv-t-outreach" data-team="outreach" data-form="Local Outreach"><div><h4>Local Outreach</h4><p class="tbd">Serve on other outreach days around Colorado Springs.</p></div><button class="btn line apply" type="button" aria-label="Apply for Local Outreach" data-apply="outreach">Apply</button></li>
+            <li class="team" id="sv-t-missions" data-team="missions" data-form="Missions"><div><h4>Missions</h4><p class="tbd">Serve with our missions team as we pray for, send and care for our missionaries.</p></div><button class="btn line apply" type="button" aria-label="Apply for Missions" data-apply="missions">Apply</button></li>
           </ul>
-          <figure class="mo-pic"><img src="img/serve-outreach-car.jpg" alt="A Springs volunteer loading groceries into a family’s car at our food drive" loading="lazy"></figure>
-          </div>
         </article>
       </div>
     </div>

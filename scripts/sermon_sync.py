@@ -39,38 +39,78 @@ def video(vid):
             "thumb": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"}
 
 
+def playlist_items(page):
+    """newest-first entries from the playlist page itself: id, title, speaker and YouTube's "8h ago" style age"""
+    m = re.search(r"var ytInitialData\s*=\s*(\{.+?\});</script>", page, re.S)
+    if not m: return []
+    found = []
+    def walk(x):
+        if isinstance(x, dict):
+            if "lockupViewModel" in x: found.append(x["lockupViewModel"])
+            for v in x.values(): walk(v)
+        elif isinstance(x, list):
+            for v in x: walk(v)
+    walk(json.loads(m.group(1)))
+    out = []
+    for v in found:
+        md = ((v.get("metadata") or {}).get("lockupMetadataViewModel") or {})
+        title, _, speaker = ((md.get("title") or {}).get("content") or "").partition(" | ")
+        rows = (((md.get("metadata") or {}).get("contentMetadataViewModel") or {}).get("metadataRows") or [])
+        parts = [((p.get("text") or {}).get("content") or "") for r in rows for p in (r.get("metadataParts") or [])]
+        age = next((x for x in parts if re.search(r"\bago$", x)), "")
+        if v.get("contentId") and title:
+            out.append({"id": v["contentId"], "title": title.strip(), "speaker": speaker.strip(), "age": age})
+    return out
+
+
+def sunday_from_age(age):
+    """'8h ago' / '7d ago' / '2w ago' / '1mo ago' -> the Sunday on or before that day (Colorado time), as 'November 15, 2026'"""
+    m = re.match(r"(\d+)\s*(mo|min|s|m|h|d|w|y)", age or "")   # "mo" before "m", or "1mo" reads as one minute
+    if not m: return ""
+    n, unit = int(m.group(1)), m.group(2)
+    days = {"s": 0, "m": 0, "min": 0, "h": n / 24, "d": n, "w": 7 * n, "mo": 30 * n, "y": 365 * n}[unit]
+    now = dt.datetime.now(dt.timezone(dt.timedelta(hours=-7)))
+    day = (now - dt.timedelta(days=days)).date()
+    day -= dt.timedelta(days=(day.weekday() + 1) % 7)   # back to Sunday
+    return day.strftime("%B %-d, %Y")
+
+
 def main():
     try:
         page = get(f"https://www.youtube.com/playlist?list={PLAYLIST}")
     except Exception as e:
         print("Couldn't read the playlist page:", type(e).__name__, "- keeping the last list."); return
-    ids = list(dict.fromkeys(re.findall(r'"videoId":"([\w-]{11})"', page)))
-    if len(ids) < TAKE:
-        print(f"Playlist page looked wrong ({len(ids)} videos found) - keeping the last list."); return
-    items = []
-    for vid in ids[:TAKE]:
-        try:
-            v = video(vid)
-        except Exception as e:
-            print("Couldn't read a video page:", type(e).__name__); v = None
-        if v: items.append(v)
-        time.sleep(1.5)
-    if len(items) < TAKE:
-        print(f"Only {len(items)} of {TAKE} videos read cleanly - keeping the last list."); return
+    top = playlist_items(page)[:TAKE]
+    if len(top) < TAKE:
+        print(f"Playlist page looked wrong ({len(top)} entries) - keeping the last list."); return
+    try:
+        old = {i["id"]: i for i in json.load(open(OUT, encoding="utf-8")).get("items", [])}
+    except (OSError, ValueError):
+        old = {}
+    items, exact, estimated = [], 0, 0
+    for e in top:
+        if e["id"] in old and old[e["id"]].get("date"):
+            date = old[e["id"]]["date"]
+        else:
+            v = None
+            try: v = video(e["id"])
+            except Exception: pass
+            if v and v.get("date"): date = v["date"]; exact += 1
+            else: date = sunday_from_age(e["age"]); estimated += 1
+            time.sleep(1.5)
+        items.append({"id": e["id"], "title": e["title"], "speaker": e["speaker"], "date": date,
+                      "thumb": f"https://i.ytimg.com/vi/{e['id']}/hqdefault.jpg"})
     body = json.dumps(items, sort_keys=True, ensure_ascii=False)
     digest = hashlib.sha256(body.encode()).hexdigest()[:16]
-    try:
-        if json.load(open(OUT, encoding="utf-8")).get("hash") == digest:
-            print("sermons.json unchanged; newest:", items[0]["title"]); return
-    except (OSError, ValueError):
-        pass
+    if old and json.load(open(OUT, encoding="utf-8")).get("hash") == digest:
+        print("sermons.json unchanged; newest:", items[0]["title"]); return
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"source": "YouTube playlist " + PLAYLIST + " via scripts/sermon_sync.py",
                    "updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"), "hash": digest, "items": items},
                   f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print("sermons.json updated; newest:", items[0]["title"], "|", items[0]["date"])
+    print(f"sermons.json updated; newest: {items[0]['title']} | {items[0]['date']} (new dates: {exact} exact, {estimated} from upload age)")
 
 
 if __name__ == "__main__":

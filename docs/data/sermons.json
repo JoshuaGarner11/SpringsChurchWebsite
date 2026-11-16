@@ -1,14 +1,13 @@
 {
  "source": "YouTube playlist PL0-75bzYYynk7GXBRfMBT-JD0AyuKTZIo via scripts/sermon_sync.py",
- "updated": "2026-11-16T05:52+00:00",
- "hash": "69b3d83995e92b7f",
+ "updated": "2026-11-16T06:06+00:00",
+ "hash": "7168a2de5f377c82",
  "items": [
   {
    "id": "Pux9AYf6dO8",
    "title": "The Imageless God",
    "speaker": "Michael Petillo",
    "date": "November 15, 2026",
-   "published": "2026-11-15",
    "thumb": "https://i.ytimg.com/vi/Pux9AYf6dO8/hqdefault.jpg"
   },
   {
@@ -16,7 +15,6 @@
    "title": "You Can't Scare the Hell Out of People",
    "speaker": "Michael Petillo",
    "date": "November 8, 2026",
-   "published": "2026-11-08",
    "thumb": "https://i.ytimg.com/vi/F4lEL8bnik0/hqdefault.jpg"
   },
   {
@@ -24,7 +22,6 @@
    "title": "Disruption",
    "speaker": "Nicky Cruz",
    "date": "November 1, 2026",
-   "published": "2026-11-01",
    "thumb": "https://i.ytimg.com/vi/zOvP-KGQ0eA/hqdefault.jpg"
   },
   {
@@ -32,7 +29,6 @@
    "title": "The Cost of a Comfortable Church",
    "speaker": "Michael Petillo",
    "date": "October 25, 2026",
-   "published": "2026-10-25",
    "thumb": "https://i.ytimg.com/vi/u_kH54cwvpY/hqdefault.jpg"
   }
  ]

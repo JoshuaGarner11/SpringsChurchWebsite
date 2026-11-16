@@ -194,7 +194,9 @@ html.sm-lock{overflow:hidden}
 #sm .panel.open .pin{opacity:1;transform:none}
 #sm .pin::before{content:"";position:absolute;top:-9px;left:var(--nx,50%);width:18px;height:18px;margin-left:-9px;background:var(--soft);border-radius:3px;transform:rotate(45deg)}
 #sm .pin h3{font:600 clamp(24px,2.4vw,30px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:6px;padding-right:44px;outline:0}
-#sm .pin .meta{font-size:16px;color:var(--ink-3);margin-bottom:20px}
+#sm .pin .meta{margin:2px 0 20px}
+#sm .meta .org,#sm .pmeta .org{display:block;font:600 clamp(18px,1.6vw,21px)/1.25 var(--hd);letter-spacing:-.01em;color:var(--ink)}
+#sm .meta .plc,#sm .pmeta .plc{display:block;margin-top:3px;font-size:16px;color:var(--ink-3)}
 #sm .pin .bio p{font-size:17px;line-height:1.65;color:var(--ink-2);max-width:40em}
 #sm .pin .bio p+p{margin-top:14px}
 #sm .pin .more{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:22px}
@@ -218,7 +220,9 @@ html.sm-lock{overflow:hidden}
 #sm .pray-pic figcaption{position:absolute;left:16px;bottom:16px;padding:8px 13px;border-radius:999px;background:rgba(14,14,14,.66);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
 #sm .pray .h2{margin-bottom:22px}
 #sm .who{font:600 clamp(24px,2.4vw,32px)/1.15 var(--hd);letter-spacing:-.015em;text-wrap:balance}
-#sm .pmeta{font-size:16px;color:var(--ink-2);margin:6px 0 22px}
+#sm .pmeta{margin:8px 0 22px}
+#sm .pmeta .plc{color:var(--ink-2)}
+#sm .pmeta[hidden]+.pts{margin-top:18px}
 #sm .pray .pts li{font-size:17px}
 #sm .pray .pts li::before{background:var(--gold-t)}
 #sm .pray-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:4px}
@@ -290,6 +294,9 @@ html.sm-lock{overflow:hidden}
 #sm .goc dt{font:600 16px/1.35 var(--hd)}
 #sm .goc dd{font-size:16px;line-height:1.5;color:var(--ink-2)}
 #sm .goc .acts{align-items:center;gap:14px 24px}
+#sm .goc .partners{margin:-8px 0 26px;font-size:16px;line-height:1.5;color:var(--ink-2);max-width:34em}
+#sm .goc .hint{margin-top:14px;font-size:14px;line-height:1.45;color:var(--ink-3)}
+#sm .goc .hint b{font-weight:600;color:var(--ink-2)}
 #sm .story{margin:20px 0 26px;padding:18px 20px;border-radius:14px;background:#fff}
 #sm .story p{font-size:16px;line-height:1.55;color:var(--ink-2);margin-bottom:10px}
 
@@ -355,7 +362,7 @@ html.sm-lock{overflow:hidden}
       <div class="hero-top">
         <h1 id="sm-h1"><span>Pray<i>.</i></span> <span>Send<i>.</i></span> <span>Go<i>.</i></span></h1>
         <div>
-          <p class="lede">Jesus was sent by God into the world. He had a mission, and God has sent you to do the same. You’ve been sent to your family, neighbors, coworkers, the broken and the needy in your neighborhood and beyond.</p>
+          <p class="lede">Jesus was sent by God into the world. His mission was to seek and save the lost, and He commissioned His followers to do the same. You have been sent to your family, neighbors, and coworkers, to the broken and needy in your neighborhood and beyond.</p>
           <div class="acts">
             <a class="btn light" href="#sm-people">Meet Our Missionaries</a>
             <a class="btn ghost" href="#sm-give">Give to Missions</a>
@@ -392,13 +399,13 @@ html.sm-lock{overflow:hidden}
       <div class="ways">
         <div class="way">
           <h3>Pray<i>.</i></h3>
-          <p class="tbd">Prayer comes first. Pray for our missionaries by name, and join us at Wednesday Prayer at 6:30 PM.</p>
+          <p class="tbd">Prayer is foundational. Pray for our missionaries by name, and join us at Wednesday Prayer at 6:30 PM.</p>
           <p class="vs">“Ask the Lord of the harvest, therefore, to send out workers into his harvest field.” <a href="https://www.bible.com/bible/111/MAT.9.38.NIV" target="_blank" rel="noopener">Matthew 9:38</a></p>
           <a class="tl" href="#sm-pray"><span>This week: <span data-pray-short>the Cassula family</span></span></a>
         </div>
         <div class="way">
           <h3>Send<i>.</i></h3>
-          <p class="tbd">We send our missionaries out with our support. Give to one of them directly, or wherever it’s needed most.</p>
+          <p>We send our missionaries out with our financial support. Give to one of them directly or wherever the need is greatest.</p>
           <p class="vs">“And how can anyone preach unless they are sent?” <a href="https://www.bible.com/bible/111/ROM.10.15.NIV" target="_blank" rel="noopener">Romans 10:15</a></p>
           <a class="tl" href="#sm-give">Give to missions</a>
         </div>
@@ -443,7 +450,7 @@ html.sm-lock{overflow:hidden}
       <div class="swap" id="sm-pt">
         <h2 class="h2" id="sm-pray-h">Pray This Week</h2>
         <p class="who" id="sm-who">Renato &amp; Michele Cassula</p>
-        <p class="pmeta" id="sm-pmeta">Brazil · Jacob’s Well</p>
+        <p class="pmeta" id="sm-pmeta"><span class="org">Jacob’s Well</span><span class="plc">Brazil</span></p>
         <ul class="pts" id="sm-pts"></ul>
         <div class="pray-acts">
           <button type="button" class="tl" id="sm-pread">Read their story</button>
@@ -514,16 +521,17 @@ html.sm-lock{overflow:hidden}
           <figure><img src="img/food-drive.jpg" alt="A Springs volunteer handing out food at our 2026 food drive" loading="lazy"></figure>
           <div class="goc-in">
             <h3>Here at Home</h3>
-            <p class="tbd">Colorado Springs is our mission field too. Here’s where you can serve this month.</p>
+            <p class="tbd">Colorado Springs is our mission field too. Here’s where you can serve.</p>
             <dl>
-              <div><dt>Feeding Families</dt><dd class="tbd">Once a month we serve meals and groceries to families in our community who are hurting.</dd></div>
+              <div><dt>Feeding Friends</dt><dd>On the third Thursday of each month, we provide groceries to families in our community who are impacted by rising food costs.</dd></div>
               <div><dt>Prison Ministry</dt><dd class="tbd">An ongoing ministry bringing the hope of Jesus to people in prison.</dd></div>
-              <div><dt>Local Schools</dt><dd class="tbd">Reaching out to and serving the schools around us.</dd></div>
             </dl>
+            <p class="partners tbd">We also give to local partners, including Springs Rescue Mission, Mercy’s Gate, and Crossfire Ministries.</p>
             <div class="acts">
               <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/241/responses/new" target="_blank" rel="noopener">Serve With Us <svg class="ne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
               <button type="button" class="tl" data-give="local">Give to Local Outreach</button>
             </div>
+            <p class="hint">On the form, choose <b>Local Outreach / Missions</b>.</p>
           </div>
         </article>
         <article class="goc trips">
@@ -560,17 +568,17 @@ html.sm-lock{overflow:hidden}
   const M = [
     { id: 'cassula', last: 'Cassula', names: 'Renato & Michele', full: 'Renato & Michele Cassula', place: 'Brazil', org: 'Jacob’s Well',
       img: 'img/m-cassula.jpg', fund: '97npxJ_LcEyXbBj6sk2wpg', btn: 'the Cassula Family', to: 'the Cassula family in Brazil',
-      bio: ['Renato and Michele built intentional relationships with the drought-impacted communities in Brazil. Their ministry emphasizes relationship-based transformation, engaging community members in planning, implementation, and long-term growth so that their own strengths and culture lead the way toward lasting spiritual, social, and economic change. Through this collaborative approach, rooted in the gospel, wells have been drilled, trust restored, churches planted, and lives now continue to experience hope and transformation.'],
-      pray: ['Pray for the drought-impacted communities they walk alongside in Brazil.', 'Pray for the churches planted through their work to keep growing.', 'Pray for lasting hope and change rooted in the gospel.'],
+      bio: ['Renato and Michele build intentional relationships with the drought-impacted communities in Brazil. Their ministry emphasizes relationship-based transformation, engaging community members in planning, implementation, and long-term growth so that local strengths and culture lead the way toward lasting spiritual, social, and economic change. Through this collaborative approach, rooted in the gospel, wells have been drilled, trust restored, churches planted, and lives now continue to experience hope and transformation.'],
+      pray: ['Pray for the drought-impacted communities they walk alongside in Brazil.', 'Pray for the continued growth of local churches that have been planted.', 'Pray for lasting hope and change rooted in the gospel.'],
       links: [{ t: 'Instagram', h: 'https://www.instagram.com/renatocassula/' }] },
-    { id: 'cruz', last: 'Cruz', names: 'Carlos & Amanda', full: 'Carlos & Amanda Cruz', place: 'Guatemala', org: 'Cruzing Guatemala',
+    { id: 'cruz', last: 'Cruz', names: 'Carlos & Amanda', full: 'Carlos & Amanda Cruz', place: 'Guatemala', org: 'Cruzin’ Guatemala',
       img: 'img/m-cruz.jpg', fund: 'p16F1qqXoNXG-g6i5IeYDA', btn: 'the Cruz Family', to: 'the Cruz family in Guatemala',
-      bio: ['Carlos and Amanda serve children and families in Piedras Azules, Juan Ponce, and Zapata, sharing the truth of Jesus’ love through Sunday school, VBS, games, and special events. They also host soccer and sports camps, building meaningful relationships with children and their communities.', 'The Cruzes help meet practical needs by distributing food bags to families. Each Sunday, Carlos travels between the villages, preaching from early morning into the afternoon and encouraging believers in every location.'],
-      pray: ['Pray for the families of Piedras Azules, Juan Ponce and Zapata.', 'Pray for strength for Carlos as he preaches village to village each Sunday.', 'Pray for the children who come to Sunday school, VBS and sports camps.'],
+      bio: ['Carlos and Amanda serve children and families in Piedras Azules, Juan Ponce, and Zapata, sharing the truth of Jesus’ love through Sunday school, Vacation Bible School, games, and special events. They also host soccer and sports camps, building meaningful relationships with children and their communities.', 'The Cruzes help meet practical needs by distributing food bags to families. Each Sunday, Carlos travels between the villages, preaching from early morning into the afternoon and encouraging believers in every location.'],
+      pray: ['Pray for the families of Piedras Azules, Juan Ponce and Zapata.', 'Pray for strength for Carlos as he preaches village to village each Sunday.', 'Pray for the children who come to Sunday school, Vacation Bible School and sports camps.'],
       links: [{ t: 'Watch their story', h: '/stories?story=cruz', local: 1 }] },
     { id: 'nickycruz', last: 'Nicky Cruz', names: 'Nicky Cruz Outreach', full: 'Nicky Cruz', place: 'Global', org: 'Nicky Cruz Outreach',
       img: 'img/m-nickycruz.jpg', fund: 'O4zlFUBaPEkAqJBbLcRFwA', btn: 'Nicky Cruz Outreach', to: 'Nicky Cruz Outreach',
-      bio: ['For the past 60 years, Nicky Cruz has traveled the world speaking to nearly 50 million people in person. For decades this author of 17 books has been driven to reach an at-risk youth culture being decimated by crime, drugs, and gang activity.', 'Nicky has a passion to evangelize unchurched communities. He launched TRUCE (To Reach Urban Communities Everywhere), an evangelism training program which utilizes urban art forms to share the gospel.'],
+      bio: ['For the past 60 years, Nicky Cruz has traveled the world, speaking to live audiences totaling nearly 50 million people. For decades this author of 17 books has been driven to reach an at-risk youth culture being decimated by crime, drugs, and gang activity.', 'Nicky has a passion to evangelize unchurched communities. He launched TRUCE (To Reach Urban Communities Everywhere), an evangelism training program which utilizes urban art forms to share the gospel.'],
       pray: ['Pray for Nicky as he preaches the gospel to unchurched communities.', 'Pray for young people caught in crime, drugs and gangs to meet Jesus.', 'Pray for the TRUCE teams training believers to share their faith.'],
       links: [] },
     { id: 'jacobs', last: 'Jacobs', names: 'Jeremy & Racquel', full: 'Jeremy & Racquel Jacobs', place: 'USA', org: 'Stories of Antisemitism',
@@ -587,36 +595,38 @@ html.sm-lock{overflow:hidden}
       links: [] },
     { id: 'lobos', last: 'Lobos', names: 'Cris & Emy', full: 'Cris & Emy Lobos', place: 'France', org: 'YWAM (Youth With A Mission)',
       img: 'img/m-lobos.jpg', fund: 'kwky8nap0IgFQu0Di8wa0w', btn: 'the Lobos Family', to: 'the Lobos family in France',
-      bio: ['Cris and Emy’s mission is to make disciples. They preach the gospel to their neighbors and in street outreaches. When people respond to the gospel, they teach them the life Jesus intended for us to live. They train them through Bible and life sharing and then take them to the streets to evangelize which results in house churches being born as their disciples reach out to people within their own networks of influence.'],
+      bio: ['Cris and Emy’s mission is to make disciples. They preach the gospel to their neighbors and in street outreaches. When people respond to the gospel, the Loboses teach them the life Jesus intended for us to live, training them through Bible study and life sharing. Later they take these disciples to the streets to evangelize; house churches are born as they reach out to people within their own networks of influence.'],
       pray: ['Pray for their neighbors and the people they meet on the streets.', 'Pray for new believers as they learn to follow Jesus.', 'Pray for the house churches growing out of their disciples’ friendships.'],
       links: [] },
     { id: 'nicholas', last: 'Nicholas', names: 'Jonathan & Tina', full: 'Jonathan & Tina Nicholas', place: 'MEA', org: 'YWAM (Youth With A Mission)',
       img: 'img/m-nicholas.jpg', fund: 'nyG0jGQ_kj1Htrly3sG10Q', btn: 'the Nicholas Family', to: 'the Nicholas family',
-      bio: ['Jonathan and Tina’s missionary work is in the Middle East and Africa (MEA) region. They engage unreached communities through discipleship, evangelism, and in-field training. They take multiple trips each year, bringing food and supplies to various people groups.'],
+      bio: ['Jonathan and Tina’s missionary work is in the Middle East and Africa (MEA). They engage unreached communities through discipleship, evangelism, and in-field training. They take multiple trips each year, bringing food and supplies to various people groups.'],
       pray: ['Pray for unreached communities across the Middle East and Africa.', 'Pray for safety and open doors on each of their trips.', 'Pray for the people they disciple and train in the field.'],
       links: [] },
     { id: 'schwarz', last: 'Schwarz', names: 'Nathan & Janessa', full: 'Nathan & Janessa Schwarz', place: 'Global', org: 'AIMS',
       img: 'img/m-schwarz.jpg', fund: 'RKcoc_c3O5wj7PRTSO386g', btn: 'the Schwarz Family', to: 'the Schwarz family',
-      bio: ['Nathan and Janessa work in the AIMS Headquarters office mobilizing native missionaries around the world to reach Unreached People Groups.', 'They connect prayer, finances, and partnerships to the local believers with the most access to the Unreached so that they can effectively reach the lost.'],
+      bio: ['Nathan and Janessa work in the AIMS Headquarters office mobilizing native missionaries around the world to reach Unreached People Groups.', 'They connect prayer, finances, and partnerships to the local believers, prioritizing the Unreached, so that those believers can effectively reach the lost.'],
       pray: ['Pray for native missionaries reaching unreached people groups.', 'Pray for the prayer, giving and partnerships they connect.'],
       links: [] },
     { id: 'stoddard', last: 'Stoddard', names: 'Zane & Jan', full: 'Zane & Jan Stoddard', place: 'Global', org: 'Springs Church Legacy/Missionary Care',
       img: 'img/m-stoddard.jpg', fund: 'bgP5wkgDSELRaV9l-r4n8w', btn: 'the Stoddard Family', to: 'the Stoddard family',
-      bio: ['Zane and Jan serve as Soul Care providers for missionaries and Marriage Mentors at Springs Church. They have relocated back to Colorado Springs but remain project managers in India overseeing two works registered with the Indian government. These ministries utilize story-telling techniques to foster discipleship in an oral society, outreach to leprosy villages, house church planting, home for the elderly, launching new ministries through discipleship, vocational training for the poor, family counseling and tutoring for children.'],
+      bio: ['Zane and Jan provide soul care for missionaries and serve as Marriage Mentors at Springs Church. They currently live in Colorado Springs but remain project managers in India, overseeing two works registered with the Indian government.', 'These ministries utilize storytelling techniques to foster discipleship in an oral society. They reach out to leprosy villages, plant house churches, and care for the elderly. They also launch new ministries through discipleship and provide vocational training for the poor, family counseling, and tutoring for children.'],
       pray: ['Pray for the two ministries they oversee in India.', 'Pray for the leprosy villages, house churches and families those ministries serve.', 'Pray for Zane and Jan as they care for missionaries and mentor marriages here.'],
       links: [{ t: 'Watch Jan’s story', h: '/stories?story=stoddard', local: 1 }, { t: 'Facebook', h: 'https://www.facebook.com/zane.j.stoddard' }] },
     { id: 'toms', last: 'Toms', names: '', full: 'The Toms Family', place: 'Portugal', org: '',
       img: 'img/m-toms.jpg', fund: 'onuCkiyd7Yg4OXduwcLfWg', btn: 'the Toms Family', to: 'the Toms family in Portugal', tbd: 1,
       bio: [], pray: ['Pray for the Toms family and the people they serve in Portugal.'], links: [] },
-    // From the draft ChurchCo contributor /albrecht (Josh 11/06: use it).
-    { id: 'albrecht', last: 'Albrecht', names: 'Alex', full: 'Alex Albrecht', place: 'Greece', org: 'TEAM (The Evangelical Alliance Mission)',
-      img: 'img/m-albrecht.jpg', fund: 'INgtE5lbHQS07KJwyBSg6g', btn: 'Alex Albrecht', to: 'Alex Albrecht in Greece',
-      bio: ['Alex has traveled to many countries to share the truth of Christ’s love with TEAM, whose mission is to partner with the global Church in sending disciples who make disciples and establish missional churches for the glory of God. She is currently building friendships and community in Greece, ministering among the local people. Her heart is to ensure that each person would have opportunity to know forgiveness and redemption, and that the name of the Lord would be honored wherever she is.'],
-      pray: ['Pray for Alex as she builds friendships and community in Greece.', 'Pray for the people she ministers among to know forgiveness and redemption.', 'Pray for TEAM as they send disciples who make disciples.'],
+    // 11/16 notes: Alex has left Greece and TEAM (likely Albania with E3 after she marries early 2027, not confirmed).
+    // Hold her profile to her heart for Muslims; no place or organization until it's settled.
+    { id: 'albrecht', last: 'Albrecht', names: 'Alex', full: 'Alex Albrecht', place: '', org: '',
+      img: 'img/m-albrecht.jpg', fund: 'INgtE5lbHQS07KJwyBSg6g', btn: 'Alex Albrecht', to: 'Alex Albrecht',
+      bio: ['Alex’s heart is to reach Muslims with the gospel.'],
+      pray: ['Pray for Alex as she follows God’s call to reach Muslims with the gospel.', 'Pray for clear direction and provision as she prepares for her next season of ministry.'],
       links: [] }
   ];
   const byId = id => M.find(m => m.id === id);
-  const metaOf = m => [m.place === 'MEA' ? 'Middle East & Africa' : m.place, m.org].filter(Boolean).join(' · ');
+  const placeOf = m => m.place === 'MEA' ? 'Middle East & Africa' : m.place;
+  const metaHTML = m => (m.org ? `<span class="org">${esc(m.org)}</span>` : '') + (placeOf(m) ? `<span class="plc">${esc(placeOf(m))}</span>` : '');
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
   const ICON_NE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
@@ -634,12 +644,12 @@ html.sm-lock{overflow:hidden}
   let openId = null;
 
   function fill(m) {
-    const meta = metaOf(m);
+    const meta = metaHTML(m);
     const bio = m.bio.length ? m.bio.map(p => `<p>${esc(p)}</p>`).join('') : `<p class="tbd">We’re adding ${esc(m.to.replace(/ in .*/, ''))}’s story soon.</p>`;
     const links = m.links.map(l => `<a class="tl" href="${l.h}"${l.local ? '' : ' target="_blank" rel="noopener"'}>${esc(l.t)}${l.local ? '' : ICON_NE}</a>`).join('');
     pin.innerHTML = `<div>
         <h3 id="sm-pn-h" tabindex="-1"${m.tbd ? ' class="tbd"' : ''}>${esc(m.full)}</h3>
-        <p class="meta">${esc(meta)}</p>
+        ${meta ? `<p class="meta">${meta}</p>` : ''}
         <div class="bio">${bio}</div>
         ${links ? `<div class="more">${links}</div>` : ''}
       </div>
@@ -726,7 +736,7 @@ html.sm-lock{overflow:hidden}
       else { img.hidden = true; pp.insertAdjacentHTML('afterbegin', `<span class="noimg" aria-hidden="true">${PIN}</span>`); }
       $('#sm-pp-week').textContent = (wk === weekIdx ? 'This week · ' : 'Week of ') + fmt(start);
       $('#sm-who').textContent = m.full;
-      $('#sm-pmeta').textContent = metaOf(m);
+      $('#sm-pmeta').innerHTML = metaHTML(m); $('#sm-pmeta').hidden = !metaHTML(m);
       $('#sm-pts').innerHTML = m.pray.map(p => `<li>${esc(p)}</li>`).join('');
       $('#sm-pts').className = 'pts tbd';
       $('#sm-pread').dataset.id = m.id; $('#sm-pgive').dataset.give = m.id;
@@ -750,8 +760,8 @@ html.sm-lock{overflow:hidden}
 
   /* ---------- giving card ---------- */
   const sel = $('#sm-to'), amt = $('#sm-amt');
-  sel.innerHTML = `<option value="missions">Wherever it’s needed most</option>
-    <optgroup label="Our missionaries">${M.map(m => `<option value="${m.id}">${esc(m.id === 'nickycruz' ? 'Nicky Cruz Outreach' : m.last)} · ${esc(m.place)}</option>`).join('')}</optgroup>
+  sel.innerHTML = `<option value="missions">Wherever the need is greatest</option>
+    <optgroup label="Our missionaries">${M.map(m => `<option value="${m.id}">${esc(m.id === 'nickycruz' ? 'Nicky Cruz Outreach' : m.last)}${m.place ? ' · ' + esc(m.place) : ''}</option>`).join('')}</optgroup>
     <optgroup label="Here at home"><option value="local">Local Outreach · Colorado Springs</option></optgroup>`;
   const often = () => root.querySelector('input[name=sm-often]:checked').value;
   const money = v => { const n = parseFloat(String(v).replace(/[^0-9.]/g, '')); return isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0; };
@@ -769,7 +779,7 @@ html.sm-lock{overflow:hidden}
   }
   function render() {
     const v = sel.value, m = byId(v), a = money(amt.value);
-    const to = m ? m.to : v === 'local' ? 'Local Outreach in Colorado Springs' : 'missions, wherever it’s needed most';
+    const to = m ? m.to : v === 'local' ? 'Local Outreach in Colorado Springs' : 'missions, wherever the need is greatest';
     $$('.chip').forEach(c => c.setAttribute('aria-pressed', String(+c.dataset.amt === a)));
     $('#sm-sum').innerHTML = a
       ? `<strong>${show(a)}${often() === 'Monthly' ? ' every month' : ''}</strong> to ${esc(to)}.${often() === 'Monthly' ? ' Starting today.' : ''}`

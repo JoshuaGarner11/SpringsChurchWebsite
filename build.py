@@ -121,7 +121,7 @@ def copy_page(folder, src, entry):
             open(os.path.join(dst, "shared.js"), "w", encoding="utf-8").write(s)
         if os.path.isdir(os.path.join(srcdir, "img")):
             shutil.copytree(os.path.join(srcdir, "img"), os.path.join(dst, "img"), dirs_exist_ok=True,
-                            ignore=shutil.ignore_patterns("src", "*-orig.*", "*.mov", "*.mp4", "*.psd", "*.tif", "*.ARW"))
+                            ignore=shutil.ignore_patterns("src", "*-orig.*", "*.mov", "*.psd", "*.tif", "*.ARW"))
     finish_html(os.path.join(dst, "index.html"), depth, folder)
     return True
 

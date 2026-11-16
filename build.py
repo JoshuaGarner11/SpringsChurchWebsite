@@ -21,7 +21,7 @@ PAGES = [
   ("about",        "springs-about-site",    "preview-live.html"),
   ("plan-a-visit", "springs-visit-site",    "preview-live.html"),
   ("our-beliefs",  "springs-beliefs-site",  "preview-live.html"),
-  ("our-staff",    "springs-staff-site",    "preview/d/index.html"),
+  ("our-staff",    "springs-staff-site",    "preview-e.html"),   # Option E (11/15); Option D = preview/d/index.html
   ("events",       "springs-events-site",   "preview-live.html"),
   ("connect",      "springs-connect-site",  "preview-live.html"),
   ("groups",       "springs-groups-site",   "preview-live.html"),
@@ -104,7 +104,7 @@ def copy_page(folder, src, entry):
     depth = 1 if folder else 0
     os.makedirs(dst, exist_ok=True)
     shutil.copy(os.path.join(srcdir, entry), os.path.join(dst, "index.html"))
-    if folder == "our-staff":  # mock ChurchCo page + the contributor stubs it fetches
+    if folder == "our-staff" and entry.startswith("preview/d"):  # Option D: mock ChurchCo page + the contributor stubs it fetches
         shutil.copytree(os.path.join(srcdir, "preview", "contributor"), os.path.join(dst, "contributor"), dirs_exist_ok=True)
         p = os.path.join(dst, "index.html")
         s = open(p, encoding="utf-8").read().replace("'/contributor/'", "'contributor/'").replace('"/contributor/', '"contributor/').replace("fetch('/contributor/", "fetch('contributor/")

@@ -1,0 +1,723 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sg').classList.toggle('show-tbd')">Show to-confirm</button>
+<div class="tcc-block html-takeover"><!-- springs.church/give · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL MOCKUP, not live.
+     Source of truth: ~/Desktop/springs-give-site/churchco/give-block.html (preview: preview-live.html via build-preview.py).
+     Pushpay can't be iframed (X-Frame-Options SAMEORIGIN), so the composer builds a Pushpay preconfigured giving link:
+     a=amount, fnd=fund key, fndv=lock, r=No|Weekly|Fortnightly|Monthly|FirstAndFifteenth, rsd=start date, sr=website.
+     Copy rule: the intro, In Person, Tithing and Generosity text is the live page's wording, word for word. Don't edit it.
+     <span class="tbd"> = new wording or facts to confirm before going live. -->
+<style>
+.tcc-block:has(#sg){padding:0!important;background:#111!important}
+.tcc-block:has(#sg) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sg) .row-defaults{padding:0!important}
+.tcc-block:has(#sg) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sg{--ink:#0E0E0E;--ink-2:#444;--ink-3:#6b6b6b;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F7F7F7;--line:rgba(14,14,14,.1);
+  --hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 17px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sg *{box-sizing:border-box}
+#sg :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,fieldset,legend){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0}
+#sg a{color:inherit;text-decoration:none}
+#sg img{display:block;max-width:100%}
+#sg button,#sg input,#sg select{font:inherit;color:inherit}
+#sg .wrap{max-width:calc(1120px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sg .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+#sg .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;text-decoration:none;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sg .btn:hover{background:#333;color:#fff}
+#sg .btn:active{transform:scale(.98)}
+#sg .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.25)}
+#sg .btn.line:hover{background:var(--ink);color:#fff}
+#sg .tl{all:unset;cursor:pointer;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sg .tl:hover{text-decoration-color:var(--ink)}
+#sg .tl:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+#sg .eyebrow{font:700 14px/1 var(--hd);letter-spacing:.06em;color:var(--gold);margin-bottom:14px;text-transform:uppercase}
+#sg .tag{font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-t);margin-bottom:12px}
+#sg .hd2{font:600 clamp(28px,3.2vw,38px)/1.1 var(--hd);letter-spacing:-.015em;color:var(--ink);text-transform:uppercase}
+#sg .sec-h{display:grid;grid-template-columns:1fr 1.1fr;gap:24px clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(28px,3.5vw,44px)}
+#sg .sec-h p{color:var(--ink-2)}
+
+/* ---------- hero ---------- */
+#sg .hero{padding:var(--top) 0 clamp(36px,4vw,56px);background:linear-gradient(#111 0 64%,#fff 64%)}
+#sg .hero .wrap{display:grid;grid-template-columns:1fr minmax(380px,452px);gap:clamp(28px,5vw,72px);align-items:start}
+#sg .hero h1{font:600 clamp(40px,5.4vw,66px)/1.02 var(--hd);letter-spacing:-.025em;color:#fff;margin-bottom:20px}
+#sg .hero .lede{font-size:clamp(17px,1.5vw,19px);color:rgba(255,255,255,.84);max-width:34em;margin-bottom:28px}
+#sg .trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:clamp(32px,4vw,48px)}
+#sg .trust li{display:flex;align-items:center;gap:8px;font-size:15px;color:rgba(255,255,255,.72)}
+#sg .trust svg{width:16px;height:16px;color:var(--gold);flex:none}
+#sg .photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:#222}
+#sg .photo img{width:100%;height:100%;object-fit:cover;object-position:42% 40%}
+#sg .photo figcaption{position:absolute;left:16px;bottom:14px;padding:7px 12px;border-radius:999px;background:rgba(14,14,14,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
+
+/* ---------- the giving card ---------- */
+#sg .giver{position:relative;scroll-margin-top:110px;background:#fff;border-radius:20px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 60px rgba(0,0,0,.18);overflow:hidden;transition:box-shadow .5s var(--ease)}
+#sg .giver.ping{box-shadow:0 0 0 3px var(--gold),0 24px 60px rgba(0,0,0,.18)}
+#sg .g-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;border-bottom:1px solid var(--line)}
+#sg .g-top b{font:700 12px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+#sg .g-top .tl{font-size:14px}
+#sg .view{padding:22px 24px 24px}
+#sg .view[hidden]{display:none}
+#sg .view.in{animation:sg-in .45s var(--ease) both}
+@keyframes sg-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+#sg .amt{display:flex;align-items:flex-start;justify-content:center;gap:4px;padding:6px 0 4px;cursor:text}
+#sg .amt .cur{font:600 30px/1 var(--hd);color:var(--ink-3);margin-top:12px}
+#sg .amt input{all:unset;box-sizing:content-box;width:1ch;min-width:1ch;max-width:8ch;font:600 64px/1.05 var(--hd);letter-spacing:-.03em;color:var(--ink);text-align:left;caret-color:var(--gold-t)}
+#sg .amt input::placeholder{color:#8f8f8f}
+#sg .amt.bump input{animation:sg-bump .35s var(--ease)}
+@keyframes sg-bump{40%{transform:translateY(-3px)}}
+#sg .quick{display:flex;justify-content:center;gap:8px;margin:10px 0 22px}
+#sg .chip{all:unset;box-sizing:border-box;cursor:pointer;min-height:38px;padding:0 15px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--line);font:600 14px/1 var(--hd);color:var(--ink);transition:background .2s,box-shadow .2s,color .2s;-webkit-tap-highlight-color:transparent}
+#sg .chip:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+#sg .chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+#sg .chip.on{background:var(--ink);color:#fff;box-shadow:none}
+
+#sg legend,#sg .lbl{display:block;font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+#sg fieldset+fieldset,#sg .row{margin-top:20px}
+#sg .funds{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#sg .funds legend{grid-column:1/-1}
+#sg .opt{position:relative;display:block;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#sg .opt input{position:absolute;opacity:0;pointer-events:none}
+#sg .opt span{display:block;height:100%;padding:12px 14px;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);transition:box-shadow .2s,background .2s}
+#sg .opt b{display:block;font:600 15px/1.25 var(--hd);color:var(--ink)}
+#sg .opt small{display:block;font-size:13px;line-height:1.35;color:var(--ink-3);margin-top:3px}
+#sg .opt:hover span{box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.35)}
+#sg .opt input:checked+span{box-shadow:inset 0 0 0 2px var(--ink);background:var(--soft)}
+#sg .opt input:focus-visible+span{outline:2px solid var(--gold-t);outline-offset:2px}
+#sg .opt.flash span{animation:sg-flash 1.1s var(--ease)}
+@keyframes sg-flash{0%,30%{background:#f3ecdc}}
+
+#sg .seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:12px;background:var(--soft)}
+#sg .seg .opt span{padding:10px;border-radius:9px;text-align:center;box-shadow:none;font:600 14px/1.2 var(--hd)}
+#sg .seg .opt input:checked+span{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)}
+#sg .often{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+#sg .often.on{grid-template-rows:1fr}
+#sg .often>div{overflow:hidden;min-height:0}
+#sg .often .inner{padding-top:12px;display:grid;gap:12px}
+#sg .freqs{display:flex;flex-wrap:wrap;gap:8px}
+#sg .field{display:flex;align-items:center;gap:12px;justify-content:space-between;min-height:48px;padding:0 6px 0 14px;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line)}
+#sg .field span{font-size:15px;color:var(--ink-2)}
+#sg .field input,#sg .field select{all:unset;box-sizing:border-box;min-height:44px;padding:0 10px;font:600 15px/1 var(--hd);color:var(--ink);cursor:pointer;text-align:right}
+#sg .field select{max-width:72%;line-height:44px;height:44px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#sg .field:focus-within{box-shadow:inset 0 0 0 2px var(--ink)}
+#sg .partner{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+#sg .partner.on{grid-template-rows:1fr}
+#sg .partner>div{overflow:hidden;min-height:0}
+#sg .partner .field{margin-top:8px}
+
+#sg .sum{margin:22px 0 14px;padding:14px 16px;border-radius:12px;background:var(--soft);font-size:16px;line-height:1.45;color:var(--ink-2);min-height:72px}
+#sg .sum strong{color:var(--ink);font-weight:700}
+#sg .sum em{display:block;font-style:normal;font-size:14px;color:var(--ink-3);margin-top:2px}
+#sg .go{width:100%;min-height:56px;font-size:14px}
+#sg .go svg{width:16px;height:16px;transition:transform .25s var(--ease)}
+#sg .go:hover svg{transform:translate(2px,-2px)}
+#sg .go[aria-disabled=true]{background:#d9d9d9;color:#777;cursor:not-allowed}
+#sg .fine{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:13px;line-height:1.45;color:var(--ink-3)}
+#sg .fine svg{width:14px;height:14px;flex:none;margin-top:2px}
+
+/* tithe calculator view */
+#sg .calc h3{font:600 24px/1.2 var(--hd);letter-spacing:-.01em;margin-bottom:6px}
+#sg .calc>p{font-size:15px;color:var(--ink-2);margin-bottom:20px}
+#sg .pay{display:flex;align-items:center;gap:4px;min-height:56px;padding:0 14px;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line)}
+#sg .pay:focus-within{box-shadow:inset 0 0 0 2px var(--ink)}
+#sg .pay .cur{font:600 20px/1 var(--hd);color:var(--ink-3)}
+#sg .pay input{all:unset;flex:1;min-width:0;font:600 24px/1 var(--hd);color:var(--ink)}
+#sg .pay input::placeholder{color:#8f8f8f}
+#sg .tenth{margin:20px 0 16px;padding:18px;border-radius:14px;background:#111;color:#fff;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:end}
+#sg .tenth .big{font:600 40px/1 var(--hd);letter-spacing:-.02em}
+#sg .tenth .per{font-size:14px;color:rgba(255,255,255,.7);grid-column:1}
+#sg .tenth .yr{grid-row:1/3;grid-column:2;text-align:right;font-size:14px;color:rgba(255,255,255,.7)}
+#sg .tenth .yr b{display:block;font:600 18px/1.2 var(--hd);color:var(--gold)}
+#sg .calc .note{margin-top:12px;font-size:13px;color:var(--ink-3);text-align:center}
+
+/* ---------- where it goes ---------- */
+#sg .where{padding:clamp(24px,3vw,40px) 0 clamp(64px,8vw,104px)}
+#sg .fundgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+#sg .fund{display:flex;flex-direction:column;padding:24px 22px 20px;border-radius:18px;background:var(--soft);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+#sg .fund:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.07)}
+#sg .fund .ic{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:18px;color:var(--gold-t)}
+#sg .fund .ic svg{width:20px;height:20px}
+#sg .fund h3{font:600 20px/1.2 var(--hd);letter-spacing:-.01em;margin-bottom:8px}
+#sg .fund p{font-size:16px;line-height:1.5;color:var(--ink-2);margin-bottom:18px;flex:1}
+#sg .fund .tl{font-size:15px;align-self:flex-start}
+
+/* ---------- missions partners ---------- */
+#sg .partners{padding:clamp(64px,8vw,104px) 0;background:var(--soft)}
+#sg .feat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+#sg .pcard{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:#111;color:#fff}
+#sg .pcard img{width:100%;aspect-ratio:16/8;object-fit:cover}
+#sg .pcard .tx{flex:1;display:flex;flex-direction:column;padding:24px 26px 24px}
+#sg .pcard .where-to{font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+#sg .pcard h3{font:600 22px/1.2 var(--hd);letter-spacing:-.01em;margin-bottom:12px}
+#sg .pcard q{display:block;font-size:16px;line-height:1.5;color:rgba(255,255,255,.8);flex:1;quotes:"\201C" "\201D"}
+#sg .pcard .acts{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;margin-top:18px}
+#sg .pcard .btn{min-height:42px;padding:0 16px;font-size:12px;background:#fff;color:var(--ink)}
+#sg .pcard .btn:hover{background:var(--gold)}
+#sg .pcard .tl{color:#fff;font-size:14px;text-decoration-color:rgba(255,255,255,.4)}
+#sg .plist{display:grid;grid-template-columns:repeat(2,1fr);gap:0 14px;background:#fff;border-radius:18px;padding:8px 22px}
+#sg .prow{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 4px;border-bottom:1px solid var(--line);-webkit-tap-highlight-color:transparent}
+#sg .prow b{display:block;font:600 16px/1.25 var(--hd);color:var(--ink)}
+#sg .prow small{display:block;font-size:14px;color:var(--ink-3);margin-top:2px}
+#sg .prow .ar{flex:none;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line);display:grid;place-items:center;transition:background .2s,color .2s,box-shadow .2s,transform .3s var(--ease)}
+#sg .prow .ar svg{width:12px;height:12px}
+#sg .prow:hover .ar{background:var(--ink);color:#fff;box-shadow:none;transform:translateX(2px)}
+#sg .prow:focus-visible{outline:2px solid var(--ink);outline-offset:-2px;border-radius:8px}
+
+/* ---------- tithing + generosity (live wording, new dress) ---------- */
+#sg .why{position:relative;padding:clamp(64px,8vw,112px) 0;background:#F3EDE3}
+#sg .why::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#sg .why .cols{position:relative;display:grid;grid-template-columns:1.08fr 1fr;gap:clamp(16px,2vw,24px);align-items:stretch}
+#sg .why h2{margin-bottom:12px}
+#sg .why .kick{font:500 clamp(20px,2vw,24px)/1.3 var(--hd);letter-spacing:-.01em;margin-bottom:18px}
+#sg .why p+p{margin-top:14px}
+#sg .tcard,#sg .gcard{position:relative;border-radius:28px;padding:clamp(28px,4vw,52px);overflow:hidden}
+#sg .tcard{background:#111;color:#fff}
+#sg .tcard h2{color:#fff}
+#sg .tcard .kick{color:#EADFC6}
+#sg .tcard>p{color:rgba(255,255,255,.78)}
+#sg .tphoto{position:relative;margin:calc(-1 * clamp(28px,4vw,52px)) calc(-1 * clamp(28px,4vw,52px)) clamp(24px,3vw,36px);aspect-ratio:16/9;overflow:hidden;background:#222}
+#sg .tphoto img{width:100%;height:100%;object-fit:cover;object-position:35% 40%;transform:scale(1.06);transition:transform 1.6s var(--ease)}
+#sg .tcard.seen .tphoto img{transform:none}
+#sg .tphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,0) 55%,#111 100%)}
+#sg .tphoto figcaption{position:absolute;left:clamp(28px,4vw,52px);bottom:14px;z-index:1;padding:7px 12px;border-radius:999px;background:rgba(14,14,14,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
+#sg .verse{position:relative;margin-top:30px;padding-top:30px;border-top:1px solid rgba(255,255,255,.14)}
+#sg .verse p{position:relative;font:400 clamp(18px,1.6vw,20px)/1.55 var(--hd);color:#fff}
+#sg .verse cite{display:block;margin-top:12px;font:700 12px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;font-style:normal;color:var(--gold)}
+#sg .tcard .acts{margin-top:28px}
+#sg .tcard .btn{background:#fff;color:var(--ink)}
+#sg .tcard .btn:hover{background:var(--gold)}
+#sg .gcard{background:#FFFCF6;box-shadow:0 1px 2px rgba(60,40,10,.05),0 18px 40px rgba(60,40,10,.07);display:flex;flex-direction:column}
+#sg .gcard>p{color:var(--ink-2)}
+#sg .gcard .kick{color:var(--ink)}
+#sg .gcard h2{margin-top:auto}
+#sg .prints{position:relative;flex:1;min-height:clamp(300px,31vw,420px);margin:0 0 clamp(28px,3vw,40px)}
+#sg .print{position:absolute;width:64%;padding:10px 10px 0;background:#fff;border-radius:4px;box-shadow:0 2px 4px rgba(40,25,5,.08),0 14px 30px rgba(40,25,5,.14);transition:transform 1s var(--ease),opacity .8s var(--ease);opacity:0}
+#sg .print img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+#sg .print figcaption{padding:10px 2px 12px;font:700 11px/1 var(--hd);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+#sg .print.a{left:0;bottom:2%;transform:translate(-14px,24px) rotate(0)}
+#sg .print.b{right:0;top:2%;transform:translate(14px,24px) rotate(0)}
+#sg .gcard.seen .print{opacity:1}
+#sg .gcard.seen .print.a{transform:rotate(-4deg);transition-delay:.15s}
+#sg .gcard.seen .print.b{transform:rotate(3.5deg);transition-delay:.3s}
+#sg .gcard.seen .print:hover{transform:rotate(0) translateY(-4px);z-index:2;transition-delay:0s}
+
+/* ---------- other ways ---------- */
+#sg .ways{padding:clamp(64px,8vw,104px) 0}
+#sg .waygrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+#sg .way{padding:26px 24px 8px 0}
+#sg .way+.way{padding-left:24px;border-left:1px solid var(--line)}
+#sg .way h3{font:600 18px/1.25 var(--hd);margin-bottom:8px}
+#sg .way p{font-size:16px;line-height:1.5;color:var(--ink-2);margin-bottom:12px}
+#sg .way .tl{font-size:15px}
+
+/* ---------- questions ---------- */
+#sg .faq{padding:clamp(56px,7vw,88px) 0;background:var(--soft)}
+#sg .faq .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(24px,5vw,72px);align-items:start}
+#sg .faq .side p{color:var(--ink-2);margin-top:12px}
+#sg details{border-top:1px solid var(--line)}
+#sg details:last-child{border-bottom:1px solid var(--line)}
+#sg summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;font:600 18px/1.3 var(--hd);color:var(--ink)}
+#sg summary::-webkit-details-marker{display:none}
+#sg summary .pm{flex:none;width:32px;height:32px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line);display:grid;place-items:center;transition:transform .3s var(--ease),background .2s}
+#sg summary .pm svg{width:12px;height:12px}
+#sg details[open] summary .pm{transform:rotate(45deg);background:var(--ink);color:#fff;box-shadow:none}
+#sg details p{padding:0 4px 22px;color:var(--ink-2);max-width:40em}
+#sg summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:6px}
+
+/* to-confirm marks (preview toggles them on) */
+#sg.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 2px #fff3a6;border-radius:2px}
+
+/* reveals */
+#sg .rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+#sg .rv.seen{opacity:1;transform:none}
+#sg .hero .ld{opacity:0;transform:translateY(16px);animation:sg-in .8s var(--ease) forwards;animation-delay:calc(var(--d,0) * 90ms + 80ms)}
+
+/* phone dock lives on <body> (ChurchCo turns @media into @container), switched on by script */
+#sg-dock{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;align-items:center;justify-content:space-between;gap:10px;padding:8px 8px 8px 18px;border-radius:14px;background:rgba(14,14,14,.95);box-shadow:0 12px 30px rgba(0,0,0,.25);transform:translateY(160%);transition:transform .4s cubic-bezier(.2,.7,.2,1);font:600 14px/1.3 gotham,'Montserrat',sans-serif;color:#fff}
+#sg-dock.on{display:flex}
+#sg-dock.show{transform:none}
+#sg-dock span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:rgba(255,255,255,.8)}
+#sg-dock a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:10px;background:#fff;color:#0E0E0E;font:700 12px/1 gotham,'Montserrat',sans-serif;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+
+@media (max-width:980px){
+  #sg .hero{background:linear-gradient(#111 0 70%,#fff 70%)}
+  #sg .hero .wrap{grid-template-columns:1fr}
+  #sg .hero .copy{display:contents}
+  #sg .hero .intro{order:1}
+  #sg .giver{order:2;max-width:560px;width:100%}
+  #sg .photo{order:3;aspect-ratio:16/9}
+  #sg .trust{margin-bottom:0}
+  #sg .fundgrid{grid-template-columns:1fr 1fr}
+  #sg .feat{grid-template-columns:1fr}
+  #sg .waygrid{grid-template-columns:1fr 1fr}
+  #sg .way:nth-child(3){padding-left:0;border-left:0}
+  #sg .way:nth-child(n+3){border-top:1px solid var(--line);margin-top:18px}
+}
+@media (max-width:760px){
+  #sg{--top:116px;font-size:16.5px}
+  #sg .hero{background:linear-gradient(#111 0 76%,#fff 76%)}
+  #sg .sec-h{grid-template-columns:1fr}
+  #sg .view{padding:20px 18px 20px}
+  #sg .g-top{padding:16px 18px}
+  #sg .amt input{font-size:56px}
+  #sg .quick{gap:6px}
+  #sg .chip{padding:0 12px}
+  #sg .freqs{display:grid;grid-template-columns:1fr 1fr}
+  #sg .amt input{max-width:7.2ch}
+  #sg .fundgrid{grid-template-columns:1fr}
+  #sg .pcard img{aspect-ratio:16/10}
+  #sg .plist{grid-template-columns:1fr;padding:4px 18px}
+  #sg .why .cols{grid-template-columns:1fr}
+  #sg .prints{min-height:clamp(250px,72vw,330px)}
+  #sg .print{width:62%}
+  #sg .waygrid{grid-template-columns:1fr}
+  #sg .way,#sg .way+.way{padding:22px 0 6px;border-left:0}
+  #sg .way+.way{border-top:1px solid var(--line);margin-top:0}
+  #sg .faq .wrap{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  #sg *,#sg *::before{animation:none!important;transition:none!important}
+  #sg .rv,#sg .hero .ld{opacity:1;transform:none}
+}
+</style>
+
+<div id="sg">
+  <!-- hero + giving card -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <div class="intro">
+          <h1 class="ld" style="--d:1"><span class="tbd">Ways to Give</span></h1>
+          <p class="lede ld" style="--d:2">Whether you’re giving today for the first time or you give every week, your gifts matter. Because of your generosity, you participate in the work of our church to help people become fully devoted followers of Jesus, both in our region and around the world.</p>
+          <ul class="trust ld" style="--d:3">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Secure checkout with Pushpay</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Card, bank, Apple Pay or Google Pay</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>One time or recurring</li>
+          </ul>
+        </div>
+        <figure class="photo ld" style="--d:4">
+          <img src="img/worship-open-hands.jpg" alt="A mom worshiping with her hand raised while carrying her baby at Springs Church">
+        </figure>
+      </div>
+
+      <form class="giver ld" style="--d:2" id="sg-give" novalidate>
+        <div class="g-top">
+          <b id="sg-title">Give Online</b>
+          <button type="button" class="tl" id="sg-flip" aria-controls="sg-calc">Figure my tithe</button>
+        </div>
+
+        <div class="view" id="sg-main">
+          <label class="amt" id="sg-amtbox">
+            <span class="cur" aria-hidden="true">$</span>
+            <input id="sg-amt" inputmode="decimal" autocomplete="off" placeholder="0" aria-label="Gift amount in dollars">
+          </label>
+          <div class="quick" role="group" aria-label="Suggested amounts">
+            <button type="button" class="chip" data-amt="25">$25</button>
+            <button type="button" class="chip" data-amt="50">$50</button>
+            <button type="button" class="chip" data-amt="100">$100</button>
+            <button type="button" class="chip" data-amt="250">$250</button>
+          </div>
+
+          <fieldset class="funds" id="sg-funds">
+            <legend>Give to</legend>
+          </fieldset>
+          <div class="partner" id="sg-partnerbox">
+            <div>
+              <label class="field"><span>Send it to</span><select id="sg-partner" aria-label="Missions partner"></select></label>
+            </div>
+          </div>
+
+          <fieldset class="row">
+            <legend>Gift type</legend>
+            <div class="seg">
+              <label class="opt"><input type="radio" name="sg-type" value="once" checked><span>Give one time</span></label>
+              <label class="opt"><input type="radio" name="sg-type" value="rec"><span>Set up recurring</span></label>
+            </div>
+            <div class="often" id="sg-often">
+              <div><div class="inner">
+                <div class="freqs" role="group" aria-label="Frequency">
+                  <button type="button" class="chip on" data-r="Weekly">Every week</button>
+                  <button type="button" class="chip" data-r="Fortnightly">Every 2 weeks</button>
+                  <button type="button" class="chip" data-r="Monthly">Every month</button>
+                  <button type="button" class="chip" data-r="FirstAndFifteenth">1st &amp; 15th</button>
+                </div>
+                <label class="field"><span>Starting</span><input type="date" id="sg-start" aria-label="First gift date"></label>
+              </div></div>
+            </div>
+          </fieldset>
+
+          <p class="sum" id="sg-sum" aria-live="polite"></p>
+          <a class="btn go" id="sg-go" href="https://pushpay.com/g/springschurchcoloradosprings" target="_blank" rel="noopener">
+            <span id="sg-golabel">Continue to Give</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <p class="fine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>You’ll finish on Pushpay, our secure giving partner, with everything above already filled in. Stock and crypto gifts are there too.</span></p>
+        </div>
+
+        <div class="view calc" id="sg-calc" hidden>
+          <h3>Figure my tithe</h3>
+          <p>A tithe is the first 10% of your income. Tell us how you’re paid and we’ll do the math.</p>
+          <fieldset>
+            <legend>I’m paid</legend>
+            <div class="freqs" role="group" aria-label="Pay schedule" id="sg-paid">
+              <button type="button" class="chip" data-r="Weekly" data-n="52">Every week</button>
+              <button type="button" class="chip on" data-r="Fortnightly" data-n="26">Every 2 weeks</button>
+              <button type="button" class="chip" data-r="FirstAndFifteenth" data-n="24">Twice a month</button>
+              <button type="button" class="chip" data-r="Monthly" data-n="12">Monthly</button>
+            </div>
+          </fieldset>
+          <div class="row">
+            <span class="lbl" id="sg-paylbl">Each paycheck</span>
+            <label class="pay"><span class="cur" aria-hidden="true">$</span><input id="sg-pay" inputmode="decimal" autocomplete="off" placeholder="0" aria-labelledby="sg-paylbl"></label>
+          </div>
+          <div class="tenth" aria-live="polite">
+            <span class="big" id="sg-tenth">$0</span>
+            <span class="per" id="sg-per">per paycheck</span>
+            <span class="yr"><b id="sg-yr">$0</b>a year</span>
+          </div>
+          <button type="button" class="btn go" id="sg-use">Use This Amount</button>
+          <p class="note">This stays on your device. Nothing here is saved or sent.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- where it goes -->
+  <section class="where">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <div><h2 class="hd2">Where It Goes</h2></div>
+        <p class="tbd">Give to the whole work of the church, or point your gift at one part of it.</p>
+      </div>
+      <div class="fundgrid" id="sg-fundgrid"></div>
+    </div>
+  </section>
+
+  <!-- missions partners -->
+  <section class="partners" id="missions">
+    <div class="wrap">
+      <div class="sec-h rv">
+        <div><h2 class="hd2">Our Missions Partners</h2></div>
+        <p>By giving through Springs Church, 100% of your donation goes directly to the individual missionary and not toward administrative costs.</p>
+      </div>
+      <div class="feat">
+        <article class="pcard rv">
+          <img src="img/s-cruz-portrait-close.jpg" alt="Carlos and Amanda Cruz" loading="lazy" style="object-position:50% 30%">
+          <div class="tx">
+            <p class="where-to">Guatemala</p>
+            <h3>Carlos &amp; Amanda Cruz</h3>
+            <q>Missions always start where you are.</q>
+            <div class="acts">
+              <button type="button" class="btn" data-partner="cruz">Give to the Cruz Family</button>
+              <a class="tl" href="https://www.springs.church/stories?story=cruz">Watch their story</a>
+            </div>
+          </div>
+        </article>
+        <article class="pcard rv">
+          <img src="img/s-stoddard-portrait.jpg" alt="Zane and Jan Stoddard" loading="lazy" style="object-position:50% 22%">
+          <div class="tx">
+            <p class="where-to">Global</p>
+            <h3>Zane &amp; Jan Stoddard</h3>
+            <q>Our ministry really is a ministry of encouragement.</q>
+            <div class="acts">
+              <button type="button" class="btn" data-partner="stoddard">Give to the Stoddards</button>
+              <a class="tl" href="https://www.springs.church/stories?story=stoddard">Watch their story</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="plist rv" id="sg-plist"></div>
+    </div>
+  </section>
+
+  <!-- tithing + generosity: live page wording, word for word -->
+  <section class="why" id="tithing">
+    <div class="wrap cols">
+      <article class="tcard rv">
+        <figure class="tphoto"><img src="img/food-drive-2.jpg" alt="Springs volunteers handing out fresh fruit at the summer food drive" loading="lazy"><figcaption><span class="tbd">Summer Food Drive</span></figcaption></figure>
+        <h2 class="hd2">Tithing</h2>
+        <p class="kick">When you tithe, you’re trusting God with your finances.</p>
+        <p>Tithing is a biblical principle. God calls us to give at the very least, the first 10% of our income back to him. In fact, it’s the one area in the Bible where God tells you to test him. Offerings and alms are any additional giving beyond basic tithing. We know God will provide abundantly for you and your family when you put Him first in your finances.</p>
+        <blockquote class="verse">
+          <p>“Bring the full tithe into the storehouse, that there may be food in my house. And thereby put me to the test, says the Lord of hosts, if I will not open the windows of heaven for you and pour down for you a blessing until there is no more need.”</p>
+          <cite>Malachi 3:10 (ESV)</cite>
+        </blockquote>
+        <div class="acts"><button type="button" class="btn" data-calc>Figure My Tithe</button></div>
+      </article>
+      <article class="gcard rv">
+        <div class="prints">
+          <figure class="print a"><img src="img/food-drive.jpg" alt="A Springs volunteer handing out groceries at the summer food drive" loading="lazy" style="object-position:55% 35%"><figcaption>Colorado Springs</figcaption></figure>
+          <figure class="print b"><img src="img/cruz-guatemala.jpg" alt="Amanda Cruz hugging a young girl in Guatemala" loading="lazy" style="object-position:50% 30%"><figcaption>Guatemala</figcaption></figure>
+        </div>
+        <h2 class="hd2">Generosity</h2>
+        <p class="kick">We give from the overflow of all He's given us.</p>
+        <p>God created us to have a generous spirit. When you give, you’re bringing God’s love to people in Colorado Springs and worldwide. You are not just making a donation; you are making a significant impact. We want to help you embrace that opportunity by giving tithe and offerings.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- other ways -->
+  <section class="ways">
+    <div class="wrap">
+      <div class="sec-h rv" style="margin-bottom:0;padding-bottom:clamp(20px,2.5vw,28px)">
+        <div><h2 class="hd2">Other Ways to Give</h2></div>
+      </div>
+      <div class="waygrid rv">
+        <div class="way">
+          <h3>In Person</h3>
+          <p>Offering boxes are located at the back of the sanctuary.</p>
+        </div>
+        <div class="way">
+          <h3>Stock or Crypto</h3>
+          <p class="tbd">Choose stocks or cryptocurrency on our Pushpay page.</p>
+          <a class="tl" href="https://pushpay.com/g/springschurchcoloradosprings?sr=website" target="_blank" rel="noopener">Open Pushpay</a>
+        </div>
+        <div class="way">
+          <h3>Recurring Gifts</h3>
+          <p class="tbd">Change, pause or stop a recurring gift any time in your Pushpay account.</p>
+          <a class="tl" href="https://pushpay.com/g/springschurchcoloradosprings?sr=website" target="_blank" rel="noopener">Manage my giving</a>
+        </div>
+        <div class="way">
+          <h3>By Mail</h3>
+          <p class="tbd">Checks payable to Springs Church, 1515 Auto Mall Loop, Colorado Springs, CO 80920.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- questions -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="side rv">
+        <h2 class="hd2">Giving Questions</h2>
+        <p class="tbd">Still wondering about something? Email <a class="tl" href="mailto:info@springs.church">info@springs.church</a>.</p>
+      </div>
+      <div class="rv">
+        <details><summary>Is giving online secure?<span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></summary>
+          <p class="tbd">Yes. Your gift is processed by Pushpay, a payment company built for churches. Springs Church never sees or stores your card or bank details.</p></details>
+        <details><summary>Will I get a giving statement?<span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></summary>
+          <p class="tbd">Pushpay emails a receipt for every gift, and your full giving history is in your Pushpay account.</p></details>
+        <details><summary>Is my gift tax-deductible?<span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></summary>
+          <p class="tbd">Gifts to The Springs Church Inc. are tax-deductible as allowed by law.</p></details>
+        <details><summary>Can I give to a specific missionary?<span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v10M1 6h10"/></svg></span></summary>
+          <p class="tbd">Yes. Choose Missions above, then pick a partner under “Send it to,” or tap any partner in Our Missions Partners.</p></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const root = document.getElementById('sg');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = 1;
+  const $ = (s, el = root) => el.querySelector(s), $$ = (s, el = root) => [...el.querySelectorAll(s)];
+
+  // Pushpay listings + fund keys (from each listing page; names don't work as fnd because "Local Outreach " has a trailing space)
+  const GENERAL = 'https://pushpay.com/g/springschurchcoloradosprings', MISSIONS = 'https://pushpay.com/g/springsmissions';
+  const FUNDS = [
+    { id: 'tithes', name: 'Tithes & General Giving', short: 'Tithes & General', line: 'Every ministry, every week', key: 'r-cKdQ468TaYtj1Su_UQhQ',
+      about: 'It’s the everyday life of our church, and your generosity keeps it going.',
+      icon: '<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>' },
+    { id: 'missions', name: 'Missions', short: 'Missions', line: 'Local & global partners', key: 'G5OVKEeDwkPceWn5l2G9FA',
+      about: 'The missionaries and churches we send and support, from Guatemala to India.',
+      icon: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>' },
+    { id: 'outreach', name: 'Local Outreach', short: 'Local Outreach', line: 'Serving Colorado Springs', key: 'hKzXWhADF21Io9RWCNVqoQ',
+      about: 'Meeting needs and serving our neighbors across Colorado Springs.',
+      icon: '<path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/>' },
+    { id: 'benevolence', name: 'Benevolence', short: 'Benevolence', line: 'Help for our church family', key: 'spTqVN8ArCvde3aR5fo-EA',
+      about: 'Practical help for members of our church family walking through a hard season.',
+      icon: '<path d="M7 11V7a2 2 0 0 1 4 0v4"/><path d="M11 10V5a2 2 0 0 1 4 0v6"/><path d="M15 9a2 2 0 0 1 4 0v4a8 8 0 0 1-8 8 7 7 0 0 1-6-3l-2-4a2 2 0 0 1 3.4-2L7 14"/>' }
+  ];
+  // Missions listing funds (keys from /g/springsmissions). Names and regions as springs.church/missions shows them
+  const PARTNERS = [
+    { id: 'cruz', label: 'Cruz', place: 'Guatemala', key: 'p16F1qqXoNXG-g6i5IeYDA' },
+    { id: 'stoddard', label: 'Stoddard', place: 'Global', key: 'bgP5wkgDSELRaV9l-r4n8w' },
+    { id: 'cassula', label: 'Cassula', place: 'Brazil', key: '97npxJ_LcEyXbBj6sk2wpg' },
+    { id: 'nickycruz', label: 'Nicky Cruz', place: 'Global', key: 'O4zlFUBaPEkAqJBbLcRFwA' },
+    { id: 'kirkeeide', label: 'Kirkeeide', place: 'Global', key: 'H2IuuHcaatk7UJyse0xfsQ' },
+    { id: 'lobos', label: 'Lobos', place: 'France', key: 'kwky8nap0IgFQu0Di8wa0w' },
+    { id: 'nicholas', label: 'Nicholas', place: 'MEA', key: 'nyG0jGQ_kj1Htrly3sG10Q' },
+    { id: 'schwarz', label: 'Schwarz', place: 'Global', key: 'RKcoc_c3O5wj7PRTSO386g' },
+    { id: 'toms', label: 'Toms', place: 'Portugal', key: 'onuCkiyd7Yg4OXduwcLfWg' },
+    { id: 'albrecht', label: 'Albrecht', place: 'Greece', key: 'INgtE5lbHQS07KJwyBSg6g' },
+    { id: 'turn', label: 'Turn Ministry', place: 'Israel', key: 'lLisMOgQ_N2-VHz4P_Skgg' },
+    { id: 'cork', label: 'Cork Church', place: 'Ireland', key: 'VZCaNvPivG2mZWa_0q7h3Q' }
+  ];
+  const FREQ = { Weekly: ['every week', 52], Fortnightly: ['every 2 weeks', 26], Monthly: ['every month', 12], FirstAndFifteenth: ['on the 1st & 15th', 24] };
+  const icon = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+  const arrow = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h8M7 3l3 3-3 3"/></svg>';
+
+  const state = { amt: 0, fund: 'tithes', partner: '', rec: false, r: 'Weekly', start: '' };
+
+  // build fund tiles, fund cards, partner list + select
+  $('#sg-funds').insertAdjacentHTML('beforeend', FUNDS.map(f =>
+    `<label class="opt" data-fund-opt="${f.id}"><input type="radio" name="sg-fund" value="${f.id}"${f.id === state.fund ? ' checked' : ''}><span><b>${f.short}</b><small>${f.line}</small></span></label>`).join(''));
+  $('#sg-fundgrid').innerHTML = FUNDS.map(f =>
+    `<article class="fund rv"><span class="ic">${icon(f.icon)}</span><h3>${f.name}</h3><p class="tbd">${f.about}</p><button type="button" class="tl" data-fund="${f.id}">Give to ${f.short}</button></article>`).join('');
+  $('#sg-plist').innerHTML = PARTNERS.filter(p => !['cruz', 'stoddard'].includes(p.id)).map(p =>
+    `<button type="button" class="prow" data-partner="${p.id}"><span><b>${p.label}</b><small>${p.place}</small></span><span class="ar">${arrow}</span></button>`).join('');
+  $('#sg-partner').innerHTML = `<option value="">Wherever it’s needed most</option>` + PARTNERS.map(p => `<option value="${p.id}">${p.label} · ${p.place}</option>`).join('');
+
+  // dates (local time)
+  const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const today = iso(new Date());
+  const start = $('#sg-start');
+  start.min = today; start.value = state.start = state.pick = today;
+  const nice = s => new Date(s + 'T12:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const money = (n, cents) => '$' + (cents ? n : Math.round(n)).toLocaleString('en-US', { minimumFractionDigits: cents && n % 1 ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 });
+  const parse = v => { const n = parseFloat(String(v).replace(/[^0-9.]/g, '')); return isFinite(n) ? Math.round(n * 100) / 100 : 0; };
+  const clean = v => { let s = v.replace(/[^0-9.]/g, ''); const i = s.indexOf('.'); if (i > -1) s = s.slice(0, i + 1) + s.slice(i + 1).replace(/\./g, '').slice(0, 2); return s.slice(0, 8); };
+
+  const amt = $('#sg-amt');
+  const fitAmt = () => { amt.style.width = Math.max(1, (amt.value || amt.placeholder).length) + 'ch'; };
+
+  // Pushpay moves a 1st & 15th schedule to the next 1st or 15th, so the page does the same
+  function snap() {
+    state.start = state.pick;
+    if (state.r !== 'FirstAndFifteenth') return;
+    const d = new Date(state.pick + 'T12:00');
+    if (d.getDate() === 1 || d.getDate() === 15) return;
+    if (d.getDate() < 15) d.setDate(15); else d.setMonth(d.getMonth() + 1, 1);
+    state.start = iso(d);
+  }
+
+  function link() {
+    const p = new URLSearchParams();
+    const partner = state.fund === 'missions' && PARTNERS.find(x => x.id === state.partner);
+    if (state.amt > 0) p.set('a', state.amt);
+    p.set('fnd', partner ? partner.key : FUNDS.find(f => f.id === state.fund).key);
+    p.set('fndv', 'lock');
+    p.set('r', state.rec ? state.r : 'No');
+    if (state.rec && state.start) p.set('rsd', state.start);
+    p.set('sr', 'website');
+    return (partner ? MISSIONS : GENERAL) + '?' + p.toString();
+  }
+
+  function render() {
+    snap();
+    start.value = state.start;
+    const f = FUNDS.find(x => x.id === state.fund);
+    const partner = state.fund === 'missions' && PARTNERS.find(x => x.id === state.partner);
+    const to = partner ? `Missions (${partner.label}, ${partner.place})` : f.name;
+    const a = state.amt > 0 ? money(state.amt, true) : null;
+    let s;
+    if (!state.rec) s = a ? `A one-time gift of <strong>${a}</strong> to <strong>${to}</strong>.` : `Choose an amount to give to <strong>${to}</strong>.`;
+    else {
+      const [words, n] = FREQ[state.r];
+      s = a ? `<strong>${a} ${words}</strong> to <strong>${to}</strong>, starting ${nice(state.start)}.<em>That’s ${money(state.amt * n)} a year.</em>`
+            : `A recurring gift ${words} to <strong>${to}</strong>, starting ${nice(state.start)}.`;
+    }
+    $('#sg-sum').innerHTML = s;
+    $('#sg-golabel').textContent = a ? `Give ${a}${state.rec ? ' ' + FREQ[state.r][0] : ''}` : 'Continue to Give';
+    $('#sg-go').href = link();
+    $('#sg-partnerbox').classList.toggle('on', state.fund === 'missions');
+    $('#sg-often').classList.toggle('on', state.rec);
+    $$('.quick .chip').forEach(c => c.classList.toggle('on', +c.dataset.amt === state.amt));
+    $$('#sg-often .chip').forEach(c => c.classList.toggle('on', c.dataset.r === state.r));
+    $$('input[name=sg-fund]').forEach(i => i.checked = i.value === state.fund);
+    $$('input[name=sg-type]').forEach(i => i.checked = (i.value === 'rec') === state.rec);
+    $('#sg-partner').value = state.partner;
+    dockText();
+  }
+
+  amt.addEventListener('input', () => { amt.value = clean(amt.value); state.amt = parse(amt.value); fitAmt(); render(); });
+  amt.addEventListener('blur', () => { if (state.amt) amt.value = state.amt % 1 ? state.amt.toFixed(2) : String(state.amt); fitAmt(); });
+  $$('.quick .chip').forEach(c => c.addEventListener('click', () => {
+    state.amt = +c.dataset.amt; amt.value = c.dataset.amt; fitAmt();
+    const box = $('#sg-amtbox'); box.classList.remove('bump'); void box.offsetWidth; box.classList.add('bump');
+    render();
+  }));
+  root.addEventListener('change', e => {
+    if (e.target.name === 'sg-fund') { state.fund = e.target.value; if (state.fund !== 'missions') state.partner = ''; render(); }
+    if (e.target.name === 'sg-type') { state.rec = e.target.value === 'rec'; render(); }
+    if (e.target.id === 'sg-partner') { state.partner = e.target.value; render(); }
+    if (e.target.id === 'sg-start') { state.pick = !e.target.value || e.target.value < today ? today : e.target.value; render(); }
+  });
+  $$('#sg-often .chip').forEach(c => c.addEventListener('click', () => { state.r = c.dataset.r; render(); }));
+  $('#sg-go').addEventListener('click', e => { if (!state.amt) { e.preventDefault(); amt.focus(); const b = $('#sg-amtbox'); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump'); } });
+
+  // jump from a card on the page to the giving card, with the choice made
+  const card = $('#sg-give');
+  function jump(flashId) {
+    showView('main');
+    card.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    card.classList.add('ping'); setTimeout(() => card.classList.remove('ping'), 1400);
+    const o = $(`[data-fund-opt="${flashId}"]`);
+    if (o) { o.classList.remove('flash'); void o.offsetWidth; o.classList.add('flash'); }
+    setTimeout(() => (state.amt ? $('#sg-go') : amt).focus({ preventScroll: true }), 700);
+  }
+  root.addEventListener('click', e => {
+    const fb = e.target.closest('[data-fund]'), pb = e.target.closest('[data-partner]'), cb = e.target.closest('[data-calc]');
+    if (fb) { state.fund = fb.dataset.fund; state.partner = ''; render(); jump(state.fund); }
+    if (pb) { state.fund = 'missions'; state.partner = pb.dataset.partner; render(); jump('missions'); }
+    if (cb) { showView('calc'); card.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+
+  // tithe calculator
+  const calc = { r: 'Fortnightly', n: 26, pay: 0 };
+  const tenth = () => Math.round(calc.pay * 10) / 100;
+  function renderCalc() {
+    const t = tenth();
+    $('#sg-tenth').textContent = money(t, true);
+    $('#sg-per').textContent = calc.r === 'FirstAndFifteenth' ? 'per paycheck, twice a month' : 'per paycheck, ' + FREQ[calc.r][0];
+    $('#sg-yr').textContent = money(Math.round(t * calc.n));
+    $$('#sg-paid .chip').forEach(c => c.classList.toggle('on', c.dataset.r === calc.r));
+    $('#sg-use').textContent = t ? `Give ${money(t, true)} ${FREQ[calc.r][0]}` : 'Use This Amount';
+  }
+  $$('#sg-paid .chip').forEach(c => c.addEventListener('click', () => { calc.r = c.dataset.r; calc.n = +c.dataset.n; renderCalc(); }));
+  const pay = $('#sg-pay');
+  pay.addEventListener('input', () => { pay.value = clean(pay.value); calc.pay = parse(pay.value); renderCalc(); });
+  $('#sg-use').addEventListener('click', () => {
+    const t = tenth();
+    if (!t) { pay.focus(); return; }
+    Object.assign(state, { amt: t, fund: 'tithes', partner: '', rec: true, r: calc.r });
+    amt.value = t % 1 ? t.toFixed(2) : String(t); fitAmt();
+    showView('main'); render(); jump('tithes');
+  });
+
+  function showView(v) {
+    const main = $('#sg-main'), c = $('#sg-calc'), flip = $('#sg-flip');
+    const toCalc = v === 'calc';
+    if (toCalc === !c.hidden) return;
+    main.hidden = toCalc; c.hidden = !toCalc;
+    (toCalc ? c : main).classList.remove('in'); void (toCalc ? c : main).offsetWidth; (toCalc ? c : main).classList.add('in');
+    flip.textContent = toCalc ? 'Back to giving' : 'Figure my tithe';
+    $('#sg-title').textContent = toCalc ? 'Tithe Calculator' : 'Give Online';
+    if (toCalc) setTimeout(() => pay.focus({ preventScroll: true }), 300);
+  }
+  $('#sg-flip').addEventListener('click', () => showView($('#sg-calc').hidden ? 'calc' : 'main'));
+  $('#sg-give').addEventListener('submit', e => e.preventDefault());
+
+  // deep links: /give#missions-cruz, /give?fund=outreach&amount=50
+  const q = new URLSearchParams(location.search);
+  if (FUNDS.some(f => f.id === q.get('fund'))) state.fund = q.get('fund');
+  if (PARTNERS.some(p => p.id === q.get('partner'))) { state.fund = 'missions'; state.partner = q.get('partner'); }
+  if (parse(q.get('amount') || '')) { state.amt = parse(q.get('amount')); amt.value = String(state.amt); }
+  fitAmt(); render(); renderCalc();
+
+  // reveals
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.rv').forEach(el => io ? io.observe(el) : el.classList.add('seen'));
+
+  // phone dock: shows once the giving card has scrolled away
+  const dock = document.getElementById('sg-dock') || document.body.appendChild(Object.assign(document.createElement('div'), { id: 'sg-dock' }));
+  dock.innerHTML = '<span id="sg-docktx"></span><a href="#sg-give">Give</a>';
+  dock.querySelector('a').addEventListener('click', e => { e.preventDefault(); jump(state.fund); });
+  function dockText() { const t = document.getElementById('sg-docktx'); if (t) t.textContent = state.amt ? `${money(state.amt, true)} to ${FUNDS.find(f => f.id === state.fund).short}` : 'Give to Springs Church'; }
+  dockText();
+  let seenCard = true;
+  const sync = () => { const phone = window.innerWidth <= 760; dock.classList.toggle('on', phone); dock.classList.toggle('show', phone && !seenCard && root.getBoundingClientRect().bottom > innerHeight); };
+  if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { seenCard = e.isIntersecting; sync(); }).observe(card);
+  addEventListener('resize', sync, { passive: true }); addEventListener('scroll', sync, { passive: true }); sync();
+})();
+</script>
+</div><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

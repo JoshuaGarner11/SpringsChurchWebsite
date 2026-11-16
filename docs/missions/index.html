@@ -1,0 +1,832 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missions | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:smooth}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sm').classList.toggle('show-tbd')">Show to-confirm</button>
+<div class="tcc-block html-takeover"><!-- springs.church/missions · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL MOCKUP, not live.
+     Source of truth: ~/Desktop/springs-missions-site/churchco/missions-block.html (preview: preview-live.html via build-preview.py).
+     Bios are the springs.church/contributor/<slug> wording (light edits: "gospel" lowercase per the stylebook, em dashes and
+     a stray hyphen turned into commas). Hero lede, "Our Missionaries" intro, Go intro and Give to Missions text are the live
+     page's wording. Pushpay can't be iframed, so Give buttons build a Pushpay link: a=amount, fnd=fund key, fndv=lock,
+     r=No|Monthly, rsd=start date, sr=website. Missionary funds are on /g/springsmissions; Missions + Local Outreach on the
+     general listing. Jacobs give through the "Turn Ministry" fund (Josh 11/06: keep that name off the page).
+     <span class="tbd"> = new wording or facts to confirm before going live. Deep links: ?m=cruz opens a missionary,
+     ?give=cruz sets the giving card, ?pray-date=2026-11-15 previews the Pray This Week rotation. -->
+<style>
+.tcc-block:has(#sm){padding:0!important;background:#111!important}
+.tcc-block:has(#sm) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sm) .row-defaults{padding:0!important}
+.tcc-block:has(#sm) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+/* Site header: the theme leaves it see-through while you scroll down from the top (white menu on white sections) and only
+   turns it black after an upward scroll. On this page, use that same black as soon as it starts scrolling. */
+body:has(#sm) .topbar.transparent.top-bar-scrolling{background-color:#0E0E0E}
+#sm{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sm *{box-sizing:border-box}
+#sm :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,fieldset,legend,cite){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sm a{color:inherit;text-decoration:none}
+#sm img{display:block;max-width:100%}
+#sm button,#sm input,#sm select{font:inherit;color:inherit}
+#sm ::selection{background:var(--gold);color:var(--ink)}
+#sm .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sm section[tabindex]:focus{outline:none}
+#sm .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#sm svg.i{width:16px;height:16px;flex:none}
+
+/* buttons + links: one set */
+#sm .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sm .btn:hover{background:#333}
+#sm .btn:active{transform:scale(.98)}
+#sm .btn:focus-visible,#sm .tl:focus-visible,#sm .card:focus-visible,#sm .chip:focus-visible,#sm .x:focus-visible,#sm .wk:focus-visible{outline:2px solid var(--gold-t);outline-offset:3px}
+#sm .btn.light{background:#fff;color:var(--ink)}
+#sm .btn.light:hover{background:var(--gold)}
+#sm .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#sm .btn.ghost:hover{background:#fff;color:var(--ink)}
+#sm .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sm .btn.line:hover{background:var(--ink);color:#fff}
+#sm .btn svg{width:15px;height:15px;transition:transform .25s var(--ease)}
+#sm .btn:hover svg.ne{transform:translate(2px,-2px)}
+#sm .tl{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sm .tl:hover{text-decoration-color:currentColor}
+#sm .tl svg{width:14px;height:14px}
+#sm .on-dark .tl{color:#fff;text-decoration-color:rgba(255,255,255,.4)}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sm .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#sm .sec{padding:clamp(72px,9vw,120px) 0}
+/* in-page links land the section heading ~20px below the site's sticky header (118px desktop, 92px phone) */
+#sm .sec[id]{scroll-margin-top:max(0px,calc(var(--hdr) + 20px - clamp(72px,9vw,120px)))}
+#sm .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sm .sec-h p{color:var(--ink-2);max-width:36em}
+#sm :is(p,li,dd){text-wrap:pretty}
+#sm .tbd{transition:background .2s}
+#sm.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+
+/* ---------- hero ---------- */
+#sm .hero{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
+#sm .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(90px,11vw,150px);background:#fff;z-index:-1}
+#sm .hero-top{display:grid;grid-template-columns:1.1fr 1fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+#sm .hero h1{font:600 clamp(52px,7.4vw,100px)/.92 var(--hd);letter-spacing:-.03em;color:#fff}
+#sm .hero h1 span{display:block}
+#sm .hero h1 i{font-style:normal;color:var(--gold)}
+#sm .hero .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.82);margin-bottom:28px;max-width:34em}
+#sm .acts{display:flex;flex-wrap:wrap;gap:12px}
+#sm .shots{display:grid;grid-template-columns:1.32fr 1fr 1fr 1.32fr;gap:clamp(8px,1vw,14px);height:clamp(220px,25vw,350px);margin-top:clamp(44px,5.5vw,72px)}
+#sm .shots figure{position:relative;border-radius:16px;overflow:hidden;background:#222}
+#sm .shots img{width:100%;height:100%;object-fit:cover}
+#sm .shots figure:nth-child(1) img{object-position:50% 30%}
+#sm .shots figure:nth-child(3) img{object-position:50% 40%}
+@media (prefers-reduced-motion:no-preference){
+  #sm.js .shots figure{clip-path:inset(100% 0 0 0 round 16px);transform:translateY(28px)}
+  #sm.js .shots figure img{transform:scale(1.12)}
+  #sm.js.ready .shots figure{clip-path:inset(0 0 0 0 round 16px);transform:none;transition:clip-path 1.15s var(--ease),transform 1.15s var(--ease);transition-delay:calc(var(--n) * 90ms + 120ms)}
+  #sm.js.ready .shots figure img{transform:none;transition:transform 1.6s var(--ease);transition-delay:calc(var(--n) * 90ms + 120ms)}
+}
+
+/* ---------- we go out together: quote + video + pray / send / go ---------- */
+#sm .together{padding:clamp(64px,8vw,108px) 0 0}
+#sm .psg-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(28px,5vw,80px);align-items:center}
+#sm .psg-top .h2{margin-bottom:24px}
+#sm .quote p{font:500 clamp(20px,1.85vw,25px)/1.4 var(--hd);letter-spacing:-.008em;color:var(--ink);text-wrap:pretty}
+#sm .quote p span{color:var(--gold-t)}
+#sm .quote cite{display:block;margin-top:16px;font-size:16px;color:var(--ink-3)}
+#sm .quote cite a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.25)}
+#sm .vid{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#111;isolation:isolate}
+#sm .vid img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform .8s var(--ease)}
+#sm .vid::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(14,14,14,.15),rgba(14,14,14,.1) 45%,rgba(14,14,14,.62));pointer-events:none}
+#sm .vid .play{all:unset;position:absolute;left:50%;top:50%;z-index:2;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;place-items:center;color:var(--ink);cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .35s var(--ease),background .2s}
+#sm .vid .play svg{width:28px;height:28px;margin-left:4px}
+#sm .vid .play:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media (hover:hover){#sm .vid:not(.soon):hover .play{transform:scale(1.07)}#sm .vid:not(.soon):hover img{transform:scale(1.02)}}
+#sm .vid.soon .play{cursor:default;background:rgba(255,255,255,.78)}
+#sm .vid figcaption{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff}
+#sm .vid figcaption b{font:600 clamp(16px,1.4vw,19px)/1.2 var(--hd)}
+#sm .vid figcaption span{flex:none;padding:8px 13px;border-radius:999px;background:rgba(14,14,14,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em}
+#sm .vid:not(.soon){cursor:pointer}
+html.sm-lock{overflow:hidden}
+#sm .vbox{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;overflow:hidden;color:#fff}
+#sm .vbox[open]{display:grid;place-items:center}
+#sm .vbox::backdrop{background:rgba(8,8,8,.94)}
+#sm .vbox-in{position:relative;width:min(94vw,calc((100dvh - 128px) * 16 / 9));aspect-ratio:16/9;opacity:0;transform:scale(.96);transition:opacity .35s var(--ease),transform .5s var(--ease)}
+#sm .vbox.in .vbox-in{opacity:1;transform:none}
+#sm .vframe{position:absolute;inset:0;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#sm .vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#sm .vx{all:unset;position:absolute;right:0;bottom:calc(100% + 12px);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:#fff;background:rgba(255,255,255,.12);transition:background .2s}
+#sm .vx:hover{background:rgba(255,255,255,.24)}
+#sm .vx:focus-visible{outline:2px solid #fff;outline-offset:3px}
+#sm .vx svg{width:20px;height:20px}
+#sm .ways{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:clamp(52px,6vw,84px)}
+#sm .way{display:flex;flex-direction:column;align-items:flex-start;padding-top:22px;border-top:1px solid var(--ink)}
+#sm .way>.tl{margin-top:auto}
+#sm .way h3{font:600 clamp(30px,3vw,38px)/1 var(--hd);letter-spacing:-.02em;margin-bottom:14px}
+#sm .way h3 i{font-style:normal;color:var(--gold-t)}
+#sm .way p{font-size:17px;color:var(--ink-2);margin-bottom:14px;max-width:25em}
+#sm .way .vs{font-size:15px;line-height:1.5;color:var(--ink-3);margin-bottom:18px}
+#sm .way .vs a{display:inline-block;margin-left:4px;font:600 12px/1 var(--hd);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-t);white-space:nowrap}
+#sm .way .vs a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- missionaries ---------- */
+#sm .people{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:32px 18px;list-style:none}
+#sm .card{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;-webkit-tap-highlight-color:transparent;border-radius:16px}
+#sm .card>span{display:block}
+#sm .card .pic{position:relative;display:block;aspect-ratio:3/2;border-radius:14px;overflow:hidden;background:var(--shot);transition:box-shadow .3s var(--ease)}
+#sm .card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+#sm .noimg{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.4)}
+#sm .noimg svg{width:clamp(28px,3vw,40px);height:auto}
+#sm .card .nm{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:14px}
+#sm .card b{font:600 20px/1.2 var(--hd);letter-spacing:-.01em}
+#sm .card .pl{font:600 12px/1 var(--hd);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-t);white-space:nowrap}
+#sm .card small{display:block;margin-top:4px;font-size:15px;line-height:1.4;color:var(--ink-3)}
+#sm .card .chev{display:none}
+@media (hover:hover){#sm .card:hover .pic img{transform:scale(1.035)}}
+#sm .card[aria-expanded=true] .pic{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--ink)}
+#sm .people.has-open .card[aria-expanded=false]{opacity:.7}
+#sm .people .card{transition:opacity .3s}
+#sm .people.has-open .card:hover{opacity:1}
+
+#sm .panel{grid-column:1/-1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease),margin .5s var(--ease);margin:-14px 0 -14px}
+#sm .panel.open{grid-template-rows:1fr;margin:0}
+#sm .panel>div{overflow:hidden;min-height:0}
+#sm .pin{position:relative;margin-top:12px;border-radius:20px;background:var(--soft);padding:clamp(24px,3.4vw,44px);display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);opacity:0;transform:translateY(-6px);transition:opacity .35s,transform .5s var(--ease)}
+#sm .panel.open .pin{opacity:1;transform:none}
+#sm .pin::before{content:"";position:absolute;top:-9px;left:var(--nx,50%);width:18px;height:18px;margin-left:-9px;background:var(--soft);border-radius:3px;transform:rotate(45deg)}
+#sm .pin h3{font:600 clamp(24px,2.4vw,30px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:6px;padding-right:44px;outline:0}
+#sm .pin .meta{font-size:16px;color:var(--ink-3);margin-bottom:20px}
+#sm .pin .bio p{font-size:17px;line-height:1.65;color:var(--ink-2);max-width:40em}
+#sm .pin .bio p+p{margin-top:14px}
+#sm .pin .more{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:22px}
+#sm .pray-box{align-self:start;background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 10px 30px rgba(0,0,0,.06)}
+#sm .pray-box h4{font:600 18px/1.2 var(--hd);margin-bottom:12px}
+#sm .pts{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+#sm .pts li{position:relative;padding-left:20px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+#sm .pts li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+#sm .pray-box .btn{width:100%;white-space:normal;text-align:center;line-height:1.3;padding:14px 20px}
+#sm .pin>*{min-width:0}
+#sm .pray-box .fine{margin-top:12px;font-size:14px;line-height:1.45;color:var(--ink-3);text-align:center}
+#sm .x{all:unset;position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:background .2s}
+#sm .x:hover{background:rgba(14,14,14,.07)}
+#sm .x svg{width:18px;height:18px}
+
+/* ---------- pray this week ---------- */
+#sm .pray{background:var(--sand)}
+#sm .pray-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,88px);align-items:center}
+#sm .pray-pic{position:relative;aspect-ratio:3/2;border-radius:20px;overflow:hidden;background:var(--shot)}
+#sm .pray-pic img{width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+#sm .pray-pic figcaption{position:absolute;left:16px;bottom:16px;padding:8px 13px;border-radius:999px;background:rgba(14,14,14,.66);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
+#sm .pray .h2{margin-bottom:22px}
+#sm .who{font:600 clamp(24px,2.4vw,32px)/1.15 var(--hd);letter-spacing:-.015em;text-wrap:balance}
+#sm .pmeta{font-size:16px;color:var(--ink-2);margin:6px 0 22px}
+#sm .pray .pts li{font-size:17px}
+#sm .pray .pts li::before{background:var(--gold-t)}
+#sm .pray-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:4px}
+#sm .wed{margin-top:26px;padding-top:20px;border-top:1px solid rgba(14,14,14,.14)}
+#sm .wed p{font-size:16px;color:var(--ink-2)}
+#sm .wed p b{color:var(--ink);font-weight:700}
+#sm .wks{position:absolute;right:14px;bottom:12px;display:flex;gap:6px}
+#sm .wk{all:unset;cursor:pointer;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(14,14,14,.66);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;transition:background .2s,transform .2s var(--ease)}
+#sm .wk:hover{background:#000}
+#sm .wk:active{transform:scale(.94)}
+#sm .wk svg{width:16px;height:16px}
+#sm .swap{transition:opacity .25s}
+#sm .swap.out{opacity:0}
+
+/* ---------- give ---------- */
+#sm .give{background:#111;color:#fff}
+#sm .give-in{display:grid;grid-template-columns:1fr minmax(360px,440px);gap:clamp(32px,6vw,96px);align-items:center}
+#sm .give-in>*,#sm .go-grid>*,#sm .pray-in>*,#sm .hero-top>*{min-width:0}
+#sm .give .h2{color:#fff;margin-bottom:22px}
+#sm .give-copy p{font-size:18px;color:rgba(255,255,255,.8);max-width:34em}
+#sm .give-copy p+p{margin-top:16px}
+#sm .give-copy .hundred{display:flex;gap:12px;align-items:flex-start;margin-top:26px;padding:18px 20px;border-radius:14px;background:rgba(255,255,255,.06);color:#fff}
+#sm .give-copy .hundred svg{width:20px;height:20px;color:var(--gold);flex:none;margin-top:3px}
+#sm .give-copy .hundred+p{margin-top:22px}
+#sm .give-copy .tl{margin-top:22px}
+#sm .giver{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 70px rgba(0,0,0,.45);transition:box-shadow .5s var(--ease);scroll-margin-top:120px}
+#sm .giver.ping{box-shadow:0 0 0 3px var(--gold),0 30px 70px rgba(0,0,0,.45)}
+#sm .lbl{display:block;font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+#sm .giver .row+.row{margin-top:20px}
+#sm .field{display:flex;align-items:center;min-height:52px;border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);transition:box-shadow .2s;position:relative}
+#sm .field:focus-within{box-shadow:inset 0 0 0 2px var(--ink)}
+#sm .field select{all:unset;box-sizing:border-box;width:100%;min-height:52px;padding:0 44px 0 16px;font:600 16px/52px var(--hd);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#sm .field .dn{position:absolute;right:16px;width:16px;height:16px;pointer-events:none;color:var(--ink-3)}
+#sm .amt{display:flex;align-items:center;gap:2px;padding-left:16px;cursor:text}
+#sm .amt span{font:600 22px/1 var(--hd);color:var(--ink-3)}
+#sm .amt input{all:unset;flex:1;min-width:0;min-height:52px;padding-right:12px;font:600 26px/52px var(--hd);letter-spacing:-.01em;caret-color:var(--gold-t)}
+#sm .amt input::placeholder{color:#8a8a8a}
+#sm .quick{display:flex;gap:8px;margin-top:10px}
+#sm .chip{all:unset;box-sizing:border-box;flex:1;cursor:pointer;min-height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--line);font:600 14px/1 var(--hd);transition:background .2s,box-shadow .2s,color .2s;-webkit-tap-highlight-color:transparent}
+#sm .chip:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+#sm .chip[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none}
+#sm .seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:12px;background:var(--soft)}
+#sm .seg label{position:relative;cursor:pointer}
+#sm .seg input{position:absolute;opacity:0;pointer-events:none}
+#sm .seg span{display:block;padding:11px;border-radius:9px;text-align:center;font:600 14px/1.2 var(--hd);color:var(--ink-3);transition:background .2s,color .2s,box-shadow .2s}
+#sm .seg input:checked+span{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)}
+#sm .seg input:focus-visible+span{outline:2px solid var(--gold-t);outline-offset:2px}
+#sm .sum{margin:22px 0 14px;padding:14px 16px;border-radius:12px;background:var(--soft);font-size:16px;line-height:1.45;color:var(--ink-2);min-height:70px}
+#sm .sum strong{color:var(--ink)}
+#sm .go-btn{width:100%;min-height:56px;font-size:14px}
+#sm .fine{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:13px;line-height:1.45;color:var(--ink-3)}
+#sm .fine svg{width:14px;height:14px;flex:none;margin-top:2px}
+
+/* ---------- go ---------- */
+#sm .go-grid{display:grid;grid-template-columns:1.12fr 1fr;gap:clamp(16px,2vw,24px);align-items:stretch}
+#sm .goc{display:flex;flex-direction:column;border-radius:20px;background:var(--soft);overflow:hidden}
+#sm .goc figure{position:relative;aspect-ratio:16/9;background:#222}
+#sm .goc figure img{width:100%;height:100%;object-fit:cover}
+#sm .goc .badge{position:absolute;left:16px;top:16px;padding:8px 13px;border-radius:999px;background:var(--gold);font:700 12px/1 var(--hd);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+#sm .goc-in{flex:1;display:flex;flex-direction:column;padding:clamp(22px,3vw,34px)}
+#sm .goc-in>.acts{margin-top:auto}
+#sm .goc.trips figure{flex:1 1 auto;aspect-ratio:auto;min-height:300px}
+#sm .goc.trips .goc-in{flex:none}
+#sm .goc.trips img{object-position:50% 35%}
+#sm .goc h3{font:600 clamp(24px,2.4vw,30px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:10px}
+#sm .goc-in>p{font-size:17px;color:var(--ink-2);max-width:34em}
+#sm .goc dl{margin:22px 0 26px;border-top:1px solid var(--line)}
+#sm .goc dl div{display:grid;grid-template-columns:minmax(150px,.8fr) 1.6fr;gap:6px 20px;padding:15px 0;border-bottom:1px solid var(--line)}
+#sm .goc dt{font:600 16px/1.35 var(--hd)}
+#sm .goc dd{font-size:16px;line-height:1.5;color:var(--ink-2)}
+#sm .goc .acts{align-items:center;gap:14px 24px}
+#sm .story{margin:20px 0 26px;padding:18px 20px;border-radius:14px;background:#fff}
+#sm .story p{font-size:16px;line-height:1.55;color:var(--ink-2);margin-bottom:10px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  #sm .people{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:900px){
+  #sm .hero-top,#sm .sec-h,#sm .pray-in,#sm .give-in,#sm .go-grid,#sm .psg-top{grid-template-columns:1fr}
+  #sm .psg-top{gap:32px}
+  #sm .sec-h{align-items:start}
+  #sm .people{grid-template-columns:repeat(2,1fr)}
+  #sm .pin{grid-template-columns:1fr}
+  #sm .ways{grid-template-columns:1fr;gap:0;margin-top:44px}
+  #sm .way{padding:20px 0 22px}
+  #sm .way:last-child{border-bottom:1px solid var(--ink)}
+  #sm .way p{margin-bottom:10px}
+  #sm .give-in{gap:40px}
+  #sm .goc.trips figure{flex:none;aspect-ratio:16/9;min-height:0}
+}
+@media (max-width:640px){
+  #sm{--top:118px;--hdr:92px;font-size:17px}
+  #sm .hero::after{height:92px}
+  #sm .acts .btn{flex:1 1 100%}
+  #sm .vid{border-radius:14px}
+  #sm .vid .play{width:68px;height:68px;margin:-34px 0 0 -34px}
+  #sm .vid .play svg{width:22px;height:22px}
+  #sm .vid figcaption{left:14px;right:14px;bottom:12px}
+  #sm .vid figcaption b{font-size:15px}
+  #sm .vid figcaption span{padding:7px 10px;font-size:11px}
+  #sm .shots{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:auto;aspect-ratio:1/0.82;margin-top:36px;gap:8px}
+  #sm .shots figure{border-radius:12px}
+  #sm .people{grid-template-columns:1fr;gap:0}
+  #sm .people>li:not(.panel){border-bottom:1px solid var(--line)}
+  #sm .people>li:first-child{border-top:1px solid var(--line)}
+  #sm .card{display:grid;grid-template-columns:104px 1fr 20px;gap:16px;align-items:center;padding:12px 0;border-radius:0}
+  #sm .card .pic{aspect-ratio:4/3;border-radius:10px}
+  #sm .card .nm{display:block;margin:0}
+  #sm .card b{font-size:18px}
+  #sm .card .pl{display:block;margin-top:6px;font-size:11px}
+  #sm .card small{font-size:14px;margin-top:3px}
+  #sm .card .chev{display:block;width:18px;height:18px;color:var(--ink-3);transition:transform .35s var(--ease)}
+  #sm .card[aria-expanded=true] .chev{transform:rotate(90deg)}
+  #sm .card[aria-expanded=true] .pic{box-shadow:none}
+  #sm .people.has-open .card[aria-expanded=false]{opacity:1}
+  #sm .panel{margin:0}
+  #sm .pin{margin:0 0 14px;border-radius:16px}
+  #sm .pin::before{display:none}
+  #sm .pray-box{padding:20px}
+  #sm .goc dl div{grid-template-columns:1fr}
+  #sm .giver{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  #sm *,#sm *::before{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+
+<div id="sm">
+  <!-- hero -->
+  <section class="hero" aria-labelledby="sm-h1">
+    <div class="wrap">
+      <div class="hero-top">
+        <h1 id="sm-h1"><span>Pray<i>.</i></span> <span>Send<i>.</i></span> <span>Go<i>.</i></span></h1>
+        <div>
+          <p class="lede">Jesus was sent by God into the world. He had a mission, and God has sent you to do the same. You’ve been sent to your family, neighbors, coworkers, the broken and the needy in your neighborhood and beyond.</p>
+          <div class="acts">
+            <a class="btn light" href="#sm-people">Meet Our Missionaries</a>
+            <a class="btn ghost" href="#sm-give">Give to Missions</a>
+          </div>
+        </div>
+      </div>
+      <div class="shots">
+        <figure style="--n:0"><img src="img/trip-2.jpg" alt="Two young women from a Springs trip team laughing together outdoors" fetchpriority="high"></figure>
+        <figure style="--n:1"><img src="img/trip-5.jpg" alt="A baptism in a river on a mission trip"></figure>
+        <figure style="--n:2"><img src="img/trip-3.jpg" alt="Two friends embracing outside a home on a mission trip"></figure>
+        <figure style="--n:3"><img src="img/trip-4.jpg" alt="A team building a home together on a mission trip"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- we go out together -->
+  <section class="together" id="sm-psg" aria-labelledby="sm-psg-h">
+    <div class="wrap">
+      <div class="psg-top">
+        <div>
+          <h2 class="h2" id="sm-psg-h">We Go Out Together</h2>
+          <blockquote class="quote">
+            <p><span>“</span>When our missionaries go out, we all go out together. We can’t all physically go out, but we go out in prayer and we go out through support.<span>”</span></p>
+            <cite>Pastor Michael Petillo, <a href="https://www.youtube.com/watch?v=nUoAN20uTfw" target="_blank" rel="noopener">Vision Sunday 2025</a></cite>
+          </blockquote>
+        </div>
+        <!-- MISSIONS VIDEO: youtu.be/pUu-zYMdkqo (Josh 11/06). Change MISSIONS_VIDEO in the script to swap it; ?video=<id> previews another. -->
+        <figure class="vid soon" id="sm-vid">
+          <img src="img/video-poster.jpg" alt="" loading="lazy">
+          <button type="button" class="play" aria-label="Play the Springs Church Missions video" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.13-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"/></svg></button>
+          <figcaption><b>Springs Church Missions</b><span id="sm-vid-tag" class="tbd">Watch · 7:39</span></figcaption>
+        </figure>
+      </div>
+      <div class="ways">
+        <div class="way">
+          <h3>Pray<i>.</i></h3>
+          <p class="tbd">Prayer comes first. Pray for our missionaries by name, and join us at Wednesday Prayer at 6:30 PM.</p>
+          <p class="vs">“Ask the Lord of the harvest, therefore, to send out workers into his harvest field.” <a href="https://www.bible.com/bible/111/MAT.9.38.NIV" target="_blank" rel="noopener">Matthew 9:38</a></p>
+          <a class="tl" href="#sm-pray"><span>This week: <span data-pray-short>the Cassula family</span></span></a>
+        </div>
+        <div class="way">
+          <h3>Send<i>.</i></h3>
+          <p class="tbd">We send our missionaries out with our support. Give to one of them directly, or wherever it’s needed most.</p>
+          <p class="vs">“And how can anyone preach unless they are sent?” <a href="https://www.bible.com/bible/111/ROM.10.15.NIV" target="_blank" rel="noopener">Romans 10:15</a></p>
+          <a class="tl" href="#sm-give">Give to missions</a>
+        </div>
+        <div class="way">
+          <h3>Go<i>.</i></h3>
+          <p class="tbd">Serve with us here in Colorado Springs, and watch for our 2027 trips.</p>
+          <p class="vs">“Therefore go and make disciples of all nations…” <a href="https://www.bible.com/bible/111/MAT.28.19.NIV" target="_blank" rel="noopener">Matthew 28:19</a></p>
+          <a class="tl" href="#sm-go">Find your place</a>
+        </div>
+      </div>
+    </div>
+    <dialog class="vbox" id="sm-vbox" aria-label="Springs Church Missions video">
+      <div class="vbox-in">
+        <button type="button" class="vx" aria-label="Close video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <div class="vframe" id="sm-vframe"></div>
+      </div>
+    </dialog>
+  </section>
+
+  <!-- missionaries -->
+  <section class="sec" id="sm-people" aria-labelledby="sm-people-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sm-people-h">Our Missionaries</h2>
+        <p>Meet our missionaries who are passionately sharing the gospel and serving communities around the world. <span class="tbd">Tap anyone to read their story, pray for them or give.</span></p>
+      </div>
+      <ul class="people" id="sm-grid"></ul>
+    </div>
+  </section>
+
+  <!-- pray this week -->
+  <section class="sec pray" id="sm-pray" aria-labelledby="sm-pray-h">
+    <div class="wrap pray-in">
+      <figure class="pray-pic swap" id="sm-pp">
+        <img id="sm-pp-img" src="img/m-cassula.jpg" alt="">
+        <figcaption id="sm-pp-week">Week of November 1</figcaption>
+        <div class="wks">
+            <button type="button" class="wk" data-wk="-1" aria-label="Last week’s missionary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button type="button" class="wk" data-wk="1" aria-label="Next week’s missionary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+      </figure>
+      <div class="swap" id="sm-pt">
+        <h2 class="h2" id="sm-pray-h">Pray This Week</h2>
+        <p class="who" id="sm-who">Renato &amp; Michele Cassula</p>
+        <p class="pmeta" id="sm-pmeta">Brazil · Jacob’s Well</p>
+        <ul class="pts" id="sm-pts"></ul>
+        <div class="pray-acts">
+          <button type="button" class="tl" id="sm-pread">Read their story</button>
+          <button type="button" class="tl" id="sm-pgive">Give to them</button>
+        </div>
+        <div class="wed">
+          <p>Pray with us at <b>Wednesday Prayer, 6:30 PM</b>. <a class="tl" href="../prayer/">Prayer at Springs</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- give -->
+  <section class="sec give on-dark" id="sm-give" aria-labelledby="sm-give-h">
+    <div class="wrap give-in">
+      <div class="give-copy">
+        <h2 class="h2" id="sm-give-h">Give to Missions</h2>
+        <p>When you give to missions, you are helping share the love of Jesus beyond the walls of our church. Your generosity supports missionaries, church plants, and outreach efforts that bring hope to communities locally and around the world. Every gift makes a difference, advancing the gospel and meeting real needs as we join together in God’s mission.</p>
+        <div class="hundred">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          <p class="tbd">By giving through Springs Church, 100% of your donation goes directly to the individual missionary and not toward administrative costs.</p>
+        </div>
+        <p class="tbd">Since our first meeting in 2009, this church has given more than $5 million to reach people around the world.</p>
+        <a class="tl" href="../give/">More ways to give</a>
+      </div>
+
+      <form class="giver" id="sm-giver" onsubmit="return false" aria-label="Give to missions">
+        <div class="row">
+          <label class="lbl" for="sm-to">Send it to</label>
+          <div class="field">
+            <select id="sm-to"></select>
+            <svg class="dn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="row">
+          <label class="lbl" for="sm-amt">Amount</label>
+          <div class="field amt"><span aria-hidden="true">$</span><input id="sm-amt" inputmode="decimal" autocomplete="off" placeholder="0" aria-describedby="sm-sum"></div>
+          <div class="quick" role="group" aria-label="Quick amounts">
+            <button type="button" class="chip" data-amt="25" aria-pressed="false">$25</button>
+            <button type="button" class="chip" data-amt="50" aria-pressed="false">$50</button>
+            <button type="button" class="chip" data-amt="100" aria-pressed="false">$100</button>
+            <button type="button" class="chip" data-amt="250" aria-pressed="false">$250</button>
+          </div>
+        </div>
+        <div class="row">
+          <span class="lbl" id="sm-often-l">How often</span>
+          <div class="seg" role="radiogroup" aria-labelledby="sm-often-l">
+            <label><input type="radio" name="sm-often" value="No" checked><span>One time</span></label>
+            <label><input type="radio" name="sm-often" value="Monthly"><span>Every month</span></label>
+          </div>
+        </div>
+        <p class="sum" id="sm-sum" aria-live="polite"></p>
+        <a class="btn go-btn" id="sm-gobtn" href="https://pushpay.com/g/springsmissions" target="_blank" rel="noopener">Give on Pushpay <svg class="ne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <p class="fine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>You’ll finish on Pushpay, our secure giving partner, with this already filled in.</span></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- go -->
+  <section class="sec" id="sm-go" aria-labelledby="sm-go-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sm-go-h">Go With Us</h2>
+        <p>Following the model in <a class="tl" style="font-size:inherit" href="https://www.bible.com/bible/111/EPH.4.11-12.NIV" target="_blank" rel="noopener">Ephesians 4:11-12</a>, Springs Church desires to empower and equip the church, sending you out to share the message of the cross. We provide opportunities to share the gospel locally, across the U.S. and overseas.</p>
+      </div>
+      <div class="go-grid">
+        <article class="goc">
+          <figure><img src="img/food-drive.jpg" alt="A Springs volunteer handing out food at our 2026 food drive" loading="lazy"></figure>
+          <div class="goc-in">
+            <h3>Here at Home</h3>
+            <p class="tbd">Colorado Springs is our mission field too. Here’s where you can serve this month.</p>
+            <dl>
+              <div><dt>Feeding Families</dt><dd class="tbd">Once a month we serve meals and groceries to families in our community who are hurting.</dd></div>
+              <div><dt>Prison Ministry</dt><dd class="tbd">An ongoing ministry bringing the hope of Jesus to people in prison.</dd></div>
+              <div><dt>Local Schools</dt><dd class="tbd">Reaching out to and serving the schools around us.</dd></div>
+            </dl>
+            <div class="acts">
+              <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/241/responses/new" target="_blank" rel="noopener">Serve With Us <svg class="ne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+              <button type="button" class="tl" data-give="local">Give to Local Outreach</button>
+            </div>
+          </div>
+        </article>
+        <article class="goc trips">
+          <figure><img src="img/cruz-trip.jpg" alt="Amanda Cruz in Guatemala" loading="lazy"></figure>
+          <div class="goc-in">
+            <h3>2027 Trips</h3>
+            <p>Coming soon.</p>
+            <div class="story">
+              <p class="tbd">Amanda Cruz first went to Guatemala on a 10-day Springs youth trip. She went back as an intern and never came back. Today she and Carlos serve there as our missionaries.</p>
+              <a class="tl" href="https://www.springs.church/stories?story=cruz">Watch their story</a>
+            </div>
+            <div class="acts">
+              <a class="btn line" href="http://eepurl.com/iUfGPA" target="_blank" rel="noopener"><span class="tbd">Get Trip News</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sm');
+  if (!root) return;
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const MISSIONS = 'https://pushpay.com/g/springsmissions', GENERAL = 'https://pushpay.com/g/springschurchcoloradosprings';
+  const FUND_MISSIONS = 'G5OVKEeDwkPceWn5l2G9FA', FUND_LOCAL = 'hKzXWhADF21Io9RWCNVqoQ';
+  // Missions video: paste the YouTube video ID here when it's ready (11 characters, from youtube.com/watch?v=XXXXXXXXXXX).
+  const MISSIONS_VIDEO = 'pUu-zYMdkqo'; // "Springs Church Missions | Promo" (7:39), Josh 11/06
+
+  // The 10 on the live page (live order) + Albrecht (Josh 11/06). Bios from springs.church/contributor/<slug>.
+  // Prayer points are drawn from each bio: confirm with Karen / each missionary before going live.
+  const M = [
+    { id: 'cassula', last: 'Cassula', names: 'Renato & Michele', full: 'Renato & Michele Cassula', place: 'Brazil', org: 'Jacob’s Well',
+      img: 'img/m-cassula.jpg', fund: '97npxJ_LcEyXbBj6sk2wpg', btn: 'the Cassula Family', to: 'the Cassula family in Brazil',
+      bio: ['Renato and Michele built intentional relationships with the drought-impacted communities in Brazil. Their ministry emphasizes relationship-based transformation, engaging community members in planning, implementation, and long-term growth so that their own strengths and culture lead the way toward lasting spiritual, social, and economic change. Through this collaborative approach, rooted in the gospel, wells have been drilled, trust restored, churches planted, and lives now continue to experience hope and transformation.'],
+      pray: ['Pray for the drought-impacted communities they walk alongside in Brazil.', 'Pray for the churches planted through their work to keep growing.', 'Pray for lasting hope and change rooted in the gospel.'],
+      links: [{ t: 'Instagram', h: 'https://www.instagram.com/renatocassula/' }] },
+    { id: 'cruz', last: 'Cruz', names: 'Carlos & Amanda', full: 'Carlos & Amanda Cruz', place: 'Guatemala', org: 'Cruzing Guatemala',
+      img: 'img/m-cruz.jpg', fund: 'p16F1qqXoNXG-g6i5IeYDA', btn: 'the Cruz Family', to: 'the Cruz family in Guatemala',
+      bio: ['Carlos and Amanda serve children and families in Piedras Azules, Juan Ponce, and Zapata, sharing the truth of Jesus’ love through Sunday school, VBS, games, and special events. They also host soccer and sports camps, building meaningful relationships with children and their communities.', 'The Cruzes help meet practical needs by distributing food bags to families. Each Sunday, Carlos travels between the villages, preaching from early morning into the afternoon and encouraging believers in every location.'],
+      pray: ['Pray for the families of Piedras Azules, Juan Ponce and Zapata.', 'Pray for strength for Carlos as he preaches village to village each Sunday.', 'Pray for the children who come to Sunday school, VBS and sports camps.'],
+      links: [{ t: 'Watch their story', h: '/stories?story=cruz', local: 1 }] },
+    { id: 'nickycruz', last: 'Nicky Cruz', names: 'Nicky Cruz Outreach', full: 'Nicky Cruz', place: 'Global', org: 'Nicky Cruz Outreach',
+      img: 'img/m-nickycruz.jpg', fund: 'O4zlFUBaPEkAqJBbLcRFwA', btn: 'Nicky Cruz Outreach', to: 'Nicky Cruz Outreach',
+      bio: ['For the past 60 years, Nicky Cruz has traveled the world speaking to nearly 50 million people in person. For decades this author of 17 books has been driven to reach an at-risk youth culture being decimated by crime, drugs, and gang activity.', 'Nicky has a passion to evangelize unchurched communities. He launched TRUCE (To Reach Urban Communities Everywhere), an evangelism training program which utilizes urban art forms to share the gospel.'],
+      pray: ['Pray for Nicky as he preaches the gospel to unchurched communities.', 'Pray for young people caught in crime, drugs and gangs to meet Jesus.', 'Pray for the TRUCE teams training believers to share their faith.'],
+      links: [] },
+    { id: 'jacobs', last: 'Jacobs', names: 'Jeremy & Racquel', full: 'Jeremy & Racquel Jacobs', place: 'USA', org: 'Stories of Antisemitism',
+      img: 'img/m-jacobs.jpg', fund: 'lLisMOgQ_N2-VHz4P_Skgg', btn: 'the Jacobs Family', to: 'the Jacobs family',
+      // Josh 11/06: keep this discreet. A Jewish friend of the Jacobs reading it should never feel targeted or double-crossed:
+      // advocacy and safety only, no outreach or conversion language. Bio trimmed from their contributor page.
+      bio: ['Jeremy and Racquel lead Stories of Antisemitism, a ministry that brings a Christian voice to the fight against antisemitism and advocates for the safety of Jewish people. They build bridges with the Jewish community and equip Christians across America to stand with their Jewish neighbors.'],
+      pray: ['Pray for Jeremy and Racquel as they speak out against antisemitism.', 'Pray for the safety of Jewish families and communities.', 'Pray for the Christians they equip to stand with their Jewish neighbors.'],
+      links: [] },
+    { id: 'kirkeeide', last: 'Kirkeeide', names: 'Linda', full: 'Linda Kirkeeide', place: 'Global', org: 'Springs Church Legacy/Missionary Care',
+      img: 'img/m-kirkeeide.jpg', fund: 'H2IuuHcaatk7UJyse0xfsQ', btn: 'Linda Kirkeeide', to: 'Linda Kirkeeide',
+      bio: ['Linda and her late husband, Bob, have been missionaries for over 40 years in Haiti and Africa. They have provided missionary care for churches, including 14 years of debriefing missionaries through Mission Training International, as well as overseeing in-country involvement. Linda currently lives in Texas where she continues to be available to coach and minister to missionaries and Christian leaders. Her passion is to help people reflect on their journeys to find healing, that they might walk well with their loving Heavenly Father.'],
+      pray: ['Pray for Linda as she coaches and cares for missionaries and Christian leaders.', 'Pray for the missionaries she walks with to find healing and rest.'],
+      links: [] },
+    { id: 'lobos', last: 'Lobos', names: 'Cris & Emy', full: 'Cris & Emy Lobos', place: 'France', org: 'YWAM (Youth With A Mission)',
+      img: 'img/m-lobos.jpg', fund: 'kwky8nap0IgFQu0Di8wa0w', btn: 'the Lobos Family', to: 'the Lobos family in France',
+      bio: ['Cris and Emy’s mission is to make disciples. They preach the gospel to their neighbors and in street outreaches. When people respond to the gospel, they teach them the life Jesus intended for us to live. They train them through Bible and life sharing and then take them to the streets to evangelize which results in house churches being born as their disciples reach out to people within their own networks of influence.'],
+      pray: ['Pray for their neighbors and the people they meet on the streets.', 'Pray for new believers as they learn to follow Jesus.', 'Pray for the house churches growing out of their disciples’ friendships.'],
+      links: [] },
+    { id: 'nicholas', last: 'Nicholas', names: 'Jonathan & Tina', full: 'Jonathan & Tina Nicholas', place: 'MEA', org: 'YWAM (Youth With A Mission)',
+      img: 'img/m-nicholas.jpg', fund: 'nyG0jGQ_kj1Htrly3sG10Q', btn: 'the Nicholas Family', to: 'the Nicholas family',
+      bio: ['Jonathan and Tina’s missionary work is in the Middle East and Africa (MEA) region. They engage unreached communities through discipleship, evangelism, and in-field training. They take multiple trips each year, bringing food and supplies to various people groups.'],
+      pray: ['Pray for unreached communities across the Middle East and Africa.', 'Pray for safety and open doors on each of their trips.', 'Pray for the people they disciple and train in the field.'],
+      links: [] },
+    { id: 'schwarz', last: 'Schwarz', names: 'Nathan & Janessa', full: 'Nathan & Janessa Schwarz', place: 'Global', org: 'AIMS',
+      img: 'img/m-schwarz.jpg', fund: 'RKcoc_c3O5wj7PRTSO386g', btn: 'the Schwarz Family', to: 'the Schwarz family',
+      bio: ['Nathan and Janessa work in the AIMS Headquarters office mobilizing native missionaries around the world to reach Unreached People Groups.', 'They connect prayer, finances, and partnerships to the local believers with the most access to the Unreached so that they can effectively reach the lost.'],
+      pray: ['Pray for native missionaries reaching unreached people groups.', 'Pray for the prayer, giving and partnerships they connect.'],
+      links: [] },
+    { id: 'stoddard', last: 'Stoddard', names: 'Zane & Jan', full: 'Zane & Jan Stoddard', place: 'Global', org: 'Springs Church Legacy/Missionary Care',
+      img: 'img/m-stoddard.jpg', fund: 'bgP5wkgDSELRaV9l-r4n8w', btn: 'the Stoddard Family', to: 'the Stoddard family',
+      bio: ['Zane and Jan serve as Soul Care providers for missionaries and Marriage Mentors at Springs Church. They have relocated back to Colorado Springs but remain project managers in India overseeing two works registered with the Indian government. These ministries utilize story-telling techniques to foster discipleship in an oral society, outreach to leprosy villages, house church planting, home for the elderly, launching new ministries through discipleship, vocational training for the poor, family counseling and tutoring for children.'],
+      pray: ['Pray for the two ministries they oversee in India.', 'Pray for the leprosy villages, house churches and families those ministries serve.', 'Pray for Zane and Jan as they care for missionaries and mentor marriages here.'],
+      links: [{ t: 'Watch Jan’s story', h: '/stories?story=stoddard', local: 1 }, { t: 'Facebook', h: 'https://www.facebook.com/zane.j.stoddard' }] },
+    { id: 'toms', last: 'Toms', names: '', full: 'The Toms Family', place: 'Portugal', org: '',
+      img: 'img/m-toms.jpg', fund: 'onuCkiyd7Yg4OXduwcLfWg', btn: 'the Toms Family', to: 'the Toms family in Portugal', tbd: 1,
+      bio: [], pray: ['Pray for the Toms family and the people they serve in Portugal.'], links: [] },
+    // From the draft ChurchCo contributor /albrecht (Josh 11/06: use it).
+    { id: 'albrecht', last: 'Albrecht', names: 'Alex', full: 'Alex Albrecht', place: 'Greece', org: 'TEAM (The Evangelical Alliance Mission)',
+      img: 'img/m-albrecht.jpg', fund: 'INgtE5lbHQS07KJwyBSg6g', btn: 'Alex Albrecht', to: 'Alex Albrecht in Greece',
+      bio: ['Alex has traveled to many countries to share the truth of Christ’s love with TEAM, whose mission is to partner with the global Church in sending disciples who make disciples and establish missional churches for the glory of God. She is currently building friendships and community in Greece, ministering among the local people. Her heart is to ensure that each person would have opportunity to know forgiveness and redemption, and that the name of the Lord would be honored wherever she is.'],
+      pray: ['Pray for Alex as she builds friendships and community in Greece.', 'Pray for the people she ministers among to know forgiveness and redemption.', 'Pray for TEAM as they send disciples who make disciples.'],
+      links: [] }
+  ];
+  const byId = id => M.find(m => m.id === id);
+  const metaOf = m => [m.place === 'MEA' ? 'Middle East & Africa' : m.place, m.org].filter(Boolean).join(' · ');
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
+  const ICON_NE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+  const pic = (m, cls) => m.img ? `<img src="${m.img}" alt="${esc(m.full)}" loading="lazy">` : `<span class="noimg" aria-hidden="true">${PIN}</span>`;
+
+  /* ---------- missionaries grid + in-place panel ---------- */
+  const grid = $('#sm-grid');
+  grid.innerHTML = M.map(m => `<li><button type="button" class="card" id="sm-c-${m.id}" data-id="${m.id}" aria-expanded="false" aria-controls="sm-panel">
+      <span class="pic">${pic(m)}</span>
+      <span><span class="nm"><b>${esc(m.last)}</b><span class="pl">${esc(m.place)}</span></span>${m.names && m.names !== m.org ? `<small>${esc(m.names)}</small>` : m.org ? `<small>${esc(m.org)}</small>` : ''}</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button></li>`).join('') +
+    `<li class="panel" id="sm-panel" hidden><div><div class="pin" role="region" aria-labelledby="sm-pn-h"></div></div></li>`;
+  const panel = $('#sm-panel'), pin = panel.querySelector('.pin');
+  let openId = null;
+
+  function fill(m) {
+    const meta = metaOf(m);
+    const bio = m.bio.length ? m.bio.map(p => `<p>${esc(p)}</p>`).join('') : `<p class="tbd">We’re adding ${esc(m.to.replace(/ in .*/, ''))}’s story soon.</p>`;
+    const links = m.links.map(l => `<a class="tl" href="${l.h}"${l.local ? '' : ' target="_blank" rel="noopener"'}>${esc(l.t)}${l.local ? '' : ICON_NE}</a>`).join('');
+    pin.innerHTML = `<div>
+        <h3 id="sm-pn-h" tabindex="-1"${m.tbd ? ' class="tbd"' : ''}>${esc(m.full)}</h3>
+        <p class="meta">${esc(meta)}</p>
+        <div class="bio">${bio}</div>
+        ${links ? `<div class="more">${links}</div>` : ''}
+      </div>
+      <div class="pray-box">
+        <h4>Pray for Them</h4>
+        <ul class="pts tbd">${m.pray.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
+        <button type="button" class="btn" data-give="${m.id}">Give to ${esc(m.btn)}</button>
+        <p class="fine" style="display:block"><span class="tbd">100% of your gift goes to them.</span></p>
+      </div>
+      <button type="button" class="x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>`;
+  }
+  function place(card) {
+    const cards = $$('.card'), li = card.parentElement;
+    let last = li;
+    const top = li.offsetTop;
+    for (let n = li.nextElementSibling; n; n = n.nextElementSibling) {
+      if (n === panel) continue;
+      if (Math.abs(n.offsetTop - top) < 4) last = n; else break;
+    }
+    if (last.nextElementSibling !== panel) last.after(panel);
+    pin.style.setProperty('--nx', (li.offsetLeft + li.offsetWidth / 2) + 'px');
+  }
+  function open(id, focus) {
+    const m = byId(id); if (!m) return;
+    const card = $('#sm-c-' + id);
+    if (openId === id) return close(true);
+    $$('.card').forEach(c => c.setAttribute('aria-expanded', String(c === card)));
+    fill(m);
+    const wasOpen = !!openId;
+    if (wasOpen) { panel.classList.remove('open'); }
+    panel.hidden = false;
+    // measure rows with the panel collapsed so row detection is stable
+    place(card);
+    openId = id;
+    grid.classList.add('has-open');
+    requestAnimationFrame(() => requestAnimationFrame(() => panel.classList.add('open')));
+    if (focus !== false) {
+      setTimeout(() => {
+        const h = pin.querySelector('h3');
+        h.focus({ preventScroll: true });
+        const r = panel.getBoundingClientRect();
+        if (r.bottom > innerHeight - 20 || r.top < 80) {
+          const y = scrollY + card.getBoundingClientRect().top - Math.max(90, (innerHeight - r.height - card.offsetHeight) / 3);
+          scrollTo({ top: Math.max(0, y), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        }
+      }, 120);
+    }
+  }
+  function close(refocus) {
+    if (!openId) return;
+    const card = $('#sm-c-' + openId);
+    panel.classList.remove('open');
+    grid.classList.remove('has-open');
+    $$('.card').forEach(c => c.setAttribute('aria-expanded', 'false'));
+    openId = null;
+    setTimeout(() => { if (!openId) panel.hidden = true; }, 520);
+    if (refocus && card) card.focus({ preventScroll: true });
+  }
+  grid.addEventListener('click', e => {
+    const c = e.target.closest('.card');
+    if (c) return open(c.dataset.id);
+    if (e.target.closest('.x')) return close(true);
+  });
+  root.addEventListener('keydown', e => { if (e.key === 'Escape' && openId) close(true); });
+  let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (openId) place($('#sm-c-' + openId)); }, 120); });
+
+  /* ---------- pray this week (rotation starts Sunday Nov 1, 2026 with the first missionary) ---------- */
+  const q = new URLSearchParams(location.search);
+  const ANCHOR = new Date(2026, 10, 1);
+  const today = (() => { const d = q.get('pray-date') ? new Date(q.get('pray-date') + 'T12:00') : new Date(); return isNaN(d) ? new Date() : d; })();
+  // calendar-day math (Math.round) so DST changes don't shift the week
+  const weekIdx = Math.floor(Math.round((new Date(today.getFullYear(), today.getMonth(), today.getDate()) - ANCHOR) / 864e5) / 7);
+  let wk = weekIdx;
+  const mod = (n, k) => ((n % k) + k) % k;
+  const fmt = d => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+  function shortName(m) { return m.id === 'nickycruz' ? 'Nicky Cruz' : m.id === 'kirkeeide' ? 'Linda Kirkeeide' : m.btn.replace('the ', 'the ').replace(/ Family$/, ' family'); }
+  function renderPray(animate) {
+    const m = M[mod(wk, M.length)];
+    const start = new Date(2026, 10, 1 + wk * 7);
+    const go = () => {
+      const img = $('#sm-pp-img'), pp = $('#sm-pp');
+      pp.querySelector('.noimg')?.remove();
+      if (m.img) { img.hidden = false; img.src = m.img; img.alt = m.full; }
+      else { img.hidden = true; pp.insertAdjacentHTML('afterbegin', `<span class="noimg" aria-hidden="true">${PIN}</span>`); }
+      $('#sm-pp-week').textContent = (wk === weekIdx ? 'This week · ' : 'Week of ') + fmt(start);
+      $('#sm-who').textContent = m.full;
+      $('#sm-pmeta').textContent = metaOf(m);
+      $('#sm-pts').innerHTML = m.pray.map(p => `<li>${esc(p)}</li>`).join('');
+      $('#sm-pts').className = 'pts tbd';
+      $('#sm-pread').dataset.id = m.id; $('#sm-pgive').dataset.give = m.id;
+      if (wk === weekIdx) root.querySelectorAll('[data-pray-short]').forEach(s => s.textContent = shortName(m));
+      $('#sm-pp').classList.remove('out'); $('#sm-pt').classList.remove('out');
+    };
+    if (!animate) return go();
+    $('#sm-pp').classList.add('out'); $('#sm-pt').classList.add('out');
+    setTimeout(go, 220);
+  }
+  root.addEventListener('click', e => {
+    const w = e.target.closest('[data-wk]');
+    if (w) { wk += +w.dataset.wk; renderPray(true); }
+    const r = e.target.closest('#sm-pread');
+    if (r) {
+      $('#sm-people').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => { if (openId !== r.dataset.id) open(r.dataset.id); }, 450);
+    }
+  });
+  renderPray(false);
+
+  /* ---------- giving card ---------- */
+  const sel = $('#sm-to'), amt = $('#sm-amt');
+  sel.innerHTML = `<option value="missions">Wherever it’s needed most</option>
+    <optgroup label="Our missionaries">${M.map(m => `<option value="${m.id}">${esc(m.id === 'nickycruz' ? 'Nicky Cruz Outreach' : m.last)} · ${esc(m.place)}</option>`).join('')}</optgroup>
+    <optgroup label="Here at home"><option value="local">Local Outreach · Colorado Springs</option></optgroup>`;
+  const often = () => root.querySelector('input[name=sm-often]:checked').value;
+  const money = v => { const n = parseFloat(String(v).replace(/[^0-9.]/g, '')); return isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0; };
+  const show = n => '$' + (n % 1 ? n.toFixed(2) : n.toLocaleString('en-US'));
+  const ymd = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  function link() {
+    const v = sel.value, m = byId(v), a = money(amt.value), p = new URLSearchParams();
+    if (a) p.set('a', a.toFixed(2));
+    p.set('fnd', m ? m.fund : v === 'local' ? FUND_LOCAL : FUND_MISSIONS);
+    p.set('fndv', 'lock');
+    p.set('r', often());
+    if (often() === 'Monthly') p.set('rsd', ymd(new Date()));
+    p.set('sr', 'website');
+    return (m ? MISSIONS : GENERAL) + '?' + p.toString();
+  }
+  function render() {
+    const v = sel.value, m = byId(v), a = money(amt.value);
+    const to = m ? m.to : v === 'local' ? 'Local Outreach in Colorado Springs' : 'missions, wherever it’s needed most';
+    $$('.chip').forEach(c => c.setAttribute('aria-pressed', String(+c.dataset.amt === a)));
+    $('#sm-sum').innerHTML = a
+      ? `<strong>${show(a)}${often() === 'Monthly' ? ' every month' : ''}</strong> to ${esc(to)}.${often() === 'Monthly' ? ' Starting today.' : ''}`
+      : `Choose an amount for ${esc(to)}, or enter it on Pushpay.`;
+    $('#sm-gobtn').href = link();
+  }
+  function setGive(id) {
+    sel.value = id; render();
+    const g = $('#sm-giver');
+    g.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+    g.classList.remove('ping'); void g.offsetWidth; g.classList.add('ping');
+    setTimeout(() => { g.classList.remove('ping'); amt.focus({ preventScroll: true }); }, 900);
+  }
+  sel.addEventListener('change', render);
+  amt.addEventListener('input', render);
+  amt.addEventListener('blur', () => { const a = money(amt.value); amt.value = a ? (a % 1 ? a.toFixed(2) : String(a)) : ''; render(); });
+  root.addEventListener('change', e => { if (e.target.name === 'sm-often') render(); });
+  root.addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (c) { amt.value = c.dataset.amt; render(); }
+    const g = e.target.closest('[data-give]'); if (g) setGive(g.dataset.give);
+  });
+  $('.amt').addEventListener('click', () => amt.focus());
+
+  /* ---------- missions video (placeholder until MISSIONS_VIDEO is set; ?video=<id> previews one) ---------- */
+  const VID = [q.get('video'), MISSIONS_VIDEO].find(v => /^[A-Za-z0-9_-]{11}$/.test(v || '')) || '';
+  const vid = $('#sm-vid');
+  if (VID) {
+    vid.classList.remove('soon');
+    const play = vid.querySelector('.play'); play.removeAttribute('aria-disabled');
+    const tag = $('#sm-vid-tag'); tag.classList.remove('tbd');
+    if (VID !== MISSIONS_VIDEO) tag.textContent = 'Watch';
+    // Plays in a near-full-screen lightbox. Closing (x, Esc, tap outside) removes the iframe, which stops playback.
+    const box = $('#sm-vbox'), frame = $('#sm-vframe'), html = document.documentElement;
+    let lastY = 0;
+    const openVideo = () => {
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${VID}?autoplay=1&rel=0&playsinline=1" title="Springs Church Missions video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+      lastY = scrollY;
+      if (typeof box.showModal === 'function') box.showModal(); else box.setAttribute('open', '');
+      html.classList.add('sm-lock');
+      requestAnimationFrame(() => requestAnimationFrame(() => box.classList.add('in')));
+    };
+    const shut = () => { if (box.open) box.close(); else box.removeAttribute('open'); cleanup(); };
+    const cleanup = () => { box.classList.remove('in'); frame.innerHTML = ''; html.classList.remove('sm-lock'); if (Math.abs(scrollY - lastY) > 4) scrollTo(0, lastY); };
+    play.addEventListener('click', openVideo);
+    vid.addEventListener('click', e => { if (!e.target.closest('.play')) openVideo(); });
+    box.addEventListener('close', cleanup);
+    box.addEventListener('click', e => { if (e.target === box || e.target.closest('.vx')) shut(); });
+  }
+
+  /* ---------- smooth in-page links: eased glide, stops if the visitor scrolls or taps ---------- */
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  let glide = 0;
+  function glideTo(el) {
+    const m = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const to = Math.max(0, Math.min(el.getBoundingClientRect().top + scrollY - m, max));
+    const from = scrollY, d = to - from;
+    const land = () => { if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); };
+    cancelAnimationFrame(glide);
+    if (reduceMotion.matches || Math.abs(d) < 2) { scrollTo({ top: to, behavior: 'instant' }); return land(); }
+    const dur = Math.min(1200, Math.max(650, Math.abs(d) * .42));
+    const opts = { passive: true }, evs = ['wheel', 'touchstart', 'keydown'];
+    const off = () => evs.forEach(ev => removeEventListener(ev, stop, opts));
+    const stop = () => { cancelAnimationFrame(glide); off(); };
+    evs.forEach(ev => addEventListener(ev, stop, opts));
+    let t0 = null;
+    const step = now => {
+      if (t0 === null) t0 = now;
+      const p = Math.min(1, (now - t0) / dur);
+      scrollTo({ top: from + d * ease(p), behavior: 'instant' });
+      if (p < 1) glide = requestAnimationFrame(step); else { off(); land(); }
+    };
+    glide = requestAnimationFrame(step);
+  }
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sm-"]');
+    if (!a || e.defaultPrevented) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    glideTo(el);
+  });
+
+  /* ---------- deep links + load-in ---------- */
+  if (byId(q.get('give')) || q.get('give') === 'local') sel.value = q.get('give');
+  render();
+  if (byId(q.get('m'))) setTimeout(() => { $('#sm-people').scrollIntoView(); open(q.get('m')); }, 200);
+  root.classList.add('js');
+  const ready = () => requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
+  const imgs = $$('.shots img'); let left = imgs.length;
+  const one = () => { if (--left <= 0) ready(); };
+  imgs.forEach(i => i.complete ? one() : (i.addEventListener('load', one), i.addEventListener('error', one)));
+  setTimeout(ready, 1500);
+})();
+</script>
+</div><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

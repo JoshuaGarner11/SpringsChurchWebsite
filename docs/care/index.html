@@ -1,0 +1,404 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Care | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px;font:700 11px gotham,sans-serif;letter-spacing:.1em}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; SERMONS &nbsp; EVENTS &nbsp; CONNECT</span></div>
+<div class="tcc-block html-takeover"><!-- springs.church/care · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON).
+     Source of truth: ~/Desktop/springs-care-site/churchco/care-block.html (preview: preview-live.html).
+     v2 (10/21): Billy + Laura feedback. v3 (10/21): Widowed, CCB form pop-ups, copy consistency. v4 (10/21): Karen's notes, prayer form #205 pop-up. v5 (10/21): thank-you panels when CCB redirects to springs.church. v6 (10/25): Care Team, Help in a Hard Season, Men's Mentorship, Widowed + Single Parents rows. v7 (11/15): Tez copy edit, hero "How Can We Help?" + "Let us know how we can pray or care for you." Care Request form = CCB form #815, embedded below. -->
+<style>
+/* ChurchCo wrapper: full width, no padding, never hidden by the in-view fade */
+.tcc-block:has(#sc){padding:0!important;background:#111!important}
+.tcc-block:has(#sc) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sc) .row-defaults{padding:0!important}
+.tcc-block:has(#sc) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sc{--ink:#0E0E0E;--ink-2:#444;--ink-3:#6b6b6b;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F7F7F7;--line:rgba(14,14,14,.1);
+  --hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 17px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sc *{box-sizing:border-box}
+#sc :is(h1,h2,h3,h4,p,ul,dl,dd,dt,small,b,strong){margin:0;padding:0;letter-spacing:normal;text-transform:none}
+#sc a{color:inherit;text-decoration:none}
+#sc img{display:block;max-width:100%}
+#sc .wrap{max-width:calc(1080px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+
+#sc .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;text-decoration:none;transition:background .2s,color .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent}
+#sc .btn:hover{background:#333;color:#fff}
+#sc .btn.white{background:#fff;color:var(--ink)}
+#sc .btn.white:hover{background:var(--gold)}
+#sc .btn.outline{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+#sc .btn.outline:hover{background:#fff;color:var(--ink)}
+#sc .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.25)}
+#sc .btn.line:hover{background:var(--ink);color:#fff}
+
+/* hero */
+#sc .hero{padding:var(--top) 0 0;background:linear-gradient(#111 0 62%,#fff 62%)}
+#sc .hero .top{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,5vw,72px);align-items:end;color:#fff;margin-bottom:clamp(32px,4vw,48px)}
+#sc .eyebrow{font:700 14px/1 var(--hd);letter-spacing:.06em;color:var(--gold);margin-bottom:14px}
+#sc .hero h1{font:600 clamp(38px,5vw,58px)/1.04 var(--hd);letter-spacing:-.02em;color:#fff}
+#sc .hero p{font-size:clamp(17px,1.5vw,19px);color:rgba(255,255,255,.85);margin-bottom:24px}
+#sc .hero .btns{display:flex;gap:10px;flex-wrap:wrap}
+#sc .photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:2.4/1;background:#ddd}
+#sc .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+#sc .info{position:relative;z-index:2;margin:-44px clamp(12px,3vw,36px) 0;background:#fff;border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 12px 32px rgba(0,0,0,.08);display:grid;grid-template-columns:repeat(3,1fr)}
+#sc .info>div{padding:20px 24px}
+#sc .info>div+div{border-left:1px solid var(--line)}
+#sc .info dt{font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-t);margin-bottom:8px}
+#sc .info dd{font:600 18px/1.25 var(--hd);color:var(--ink)}
+#sc .info dd small{display:block;font:400 15px/1.4 var(--bd);color:var(--ink-3);margin-top:3px}
+#sc .info a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+
+/* prayer, first */
+#sc .care{padding:clamp(56px,7vw,88px) 0 clamp(40px,5vw,64px)}
+#sc .prayer{display:grid;grid-template-columns:1fr auto;gap:20px 40px;align-items:center;padding:clamp(22px,3vw,32px);border-radius:18px;background:var(--soft);margin-bottom:clamp(40px,5vw,64px);scroll-margin-top:110px}
+#sc .prayer .tag{font:700 11px/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-t);margin-bottom:8px}
+#sc .prayer h2{font:500 clamp(24px,2.6vw,30px)/1.2 var(--hd);letter-spacing:-.01em;color:var(--ink);margin-bottom:6px}
+#sc .prayer p{color:var(--ink-2)}
+
+/* groups of care */
+#sc .grp+.grp{margin-top:clamp(40px,5vw,56px)}
+#sc .grp-h{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:end;margin-bottom:14px}
+#sc .hd2{font:500 clamp(26px,3vw,34px)/1.15 var(--hd);letter-spacing:-.015em;color:var(--ink)}
+#sc .sub{color:var(--ink-3)}
+#sc .item{border-top:1px solid var(--line);scroll-margin-top:110px}
+#sc .grp .item:last-child{border-bottom:1px solid var(--line)}
+#sc .item>button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:1fr 36px;gap:16px;align-items:center;padding:20px 12px;border-radius:10px;cursor:pointer;transition:background .2s;-webkit-tap-highlight-color:transparent}
+#sc .item>button:hover{background:var(--soft)}
+#sc .item>button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+#sc .item b{display:block;font:500 clamp(20px,2.1vw,24px)/1.25 var(--hd);letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
+#sc .item span.ln{display:block;font:400 16px/1.45 var(--bd);color:var(--ink-3)}
+#sc .pm{width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line);display:grid;place-items:center;transition:transform .3s var(--ease),background .2s,box-shadow .2s}
+#sc .pm svg{width:13px;height:13px}
+#sc .item>button:hover .pm{box-shadow:inset 0 0 0 1.5px var(--ink)}
+#sc .item.open .pm{transform:rotate(45deg);background:var(--ink);color:#fff;box-shadow:none}
+#sc .dr{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+#sc .item.open .dr{grid-template-rows:1fr}
+#sc .dr>div{overflow:hidden;min-height:0}
+#sc .in{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(20px,4vw,56px);padding:4px 12px 30px}
+#sc .in p{color:var(--ink-2)}
+#sc .in p+p{margin-top:10px}
+#sc .in h4{font:600 17px/1.3 var(--hd);color:var(--ink);margin:16px 0 4px}
+#sc .facts{background:var(--soft);border-radius:14px;margin:0 0 16px}
+#sc .facts div{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:12px 16px;font-size:16px;line-height:1.45}
+#sc .facts div+div{border-top:1px solid var(--line)}
+#sc .facts dt{font:700 11px/1.9 var(--hd);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+#sc .facts dd{font-weight:600;color:var(--ink)}
+#sc .acts{display:flex;align-items:center;gap:10px 20px;flex-wrap:wrap}
+#sc .tl{font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sc .tl:hover{text-decoration-color:var(--ink)}
+#sc .note{margin-top:12px;font-size:15px;color:var(--ink-3)}
+#sc .evs{display:grid;gap:10px;margin:0 0 16px}
+#sc .ev{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:12px 14px;border-radius:12px;background:var(--soft)}
+#sc .ev .d{font:700 12px/1.2 var(--hd);letter-spacing:.06em;text-transform:uppercase;text-align:center;min-width:44px}
+#sc .ev .d b{display:block;font-size:20px}
+#sc .ev strong{display:block;font-weight:600;font-size:16px}
+#sc .ev span{font-size:14px;color:var(--ink-3)}
+#sc .ev a{font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:3px;margin-left:6px;color:var(--ink)}
+
+/* care for one another */
+#sc .body-band{background:#111;color:#fff;padding:clamp(48px,6vw,72px) 0}
+#sc .body-band .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+#sc .body-band h2{font:500 clamp(26px,3vw,34px)/1.15 var(--hd);letter-spacing:-.015em;color:#fff;margin-bottom:10px}
+#sc .body-band p{color:rgba(255,255,255,.8)}
+#sc .body-band .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+/* request + CCB form */
+#sc .req{background:var(--soft);padding:clamp(48px,6vw,80px) 0;scroll-margin-top:90px}
+#sc .req .wrap{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(28px,5vw,64px);align-items:start}
+#sc .req .sub{color:var(--ink-2);margin:8px 0 22px}
+#sc .req ul{list-style:none;display:grid;gap:10px;margin:0 0 24px;padding:0}
+#sc .req li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--ink-2);font-size:16px;margin:0}
+#sc .req li svg{width:18px;height:18px;margin-top:4px;color:var(--gold-t)}
+#sc .crisis{padding:14px 16px;border-radius:12px;background:#fff;font-size:15px;color:var(--ink-2)}
+#sc .crisis a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+#sc .formbox{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06)}
+#sc .formbox iframe{display:block;width:100%;height:min(860px,82vh);border:0}
+#sc .formalt{margin-top:12px;font-size:15px;color:var(--ink-3)}
+
+/* CCB form pop-up */
+#sc dialog{border:0;padding:0;margin:auto;width:min(680px,calc(100vw - 16px));height:min(900px,calc(100dvh - 16px));border-radius:16px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+#sc dialog[open]{display:flex;flex-direction:column}
+#sc dialog::backdrop{background:rgba(0,0,0,.5)}
+#sc .dlg-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 12px 12px 20px;border-bottom:1px solid var(--line)}
+#sc .dlg-h b{font:600 17px/1.3 var(--hd)}
+#sc .dlg-h button{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:var(--soft);font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
+#sc dialog iframe{flex:1;width:100%;border:0}
+#sc .dlg-f{padding:10px 20px 12px;font-size:14px;color:var(--ink-3);border-top:1px solid var(--line)}
+
+/* thank-you panel, shown when a CCB form redirects back to springs.church after submit */
+#sc .thanks{display:none;padding:clamp(28px,4vw,44px);text-align:center}
+#sc .thanks.on{display:block}
+#sc .thanks .ok{width:52px;height:52px;margin:0 auto 16px;border-radius:50%;background:var(--soft);display:grid;place-items:center;color:var(--gold-t)}
+#sc .thanks .ok svg{width:24px;height:24px}
+#sc .thanks h3{font:600 22px/1.25 var(--hd);color:var(--ink);margin-bottom:8px}
+#sc .thanks p{color:var(--ink-2);max-width:30em;margin:0 auto 20px}
+#sc .thanks .btn{margin:0 4px}
+#sc .formbox.done iframe,#sc dialog.done iframe,#sc dialog.done .dlg-f{display:none}
+#sc dialog.done{height:auto}
+
+/* phone dock lives on <body>; ChurchCo turns @media into @container, so it is styled here and switched on by script */
+#sc-dock{display:none;position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));z-index:50;gap:6px;padding:6px;border-radius:14px;background:rgba(14,14,14,.94);box-shadow:0 12px 30px rgba(0,0,0,.25);transform:translate(-50%,160%);transition:transform .4s cubic-bezier(.2,.7,.2,1);font-family:'Untitled Sans',system-ui,sans-serif}
+#sc-dock.on{display:flex}
+#sc-dock.show{transform:translate(-50%,0)}
+#sc-dock .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border:0;border-radius:10px;font:700 12px/1 gotham,'Montserrat',sans-serif;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap;background:#fff;color:#0E0E0E}
+#sc-dock .btn.ghost{background:transparent;color:#fff}
+
+@media (max-width:760px){
+  #sc{--top:118px}
+  #sc .hero{background:linear-gradient(#111 0 70%,#fff 70%)}
+  #sc .hero .top{grid-template-columns:1fr;gap:16px}
+  #sc .hero .btns .btn{flex:1}
+  #sc .photo{aspect-ratio:4/3;border-radius:18px}
+  #sc .photo img{object-position:58% 40%}
+  #sc .info{grid-template-columns:1fr;margin-top:-28px}
+  #sc .info>div{padding:14px 18px}
+  #sc .info>div+div{border-left:0;border-top:1px solid var(--line)}
+  #sc .prayer{grid-template-columns:1fr}
+  #sc .prayer .btn{width:100%}
+  #sc .grp-h{grid-template-columns:1fr;gap:4px}
+  #sc .in{grid-template-columns:1fr;gap:16px;padding:0 12px 26px}
+  #sc .facts div{grid-template-columns:92px 1fr}
+  #sc .acts .btn{width:100%}
+  #sc .body-band .wrap{grid-template-columns:1fr}
+  #sc .body-band .btns{justify-content:flex-start}
+  #sc .body-band .btns .btn{flex:1}
+  #sc .req .wrap{grid-template-columns:1fr}
+  #sc .formbox iframe{height:78vh}
+}
+@media (prefers-reduced-motion:reduce){#sc *{transition:none!important;animation:none!important}}
+</style>
+
+<div id="sc">
+  <section class="hero"><div class="wrap">
+    <div class="top">
+      <div><p class="eyebrow">Care</p><h1>How Can We Help?</h1></div>
+      <div><p>From new babies to hospital stays, our church family walks with one another through every season. Let us know how we can pray or care for you.</p>
+        <div class="btns"><a class="btn white" href="#sc-req" data-go="sc-req">Care Request</a><a class="btn outline" href="https://springschurch.ccbchurch.com/goto/forms/205/responses/new" data-form="205" data-title="Prayer Request" target="_blank" rel="noopener">Prayer Request</a></div></div>
+    </div>
+    <div class="photo"><img src="https://media.thechurchcoassets.com/accounts/4185/3abca097-8252-4426-ba0c-228cc0c4d6f7-./stories-reed-embrace.jpg" alt="A husband and wife holding each other close"></div>
+    <dl class="info" id="sc-info"></dl>
+  </div></section>
+
+  <section class="care"><div class="wrap">
+    <div class="prayer" id="prayer">
+      <div><p class="tag">Prayer</p><h2>We are a praying church.</h2>
+        <p>Send a request and our prayer team will lift it up, or join us for Wednesday Night Prayer.</p></div>
+      <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/205/responses/new" data-form="205" data-title="Prayer Request" target="_blank" rel="noopener">Send a Prayer Request</a>
+    </div>
+    <div id="sc-groups"></div>
+  </div></section>
+
+  <section class="body-band"><div class="wrap">
+    <div><h2>Care for One Another</h2>
+      <p>Almost every meal, visit, coffee and prayer on this page happens because someone in our church family said yes. Join a team, or give toward caring for one another.</p></div>
+    <div class="btns"><a class="btn white" href="../serve/">Serve</a><a class="btn outline" href="../give/">Give</a></div>
+  </div></section>
+
+  <section class="req" id="sc-req"><div class="wrap">
+    <div>
+      <h2 class="hd2">Care Request</h2>
+      <p class="sub">We are honored that you have reached out to us. Please know that you are not alone. Our Care Team is here to walk alongside you, offering prayer, encouragement and support during this time.</p>
+      <ul>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 10.5l4 4 8-9"/></svg>Our Care Team reads every note.</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 10.5l4 4 8-9"/></svg>Someone will reach out to you personally.</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 10.5l4 4 8-9"/></svg>What you share stays with the Care Team.</li>
+      </ul>
+      <p class="crisis">In an emergency, call <a href="tel:911">911</a>. If you’re in crisis, call or text <a href="tel:988">988</a> any time.</p>
+    </div>
+    <div>
+      <div class="formbox"><div class="thanks" id="sc-thanks"><div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h3>Thank you.</h3><p>Your request is in. Someone from our Care Team will reach out to you personally.</p><button class="btn line" type="button" data-again>Send Another Request</button></div><iframe id="sc-frame" title="Care Request form" loading="lazy" src="https://springschurch.ccbchurch.com/goto/forms/815/responses/new"></iframe></div>
+      <p class="formalt">Trouble with the form? <a class="tl" href="https://springschurch.ccbchurch.com/goto/forms/815/responses/new" target="_blank" rel="noopener">Open it full screen</a>.</p>
+    </div>
+  </div></section>
+
+  <dialog id="sc-dlg" aria-label="Form">
+    <div class="dlg-h"><b id="sc-dlg-t">Form</b><button type="button" data-close aria-label="Close">×</button></div>
+    <div class="thanks" id="sc-dlg-thanks"><div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h3>Thank you.</h3><p>We received your submission.</p><button class="btn" type="button" data-close>Close</button></div>
+    <iframe id="sc-dlg-f" title="Form"></iframe>
+    <p class="dlg-f">Trouble with the form? <a class="tl" id="sc-dlg-a" href="#" target="_blank" rel="noopener">Open it full screen</a>.</p>
+  </dialog>
+
+  <div class="dock" id="sc-dock"><a class="btn ghost" href="https://springschurch.ccbchurch.com/goto/forms/205/responses/new" data-form="205" data-title="Prayer Request" target="_blank" rel="noopener">Prayer</a><a class="btn white" href="#sc-req" data-go="sc-req">Care Request</a></div>
+</div>
+
+<script>
+(() => {
+  const root = document.getElementById('sc');
+  if (!root || root.dataset.ready) return; root.dataset.ready = 1;
+
+  /* ---------- content ---------- */
+  const EVENTS_EMAIL = 'events@springs.church';
+  const secondWed = (y, m) => { const d = new Date(y, m, 1); return new Date(y, m, 1 + ((3 - d.getDay() + 7) % 7) + 7); };
+  const now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let cls = secondWed(now.getFullYear(), now.getMonth()); if (cls < today) cls = secondWed(now.getFullYear(), now.getMonth() + 1);
+  const nextClass = cls.getTime() === today.getTime() ? 'Tonight' : cls.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+
+  // GriefShare seminars from springs.church/events; each hides itself once it ends
+  const seminars = [
+    { title: 'Loss of a Spouse Seminar', start: '2026-10-26T18:30', end: '2026-10-26T20:30', time: '6:30–8:30 PM', where: 'Classroom 1', url: 'https://find.griefshare.org/groups/299682/registrations/new' },
+    { title: 'Surviving the Holidays', start: '2026-11-07T13:00', end: '2026-11-07T15:00', time: '1–3 PM', where: 'Classroom 1', url: 'https://find.griefshare.org/groups/299683/registrations/new' },
+  ].filter((e) => new Date(e.end) > now);
+
+  /* Copy style: titles and buttons in Title Case; every other line is a sentence ending in a period.
+     Fact values are short phrases with no period. No serial comma. "&" only in titles. Times like 8 AM, 1–3 PM. */
+  const MARRIAGE_FORM = 0; // CCB form id for Marriage Ministry, once it exists
+  const CCB = (id) => `https://springschurch.ccbchurch.com/goto/forms/${id}/responses/new`;
+  const groups = [
+    { title: 'Hard Seasons', sub: 'When life gets heavy, you don’t have to carry it alone.', items: [
+      { id: 'visits', title: 'Hospital & Home Visits', line: 'Let us know before a surgery or hospital stay, and someone from our Care Team will reach out.',
+        body: ['If you or someone you love has a surgery coming up, is in the hospital, is homebound or lives in a nursing or assisted living facility, we’d love to visit and pray with you.',
+               'Because of privacy laws, hospitals won’t tell us you’re there. A quick note from you or a family member, ideally before a planned surgery, is how we find out.'],
+        facts: [['Hospital', 'Before and after surgery, hospital stays'], ['At home', 'Homebound members'], ['Care facilities', 'Nursing and assisted living']] },
+      { id: 'loss', title: 'Loss & Grief', line: 'We’ll help you plan a memorial service and walk with you after.', events: seminars,
+        body: ['Losing someone you love is incredibly hard. You don’t have to navigate this season alone. We’ll help you plan a funeral or memorial service that honors your loved one and points to the hope we have in Jesus. For members of Springs Church, we can host the service and the reception.',
+               'GriefShare is a support group for anyone grieving the death of someone close. You’ll watch a short video, then talk (or just listen) with others who understand.',
+               'We also offer Healing Journey seasonally. Ask us about the next one.'],
+        facts: [['We help with', 'Planning a funeral or memorial service'], ['Support', 'GriefShare and Healing Journey (seasonal)']] },
+      { id: 'hard-season', title: 'Help in a Hard Season', line: 'When life suddenly falls apart, our Care Team wants to help you find a way forward.',
+        body: ['A job loss, an emergency or an unexpected crisis can leave you unsure where to turn. Let us know what’s going on.',
+               'Our Care Team will pray with you, help you think through next steps and connect you with resources.'],
+        facts: [['We offer', 'Prayer, next steps and connection to resources']] },
+    ] },
+    { title: 'Walk With Someone', sub: 'People who will listen, pray and point you to Jesus.', items: [
+      { id: 'mentorship', title: 'Men’s Mentorship', line: 'Men’s Mentorship pairs men with seasoned mentors who will walk alongside them.',
+        body: ['Men’s Mentorship is open to every man. It pairs men with seasoned mentors who invest in them through faith, work, marriage, fatherhood and the ordinary stuff of life.',
+               'Want a mentor, or ready to be one? Sign up below.'],
+        facts: [['Cost', 'Free'], ['For', 'Every man'], ['Also', 'Men’s Breakfast, 1st Saturday of the month, 8 AM, Kids Auditorium']],
+        form: [765, 'Men’s Mentorship Sign-Up'],
+        note: 'Mentorship isn’t an emergency service. If you’re in crisis, call or text 988.' },
+      { id: 'marriage', title: 'Marriage Ministry', line: 'Connect with marriage mentors or prepare for your wedding day.',
+        body: ['Whether you’re engaged, newly married or years in and running on empty, our Marriage Ministry walks with you. We connect couples with marriage mentors who have walked the road ahead of you.',
+               'Engaged? Premarital preparation through our Marriage Ministry helps you build your marriage on Jesus from day one. Email marriage@springs.church to get started.'],
+        facts: [['Includes', 'Marriage mentors and premarital preparation']],
+        form: MARRIAGE_FORM ? [MARRIAGE_FORM, 'Marriage Ministry Sign-Up'] : null,
+        mail: MARRIAGE_FORM ? null : ['marriage@springs.church', 'Email Marriage Ministry'] },
+      { id: 'coffee', title: 'Connect Over Coffee', line: 'Have coffee on a Sunday morning with people from our church family who’d love to hear your story.',
+        body: ['Whether you’ve been here two days or two years, grab coffee before service on a Sunday morning. Our Connect Over Coffee team, mostly volunteers from our church family, would love to hear your story and share how you can connect at Springs.'],
+        facts: [['When', 'Sunday mornings before service'], ['With', 'Volunteers from our church family']],
+        form: [578, 'Sign Up for Coffee'] },
+      { id: 'widowed', title: 'Widowed', line: 'We host gatherings a few times a year for those who are widowed.',
+        body: ['A few times a year, we gather those who are widowed for encouragement and time together.',
+               'Want to hear about the next one? Check the box on the Care Request form below.'] },
+      { id: 'single-parents', title: 'Single Parents', line: 'We host gatherings a few times a year for single parents.',
+        body: ['A few times a year, we gather single parents for encouragement, community and time together.',
+               'Want to hear about the next one? Check the box on the Care Request form below.'] },
+    ] },
+    { title: 'Life Moments', sub: 'Big days are better with your church family.', items: [
+      { id: 'membership', title: 'Membership', line: 'Our membership class meets the 2nd Wednesday of every month.',
+        body: ['Membership is how you commit to this church family, and how this family commits to you: to know you, pray for you and walk with you in every season.',
+               'It starts with our membership class. We’ll share our story, what we believe and how the church is led. You’ll also learn how to find your place to serve.'],
+        facts: [['When', '2nd Wednesday of every month'], ['Where', 'The Green Room'], ['Next class', nextClass]] },
+      { id: 'weddings', title: 'Weddings', line: 'Weddings at Springs are for members and regular attenders.',
+        body: ['We love celebrating weddings, and we care even more about the marriage that follows. Every couple married at Springs walks through premarital preparation with our Marriage Ministry.',
+               'Our building can host your ceremony and your reception. Send an event request early so we can talk about dates, rooms and next steps.'],
+        facts: [['Who', 'Members and regular attenders'], ['Required', 'Premarital preparation'], ['Receptions', 'Available in our building']],
+        form: [259, 'Event Request'],
+        links: [['marriage', 'About Marriage Ministry']] },
+      { id: 'baby', title: 'New Baby & Child Dedication', line: 'We’ll bring meals, a visit and a gift when your little one arrives.',
+        body: ['A new baby changes everything, and you shouldn’t have to cook through it. Let us know when your little one is on the way or has arrived. We’ll set up a meal train and bring a welcome gift, and someone will visit and pray over your family.',
+               'When you’re ready, we invite you to dedicate your child, promising, with the support of your church family, to raise your little one to know and love Jesus. Check our events page to see when the next child dedication is.'],
+        facts: [['We bring', 'Meals, a visit and a welcome gift'], ['Child dedication', 'See our events page for the next date']],
+        links: [['/events', 'See upcoming events']] },
+    ] },
+  ];
+
+  /* ---------- render ---------- */
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const plus = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg>';
+  const facts = (f) => f && f.length ? `<dl class="facts">${f.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>` : '';
+  const day = (s) => { const d = new Date(s); return `${d.toLocaleDateString('en-US', { month: 'short' })}<b>${d.getDate()}</b>`; };
+  const item = (n) => `
+    <div class="item" id="${n.id}">
+      <button type="button" aria-expanded="false" aria-controls="${n.id}-d"><span><b>${n.title}</b><span class="ln">${n.line}</span></span><span class="pm">${plus}</span></button>
+      <div class="dr" id="${n.id}-d"><div><div class="in">
+        <div>${n.body.map((p) => `<p>${p}</p>`).join('')}${n.sub ? `<h4>${n.sub[0]}</h4><p>${n.sub[1]}</p>` : ''}${n.note ? `<p class="note">${n.note}</p>` : ''}</div>
+        <div>
+          ${facts(n.facts)}
+          ${n.events && n.events.length ? `<div class="evs">${n.events.map((e) => `<div class="ev"><div class="d">${day(e.start)}</div><div><strong>GriefShare: ${esc(e.title)}</strong><span>${e.time} · ${e.where}</span><a href="${e.url}" target="_blank" rel="noopener">Register</a></div></div>`).join('')}</div>` : ''}
+          <div class="acts">
+            ${n.form ? `<a class="btn" href="${CCB(n.form[0])}" data-form="${n.form[0]}" data-title="${esc(n.form[1])}" target="_blank" rel="noopener">${n.form[1]}</a>` : ''}
+            ${n.mail ? `<a class="btn" href="mailto:${n.mail[0]}">${n.mail[1]}</a>` : ''}
+            <a class="tl" href="#sc-req" data-go="sc-req">${n.form || n.mail ? 'Or send us a note' : 'Let us know'}</a>
+            ${(n.links || []).map(([id, l]) => id.startsWith('/') ? `<a class="tl" href="${id}">${l}</a>` : `<a class="tl" href="#${id}" data-go="${id}">${l}</a>`).join('')}
+          </div>
+          ${n.events && n.events.length ? `<p class="note">Questions about an event? Email <a class="tl" href="mailto:${EVENTS_EMAIL}">${EVENTS_EMAIL}</a>.</p>` : ''}
+        </div>
+      </div></div></div>
+    </div>`;
+  document.getElementById('sc-groups').innerHTML = groups.map((g) => `
+    <div class="grp">
+      <div class="grp-h"><h2 class="hd2">${g.title}</h2><p class="sub">${g.sub}</p></div>
+      ${g.items.map(item).join('')}
+    </div>`).join('');
+
+  const sem = seminars[0];
+  document.getElementById('sc-info').innerHTML = `
+    <div><dt>Surgery coming up?</dt><dd>Let us know<small>Hospitals won’t tell us. <a href="#visits" data-go="visits">Details</a></small></dd></div>
+    <div><dt>Next membership class</dt><dd>${nextClass}<small>2nd Wednesday · The Green Room</small></dd></div>
+    <div><dt>GriefShare</dt><dd>${sem ? esc(sem.title) : 'Support for grief'}<small>${sem ? new Date(sem.start).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) + ' · ' : ''}<a href="#loss" data-go="loss">Details</a></small></dd></div>`;
+
+  /* ---------- behavior ---------- */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // keep targets clear of the site's fixed header
+  const hdrH = () => { let h = 0; document.querySelectorAll('header, .topbar, nav').forEach((el) => { if (root.contains(el)) return; const cs = getComputedStyle(el); if (cs.position === 'fixed' || cs.position === 'sticky') { const r = el.getBoundingClientRect(); if (r.top <= 1 && r.bottom > h && r.bottom < 200) h = r.bottom; } }); return h; };
+  const setOpen = (it, on) => { it.classList.toggle('open', on); it.querySelector('button').setAttribute('aria-expanded', on); };
+  const go = (id) => {
+    const el = document.getElementById(id); if (!el) return;
+    if (el.classList.contains('item')) setOpen(el, true);
+    setTimeout(() => scrollTo({ top: el.getBoundingClientRect().top + scrollY - hdrH() - 12, behavior: reduce ? 'auto' : 'smooth' }), 60);
+    try { history.replaceState(null, '', '#' + id); } catch (_) {}
+  };
+  const dlg = document.getElementById('sc-dlg'), dlgF = document.getElementById('sc-dlg-f');
+  const openForm = (id, title) => {
+    const url = CCB(id);
+    document.getElementById('sc-dlg-t').textContent = title;
+    document.getElementById('sc-dlg-a').href = url;
+    if (dlgF.getAttribute('src') !== url) dlgF.src = url;
+    dlg.showModal();
+  };
+  dlg.addEventListener('click', (e) => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+
+  // CCB sends people back to springs.church after they submit. When a form frame lands on our own site,
+  // stop it there and show a thank-you instead of the website inside the website.
+  const landedHome = (fr) => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  const frame = document.getElementById('sc-frame'), box = root.querySelector('.formbox'), FORM_URL = frame.getAttribute('src');
+  frame.addEventListener('load', () => {
+    if (!landedHome(frame)) return;
+    frame.src = 'about:blank'; box.classList.add('done'); document.getElementById('sc-thanks').classList.add('on');
+    go('sc-req');
+  });
+  root.querySelector('[data-again]').addEventListener('click', () => {
+    document.getElementById('sc-thanks').classList.remove('on'); box.classList.remove('done'); frame.src = FORM_URL;
+  });
+  dlgF.addEventListener('load', () => {
+    if (!landedHome(dlgF)) return;
+    dlgF.removeAttribute('src'); dlgF.src = 'about:blank'; dlg.classList.add('done'); document.getElementById('sc-dlg-thanks').classList.add('on');
+  });
+  dlg.addEventListener('close', () => {
+    if (!dlg.classList.contains('done')) return;
+    dlg.classList.remove('done'); document.getElementById('sc-dlg-thanks').classList.remove('on'); dlgF.removeAttribute('src');
+  });
+  root.addEventListener('click', (e) => {
+    const f = e.target.closest('[data-form]'); if (f && dlg.showModal) { e.preventDefault(); openForm(f.dataset.form, f.dataset.title); return; }
+    const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); go(g.dataset.go); return; }
+    const t = e.target.closest('.item>button'); if (t) { const it = t.parentElement; setOpen(it, !it.classList.contains('open')); }
+  });
+
+  // phone dock: between the photo and the form (lives on <body>)
+  const dock = document.getElementById('sc-dock'); document.body.appendChild(dock);
+  dock.addEventListener('click', (e) => { const f = e.target.closest('[data-form]'); if (f && dlg.showModal) { e.preventDefault(); openForm(f.dataset.form, f.dataset.title); return; } if (e.target.closest('[data-go]')) { e.preventDefault(); go('sc-req'); } });
+  const photo = root.querySelector('.photo'), req = document.getElementById('sc-req');
+  const phone = matchMedia('(max-width: 760px)');
+  let r = 0;
+  const upd = () => { r = 0; dock.classList.toggle('on', phone.matches); dock.classList.toggle('show', photo.getBoundingClientRect().bottom < 0 && req.getBoundingClientRect().top > innerHeight * .85); };
+  addEventListener('scroll', () => { if (!r) r = requestAnimationFrame(upd); }, { passive: true }); addEventListener('resize', upd); upd();
+
+  // old links (#visitation, #memorial, #griefshare…) still land somewhere sensible
+  const alias = { visitation: 'visits', memorial: 'loss', griefshare: 'loss', help: 'hard-season', benevolence: 'hard-season', mentoring: 'mentorship', counseling: 'mentorship', gatherings: 'widowed' };
+  const h = location.hash.slice(1), target = alias[h] || h;
+  if (target && document.getElementById(target)) setTimeout(() => go(target), 300);
+})();
+</script>
+</div><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

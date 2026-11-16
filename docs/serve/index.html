@@ -1,0 +1,700 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serve | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:smooth}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sv').classList.toggle('show-tbd')">Show to-confirm</button>
+<div class="tcc-block html-takeover"><!-- springs.church/serve · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). Review copy LIVE on /servecopy (11/06); /serve untouched.
+     Source of truth: ~/Desktop/springs-serve-site/churchco/serve-block.html (preview: preview-live.html via build-preview.py).
+     Idea: a week at Springs as a run of show. Every team sits at the moment it serves (door, room, kids wing, altar, safety,
+     Wednesday, Friday, behind the scenes, city). The team list = the 20 teams on CCB form #241 "Springs Church | Volunteer
+     Application" (one team per application). Team lines start from the live /serve wording. Apply opens #241 in a dialog and
+     tells people which box to check (we can't prefill CCB). CCB sends people to springs.church after submit; the dialog
+     catches that and shows a thank-you. <span class="tbd"> = new wording or facts to confirm before going live.
+     Deep links: ?team=coffee scrolls to and highlights a team (for leaders to text), ?apply=coffee opens its application. -->
+<style>
+.tcc-block:has(#sv){padding:0!important;background:#111!important}
+.tcc-block:has(#sv) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sv) .row-defaults{padding:0!important}
+.tcc-block:has(#sv) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sv{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sv *{box-sizing:border-box}
+#sv :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sv ul,#sv ol{list-style:none}
+#sv a{color:inherit;text-decoration:none}
+#sv img{display:block;max-width:100%}
+#sv button{font:inherit;color:inherit}
+#sv ::selection{background:var(--gold);color:var(--ink)}
+#sv .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sv svg.i{width:16px;height:16px;flex:none}
+#sv .tbd{transition:background .2s}
+#sv.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#sv :is(p,li,dd){text-wrap:pretty}
+
+/* buttons + links: one set (same as /missionscopy) */
+#sv .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sv .btn:hover{background:#333}
+#sv .btn:active{transform:scale(.98)}
+#sv :is(.btn,.tl,.run a,.shots a,.cue-b,.cue-m a,.x,.apply,.mo-ask a,.steps dd a,.who dd a,.quote cite a,.verse a,.dlg-f a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+#sv .btn.light{background:#fff;color:var(--ink)}
+#sv .btn.light:hover{background:var(--gold)}
+#sv .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#sv .btn.ghost:hover{background:#fff;color:var(--ink)}
+#sv .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sv .btn.line:hover{background:var(--ink);color:#fff}
+#sv .tl{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sv .tl:hover{text-decoration-color:currentColor}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sv .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#sv .sec{padding:clamp(72px,9vw,120px) 0}
+#sv .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sv .sec-h p{color:var(--ink-2);max-width:36em}
+#sv [id^="sv-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+
+/* ---------- hero ---------- */
+#sv .hero{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
+#sv .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(90px,11vw,150px);background:#fff;z-index:-1}
+#sv .hero-top{display:grid;grid-template-columns:1.1fr 1fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+#sv .hero-top>*{min-width:0}
+#sv .hero h1{font:600 clamp(52px,7.4vw,100px)/.92 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+#sv .hero h1 i{font-style:normal;color:var(--gold)}
+#sv .hero .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.82);margin-bottom:28px;max-width:34em}
+#sv .acts{display:flex;flex-wrap:wrap;gap:12px}
+#sv .shots{display:grid;grid-template-columns:1.32fr 1fr 1fr 1.32fr;gap:clamp(8px,1vw,14px);height:clamp(220px,25vw,350px);margin-top:clamp(44px,5.5vw,72px)}
+#sv .shots a{position:relative;display:block;border-radius:16px;overflow:hidden;background:#222;isolation:isolate;-webkit-tap-highlight-color:transparent}
+#sv .shots img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+#sv .shots a::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(14,14,14,.55));pointer-events:none}
+#sv .shots span{position:absolute;left:14px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgba(14,14,14,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff;transition:background .25s}
+#sv .shots span svg{width:13px;height:13px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sv .shots a:hover img{transform:scale(1.035)}#sv .shots a:hover span{background:rgba(14,14,14,.85)}#sv .shots a:hover span svg{transform:translateY(2px)}}
+#sv .shots a:nth-child(1) img{object-position:55% 40%}
+#sv .shots a:nth-child(2) img{object-position:50% 45%}
+#sv .shots a:nth-child(3) img{object-position:50% 40%}
+@media (prefers-reduced-motion:no-preference){
+  #sv.js .shots a{clip-path:inset(100% 0 0 0 round 16px);transform:translateY(28px)}
+  #sv.js .shots a img{transform:scale(1.12)}
+  #sv.js.ready .shots a{clip-path:inset(0 0 0 0 round 16px);transform:none;transition:clip-path 1.15s var(--ease),transform 1.15s var(--ease);transition-delay:calc(var(--n) * 90ms + 120ms)}
+  #sv.js.ready .shots a img{transform:none;transition:transform 1.6s var(--ease);transition-delay:calc(var(--n) * 90ms + 120ms)}
+}
+
+/* ---------- a church that serves ---------- */
+#sv .why{padding:clamp(64px,8vw,108px) 0 0}
+#sv .why-in{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,6vw,96px);align-items:end}
+#sv .why .h2{margin-bottom:24px}
+#sv .quote p{font:500 clamp(21px,2vw,27px)/1.38 var(--hd);letter-spacing:-.008em;color:var(--ink);text-wrap:pretty}
+#sv .quote p span{color:var(--gold-t)}
+#sv .quote cite{display:block;margin-top:16px;font-size:16px;color:var(--ink-3)}
+#sv .quote cite a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.25)}
+#sv .verse{padding-top:22px;border-top:1px solid var(--ink)}
+#sv .verse p{font-size:clamp(18px,1.5vw,20px);line-height:1.55;color:var(--ink-2)}
+#sv .verse a{display:inline-block;margin-top:12px;font:600 12px/1 var(--hd);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-t)}
+#sv .verse a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- the week, as a run of show ---------- */
+#sv .run{background:var(--sand);border-radius:20px;padding:clamp(10px,1.6vw,18px) clamp(14px,2.4vw,30px)}
+#sv .run li+li{border-top:1px solid rgba(14,14,14,.1)}
+#sv .run a{display:grid;grid-template-columns:minmax(150px,.8fr) minmax(180px,1fr) minmax(0,1.5fr) 24px;gap:6px 24px;align-items:center;padding:16px 4px;border-radius:10px;transition:background .2s;-webkit-tap-highlight-color:transparent}
+#sv .run .t{font:600 13px/1.3 var(--hd);letter-spacing:.02em;color:var(--gold-t);font-variant-numeric:tabular-nums}
+#sv .run b{font:600 19px/1.2 var(--hd);letter-spacing:-.01em}
+#sv .run .tm{font-size:16px;line-height:1.4;color:var(--ink-2)}
+#sv .run svg{width:18px;height:18px;color:var(--ink-3);transition:transform .3s var(--ease),color .2s}
+@media (hover:hover){#sv .run a:hover{background:rgba(255,255,255,.6)}#sv .run a:hover svg{transform:translateY(3px);color:var(--ink)}}
+#sv .run .lv{display:inline-flex;align-items:center;gap:6px;margin-left:10px;padding:4px 9px 4px 8px;border-radius:999px;background:var(--ink);color:#fff;font:700 11px/1 var(--hd);letter-spacing:.07em;text-transform:uppercase;vertical-align:2px}
+#sv .run .lv::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+@media (prefers-reduced-motion:no-preference){#sv .run .lv.now::before{animation:sv-live 1.8s ease-in-out infinite}}
+@keyframes sv-live{50%{opacity:.25}}
+
+#sv .moments{margin-top:clamp(56px,7vw,96px)}
+#sv .mo{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.4fr);gap:28px clamp(32px,5vw,80px);padding:clamp(36px,4.5vw,56px) 0;border-top:1px solid var(--ink)}
+#sv .mo>*{min-width:0}
+#sv .mo h3{font:600 clamp(26px,2.7vw,34px)/1.1 var(--hd);letter-spacing:-.02em}
+#sv .mo .when{display:flex;align-items:center;gap:8px;margin:10px 0 16px;font:600 14px/1.3 var(--hd);color:var(--gold-t)}
+#sv .mo .when svg{width:15px;height:15px}
+#sv .mo-l>p{font-size:17px;color:var(--ink-2);max-width:30em}
+#sv .mo-pic{margin-top:22px;aspect-ratio:3/2;border-radius:16px;overflow:hidden;background:var(--shot)}
+#sv .mo-pic img{width:100%;height:100%;object-fit:cover}
+#sv .mo.solo .mo-pic{margin-top:26px;aspect-ratio:16/9}
+#sv .mo.solo .team{border-bottom:0;padding-bottom:0}
+#sv .mo-ask{margin-top:16px;font-size:15px;color:var(--ink-3)}
+#sv .mo-ask a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sv .mo-ask a:hover{text-decoration-color:currentColor}
+
+#sv .team{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 28px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--hdr) + 40px)}
+#sv .team:first-child{padding-top:4px}
+#sv .team h4{font:600 21px/1.2 var(--hd);letter-spacing:-.01em;margin-bottom:6px}
+#sv .team p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:34em}
+#sv .chs{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+#sv .ch{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:0 11px;border-radius:999px;background:var(--soft);font:600 12px/1 var(--hd);letter-spacing:.02em;color:var(--ink-2)}
+#sv .ch.bg{background:transparent;box-shadow:inset 0 0 0 1px rgba(125,106,63,.45);color:var(--gold-t)}
+#sv .ch svg{width:12px;height:12px}
+#sv .apply{align-self:center;min-height:44px;padding:0 18px;font-size:12px}
+#sv .team::before{content:"";position:absolute;inset:6px -14px;border-radius:14px;background:var(--sand);opacity:0;z-index:-1;transition:opacity .6s}
+#sv .moments{position:relative;isolation:isolate}
+#sv .team.ping::before{opacity:1}
+
+/* ---------- how joining works ---------- */
+#sv .join{background:var(--sand)}
+#sv .join-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+#sv .join .h2{margin-bottom:20px}
+#sv .join-l>p{color:var(--ink-2);max-width:30em;margin-bottom:28px}
+#sv .join-pic{margin-top:36px;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--shot)}
+#sv .join-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+#sv .steps{border-top:1px solid rgba(14,14,14,.18)}
+#sv .steps div{display:grid;grid-template-columns:minmax(160px,.7fr) 1.6fr;gap:6px 24px;padding:20px 0;border-bottom:1px solid rgba(14,14,14,.18)}
+#sv .steps dt{font:600 17px/1.35 var(--hd)}
+#sv .steps dd{font-size:17px;line-height:1.55;color:var(--ink-2)}
+#sv .steps dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sv .join .acts{margin-top:30px;align-items:center;gap:14px 24px}
+
+/* ---------- questions ---------- */
+#sv .ask-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+#sv .ask .h2{margin-bottom:20px}
+#sv .ask-l>p{color:var(--ink-2);max-width:30em}
+#sv .ask-l .more{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:26px}
+#sv .who{border-top:1px solid var(--ink)}
+#sv .who div{display:grid;grid-template-columns:minmax(160px,.7fr) 1.6fr;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+#sv .who dt{font:600 17px/1.35 var(--hd)}
+#sv .who dd{font-size:17px;line-height:1.55;color:var(--ink-2)}
+#sv .who dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sv .who dd a:hover,#sv .steps dd a:hover{text-decoration-color:currentColor}
+#sv .who small{display:block;font-size:15px;color:var(--ink-3)}
+
+/* ---------- cue light: where you are in the week ---------- */
+#sv .cue{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));z-index:60;transform:translate(-50%,calc(100% + 30px));opacity:0;transition:transform .5s var(--ease),opacity .3s;pointer-events:none}
+#sv .cue.on{transform:translate(-50%,0);opacity:1;pointer-events:auto}
+#sv .cue-b{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;min-height:52px;max-width:calc(100vw - 32px);padding:0 18px 0 16px;border-radius:999px;background:var(--ink);color:#fff;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.18);font:600 14px/1.2 var(--hd);white-space:nowrap;-webkit-tap-highlight-color:transparent}
+#sv .cue-b i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);flex:none}
+#sv .cue-b .cn{overflow:hidden;text-overflow:ellipsis;transition:opacity .2s}
+#sv .cue-b small{font:600 12px/1 var(--hd);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+#sv .cue-b svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+#sv .cue.open .cue-b svg{transform:rotate(180deg)}
+#sv .cue-m{position:absolute;left:50%;bottom:calc(100% + 10px);width:min(340px,calc(100vw - 32px));transform:translate(-50%,8px);opacity:0;visibility:hidden;padding:8px;border-radius:18px;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.24),0 2px 8px rgba(0,0,0,.08);transition:opacity .25s,transform .35s var(--ease),visibility 0s .35s}
+#sv .cue.open .cue-m{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .25s,transform .35s var(--ease)}
+#sv .cue-m a{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;font:600 15px/1.25 var(--hd);color:var(--ink)}
+#sv .cue-m a small{font:600 12px/1.25 var(--hd);color:var(--ink-3);text-align:right}
+#sv .cue-m a:hover{background:var(--soft)}
+#sv .cue-m a[aria-current]{background:var(--sand)}
+
+/* ---------- application dialog ---------- */
+html.sv-lock{overflow:hidden}
+#sv dialog{border:0;padding:0;margin:auto;width:min(720px,calc(100vw - 16px));height:min(920px,calc(100dvh - 16px));max-height:none;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+#sv dialog[open]{display:flex;flex-direction:column;animation:sv-in .45s var(--ease)}
+#sv dialog::backdrop{background:rgba(8,8,8,.62)}
+@keyframes sv-in{from{opacity:0;transform:translateY(14px) scale(.985)}}
+#sv .dlg-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 12px 12px 22px;border-bottom:1px solid var(--line)}
+#sv .dlg-h b{font:600 17px/1.3 var(--hd)}
+#sv .x{all:unset;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--soft);cursor:pointer;transition:background .2s}
+#sv .x:hover{background:#e9e9e7}
+#sv .x svg{width:18px;height:18px}
+#sv .pick{display:flex;gap:12px;align-items:flex-start;padding:14px 22px;background:var(--sand);font-size:15px;line-height:1.45;color:var(--ink-2)}
+#sv .pick svg{width:18px;height:18px;flex:none;margin-top:1px;color:var(--gold-t)}
+#sv .pick b{color:var(--ink);font-weight:700}
+#sv dialog iframe{flex:1;width:100%;border:0;background:#fff}
+#sv .dlg-f{padding:10px 22px 12px;font-size:14px;color:var(--ink-3);border-top:1px solid var(--line)}
+#sv .dlg-f a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+#sv .dlg-f .tl{font-size:14px}
+#sv .thanks{display:none;padding:clamp(32px,5vw,52px) clamp(22px,4vw,44px);text-align:center}
+#sv dialog.done .thanks{display:block}
+#sv dialog.done :is(iframe,.dlg-f,.pick){display:none}
+#sv dialog.done{height:auto}
+#sv .thanks .ok{width:54px;height:54px;margin:0 auto 18px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--gold-t)}
+#sv .thanks .ok svg{width:24px;height:24px}
+#sv .thanks h3{font:600 24px/1.25 var(--hd);margin-bottom:10px;outline:0}
+#sv .thanks p{color:var(--ink-2);max-width:28em;margin:0 auto 24px}
+#sv .thanks .acts{justify-content:center}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  #sv .hero-top,#sv .sec-h,#sv .why-in,#sv .join-in,#sv .ask-in,#sv .mo{grid-template-columns:1fr}
+  #sv .sec-h{align-items:start}
+  #sv .why-in{gap:36px}
+  #sv .run a{grid-template-columns:minmax(0,1fr) 20px;gap:4px 16px}
+  #sv .run .t{grid-column:1;grid-row:2}
+  #sv .run b{grid-column:1;grid-row:1}
+  #sv .run .tm{grid-column:1;grid-row:3}
+  #sv .run svg{grid-column:2;grid-row:1/4}
+  #sv .mo{gap:22px}
+  #sv .mo-pic{aspect-ratio:16/9}
+  #sv .join-pic{display:none}
+}
+@media (max-width:640px){
+  #sv{--top:118px;--hdr:92px;font-size:17px}
+  #sv .hero::after{height:92px}
+  #sv .acts .btn{flex:1 1 100%}
+  #sv .shots{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:auto;aspect-ratio:1/0.82;margin-top:36px;gap:8px}
+  #sv .shots a{border-radius:12px}
+  #sv .shots span{left:10px;bottom:10px;padding:8px 10px;font-size:11px}
+  #sv .team{gap:0 14px}
+  #sv .team h4{font-size:19px;margin-top:6px}
+  #sv .team p{font-size:16px}
+  #sv .apply{align-self:start;min-height:40px;padding:0 14px;font-size:11px}
+  #sv .team::before{inset:6px -10px}
+  #sv .steps div,#sv .who div{grid-template-columns:1fr}
+  #sv .cue-b{gap:10px;padding:0 16px 0 14px}
+  #sv dialog{width:100vw;height:100dvh;max-width:none;border-radius:0;margin:0}
+  #sv dialog.done{height:100dvh}
+  #sv dialog.done .thanks{margin:auto 0}
+  #sv dialog.done[open]{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  #sv *,#sv *::before{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+</style>
+
+<div id="sv">
+  <!-- hero -->
+  <section class="hero" aria-labelledby="sv-h1">
+    <div class="wrap">
+      <div class="hero-top">
+        <h1 id="sv-h1"><span class="tbd">Take your place<i>.</i></span></h1>
+        <div>
+          <p class="lede">We believe the heartbeat of a healthy and flourishing body of believers is the individual’s commitment to serving the Lord. Explore our teams and discover the role God has provided just for you.</p>
+          <div class="acts">
+            <a class="btn light" href="#sv-find">Find Your Place</a>
+            <a class="btn ghost" href="#sv-join">How Joining Works</a>
+          </div>
+        </div>
+      </div>
+      <nav class="shots" aria-label="Jump to a place to serve">
+        <a href="#sv-door" style="--n:0"><img src="img/serve-greeter.jpg" alt="A Springs greeter shaking hands with a guest in the lobby" fetchpriority="high"><span>At the Door <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+        <a href="#sv-kids" style="--n:1"><img src="img/serve-kids-play.jpg" alt="A Springs Kids volunteer playing a game with preschoolers"><span>In the Kids Wing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+        <a href="#sv-altar" style="--n:2"><img src="img/serve-prayer-group.jpg" alt="People praying together at the front after a service"><span>At the Altar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+        <a href="#sv-city" style="--n:3"><img src="img/serve-outreach.jpg" alt="Springs volunteers handing out groceries at our 2026 food drive"><span>In the City <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- a church that serves -->
+  <section class="why" aria-labelledby="sv-why-h">
+    <div class="wrap why-in">
+      <div>
+        <h2 class="h2" id="sv-why-h">A Church That Serves</h2>
+        <blockquote class="quote">
+          <p>“Everybody was using their time, their treasure, their talents to advance the kingdom of God… <span>Everybody took their place.</span>”</p>
+          <cite>Pastor Michael Petillo, on the church in Revelation 2, <a href="https://youtu.be/JCmJmtOEob4?t=318" target="_blank" rel="noopener">Be Careful Which Voice You Marry</a></cite>
+        </blockquote>
+      </div>
+      <div class="verse">
+        <p>“Each of you should use whatever gift you have received to serve others, as faithful stewards of God’s grace in its various forms.”</p>
+        <a href="https://www.bible.com/bible/111/1PE.4.10.NIV" target="_blank" rel="noopener">1 Peter 4:10</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- the week -->
+  <section class="sec" id="sv-find" aria-labelledby="sv-find-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sv-find-h">Find Your Place</h2>
+        <p class="tbd">Here’s a week at Springs, from the parking lot on Sunday morning to a Friday night with young adults. Every moment has a team behind it. Find the one that sounds like you and apply for that team.</p>
+      </div>
+
+      <nav class="run" aria-label="A week at Springs">
+        <ol>
+          <li><a href="#sv-door"><span class="t">Sundays, before 10 AM</span><b>Before You Walk In</b><span class="tm">Parking, Connect, Coffee Bar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-room"><span class="t">Sundays + Wednesdays</span><b>In the Room</b><span class="tm">Worship, Production, Online Hosts</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-kids"><span class="t">Sundays + Wednesdays</span><b>In the Kids Wing</b><span class="tm">Kids Check-In, Early Childhood, Springs Kids</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-altar"><span class="t">After every service</span><b>At the Altar</b><span class="tm">Prayer Team</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-safe"><span class="t">Services + events</span><b>Keeping Everyone Safe</b><span class="tm">Security, Medical</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-wed"><span class="t">Wednesdays, 6:30 PM</span><b>Wednesday Night</b><span class="tm">Awaken, Middle School, Youth</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-fri"><span class="t">Fridays, 7 PM</span><b>Friday Night</b><span class="tm">Young Adults</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-week"><span class="t tbd">All week</span><b>Behind the Scenes</b><span class="tm">Creative, Facilities, Hospitality &amp; Events</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+          <li><a href="#sv-city"><span class="t tbd">Third Thursdays</span><b>Out in the City</b><span class="tm">Local Outreach</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></li>
+        </ol>
+      </nav>
+
+      <div class="moments">
+        <!-- Before You Walk In -->
+        <article class="mo" id="sv-door" aria-labelledby="sv-door-h" data-cue="Sundays, before 10 AM">
+          <div class="mo-l">
+            <h3 id="sv-door-h">Before You Walk In</h3>
+            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sundays, before the 10 AM service</p>
+            <p class="tbd">For a lot of people, the first person they meet at Springs is in the parking lot or at the door. A warm hello and a good cup of coffee go a long way.</p>
+            <figure class="mo-pic"><img src="img/serve-coffee.jpg" alt="A Springs Coffee Bar volunteer serving a guest" loading="lazy"></figure>
+          </div>
+          <ul class="teams">
+            <li class="team" id="sv-t-parking" data-team="parking" data-form="Parking Team"><div><h4>Parking Team</h4><p class="tbd">Greet people as they pull in and help them find a spot and the right door.</p><div class="chs"><span class="ch">Sundays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Parking Team" data-apply="parking">Apply</button></li>
+            <li class="team" id="sv-t-connect" data-team="connect" data-form="Connect Team"><div><h4>Connect Team</h4><p>Welcome people at the doors, help them find their way and a seat, and answer their questions.</p><div class="chs"><span class="ch">Sundays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Connect Team" data-apply="connect">Apply</button></li>
+            <li class="team" id="sv-t-coffee" data-team="coffee" data-form="Coffee Bar"><div><h4>Coffee Bar</h4><p>Serve fresh coffee, drinks and snacks to everyone who walks in.</p><div class="chs"><span class="ch">Sundays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Coffee Bar" data-apply="coffee">Apply</button></li>
+          </ul>
+        </article>
+
+        <!-- In the Room -->
+        <article class="mo" id="sv-room" aria-labelledby="sv-room-h" data-cue="Sundays + Wednesdays">
+          <div class="mo-l">
+            <h3 id="sv-room-h">In the Room</h3>
+            <p class="when tbd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sundays at 10 AM and Wednesdays at 6:30 PM</p>
+            <p class="tbd">Worship, the message and the livestream depend on people on the stage, in the booth and online.</p>
+            <figure class="mo-pic"><img src="img/serve-worship.jpg" alt="The Springs worship team leading a service under stage lights" loading="lazy"></figure>
+          </div>
+          <ul class="teams">
+            <li class="team" id="sv-t-worship" data-team="worship" data-form="Worship (Band or Choir)"><div><h4>Worship Team</h4><p>Sing in the choir, play in the band or join the vocalists who lead us in worship during services.</p><div class="chs"><span class="ch">During services</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Worship Team" data-apply="worship">Apply</button></li>
+            <li class="team" id="sv-t-production" data-team="production" data-form="Production Team"><div><h4>Production Team</h4><p>Run lighting, video, audio, the livestream and the stage.</p><div class="chs"><span class="ch">During services</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Production Team" data-apply="production">Apply</button></li>
+            <li class="team" id="sv-t-online" data-team="online" data-form="Online Hosts"><div><h4>Online Hosts</h4><p class="tbd">Welcome the people watching online and help them take a next step.</p><div class="chs"><span class="ch">Sundays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Online Hosts" data-apply="online">Apply</button></li>
+          </ul>
+        </article>
+
+        <!-- In the Kids Wing -->
+        <article class="mo" id="sv-kids" aria-labelledby="sv-kids-h" data-cue="Sundays + Wednesdays">
+          <div class="mo-l">
+            <h3 id="sv-kids-h">In the Kids Wing</h3>
+            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sundays at 10 AM and Wednesdays at 6:30 PM</p>
+            <p>While parents worship, kids learn about Jesus from leaders who know them by name. Every Kids team member completes a background check.</p>
+            <figure class="mo-pic"><img src="img/serve-kids-reading.jpg" alt="A Springs Kids volunteer reading a book with a toddler" loading="lazy"></figure>
+            <p class="mo-ask">Questions? <a href="mailto:kids@springs.church">kids@springs.church</a></p>
+          </div>
+          <ul class="teams">
+            <li class="team" id="sv-t-checkin" data-team="checkin" data-form="Kids Check-In / Sun &amp; Wed"><div><h4>Kids Check-In</h4><p>Greet families at the Kids check-in counter and make sure every child is securely registered.</p><div class="chs"><span class="ch">Sundays</span><span class="ch">Wednesdays</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Kids Check-In" data-apply="checkin">Apply</button></li>
+            <li class="team" id="sv-t-early" data-team="early" data-form="Springs Early Childhood | Infant - Grade K"><div><h4>Springs Early Childhood</h4><p>Care for and teach our littlest ones, infants through kindergarten.</p><div class="chs"><span class="ch">Sundays</span><span class="ch">Wednesdays</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Springs Early Childhood" data-apply="early">Apply</button></li>
+            <li class="team" id="sv-t-kids" data-team="kids" data-form="Springs Kids | Sun | Grades 1-5"><div><h4>Springs Kids on Sundays</h4><p>Lead worship, teach the Bible and run small groups with kids in grades 1 to 5.</p><div class="chs"><span class="ch">Sundays</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Springs Kids on Sundays" data-apply="kids">Apply</button></li>
+          </ul>
+        </article>
+
+        <!-- At the Altar -->
+        <article class="mo solo" id="sv-altar" aria-labelledby="sv-altar-h" data-cue="After every service">
+          <div class="mo-l">
+            <h3 id="sv-altar-h">At the Altar</h3>
+            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>During and after every service</p>
+            <p>After every service our prayer team stays up front to pray with anyone who comes forward.</p>
+          </div>
+          <div class="mo-r">
+          <ul class="teams">
+            <li class="team" id="sv-t-prayer" data-team="prayer" data-form="Prayer Team"><div><h4>Prayer Team</h4><p>Take time to pray with people for their personal needs during and after services.</p><div class="chs"><span class="ch">During services</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Prayer Team" data-apply="prayer">Apply</button></li>
+          </ul>
+          <figure class="mo-pic"><img src="img/serve-prayer.jpg" alt="A Springs prayer team member praying with a man after a service" loading="lazy"></figure>
+          </div>
+        </article>
+
+        <!-- Keeping Everyone Safe -->
+        <article class="mo" id="sv-safe" aria-labelledby="sv-safe-h" data-cue="Services + events">
+          <div class="mo-l">
+            <h3 id="sv-safe-h">Keeping Everyone Safe</h3>
+            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Every service and event</p>
+            <p class="tbd">Quiet, ready and watchful, so everyone else can focus on worship.</p>
+          </div>
+          <ul class="teams">
+            <li class="team" id="sv-t-security" data-team="security" data-form="Security Team"><div><h4>Security Team</h4><p>Help keep a safe and secure environment for our people, our kids and our building.</p><div class="chs"><span class="ch">During services</span><span class="ch">Events</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Security Team" data-apply="security">Apply</button></li>
+            <li class="team" id="sv-t-medical" data-team="medical" data-form="Medical Team"><div><h4>Medical Team</h4><p>Be ready to help when there’s a medical emergency.</p><div class="chs"><span class="ch">During services</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Medical Team" data-apply="medical">Apply</button></li>
+          </ul>
+        </article>
+
+        <!-- Wednesday Night -->
+        <article class="mo" id="sv-wed" aria-labelledby="sv-wed-h" data-cue="Wednesdays, 6:30 PM">
+          <div class="mo-l">
+            <h3 id="sv-wed-h">Wednesday Night</h3>
+            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Wednesdays at 6:30 PM</p>
+            <p>While adults gather for midweek prayer, kids and students get a night of their own: Awaken for grades 1 to 5, Rooted for middle school in the Kids Auditorium and Anthem for high school in the Tent.</p>
+            <figure class="mo-pic"><img src="img/serve-youth.jpg" alt="Students worshiping together on a Wednesday night" loading="lazy"></figure>
+            <p class="mo-ask">Questions? <a href="mailto:kids@springs.church">kids@springs.church</a> for Awaken, <a href="mailto:youth@springs.church">youth@springs.church</a> for Middle School and Youth</p>
+          </div>
+          <ul class="teams">
+            <li class="team" id="sv-t-awaken" data-team="awaken" data-form="Springs Kids | Wed | Grades 1-5"><div><h4>Awaken</h4><p>Worship, play games and dig into the Bible with kids in grades 1 to 5.</p><div class="chs"><span class="ch">Wednesdays</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Awaken" data-apply="awaken">Apply</button></li>
+            <li class="team" id="sv-t-middle" data-team="middle" data-form="Middle School (Grades 6-8)"><div><h4>Middle School</h4><p>Lead break-out groups and help plan activities for Rooted, grades 6 to 8.</p><div class="chs"><span class="ch">Wednesdays</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Middle School" data-apply="middle">Apply</button></li>
+            <li class="team" id="sv-t-youth" data-team="youth" data-form="High School (Grades 9-12)"><div><h4>Youth</h4><p>Lead break-out groups and help plan activities for Anthem, grades 9 to 12.</p><div class="chs"><span class="ch">Wednesdays</span><span class="ch bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Background check</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Youth" data-apply="youth">Apply</button></li>
+          </ul>
+        </article>
+
+        <!-- Friday Night -->
+        <article class="mo solo" id="sv-fri" aria-labelledby="sv-fri-h" data-cue="Fridays, 7 PM">
+          <div class="mo-l">
+            <h3 id="sv-fri-h">Friday Night</h3>
+            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Fridays at 7 PM in the Garage</p>
+            <p class="tbd">Young adults gather on Friday nights to worship, open the Bible and build real friendships.</p>
+            <p class="mo-ask">Questions? <a href="mailto:YA@springs.church">YA@springs.church</a></p>
+          </div>
+          <div class="mo-r">
+          <ul class="teams">
+            <li class="team" id="sv-t-ya" data-team="ya" data-form="Young Adults"><div><h4>Young Adults</h4><p class="tbd">Help host Friday nights: set up, welcome people and help lead.</p><div class="chs"><span class="ch">Fridays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Young Adults" data-apply="ya">Apply</button></li>
+          </ul>
+          <figure class="mo-pic"><img src="img/serve-ya.jpg" alt="Three young women from Springs Young Adults smiling together" loading="lazy"></figure>
+          </div>
+        </article>
+
+        <!-- Behind the Scenes -->
+        <article class="mo" id="sv-week" aria-labelledby="sv-week-h" data-cue="All week">
+          <div class="mo-l">
+            <h3 id="sv-week-h">Behind the Scenes</h3>
+            <p class="when tbd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>All week, and around events</p>
+            <p class="tbd">Sunday starts long before Sunday. These teams tell the story, care for the building and host the events that bring us together.</p>
+          </div>
+          <ul class="teams">
+            <li class="team" id="sv-t-creative" data-team="creative" data-form="Creative Team"><div><h4>Creative Team</h4><p>Help with communications, the website, social media, photography and video.</p><div class="chs"><span class="ch tbd">Your schedule</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Creative Team" data-apply="creative">Apply</button></li>
+            <li class="team" id="sv-t-facilities" data-team="facilities" data-form="Facilities Team"><div><h4>Facilities Team</h4><p>Set up rooms and help care for the building we all share.</p><div class="chs"><span class="ch tbd">Your schedule</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Facilities Team" data-apply="facilities">Apply</button></li>
+            <li class="team" id="sv-t-events" data-team="events" data-form="Hospitality / Events Team"><div><h4>Hospitality &amp; Events</h4><p>Set up and serve at church events, from the first table to the last chair.</p><div class="chs"><span class="ch">Events</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Hospitality &amp; Events" data-apply="events">Apply</button></li>
+          </ul>
+        </article>
+
+        <!-- Out in the City -->
+        <article class="mo solo" id="sv-city" aria-labelledby="sv-city-h" data-cue="Third Thursdays">
+          <div class="mo-l">
+            <h3 id="sv-city-h">Out in the City</h3>
+            <p class="when tbd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Every third Thursday, and on outreach days</p>
+            <p class="tbd">Colorado Springs is our mission field too. Serve families in our city alongside our missions team.</p>
+            <p class="mo-ask"><a href="../missions/">See all of Springs Missions</a></p>
+          </div>
+          <div class="mo-r">
+          <ul class="teams">
+            <li class="team" id="sv-t-outreach" data-team="outreach" data-form="Local Outreach / Missions"><div><h4>Local Outreach</h4><p class="tbd">Serve at our monthly feeding program and other outreach days around Colorado Springs.</p><div class="chs"><span class="ch tbd">Third Thursdays</span></div></div><button class="btn line apply" type="button" aria-label="Apply for Local Outreach" data-apply="outreach">Apply</button></li>
+          </ul>
+          <figure class="mo-pic"><img src="img/serve-outreach-car.jpg" alt="A Springs volunteer loading groceries into a family’s car at our food drive" loading="lazy"></figure>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- how joining works -->
+  <section class="sec join" id="sv-join" aria-labelledby="sv-join-h">
+    <div class="wrap join-in">
+      <div class="join-l">
+        <h2 class="h2" id="sv-join-h">How Joining Works</h2>
+        <p>Thank you for your interest in volunteering at Springs Church. Here’s what to expect before you start.</p>
+        <figure class="join-pic"><img src="img/serve-kids-room.jpg" alt="Springs Kids volunteers with a room of preschoolers" loading="lazy"></figure>
+      </div>
+      <div>
+        <dl class="steps">
+          <div><dt>One Team at a Time</dt><dd>Each application is for one team. <span class="tbd">Interested in two? Send an application for each.</span></dd></div>
+          <div><dt>What It Asks</dt><dd>Your contact information and mailing address, a little about your faith and how long you’ve been at Springs, and whether you’re a member.</dd></div>
+          <div><dt>Our Statement of Faith</dt><dd>Everyone who serves on a team agrees to our Statement of Faith. <a href="../beliefs/">Read it before you start</a>.</dd></div>
+          <div><dt>Background Checks</dt><dd>Kids and Youth teams and the Security Team need a background check before you serve.</dd></div>
+          <div><dt>What Happens Next</dt><dd>We’ll reach out to you shortly. We’re looking forward to serving with you.</dd></div>
+        </dl>
+        <div class="acts">
+          <button class="btn" type="button" data-apply="">Start Your Application</button>
+          <a class="tl" href="#sv-find">Pick a team first</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- questions -->
+  <section class="sec ask" id="sv-ask" aria-labelledby="sv-ask-h">
+    <div class="wrap ask-in">
+      <div class="ask-l">
+        <h2 class="h2" id="sv-ask-h">Questions?</h2>
+        <p class="tbd">Not sure where you fit? Ask us. We’ll help you find a place.</p>
+        <div class="more">
+          <a class="tl" href="../groups/">Find a group</a>
+          <a class="tl" href="../missions/">Missions</a>
+          <a class="tl" href="../care/">Care</a>
+        </div>
+      </div>
+      <dl class="who">
+        <div><dt>Serving at Springs</dt><dd><a href="mailto:info@springs.church">info@springs.church</a> or <a href="tel:+17194888331">(719) 488-8331</a><small>Office hours Tuesday–Thursday, 9 AM–5 PM</small></dd></div>
+        <div><dt>Springs Kids</dt><dd><a href="mailto:kids@springs.church">kids@springs.church</a></dd></div>
+        <div><dt>Middle School &amp; Youth</dt><dd><a href="mailto:youth@springs.church">youth@springs.church</a></dd></div>
+        <div><dt>Young Adults</dt><dd><a href="mailto:YA@springs.church">YA@springs.church</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- cue light: shows where you are in the week while you browse teams -->
+  <div class="cue" aria-hidden="true">
+    <button class="cue-b" type="button" aria-expanded="false" aria-controls="sv-cue-m" aria-label="Jump to another moment in the week" tabindex="-1"><i></i><span class="cn">Before You Walk In</span><small>1 of 9</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
+    <nav class="cue-m" id="sv-cue-m" aria-label="Moments in the week"></nav>
+  </div>
+
+  <!-- application: CCB form #241 -->
+  <dialog id="sv-dlg" aria-labelledby="sv-dlg-t">
+    <div class="dlg-h"><b id="sv-dlg-t">Volunteer Application</b><button class="x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <p class="pick" id="sv-pick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span></span></p>
+    <iframe id="sv-dlg-f" title="Springs Church Volunteer Application"></iframe>
+    <p class="dlg-f">Trouble with the form? <button class="tl" type="button" data-restart>Start over</button> or <a id="sv-dlg-a" href="https://springschurch.ccbchurch.com/goto/forms/241/responses/new" target="_blank" rel="noopener">open it full screen</a>.</p>
+    <div class="thanks" role="status">
+      <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h3 tabindex="-1">Thank you.</h3>
+      <p>Your application is in. We’ll reach out to you shortly. We’re looking forward to serving with you!</p>
+      <div class="acts"><button class="btn line" type="button" data-another>Apply for Another Team</button><button class="btn" type="button" data-close>Close</button></div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sv');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const FORM = 'https://springschurch.ccbchurch.com/goto/forms/241/responses/new';
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const q = new URLSearchParams(location.search);
+  const team = id => root.querySelector('.team[data-team="' + id + '"]');
+
+  /* ---------- in-page links: eased glide that stops if the visitor scrolls or taps ---------- */
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  let glide = 0;
+  function glideTo(el, after) {
+    const m = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const to = Math.max(0, Math.min(el.getBoundingClientRect().top + scrollY - m, max));
+    const from = scrollY, d = to - from;
+    const land = () => { if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); after && after(); };
+    cancelAnimationFrame(glide);
+    if (reduceMotion.matches || Math.abs(d) < 2) { scrollTo({ top: to, behavior: 'instant' }); return land(); }
+    const dur = Math.min(1200, Math.max(650, Math.abs(d) * .42));
+    const opts = { passive: true }, evs = ['wheel', 'touchstart', 'keydown'];
+    const off = () => evs.forEach(ev => removeEventListener(ev, stop, opts));
+    const stop = () => { cancelAnimationFrame(glide); off(); };
+    evs.forEach(ev => addEventListener(ev, stop, opts));
+    let t0 = null;
+    const step = now => {
+      if (t0 === null) t0 = now;
+      const p = Math.min(1, (now - t0) / dur);
+      scrollTo({ top: from + d * ease(p), behavior: 'instant' });
+      if (p < 1) glide = requestAnimationFrame(step); else { off(); land(); }
+    };
+    glide = requestAnimationFrame(step);
+  }
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sv-"]');
+    if (!a || e.defaultPrevented) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    closeCue();
+    glideTo(el);
+  });
+
+  /* ---------- application dialog (CCB form #241) ---------- */
+  const dlg = $('#sv-dlg'), frame = $('#sv-dlg-f'), pick = $('#sv-pick span');
+  const canModal = typeof dlg.showModal === 'function';
+  function openApply(id) {
+    const t = id ? team(id) : null;
+    if (!canModal) { location.href = FORM; return; }
+    if (t) {
+      const box = t.dataset.form, name = t.querySelector('h4').textContent;
+      pick.innerHTML = 'You’re applying for <b></b>. Under <b>Team Opportunities</b>, check <b></b>.';
+      const b = pick.querySelectorAll('b'); b[0].textContent = name; b[2].textContent = '“' + box + '”';
+    } else {
+      pick.innerHTML = 'Under <b>Team Opportunities</b>, check the one team you’re applying for.';
+    }
+    dlg.classList.remove('done');
+    if (frame.getAttribute('src') !== FORM) frame.src = FORM;
+    dlg.showModal();
+    document.documentElement.classList.add('sv-lock');
+  }
+  dlg.addEventListener('close', () => {
+    document.documentElement.classList.remove('sv-lock');
+    if (dlg.classList.contains('done')) { dlg.classList.remove('done'); frame.removeAttribute('src'); }
+  });
+  dlg.addEventListener('click', e => {
+    if (e.target === dlg || e.target.closest('[data-close]')) dlg.close();
+    if (e.target.closest('[data-another]')) { dlg.close(); glideTo($('#sv-find')); }
+    // CCB's own Cancel button goes to its public forms list; Start over brings the application back
+    if (e.target.closest('[data-restart]')) { frame.src = 'about:blank'; requestAnimationFrame(() => { frame.src = FORM; }); }
+  });
+  // CCB sends people to springs.church after they submit. When the frame lands on our own site,
+  // stop it there and show a thank-you instead of the website inside the website.
+  const landedHome = fr => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  frame.addEventListener('load', () => {
+    if (!landedHome(frame)) return;
+    frame.src = 'about:blank';
+    dlg.classList.add('done');
+    dlg.querySelector('.thanks h3').focus();
+  });
+  root.addEventListener('click', e => {
+    const b = e.target.closest('[data-apply]');
+    if (!b) return;
+    e.preventDefault();
+    openApply(b.dataset.apply);
+  });
+
+  /* ---------- cue light: which moment of the week you're looking at ---------- */
+  const mos = $$('.mo'), cue = $('.cue'), cueB = $('.cue-b'), cueM = $('#sv-cue-m');
+  const total = mos.length;
+  cueM.innerHTML = mos.map(m => '<a href="#' + m.id + '">' + m.querySelector('h3').textContent + '<small>' + m.dataset.cue + '</small></a>').join('');
+  let current = -1;
+  function setCue(i) {
+    if (i === current) return;
+    current = i;
+    const name = mos[i].querySelector('h3').textContent;
+    const cn = cueB.querySelector('.cn');
+    cn.style.opacity = 0;
+    setTimeout(() => { cn.textContent = name; cn.style.opacity = 1; }, reduceMotion.matches ? 0 : 140);
+    cueB.querySelector('small').textContent = (i + 1) + ' of ' + total;
+    $$('.cue-m a').forEach((a, k) => k === i ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current'));
+  }
+  function closeCue() { cue.classList.remove('open'); cueB.setAttribute('aria-expanded', 'false'); }
+  function showCue(on) {
+    cue.classList.toggle('on', on);
+    cue.setAttribute('aria-hidden', on ? 'false' : 'true');
+    cueB.tabIndex = on ? 0 : -1;
+    if (!on) closeCue();
+  }
+  cueB.addEventListener('click', () => { const o = !cue.classList.contains('open'); cue.classList.toggle('open', o); cueB.setAttribute('aria-expanded', o); });
+  document.addEventListener('click', e => { if (!e.target.closest('.cue')) closeCue(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && cue.classList.contains('open')) { closeCue(); cueB.focus(); } });
+  const inView = new Set();
+  const moObs = new IntersectionObserver(es => {
+    es.forEach(en => en.isIntersecting ? inView.add(en.target) : inView.delete(en.target));
+    if (!inView.size) return;
+    // the moment nearest the upper third of the screen wins
+    let best = 0, bd = Infinity;
+    mos.forEach((m, k) => { if (!inView.has(m)) return; const r = m.getBoundingClientRect(); const d = Math.abs(r.top - innerHeight * .3); if (r.top <= innerHeight * .3 && r.bottom > innerHeight * .3) { best = k; bd = -1; } else if (bd !== -1 && d < bd) { best = k; bd = d; } });
+    setCue(best);
+  }, { rootMargin: '-20% 0px -40% 0px', threshold: [0, .25, .5, .75, 1] });
+  mos.forEach(m => moObs.observe(m));
+  const zone = $('.moments'), run = $('.run');
+  let zoneOn = false, runOn = true;
+  const zoneObs = new IntersectionObserver(es => es.forEach(en => {
+    if (en.target === zone) zoneOn = en.isIntersecting; else runOn = en.isIntersecting;
+    showCue(zoneOn && !runOn && !dlg.open);
+  }), { rootMargin: '0px 0px -35% 0px' });
+  zoneObs.observe(zone); zoneObs.observe(run);
+  setCue(0);
+
+  /* ---------- the week index knows what's happening now (Colorado time) ---------- */
+  // Known times only: Sundays 10 AM, Wednesdays 6:30 PM, Fridays 7 PM. ?now=2026-11-08T09:30 previews another moment.
+  (function () {
+    let day, m;
+    const pv = q.get('now'), pd = pv ? new Date(pv) : null;
+    if (pd && !isNaN(pd)) { day = pd.getDay(); m = pd.getHours() * 60 + pd.getMinutes(); }
+    else {
+      try {
+        const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+        day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[p.weekday];
+        m = (+p.hour % 24) * 60 + +p.minute;
+      } catch (_) { return; }
+    }
+    let id, now = false;
+    if (day === 0 && m < 600) { id = 'sv-door'; now = m >= 480; }
+    else if (day === 0 && m < 720) { id = 'sv-room'; now = true; }
+    else if (day === 3 && m >= 1110 && m < 1230) { id = 'sv-wed'; now = true; }
+    else if (day === 5 && m >= 1140 && m < 1290) { id = 'sv-fri'; now = true; }
+    else if (day <= 2 || (day === 3 && m < 1110)) id = 'sv-wed';
+    else if (day <= 4 || (day === 5 && m < 1140)) id = 'sv-fri';
+    else id = 'sv-door';
+    const t = root.querySelector('.run a[href="#' + id + '"] .t');
+    if (!t) return;
+    const tag = document.createElement('span');
+    tag.className = 'lv' + (now ? ' now' : '');
+    tag.textContent = now ? 'Now' : 'Next';
+    t.appendChild(tag);
+  })();
+
+  /* ---------- deep links: ?team=coffee highlights a team, ?apply=coffee opens its application ---------- */
+  function ping(id) {
+    const t = team(id); if (!t) return;
+    setTimeout(() => glideTo(t, () => { t.classList.add('ping'); setTimeout(() => t.classList.remove('ping'), 2600); }), 250);
+  }
+  if (q.get('team')) ping(q.get('team'));
+  if (q.get('apply') !== null && (q.get('apply') === '' || team(q.get('apply')))) setTimeout(() => openApply(q.get('apply')), 300);
+
+  /* ---------- load-in ---------- */
+  root.classList.add('js');
+  const ready = () => requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
+  const imgs = $$('.shots img'); let left = imgs.length;
+  const one = () => { if (--left <= 0) ready(); };
+  imgs.forEach(i => i.complete ? one() : (i.addEventListener('load', one), i.addEventListener('error', one)));
+  setTimeout(ready, 1500);
+})();
+</script>
+</div><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

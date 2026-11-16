@@ -1,0 +1,458 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style></head>
+<body data-website><div class="topbar"><img src="img/logo-horz-white.png" alt=""><span>ABOUT &nbsp; MEDIA &nbsp; EVENTS &nbsp; CONNECT &nbsp; PRAYER &nbsp; GIVE</span></div>
+<button class="tbd-toggle" onclick="document.getElementById('sab').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/about ("Who We Are") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /about untouched.
+     Source of truth: ~/Desktop/springs-about-site/churchco/about-block.html (preview: preview-live.html via build-preview.py).
+     Built from the Creative Board card "About Page" (Website Updates, audit Oct 29): adds the vision statement + the four callings
+     (Understanding Scripture, Practicing Prayer, Experiencing Community, Developing Calling), swaps the 2011 story photo for current
+     ones, keeps "Let's Chat" (CCB form #578, opens in place), and uses one YouTube handle (@springs.church; @springs_church is a 404).
+     Words are the church's own (About page, Statement of Faith, /our-staff). <span class="tbd"> = new wording or facts to confirm.
+     Times follow the Springs stylebook (10AM, 6:30PM). -->
+<style>
+.tcc-block:has(#sab){padding:0!important;background:#111!important}
+.tcc-block:has(#sab) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(#sab) .row-defaults{padding:0!important}
+.tcc-block:has(#sab) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+#sab{--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+#sab *{box-sizing:border-box}
+#sab :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+#sab ul,#sab ol{list-style:none}
+#sab a{color:inherit;text-decoration:none}
+#sab img{display:block;max-width:100%}
+#sab button{font:inherit;color:inherit}
+#sab ::selection{background:var(--gold);color:var(--ink)}
+#sab .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+#sab svg.i{width:16px;height:16px;flex:none}
+#sab .tbd{transition:background .2s}
+#sab.show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+#sab :is(p,li,dd){text-wrap:pretty}
+#sab [id^="sab-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+
+/* buttons + links: one set (same as /servecopy, /missionscopy) */
+#sab .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sab .btn:hover{background:#333}
+#sab .btn:active{transform:scale(.98)}
+#sab .btn.light{background:#fff;color:var(--ink)}
+#sab .btn.light:hover{background:var(--gold)}
+#sab .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+#sab .btn.ghost:hover{background:#fff;color:var(--ink)}
+#sab .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+#sab .btn.line:hover{background:var(--ink);color:#fff}
+#sab .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
+#sab .tl:hover{text-decoration-color:currentColor}
+#sab :is(.btn,.tl,.go a,.deep a,.x,dd a,.yr-meta a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+
+/* one section-header pattern: uppercase H2 left, intro right */
+#sab .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+#sab .sec{padding:clamp(72px,9vw,120px) 0}
+#sab .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+#sab .sec-h p{color:var(--ink-2);max-width:36em}
+
+/* ---------- hero ---------- */
+#sab .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111}
+#sab .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(90px,11vw,150px);background:#fff;z-index:-1}
+#sab .top-in{display:grid;grid-template-columns:1.1fr 1fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+#sab .top-in>*{min-width:0}
+#sab .top h1{font:600 clamp(50px,7vw,96px)/.94 var(--hd);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+#sab .top h1 i{font-style:normal;color:var(--gold)}
+#sab .top .lede{font-size:clamp(17px,1.45vw,19px);line-height:1.6;color:rgba(255,255,255,.82);margin-bottom:12px;max-width:34em}
+#sab .top .lede+.lede{margin-bottom:28px;color:rgba(255,255,255,.64)}
+#sab .acts{display:flex;flex-wrap:wrap;gap:12px}
+#sab .trio{display:grid;grid-template-columns:1.35fr 1fr 1.35fr;gap:clamp(8px,1vw,14px);height:clamp(220px,26vw,360px);margin-top:clamp(44px,5.5vw,72px)}
+#sab .trio figure{position:relative;border-radius:16px;overflow:hidden;background:#222;isolation:isolate}
+#sab .trio img{width:100%;height:100%;object-fit:cover}
+#sab .trio figure::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(14,14,14,.55));pointer-events:none}
+#sab .trio figcaption{position:absolute;left:14px;bottom:14px;z-index:2;padding:9px 13px;border-radius:999px;background:rgba(14,14,14,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 12px/1 var(--hd);letter-spacing:.04em;color:#fff}
+#sab .trio figure:nth-child(1) img{object-position:50% 45%}
+#sab .trio figure:nth-child(2) img{object-position:62% 30%}
+#sab .trio figure:nth-child(3) img{object-position:50% 40%}
+@media (prefers-reduced-motion:no-preference){
+  #sab.js .trio figure{clip-path:inset(100% 0 0 0 round 16px);transform:translateY(28px)}
+  #sab.js .trio img{transform:scale(1.12)}
+  #sab.js.ready .trio figure{clip-path:inset(0 0 0 0 round 16px);transform:none;transition:clip-path 1.15s var(--ease),transform 1.15s var(--ease);transition-delay:calc(var(--n) * 90ms + 120ms)}
+  #sab.js.ready .trio img{transform:none;transition:transform 1.6s var(--ease);transition-delay:calc(var(--n) * 90ms + 120ms)}
+}
+
+/* ---------- vision and calling ---------- */
+#sab .vision-line{font:500 clamp(22px,2.2vw,30px)/1.32 var(--hd);letter-spacing:-.01em;color:var(--ink);max-width:24em;margin-bottom:clamp(36px,4.5vw,56px);text-wrap:balance}
+#sab .vision-line span{color:var(--gold-t)}
+#sab .calls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,18px)}
+#sab .call{display:flex;flex-direction:column;padding:clamp(22px,2.2vw,28px);border-radius:20px;background:var(--sand);min-height:100%}
+#sab .call h3{font:600 clamp(21px,1.9vw,24px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:12px}
+#sab .call p{font-size:17px;line-height:1.55;color:var(--ink-2);margin-bottom:22px}
+#sab .go{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}
+#sab .go a{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 14px;border-radius:999px;background:#fff;font:600 13px/1 var(--hd);letter-spacing:.02em;color:var(--ink);transition:background .2s,color .2s}
+#sab .go a svg{width:12px;height:12px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sab .go a:hover{background:var(--ink);color:#fff}#sab .go a:hover svg{transform:translateX(2px)}}
+
+/* ---------- our story (the one dark band) ---------- */
+#sab .story{background:#111;color:#fff}
+#sab .story .h2{color:#fff}
+#sab .story .sec-h p{color:rgba(255,255,255,.72)}
+#sab .yr{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:22px clamp(32px,6vw,96px);padding:clamp(36px,4.5vw,56px) 0;border-top:1px solid rgba(255,255,255,.22)}
+#sab .yr>*{min-width:0}
+#sab .yr-n{font:600 clamp(56px,7vw,96px)/.9 var(--hd);letter-spacing:-.04em;color:var(--gold);font-variant-numeric:tabular-nums}
+#sab .yr-n.w{font-size:clamp(44px,5.2vw,72px)}
+#sab .yr h3{font:600 clamp(24px,2.5vw,32px)/1.12 var(--hd);letter-spacing:-.02em;margin-bottom:14px;text-wrap:balance}
+#sab .yr p{color:rgba(255,255,255,.78);max-width:34em}
+#sab .yr p+p{margin-top:12px}
+#sab .yr-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:20px;font-size:16px;color:rgba(255,255,255,.62)}
+#sab .yr-meta a{font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.35)}
+#sab .yr-meta a:hover{text-decoration-color:currentColor}
+#sab .founders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);margin-top:28px}
+#sab .founders figure{min-width:0}
+#sab .founders img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;background:var(--shot)}
+#sab .founders figcaption{margin-top:12px}
+#sab .founders b{display:block;font:600 16px/1.25 var(--hd);color:#fff}
+#sab .founders small{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:rgba(255,255,255,.58)}
+#sab .now-pic{margin-top:28px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(16px,2.4vw,28px);align-items:end}
+#sab .now-pic img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 25%;border-radius:16px;background:var(--shot)}
+#sab .now-pic figcaption b{display:block;font:600 18px/1.25 var(--hd)}
+#sab .now-pic figcaption small{display:block;margin-top:4px;font-size:15px;color:rgba(255,255,255,.6)}
+#sab .now-pic .tl{margin-top:16px;color:#fff;text-decoration-color:rgba(255,255,255,.35)}
+
+/* ---------- go deeper: two link cards ---------- */
+#sab .deep{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+#sab .deep a{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(300px,30vw,400px);padding:clamp(24px,2.6vw,34px);border-radius:20px;overflow:hidden;isolation:isolate;color:#fff;background:#222;-webkit-tap-highlight-color:transparent}
+#sab .deep img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s var(--ease)}
+#sab .deep a::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,14,14,.08) 10%,rgba(14,14,14,.5) 48%,rgba(14,14,14,.88))}
+#sab .deep a:first-child img{object-position:50% 12%}
+#sab .deep h3{font:600 clamp(28px,3vw,38px)/1.05 var(--hd);letter-spacing:-.02em;text-transform:uppercase;margin-bottom:10px}
+#sab .deep p{font-size:17px;line-height:1.5;color:rgba(255,255,255,.84);max-width:28em}
+#sab .deep .more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase}
+#sab .deep .more svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sab .deep a:hover img{transform:scale(1.035)}#sab .deep a:hover .more svg{transform:translateX(3px)}}
+
+/* ---------- connect over coffee ---------- */
+#sab .coffee-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center}
+#sab .coffee-pic{aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:var(--shot)}
+#sab .coffee-pic img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+#sab .coffee .h2{margin-bottom:20px}
+#sab .coffee p{color:var(--ink-2);max-width:32em}
+#sab .coffee p+p{margin-top:14px}
+#sab .coffee .acts{margin-top:28px;align-items:center;gap:14px 22px}
+#sab .coffee small{display:block;margin-top:14px;font-size:15px;color:var(--ink-3)}
+
+/* ---------- you're invited ---------- */
+#sab .visit{background:var(--sand)}
+#sab .visit-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+#sab .visit .h2{margin-bottom:18px}
+#sab .visit-l>p{color:var(--ink-2);max-width:30em}
+#sab .visit .acts{margin-top:28px}
+#sab .map{margin-top:32px;aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#e7e1d4}
+#sab .map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35) contrast(1.02)}
+#sab .facts{border-top:1px solid var(--ink)}
+#sab .facts div{display:grid;grid-template-columns:minmax(130px,.55fr) 1.6fr;gap:4px 24px;padding:20px 0;border-bottom:1px solid rgba(14,14,14,.16)}
+#sab .facts dt{font:600 17px/1.35 var(--hd)}
+#sab .facts dd{font-size:17px;line-height:1.55;color:var(--ink-2)}
+#sab .facts dd b{display:block;font:600 22px/1.2 var(--hd);color:var(--ink);margin-bottom:4px;font-variant-numeric:tabular-nums}
+#sab .facts dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sab .facts dd a:hover{text-decoration-color:currentColor}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #sab.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
+  #sab.js .rv.in{opacity:1;transform:none}
+}
+
+/* ---------- form dialog (CCB #578) ---------- */
+html.sab-lock{overflow:hidden}
+#sab dialog{border:0;padding:0;margin:auto;width:min(720px,calc(100vw - 16px));height:min(900px,calc(100dvh - 16px));max-height:none;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+#sab dialog[open]{display:flex;flex-direction:column;animation:sab-in .45s var(--ease)}
+#sab dialog::backdrop{background:rgba(8,8,8,.62)}
+@keyframes sab-in{from{opacity:0;transform:translateY(14px) scale(.985)}}
+#sab .dlg-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 12px 12px 22px;border-bottom:1px solid var(--line)}
+#sab .dlg-h b{font:600 17px/1.3 var(--hd)}
+#sab .x{all:unset;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--soft);cursor:pointer;transition:background .2s}
+#sab .x:hover{background:#e9e9e7}
+#sab .x svg{width:18px;height:18px}
+#sab dialog iframe{flex:1;width:100%;border:0;background:#fff}
+#sab .thanks{display:none;padding:clamp(32px,5vw,52px) clamp(22px,4vw,44px);text-align:center}
+#sab dialog.done .thanks{display:block}
+#sab dialog.done iframe{display:none}
+#sab dialog.done{height:auto}
+#sab .thanks .ok{width:54px;height:54px;margin:0 auto 18px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--gold-t)}
+#sab .thanks .ok svg{width:24px;height:24px}
+#sab .thanks h3{font:600 24px/1.25 var(--hd);margin-bottom:10px;outline:0}
+#sab .thanks p{color:var(--ink-2);max-width:28em;margin:0 auto 24px}
+#sab .thanks .acts{justify-content:center}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  #sab .calls{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  #sab .top-in,#sab .sec-h,#sab .yr,#sab .coffee-in,#sab .visit-in{grid-template-columns:1fr}
+  #sab .sec-h{align-items:start}
+  #sab .yr{gap:14px}
+  #sab .yr-n,#sab .yr-n.w{font-size:clamp(44px,12vw,64px)}
+  #sab .coffee-pic{order:2;aspect-ratio:16/10}
+}
+@media (max-width:640px){
+  #sab{--top:128px}
+  #sab .trio{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:auto;aspect-ratio:1/1.02}
+  #sab .trio figure:nth-child(1){grid-column:1/3}
+  #sab .calls,#sab .deep{grid-template-columns:1fr}
+  #sab .deep a{min-height:280px}
+  #sab .founders{gap:10px}
+  #sab .founders b{font-size:14px}
+  #sab .founders small{font-size:13px}
+  #sab .now-pic{grid-template-columns:1fr}
+  #sab .facts div{grid-template-columns:1fr}
+  #sab .acts .btn{flex:1 1 auto}
+}
+</style>
+
+<div id="sab">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sab-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="sab-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="sab-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- hero: the vision statement, and the three things the church has been known for since 2009 -->
+  <header class="top">
+    <div class="wrap">
+      <div class="top-in">
+        <h1>Ignite a passion for <i>Christ.</i></h1>
+        <div>
+          <p class="lede">Springs Church exists to ignite a passion for Christ and to equip believers for His mission in Colorado Springs and the world.</p>
+          <p class="lede"><span class="tbd">Since 2009, we’ve been a church family grounded in Spirit-filled worship, Biblical preaching and powerful prayer.</span></p>
+          <div class="acts">
+            <a class="btn light" href="#sab-visit">Plan a Visit</a>
+            <a class="btn ghost" href="../beliefs/">Our Beliefs</a>
+          </div>
+        </div>
+      </div>
+      <div class="trio">
+        <figure style="--n:0"><img src="img/about-worship.jpg" alt="The worship team leads the church on stage under blue and gold lights" fetchpriority="high"><figcaption>Spirit-filled worship</figcaption></figure>
+        <figure style="--n:1"><img src="img/about-hero-1011.jpg" alt="Pastor Michael Petillo preaching from the pulpit"><figcaption>Biblical preaching</figcaption></figure>
+        <figure style="--n:2"><img src="img/about-prayer.jpg" alt="People at Springs praying together with hands on shoulders"><figcaption>Powerful prayer</figcaption></figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- vision and calling: the statement + the four callings, each pointing to where it happens -->
+  <section class="sec" id="sab-vision" aria-labelledby="sab-vision-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sab-vision-h">Our Vision and Calling</h2>
+        <p>At Springs Church we desire to be an authentic community of worshippers who are passionate about understanding Scripture, practicing prayer, experiencing community, and developing calling.</p>
+      </div>
+      <ul class="calls">
+        <li class="call rv" style="--d:0">
+          <h3>Understanding Scripture</h3>
+          <p><span class="tbd">Biblical preaching every Sunday, and a Bible in your pocket the rest of the week.</span></p>
+          <div class="go"><a href="https://www.springs.church/sermons">Sermons <svg aria-hidden="true"><use href="#sab-arr"/></svg></a><a href="https://www.springs.church/youversion">Bible App <svg aria-hidden="true"><use href="#sab-arr"/></svg></a></div>
+        </li>
+        <li class="call rv" style="--d:1">
+          <h3>Practicing Prayer</h3>
+          <p><span class="tbd">We pray together every Wednesday at 6:30PM, and our prayer team would love to pray with you any week.</span></p>
+          <div class="go"><a href="../prayer/">Prayer <svg aria-hidden="true"><use href="#sab-arr"/></svg></a></div>
+        </li>
+        <li class="call rv" style="--d:2">
+          <h3>Experiencing Community</h3>
+          <p><span class="tbd">Groups meet in homes, at the church and around town, so no one has to walk with Jesus alone.</span></p>
+          <div class="go"><a href="../groups/">Groups <svg aria-hidden="true"><use href="#sab-arr"/></svg></a></div>
+        </li>
+        <li class="call rv" style="--d:3">
+          <h3>Developing Calling</h3>
+          <p><span class="tbd">Everyone has gifts and a place to use them, here in Colorado Springs and around the world.</span></p>
+          <div class="go"><a href="../serve/">Serve <svg aria-hidden="true"><use href="#sab-arr"/></svg></a><a href="../missions/">Missions <svg aria-hidden="true"><use href="#sab-arr"/></svg></a></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- our story: 2009, 2012, today (dates, not step numbers) -->
+  <section class="sec story" id="sab-story" aria-labelledby="sab-story-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="sab-story-h">Our Story</h2>
+        <p><span class="tbd">From a basement prayer meeting to a church family from every corner of Colorado Springs.</span></p>
+      </div>
+
+      <article class="yr rv">
+        <div class="yr-n" aria-hidden="true">2009</div>
+        <div>
+          <h3><span class="tbd">Twelve people and a prayer meeting.</span></h3>
+          <p>Springs Church began in 2009 as a small basement prayer meeting of twelve folks. It was started by three couples, each with their own unique gifting.</p>
+          <div class="founders">
+            <figure><img src="img/about-founders-wilkerson.jpg" alt="Gary and Kelly Wilkerson" loading="lazy"><figcaption><b>Gary &amp; Kelly Wilkerson</b><small>World Challenge</small></figcaption></figure>
+            <figure><img src="img/about-founders-dow.jpg" alt="Patrick and Alicia Dow" loading="lazy"><figcaption><b>Patrick &amp; Alicia Dow</b><small>Nicky Cruz Outreach</small></figcaption></figure>
+            <figure><img src="img/about-founders-taylor.jpg" alt="Adam and Julie Taylor" loading="lazy"><figcaption><b>Adam &amp; Julie Taylor</b><small>In memoriam, 1964–2012</small></figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="yr rv">
+        <div class="yr-n" aria-hidden="true">2012</div>
+        <div>
+          <h3><span class="tbd">A home in Briargate.</span></h3>
+          <p>In 2012 we moved to our current location. The new space let us expand our Springs Kids ministry, open opportunities to partner with local outreach and be a part of the vibrant Briargate neighborhood.</p>
+          <div class="yr-meta"><span>1515 Auto Mall Loop, Colorado Springs</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get directions</a></div>
+        </div>
+      </article>
+
+      <article class="yr rv">
+        <div class="yr-n w" aria-hidden="true">Today</div>
+        <div>
+          <h3><span class="tbd">One family, every corner of the city.</span></h3>
+          <p>Springs Church is a diverse representation of spiritual heritage from every corner of our city, <span class="tbd">more than a thousand people</span> strong. We support missionaries stateside and abroad, worship together online, and continue the mission to share the Gospel of Jesus Christ everywhere under our Lead Pastor, Michael Petillo.</p>
+          <figure class="now-pic">
+            <img src="img/about-pastor.jpg" alt="Michael and Beth Petillo smiling in the church lobby" loading="lazy">
+            <figcaption><b>Michael &amp; Beth Petillo</b><small>Lead Pastor + Elder</small><a class="tl" href="../team/">Meet our team <svg class="i" aria-hidden="true"><use href="#sab-arr"/></svg></a></figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- go deeper -->
+  <section class="sec" aria-label="Learn more about Springs">
+    <div class="wrap">
+      <div class="deep">
+        <a class="rv" style="--d:0" href="../beliefs/">
+          <img src="img/about-worship-bw.jpg" alt="" loading="lazy">
+          <h3>Our Beliefs</h3>
+          <p><span class="tbd">What we believe about God, Scripture, salvation and the church, in our Statement of Faith.</span></p>
+          <span class="more">Read the Statement <svg aria-hidden="true"><use href="#sab-arr"/></svg></span>
+        </a>
+        <a class="rv" style="--d:1" href="../team/">
+          <img src="img/about-community.jpg" alt="" loading="lazy">
+          <h3>Our Team</h3>
+          <p><span class="tbd">The pastors, elders and staff who serve Springs, and who would love to meet you.</span></p>
+          <span class="more">Meet the Team <svg aria-hidden="true"><use href="#sab-arr"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- connect over coffee: live copy, form #578 opens in place -->
+  <section class="sec coffee" id="sab-coffee" aria-labelledby="sab-coffee-h" style="padding-top:0">
+    <div class="wrap coffee-in">
+      <div class="coffee-pic rv"><img src="img/about-coffee.jpg" alt="A barista hands a coffee across the counter at the Springs coffee bar" loading="lazy"></div>
+      <div class="rv" style="--d:1">
+        <h2 class="h2" id="sab-coffee-h">Connect Over Coffee</h2>
+        <p>Do you need to talk with someone? Life can be challenging and we have a team who would love to hear your heart, pray with you, and get you plugged into this vibrant community.</p>
+        <p>Let’s Connect Over Coffee before service on Sunday morning. If you’ve been here for ten days, ten months or even ten years, we invite everyone at Springs Church to join us for a cup of brew!</p>
+        <div class="acts">
+          <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/578/responses/new" data-form>Let’s Chat</a>
+          <a class="tl" href="../care/">Need care now? <svg class="i" aria-hidden="true"><use href="#sab-arr"/></svg></a>
+        </div>
+        <small><span class="tbd">The form opens right here. Someone from our team will reach out to set a time.</span></small>
+      </div>
+    </div>
+  </section>
+
+  <!-- you're invited -->
+  <section class="sec visit" id="sab-visit" aria-labelledby="sab-visit-h">
+    <div class="wrap visit-in">
+      <div class="visit-l">
+        <h2 class="h2" id="sab-visit-h">You’re Invited</h2>
+        <p>Join us in person or online. <span class="tbd">Friendly faces at the doors will help you find your way, and there’s a space for your kids to meet Jesus too.</span></p>
+        <div class="acts">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn line" href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Watch Online</a>
+        </div>
+        <div class="map" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7742703143895!2d-104.80077632365287!3d38.951984943480724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87134c2ab7a98667%3A0xa4fc6fb6d4c0222b!2sSprings%20Church!5e0!3m2!1sen!2sus!4v1754926116624!5m2!1sen!2sus"></div>
+      </div>
+      <dl class="facts">
+        <div><dt>Sundays</dt><dd><b>10AM</b>Worship and teaching. Springs Kids for babies through grade 5.</dd></div>
+        <div><dt>Wednesdays</dt><dd><b>6:30PM</b>Prayer night. Awaken for kids, Rooted for middle school and Anthem for high school.</dd></div>
+        <div><dt>Address</dt><dd>1515 Auto Mall Loop<br>Colorado Springs, CO 80920</dd></div>
+        <div><dt>Online</dt><dd>Watch live Sundays at 10AM on <a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">YouTube</a>.</dd></div>
+        <div><dt>Contact</dt><dd><a href="tel:+17194888331">(719) 488-8331</a><br><a href="mailto:info@springs.church">info@springs.church</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <dialog id="sab-dlg" aria-labelledby="sab-dlg-t">
+    <div class="dlg-h"><b id="sab-dlg-t">Connect Over Coffee</b><button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#sab-x"/></svg></button></div>
+    <iframe id="sab-dlg-f" title="Connect Over Coffee form"></iframe>
+    <div class="thanks">
+      <div class="ok"><svg aria-hidden="true"><use href="#sab-ok"/></svg></div>
+      <h3 tabindex="-1">Thanks. We’ll see you for coffee.</h3>
+      <p><span class="tbd">Someone from our team will reach out soon to find a Sunday that works.</span></p>
+      <div class="acts"><button class="btn" type="button" data-close>Done</button></div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('sab');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  root.classList.add('js');
+  const $ = s => root.querySelector(s), $$ = s => [...root.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* in-page links */
+  root.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#sab-"]');
+    if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
+  });
+
+  /* reveals */
+  const rv = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+
+  /* map loads when the visit section gets close */
+  const map = $('.map');
+  const loadMap = () => { if (map.firstChild) return; const f = document.createElement('iframe'); f.src = map.dataset.map; f.title = 'Map to Springs Church'; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; map.appendChild(f); };
+  if ('IntersectionObserver' in window) { const mo = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { loadMap(); mo.disconnect(); } }, { rootMargin: '600px 0px' }); mo.observe(map); } else loadMap();
+
+  /* Connect Over Coffee: CCB form #578 in a dialog; CCB sends people to springs.church after submit, so catch that and say thanks */
+  const dlg = $('#sab-dlg'), frame = $('#sab-dlg-f');
+  const FORM = 'https://springschurch.ccbchurch.com/goto/forms/578/responses/new';
+  const landedHome = fr => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  root.addEventListener('click', e => {
+    const b = e.target.closest('[data-form]');
+    if (!b || typeof dlg.showModal !== 'function') return;
+    e.preventDefault();
+    dlg.classList.remove('done');
+    if (frame.getAttribute('src') !== FORM) frame.src = FORM;
+    dlg.showModal();
+    document.documentElement.classList.add('sab-lock');
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+  dlg.addEventListener('close', () => {
+    document.documentElement.classList.remove('sab-lock');
+    if (dlg.classList.contains('done')) { dlg.classList.remove('done'); frame.removeAttribute('src'); }
+  });
+  frame.addEventListener('load', () => {
+    if (!landedHome(frame)) return;
+    frame.src = 'about:blank';
+    dlg.classList.add('done');
+    dlg.querySelector('.thanks h3').focus();
+  });
+
+  /* hero load-in once the photos are ready (or after 1.5s) */
+  const imgs = $$('.trio img');
+  let left = imgs.length, done = false;
+  const ready = () => { if (done) return; done = true; requestAnimationFrame(() => root.classList.add('ready')); };
+  const one = () => { if (--left <= 0) ready(); };
+  imgs.forEach(i => i.complete ? one() : (i.addEventListener('load', one), i.addEventListener('error', one)));
+  setTimeout(ready, 1500);
+})();
+</script>
+</section></main><footer class="cc-ftr">STAND-IN FOOTER</footer></body></html>

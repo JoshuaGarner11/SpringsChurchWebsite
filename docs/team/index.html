@@ -1,0 +1,592 @@
+<!doctype html><html lang="en" data-website><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Our Team | Springs Church (local mockup)</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..700&family=Figtree:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+    /* stand-in for the ChurchCo theme around the block */
+    body{margin:0;background:#F7F7F7;font-family:"proxima-nova","Figtree",sans-serif;color:#0E0E0E}
+    main{container-type:inline-size}
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:50;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;transition:background .3s}
+    .topbar.solid{background:#0E0E0E}
+    .topbar img{height:26px} .topbar nav{display:flex;gap:26px;font:600 13px/1 "gotham","Montserrat",sans-serif;letter-spacing:.08em;color:#fff}
+    @media(max-width:800px){.topbar nav{display:none}}
+    .hero{height:300px;background:#111 url(https://media.thechurchcoassets.com/accounts/4185/6054ea3a-48e8-4c90-ad55-74cdd08c4943-/DSC01220__largepreview__.webp) center/cover;position:relative;display:flex;align-items:flex-end}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(0,0,0,.55))}
+    .hero h1{position:relative;color:#fff;font:600 clamp(40px,6vw,64px)/1 "gotham","Montserrat",sans-serif;letter-spacing:-3px;margin:0 0 44px 6vw}
+    .block-contributors{padding:60px 6vw;text-align:center}
+    .block-contributors h3{font:500 31px/1.2 "gotham","Montserrat",sans-serif}
+    .block-contributors [data-edit-list]{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:30px}
+    .block-contributors img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px}
+    .block-contributors .content h3{font-size:20px;margin:12px 0 0}
+    footer{background:#0E0E0E;color:#999;padding:40px 6vw;font-size:14px}
+    .devbar{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;gap:4px;font:600 12px/1 system-ui;background:#fff;border:1px solid #ddd;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.18)}.devbar a,.devbar button{all:unset;cursor:pointer;white-space:nowrap;padding:8px 10px;border-radius:999px;color:#333} .devbar a.on{background:#222;color:#fff}
+    </style></head><body>
+    <header class="topbar"><img src="https://media.thechurchcoassets.com/accounts/4185/1c3a3dd0-a955-4f0e-b3cf-89986f0f5992-./SC_logo_horz-WHT__largepreview__.webp" alt="Springs Church"><nav><span>ABOUT</span><span>SERMONS</span><span>EVENTS</span><span>CONNECT</span><span>PRAYER</span><span>GIVE</span></nav></header>
+    <main><div class="flex flex-wrap renderer" id="blocks">
+    
+    <section class="tcc-block block-html not-in-view"><div class="row-inner"><div class="container">
+    <!--
+  SPRINGS CHURCH · OUR TEAM · OPTION D ("Open Doors") · MOCKUP, NOT LIVE
+  Built on the home page system (Option I/J: cream + charcoal + ember, Gotham + Proxima, eyebrow +
+  uppercase H2, pill buttons). Every portrait is an arched doorway with the name on the photo.
+  The hero asks "I'd like to talk with someone about ___" and answers with the right people.
+  Same editing model as A to C: one ChurchCo HTML block above the four ChurchCo "Contributors"
+  blocks; it reads them, hides them, and draws this layout. Replaces the page hero.
+  The "talk about" list is the TOPICS list in the script: a label + words to look for in job titles.
+-->
+<style>
+#ssd{
+  --cream:#F6F2EC; --sand:#EEE7DC; --card:#FFFDF9; --char:#1E1D1B; --char-2:#292825;
+  --ink:#1B1A18; --ink-2:#47433D; --ink-3:#625D55; --line:rgba(27,26,24,.11);
+  --on-dark:#F6F2EC; --on-dark-2:rgba(246,242,236,.74); --line-dark:rgba(246,242,236,.14);
+  --accent:#A84A25; --accent-l:#E9B999;
+  --display:"gotham","Montserrat",system-ui,sans-serif;
+  --body:"proxima-nova","Figtree",system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,4vw,56px); --max:1280px; --gut:24px; --sec:clamp(72px,8vw,112px);
+  --r-xl:28px; --r-l:20px; --r-m:12px;
+  --shadow:0 1px 2px rgba(27,26,24,.05),0 10px 28px rgba(27,26,24,.08);
+  --ease:cubic-bezier(.2,.7,.2,1); --tb:var(--ssd-tb,0px);
+  background:var(--cream); color:var(--ink); font:400 18px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased; text-align:left; overflow-x:clip; position:relative;
+}
+.tcc-block:has(#ssd) .row-inner{opacity:1!important;transform:none!important}
+.tcc-block:has(#ssd) .container{max-width:none!important;padding:0!important}
+#ssd *,#ssd *::before,#ssd *::after{box-sizing:border-box}
+#ssd h1,#ssd h2,#ssd h3,#ssd p,#ssd ul{margin:0;padding:0}
+#ssd ul{list-style:none}
+#ssd a{color:inherit;text-decoration:none}
+#ssd img{display:block;max-width:100%}
+#ssd button,#ssd select{font:inherit;color:inherit}
+#ssd .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#ssd .wrap{width:100%;max-width:calc(var(--max) + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+
+/* type */
+#ssd .eyebrow{font:700 12px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+#ssd .h2{font:700 clamp(32px,3.6vw,54px)/1 var(--display);letter-spacing:-.018em;text-transform:uppercase;color:var(--ink)}
+#ssd .lead{font:400 clamp(18px,1.45vw,20px)/1.6 var(--body);color:var(--ink-2)}
+#ssd .meta{font:500 15px/1.5 var(--body);color:var(--ink-3)}
+
+/* buttons */
+#ssd .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;
+  font:700 12.5px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;cursor:pointer;border:0;
+  transition:background .2s,color .2s,box-shadow .2s,transform .15s}
+#ssd .btn:active{transform:scale(.98)}
+#ssd .btn svg{width:15px;height:15px}
+#ssd .btn-primary{background:var(--ink);color:var(--cream)}
+#ssd .btn-secondary{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink)}
+#ssd .link{display:inline-flex;align-items:center;gap:8px;font:700 12.5px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);padding:6px 0;background:none;border:0;cursor:pointer}
+#ssd .link svg{width:14px;height:14px;transition:transform .25s var(--ease)}
+@media(hover:hover) and (pointer:fine){
+  #ssd .btn-primary:hover{background:var(--accent)}
+  #ssd .btn-secondary:hover{background:var(--ink);color:var(--cream)}
+  #ssd .link:hover svg{transform:translateX(4px)}
+}
+#ssd :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* the arch: a doorway-shaped portrait with the name on the photo */
+#ssd .arch{position:relative;display:block;width:100%;aspect-ratio:4/5;border-radius:999px 999px var(--r-l) var(--r-l);overflow:hidden;background:var(--sand);isolation:isolate}
+#ssd .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(.86) contrast(1.04);transition:transform 1s var(--ease)}
+#ssd .arch::after{content:"";position:absolute;inset:auto 0 0;height:55%;z-index:1;pointer-events:none;
+  background:linear-gradient(transparent,rgba(24,18,13,.5) 50%,rgba(24,18,13,.86))}
+#ssd .arch .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 clamp(14px,1.6vw,22px) clamp(16px,1.7vw,22px);color:#fff;text-align:center}
+#ssd .arch .nm{display:block;font:700 clamp(15px,1.35vw,19px)/1.1 var(--display);letter-spacing:-.005em;text-transform:uppercase}
+#ssd .arch .rl{display:block;margin-top:6px;font:500 clamp(13px,1vw,14.5px)/1.3 var(--body);color:rgba(255,255,255,.82)}
+
+/* person tile (button wrapping an arch) */
+#ssd .p{all:unset;box-sizing:border-box;display:block;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .35s var(--ease)}
+#ssd .p .arch{transition:box-shadow .35s var(--ease)}
+#ssd .p:focus-visible{outline:none}
+#ssd .p:focus-visible .arch{outline:3px solid var(--accent);outline-offset:4px}
+#ssd .p:active{transform:scale(.985)}
+@media(hover:hover) and (pointer:fine){
+  #ssd .p:hover{transform:translateY(-4px)}
+  #ssd .p:hover .arch{box-shadow:var(--shadow)}
+  #ssd .p:hover .arch img{transform:scale(1.04)}
+}
+
+/* hero */
+#ssd .ssd-top{background:var(--char);color:var(--on-dark);padding-top:calc(var(--tb) + clamp(36px,4.5vw,72px));padding-bottom:clamp(100px,10vw,140px);position:relative}
+#ssd .ssd-top .g{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);align-items:center}
+#ssd .ssd-top .t{grid-column:1 / span 7}
+#ssd .ssd-top .eyebrow{color:var(--accent-l)}
+#ssd .ssd-top h1{font:700 clamp(46px,6.4vw,96px)/.94 var(--display);letter-spacing:-.03em;text-transform:uppercase;color:var(--on-dark)}
+#ssd .ssd-top .lead{color:var(--on-dark-2);margin-top:22px;max-width:40ch}
+#ssd .doors{grid-column:9 / span 4;position:relative;height:clamp(300px,30vw,420px)}
+#ssd .doors .arch{position:absolute;width:52%;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+#ssd .doors .arch:nth-child(1){left:0;top:12%;z-index:1}
+#ssd .doors .arch:nth-child(2){right:0;top:0;z-index:2}
+#ssd .doors .arch:nth-child(3){left:24%;bottom:-6%;width:46%;z-index:3}
+#ssd .doors .arch img{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+#ssd .doors .arch img.on{opacity:1}
+#ssd .doors .arch::after{display:none}
+@media(max-width:900px){
+  #ssd .ssd-top .t{grid-column:1 / -1}
+  #ssd .doors{grid-column:1 / -1;order:-1;display:flex;height:auto;margin-bottom:6px;padding-left:2px}
+  #ssd .doors .arch,#ssd .doors .arch:nth-child(n){position:relative;inset:auto;width:58px;margin-right:-8px;box-shadow:0 0 0 3px var(--char)}
+}
+
+/* finder */
+#ssd .finder{position:relative;z-index:3;margin-top:calc(clamp(100px,10vw,140px) * -1 + 28px)}
+#ssd .fcard{background:var(--card);border-radius:var(--r-xl);box-shadow:0 0 0 1px var(--line),0 24px 60px rgba(27,26,24,.12);padding:clamp(24px,3.2vw,44px)}
+#ssd .ask{font:700 clamp(24px,2.9vw,40px)/1.2 var(--display);letter-spacing:-.02em;color:var(--ink)}
+#ssd .pick{position:relative;display:inline-block;vertical-align:baseline}
+#ssd .pick select{appearance:none;-webkit-appearance:none;border:0;background:transparent;cursor:pointer;font:inherit;letter-spacing:inherit;color:var(--accent);
+  padding:0 1.05em 2px 0;border-bottom:3px solid currentColor;border-radius:0;max-width:100%;outline:none}
+#ssd .pick select:focus-visible{background:rgba(168,74,37,.08);border-radius:6px 6px 0 0}
+#ssd .pick svg{position:absolute;right:0;top:50%;width:.7em;height:.7em;translate:0 -40%;color:var(--accent);pointer-events:none}
+#ssd .quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+@media(max-width:640px){
+  #ssd .quick{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:18px calc(clamp(24px,3.2vw,44px) * -1) 0;padding:2px clamp(24px,3.2vw,44px);
+    mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 28px),transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 28px),transparent)}
+  #ssd .quick::-webkit-scrollbar{display:none}
+  #ssd .quick button{flex:none}
+}
+#ssd .quick button{all:unset;cursor:pointer;white-space:nowrap;height:38px;padding:0 16px;border-radius:999px;display:inline-flex;align-items:center;font:600 15px/1 var(--body);color:var(--ink-2);
+  box-shadow:inset 0 0 0 1px var(--line);background:var(--cream);transition:background .2s,color .2s,box-shadow .2s,transform .15s}
+#ssd .quick button:active{transform:scale(.97)}
+#ssd .quick button[aria-pressed="true"]{background:var(--ink);color:var(--cream);box-shadow:none}
+#ssd .quick button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(hover:hover) and (pointer:fine){#ssd .quick button:not([aria-pressed="true"]):hover{box-shadow:inset 0 0 0 1px var(--ink-3);color:var(--ink)}}
+#ssd .answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+#ssd .answer.on{grid-template-rows:1fr}
+#ssd .answer>div{overflow:hidden;min-height:0}
+#ssd .ans-in{padding-top:28px;margin-top:28px;border-top:1px solid var(--line)}
+#ssd .ans-in .meta{margin-bottom:18px}
+#ssd .hits{display:grid;gap:14px}
+@media(min-width:760px){#ssd .hits{grid-template-columns:repeat(2,1fr)}}
+#ssd .hit{display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:center;padding:14px;border-radius:var(--r-l);background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);
+  opacity:0;transform:translateY(8px);animation:ssd-in .45s var(--ease) forwards;animation-delay:calc(var(--i) * 70ms)}
+@keyframes ssd-in{to{opacity:1;transform:none}}
+#ssd .hit .arch{aspect-ratio:4/5;border-radius:999px 999px 12px 12px}
+#ssd .hit .arch::after{display:none}
+#ssd .hit h3{font:700 18px/1.15 var(--display);letter-spacing:-.005em;text-transform:uppercase}
+#ssd .hit .rl{font:500 15px/1.35 var(--body);color:var(--ink-3);margin-top:4px}
+#ssd .hit .acts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;align-items:center}
+#ssd .hit .acts a,#ssd .hit .acts button{font:700 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;padding:6px 0;background:none;border:0;cursor:pointer;color:var(--ink);display:inline-flex;gap:7px;align-items:center}
+#ssd .hit .acts .em{color:var(--accent)}
+#ssd .hit .acts svg{width:14px;height:14px}
+#ssd .hit.office{grid-template-columns:1fr;background:var(--char);color:var(--on-dark);box-shadow:none}
+#ssd .hit.office p{color:var(--on-dark-2);font-size:16px;margin:6px 0 14px}
+#ssd .hit.office .btn-primary{background:var(--cream);color:var(--ink);align-self:flex-start}
+#ssd .hits.one{grid-template-columns:1fr}
+#ssd .hit.pastors{grid-template-columns:auto 1fr;gap:clamp(18px,2.4vw,32px);padding:clamp(16px,2vw,24px);background:var(--char);color:var(--on-dark);box-shadow:none}
+#ssd .hit.pastors .duo{display:flex}
+#ssd .hit.pastors .duo .arch{width:clamp(76px,8vw,104px);box-shadow:0 0 0 3px var(--char)}
+#ssd .hit.pastors .duo .arch+.arch{margin-left:-14px}
+#ssd .hit.pastors h3{font-size:clamp(19px,1.8vw,24px)}
+#ssd .hit.pastors p{color:var(--on-dark-2);font-size:16px;margin:8px 0 16px;max-width:46ch}
+#ssd .hit.pastors .btn-primary{background:var(--cream);color:var(--ink)}
+@media(hover:hover) and (pointer:fine){#ssd .hit.pastors .btn-primary:hover,#ssd .hit.office .btn-primary:hover{background:#fff}}
+@media(max-width:560px){#ssd .hit.pastors{grid-template-columns:1fr}#ssd .hit.pastors .duo .arch{width:84px}}
+
+/* sections */
+#ssd .sec{padding-top:var(--sec)}
+#ssd .sec[hidden]{display:none}
+#ssd .shead{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);align-items:end;margin-bottom:clamp(32px,4vw,56px)}
+#ssd .shead .t{grid-column:1 / span 7}
+#ssd .shead .d{grid-column:8 / span 5}
+@media(max-width:820px){#ssd .shead .t,#ssd .shead .d{grid-column:1 / -1}}
+
+/* leadership: two big doorways with the story beside */
+#ssd .lead-g{display:grid;gap:clamp(40px,5vw,64px)}
+@media(min-width:900px){#ssd .lead-g{grid-template-columns:1fr 1fr}}
+#ssd .lp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.4vw,32px);align-items:end}
+#ssd .lp .arch{aspect-ratio:5/6}#ssd .lp .arch .nm{font-size:clamp(17px,1.5vw,22px)}
+#ssd .lp .bio{font-size:17px;line-height:1.6;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+#ssd .lp .bio:empty{display:none}
+#ssd .lp .link{margin-top:14px}
+@media(max-width:560px){#ssd .lp{grid-template-columns:1fr}#ssd .lp .arch{max-width:340px}#ssd .lp .bio{-webkit-line-clamp:4}}
+
+/* grids */
+#ssd .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,28px) clamp(12px,1.6vw,24px)}
+@media(min-width:700px){#ssd .grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1040px){#ssd .grid{grid-template-columns:repeat(4,1fr)}}
+#ssd .grid.three{max-width:980px}
+@media(min-width:700px){#ssd .grid.three{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:420px){#ssd .grid .arch .nm{font-size:14px}#ssd .grid .arch .rl{font-size:12.5px}#ssd .grid .arch .cap{padding:0 10px 14px}}
+
+/* founders: one warm sand panel */
+#ssd .roots{margin-top:var(--sec)}
+#ssd .roots .panel{background:var(--sand);border-radius:var(--r-xl);padding:clamp(28px,4vw,56px)}
+#ssd .roots .row{display:grid;gap:clamp(14px,2vw,24px)}
+@media(min-width:700px){#ssd .roots .row{grid-template-columns:repeat(3,1fr)}}
+#ssd .roots .p .arch{aspect-ratio:3/2;border-radius:var(--r-l)}
+#ssd .roots .p .arch img{filter:grayscale(1) contrast(1.05) sepia(.12)}
+@media(hover:hover) and (pointer:fine){#ssd .roots .p:hover .arch img{filter:saturate(.86)}}
+
+/* closing */
+#ssd .close{padding-top:var(--sec);padding-bottom:calc(var(--sec) + 8px)}
+#ssd .close .box{background:var(--char);color:var(--on-dark);border-radius:var(--r-xl);padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:repeat(12,1fr);gap:24px var(--gut);align-items:end}
+#ssd .close .box>div:first-child{grid-column:1 / span 7}
+#ssd .close .box>div:last-child{grid-column:9 / span 4;display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+#ssd .close .eyebrow{color:var(--accent-l)}
+#ssd .close .h2{color:var(--on-dark)}
+#ssd .close .lead{color:var(--on-dark-2);margin-top:16px}
+#ssd .close .btn-primary{background:var(--cream);color:var(--ink)}
+#ssd .close .btn-secondary{box-shadow:inset 0 0 0 1.5px rgba(246,242,236,.55);color:var(--on-dark)}
+@media(hover:hover) and (pointer:fine){#ssd .close .btn-primary:hover{background:#fff}#ssd .close .btn-secondary:hover{background:var(--cream);color:var(--ink)}}
+@media(max-width:820px){#ssd .close .box>div{grid-column:1 / -1!important;justify-content:flex-start!important}}
+
+/* reveals */
+#ssd .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--d,0) * 60ms)}
+#ssd .rv.in{opacity:1;transform:none}
+#ssd .ssd-top .t>*{animation:ssd-rise .8s var(--ease) both}
+@keyframes ssd-rise{from{opacity:0;transform:translateY(14px)}}
+#ssd .ssd-top .t>*:nth-child(2){animation-delay:.08s}
+#ssd .ssd-top .t>*:nth-child(3){animation-delay:.16s}
+#ssd .note{margin-top:20px;padding:14px 18px;border:1px dashed var(--accent);border-radius:14px;font-size:15px;color:var(--accent)}
+#ssd .note[hidden]{display:none}
+
+/* profile sheet (on <body>) */
+#ssd-sheet{--cream:#F6F2EC;--sand:#EEE7DC;--ink:#1B1A18;--ink-2:#47433D;--ink-3:#625D55;--line:rgba(27,26,24,.11);--accent:#A84A25;--ease:cubic-bezier(.32,.72,0,1);
+  border:0;padding:0;margin:0;max-width:none;max-height:none;background:transparent;width:100%;height:100%;position:fixed;inset:0;overflow:hidden;
+  font:400 17px/1.6 "proxima-nova","Figtree",system-ui,sans-serif;color:var(--ink)}
+#ssd-sheet *,#ssd-sheet *::before,#ssd-sheet *::after{box-sizing:border-box}
+#ssd-sheet::backdrop{background:rgba(27,26,24,0);transition:background-color .3s}
+#ssd-sheet[open]::backdrop{background:rgba(27,26,24,.5)}
+#ssd-sheet .sh{position:absolute;right:0;top:0;bottom:0;width:min(480px,100%);background:var(--cream);display:flex;flex-direction:column;
+  transform:translateX(100%);transition:transform .34s var(--ease);box-shadow:-24px 0 60px rgba(0,0,0,.2)}
+#ssd-sheet.on .sh{transform:none}
+#ssd-sheet .sh:focus{outline:none}
+#ssd-sheet .scroll{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:28px 28px 32px}
+#ssd-sheet .arch{position:relative;width:min(300px,78%);margin:8px auto 0;aspect-ratio:4/5;border-radius:999px 999px 20px 20px;overflow:hidden;background:var(--sand)}
+#ssd-sheet .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;filter:saturate(.86) contrast(1.04)}
+#ssd-sheet .hd{text-align:center;margin-top:22px}
+#ssd-sheet .rl{font:700 12px/1.2 "gotham","Montserrat",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0}
+#ssd-sheet h2{font:700 clamp(28px,4vw,36px)/1 "gotham","Montserrat",system-ui,sans-serif;letter-spacing:-.02em;text-transform:uppercase;margin:12px 0 0;color:var(--ink)}
+#ssd-sheet .bio{margin-top:22px;color:var(--ink-2)}
+#ssd-sheet .bio p{margin:0 0 12px}
+#ssd-sheet .bio:empty{display:none}
+#ssd-sheet .acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+#ssd-sheet .acts:empty{display:none}
+#ssd-sheet .acts a{display:inline-flex;align-items:center;gap:9px;height:48px;padding:0 22px;border-radius:999px;font:700 12.5px/1 "gotham","Montserrat",sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s,transform .15s}
+#ssd-sheet .acts a:active{transform:scale(.98)}
+#ssd-sheet .acts .mail{background:var(--ink);color:var(--cream)}
+#ssd-sheet .acts .prof{box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink)}
+#ssd-sheet .acts svg{width:15px;height:15px}
+@media(hover:hover) and (pointer:fine){#ssd-sheet .acts .mail:hover{background:var(--accent)}#ssd-sheet .acts .prof:hover{background:var(--ink);color:var(--cream)}}
+#ssd-sheet .sk{height:14px;border-radius:7px;margin:10px auto;background:linear-gradient(90deg,#ebe4d9,#f4efe7,#ebe4d9);background-size:200% 100%;animation:ssd-sk 1.2s linear infinite}
+@keyframes ssd-sk{to{background-position:-200% 0}}
+#ssd-sheet .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--line)}
+#ssd-sheet .bar span{font:500 14px/1 "proxima-nova","Figtree",sans-serif;color:var(--ink-3)}
+#ssd-sheet button{all:unset;cursor:pointer;width:44px;height:44px;border-radius:999px;display:grid;place-items:center;color:var(--ink);transition:background .15s,transform .15s}
+#ssd-sheet button:active{transform:scale(.94)}
+#ssd-sheet button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+#ssd-sheet button svg{width:22px;height:22px}
+#ssd-sheet .x{position:absolute;top:12px;right:12px;z-index:2;background:var(--card,#FFFDF9);box-shadow:0 0 0 1px var(--line)}
+@media(hover:hover) and (pointer:fine){#ssd-sheet .bar button:hover{background:rgba(27,26,24,.07)}}
+@media(max-width:640px){
+  #ssd-sheet .sh{top:auto;left:0;width:100%;max-height:92dvh;border-radius:24px 24px 0 0;transform:translateY(100%)}
+  #ssd-sheet .bar{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){
+  #ssd *,#ssd-sheet .sh,#ssd-sheet::backdrop{transition-duration:.01ms!important;animation:none!important}
+  #ssd .rv{opacity:1;transform:none}
+  #ssd .hit{opacity:1;transform:none}
+}
+</style>
+
+<div id="ssd" aria-label="Our team">
+  <header class="ssd-top">
+    <div class="wrap g">
+      <div class="t">
+        <p class="eyebrow">Our Team</p>
+        <h1>We'd love<br>to meet you</h1>
+        <p class="lead">The pastors, elders and staff of Springs Church. Pick a face to hear their story, or tell us what's on your mind and we'll point you to the right person.</p>
+      </div>
+      <div class="doors" aria-hidden="true"><span class="arch"></span><span class="arch"></span><span class="arch"></span></div>
+    </div>
+  </header>
+
+  <div class="finder wrap">
+    <div class="fcard">
+      <p class="ask" id="ssd-ask">I'd like to talk with someone about
+        <span class="pick"><select aria-labelledby="ssd-ask"><option value="">choose one</option></select>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+      </p>
+      <div class="quick" role="group" aria-label="Common topics"></div>
+      <div class="answer" aria-live="polite"><div><div class="ans-in"></div></div></div>
+      <p class="note" hidden>Editor preview: the ChurchCo team blocks stay visible below so you can edit them. On the live site they're hidden and this layout shows instead.</p>
+    </div>
+  </div>
+
+  <div class="view"></div>
+
+  <div class="close wrap">
+    <div class="box">
+      <div>
+        <p class="eyebrow">Still not sure?</p>
+        <h2 class="h2">We'll help you<br>find your way</h2>
+        <p class="lead">Send our office a note, or come say hi on Sunday. Someone will be glad you asked.</p>
+      </div>
+      <div><a class="btn btn-primary" href="../contact/">Contact us</a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('ssd');
+  if(!root||root.dataset.ready)return; root.dataset.ready='1';
+  var $=function(s,el){return (el||document).querySelector(s)}, $$=function(s,el){return [].slice.call((el||document).querySelectorAll(s))};
+  var LIVE=/(^|\.)springs\.church$|^localhost$|^127\.0\.0\.1$/.test(location.hostname)&&window.top===window;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // "I'd like to talk with someone about ___": label, link slug, who to show, quick button (1/0).
+  // Who to show: words to look for in job titles, {name:/.../} for a specific person,
+  // 'pastors' (Leadership block + info@ email) or 'office' (office team + contact link).
+  // A topic only shows up if someone matches.
+  var TOPICS=[
+    ['getting connected','connected',{name:/\bfratt\b/i},1],
+    ['my kids','kids',/kid|childhood|nursery|preschool/i,1],
+    ['my middle schooler','middle-school',/middle school/i,1],
+    ['Youth','youth',/high school|youth/i,1],
+    ['young adults','young-adults',/young adult/i,1],
+    ['worship and music','worship',/worship|music/i,1],
+    ['production and tech','production',/production|media|tech/i,0],
+    ['missions','missions',/mission/i,1],
+    ['deacons and care','care',/deacon|care/i,0],
+    ['talking with a pastor','pastor','pastors',1],
+    ['our building','building',/facilit/i,0],
+    ['the coffee bar','coffee',/coffee/i,0],
+    ['something else','other','office',1]
+  ];
+  var OFFICE=/executive assistant|office|reception/i;
+  var PASTORS_EMAIL='info@springs.church';
+
+  function kindOf(t){t=t||'';return /found/i.test(t)?'founders':/elder/i.test(t)?'elders':/lead/i.test(t)?'lead':'staff'}
+  function slugOf(name,href){
+    var m=href&&href.match(/\/contributor\/([^/?#]+)/); if(m)return m[1];
+    var w=name.replace(/&.*?(?=\s\S+$)/,'').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').split(/\s+/);
+    return (w[0]+'-'+w[w.length-1]).replace(/[^a-z0-9-]/g,'');
+  }
+  function esc(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML}
+  function first(p){return p.couple?'':p.name.split(' ')[0]}
+  function rank(role){return /pastor/i.test(role)?0:/director/i.test(role)?1:/coordinator|manager/i.test(role)?2:3}
+
+  function read(){
+    return $$('section.block-contributors').map(function(sec){
+      var head=$('.row-defaults',sec), title=head&&$('h1,h2,h3,h4',head), sub=head&&$('p',head);
+      var b={sec:sec,title:title?title.textContent.trim():'',sub:sub?sub.textContent.trim():''};
+      b.kind=kindOf(b.title);
+      b.people=$$('[data-listitem]',sec).map(function(li){
+        var n=$('.content h1,.content h2,.content h3,.content h4',li), r=$('.content p',li), im=$('img',li), a=$('a[href*="contributor/"]',li);
+        var name=n?n.textContent.trim():''; if(!name)return null;
+        return {name:name,role:r?r.textContent.trim():'',img:im?(im.currentSrc||im.getAttribute('src')):'',slug:slugOf(name,a?a.getAttribute('href'):''),kind:b.kind,couple:/&/.test(name)};
+      }).filter(Boolean);
+      return b;
+    }).filter(function(b){return b.people.length});
+  }
+
+  var cache={};
+  function profile(p){
+    if(!cache[p.slug]) cache[p.slug]=fetch('contributor/'+p.slug,{credentials:'same-origin'}).then(function(r){return r.ok?r.text():''}).then(function(h){
+      var d=new DOMParser().parseFromString(h,'text/html'), page=$('[data-contributor-post]',d);
+      if(!page)return {ok:false,bio:[],mail:''};
+      var m=$('[data-testid="contributor-email-link"]',page)||$('a[href^="mailto:"]',page);
+      return {ok:true,bio:$$('section.bio p',page).map(function(x){return x.textContent.trim()}).filter(Boolean),mail:m?m.getAttribute('href'):''};
+    }).catch(function(){return {ok:false,bio:[],mail:''}});
+    return cache[p.slug];
+  }
+
+  var ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var MAIL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>';
+  var people=[], blocks=[], ring=[];
+
+  function arch(p,cap){
+    return '<span class="arch"><img src="'+esc(p.img)+'" alt="" loading="lazy" decoding="async">'+
+      (cap?'<span class="cap"><span class="nm">'+esc(p.name)+'</span><span class="rl">'+esc(p.role)+'</span></span>':'')+'</span>';
+  }
+  function tile(p,d){return '<button class="p rv" style="--d:'+(d%4)+'" data-i="'+p.i+'">'+arch(p,true)+'<span class="sr">. Open profile</span></button>'}
+  function head(eyebrow,b){
+    return '<div class="shead rv"><div class="t"><p class="eyebrow">'+esc(eyebrow)+'</p><h2 class="h2">'+esc(b.title)+'</h2></div>'+
+      (b.sub?'<div class="d"><p class="lead">'+esc(b.sub)+'</p></div>':'')+'</div>';
+  }
+
+  function render(){
+    blocks=read(); people=[];
+    blocks.forEach(function(b){b.people.forEach(function(p){p.i=people.length;people.push(p)})});
+    ring=people.slice();
+    var html='';
+    blocks.forEach(function(b){
+      if(b.kind==='lead'){
+        html+='<section class="sec wrap" data-k="lead">'+head('Pastors',b)+'<div class="lead-g">'+b.people.map(function(p,j){
+          return '<article class="lp rv" style="--d:'+j+'"><button class="p" data-i="'+p.i+'">'+arch(p,true)+'<span class="sr">. Open profile</span></button>'+
+            '<div><p class="bio" data-bio="'+p.i+'"></p><button class="link" data-i="'+p.i+'">Read their story '+ARROW+'</button></div></article>'}).join('')+'</div></section>';
+      } else if(b.kind==='founders'){
+        html+='<section class="roots wrap" data-k="founders"><div class="panel">'+head('Since 2009',b)+'<div class="row">'+b.people.map(tile).join('')+'</div></div></section>';
+      } else {
+        var eb=b.kind==='elders'?'Shepherds':b.people.length+' people';
+        html+='<section class="sec wrap" data-k="'+b.kind+'">'+head(eb,b)+'<div class="grid'+(b.people.length===3?' three':'')+'">'+b.people.map(tile).join('')+'</div></section>';
+      }
+    });
+    $('.view',root).innerHTML=html;
+
+    // hero doorways: three arches slowly cycling through current team faces
+    var pool=people.filter(function(p){return p.kind!=='founders'&&!p.couple});
+    $$('.doors .arch',root).forEach(function(a,k){
+      var mine=pool.filter(function(_,j){return j%3===k});
+      a.innerHTML=mine.map(function(p,j){return '<img src="'+esc(p.img)+'" alt=""'+(j?' loading="lazy"':'')+(j===0?' class="on"':'')+'>'}).join('');
+    });
+    if(!reduce&&pool.length>3){
+      var tick=0; setInterval(function(){
+        if(document.hidden)return;
+        var a=$$('.doors .arch',root)[tick%3], ims=$$('img',a); if(ims.length<2){tick++;return}
+        var k=ims.findIndex(function(x){return x.classList.contains('on')});
+        ims[k].classList.remove('on'); ims[(k+1)%ims.length].classList.add('on'); tick++;
+      },2200);
+    }
+
+    // topics that actually match someone
+    var sel=$('.pick select',root), quick=$('.quick',root), live=[];
+    TOPICS.forEach(function(t){
+      var hits=matches(t); if(!hits.length&&t[2]!=='office')return;
+      live.push(t);
+      sel.insertAdjacentHTML('beforeend','<option value="'+t[1]+'">'+esc(t[0])+'</option>');
+      if(t[3]) quick.insertAdjacentHTML('beforeend','<button aria-pressed="false" data-t="'+t[1]+'">'+esc(t[0].charAt(0).toUpperCase()+t[0].slice(1))+'</button>');
+    });
+    fitSelect(); if(document.fonts)document.fonts.ready.then(fitSelect);
+
+    $$('[data-bio]',root).forEach(function(el){profile(people[+el.dataset.bio]).then(function(r){el.textContent=r.bio.join(' ')})});
+
+    if(LIVE) blocks.forEach(function(b){b.sec.style.display='none'});
+    else $('.note',root).hidden=false;
+
+    reveal();
+    var q=new URLSearchParams(location.search).get('help');
+    if(q&&TOPICS.some(function(t){return t[1]===q}))choose(q,true);
+  }
+
+  function matches(t){
+    var w=t[2], list=w==='office'?people.filter(function(p){return p.kind==='staff'&&OFFICE.test(p.role)}):
+      w==='pastors'?people.filter(function(p){return p.kind==='lead'}):
+      w.name?people.filter(function(p){return p.kind!=='founders'&&w.name.test(p.name)}):
+      people.filter(function(p){return p.kind!=='founders'&&w.test(p.role)});
+    return list.sort(function(a,b){return rank(a.role)-rank(b.role)});
+  }
+
+  // keep the inline select only as wide as the chosen words
+  function fitSelect(){
+    var sel=$('.pick select',root), m=document.createElement('span');
+    m.style.cssText='position:absolute;visibility:hidden;white-space:pre;font:inherit;letter-spacing:inherit';
+    m.textContent=sel.options[sel.selectedIndex].text; sel.parentNode.appendChild(m);
+    sel.style.width=Math.ceil(m.getBoundingClientRect().width+parseFloat(getComputedStyle(sel).paddingRight))+4+'px'; m.remove();
+  }
+
+  function choose(slug,fromLink){
+    var t=TOPICS.filter(function(x){return x[1]===slug})[0];
+    var sel=$('.pick select',root); sel.value=t?slug:''; fitSelect();
+    $$('.quick button',root).forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===slug?'true':'false')});
+    var url=new URL(location.href); if(t)url.searchParams.set('help',slug); else url.searchParams.delete('help');
+    history.replaceState(null,'',url);
+    var box=$('.answer',root), inner=$('.ans-in',root);
+    if(!t){box.classList.remove('on');return}
+    var hits=matches(t).slice(0,4), office=t[2]==='office';
+    if(t[2]==='pastors'){
+      inner.innerHTML='<div class="hits one"><div class="hit pastors" style="--i:0"><div class="duo">'+hits.map(function(p){return arch(p,false)}).join('')+'</div>'+
+        '<div><h3>Reach out to our pastors</h3><p>Send a note to '+esc(PASTORS_EMAIL)+' and we\'ll connect you with one of our pastors.</p>'+
+        '<a class="btn btn-primary" href="mailto:'+esc(PASTORS_EMAIL)+'">'+MAIL+'Email our pastors</a></div></div></div>';
+      box.classList.add('on');
+      if(fromLink) setTimeout(function(){$('.finder',root).scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})},200);
+      return;
+    }
+    inner.innerHTML='<p class="meta">'+(office?'Our office team can point you to the right person.':(hits.length===1?'Here\'s who to talk to:':'Here\'s who can help. Start with '+esc(first(hits[0])||hits[0].name)+'.'))+'</p>'+
+      '<div class="hits">'+hits.map(function(p,j){
+        return '<div class="hit" style="--i:'+j+'">'+arch(p,false)+'<div><h3>'+esc(p.name)+'</h3><p class="rl">'+esc(p.role)+'</p>'+
+          '<div class="acts" data-acts="'+p.i+'"><button data-i="'+p.i+'">About '+esc(first(p)||'them')+' '+ARROW+'</button></div></div></div>'}).join('')+
+      (office?'<div class="hit office" style="--i:'+hits.length+'"><div><h3>Send us a note</h3><p>Tell us what you need and we\'ll get you to the right person.</p><a class="btn btn-primary" href="../contact/">Contact us</a></div></div>':'')+
+      '</div>';
+    box.classList.add('on');
+    hits.forEach(function(p){profile(p).then(function(r){
+      var a=$('[data-acts="'+p.i+'"]',inner); if(!a||!r.mail||!first(p))return;
+      a.insertAdjacentHTML('afterbegin','<a class="em" href="'+esc(r.mail)+'">'+MAIL+'Email '+esc(first(p))+'</a>');
+    })});
+    if(fromLink) setTimeout(function(){$('.finder',root).scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})},200);
+  }
+
+  root.addEventListener('change',function(e){if(e.target.matches('.pick select'))choose(e.target.value)});
+  root.addEventListener('click',function(e){
+    var q=e.target.closest('.quick button');
+    if(q){choose(q.getAttribute('aria-pressed')==='true'?'':q.dataset.t);return}
+    var b=e.target.closest('[data-i]'); if(b&&!e.target.closest('a'))open(+b.dataset.i);
+  });
+  root.addEventListener('pointerover',function(e){var b=e.target.closest('[data-i]');if(b)profile(people[+b.dataset.i])});
+
+  // gentle reveals (class toggle), with a fallback so nothing stays hidden
+  function reveal(){
+    var els=$$('.rv',root);
+    if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})},600);
+  }
+
+  // ---- profile sheet ----
+  var dlg,cur=-1,opener=null;
+  function ico(d){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>'}
+  function build(){
+    dlg=document.createElement('dialog'); dlg.id='ssd-sheet'; dlg.setAttribute('aria-labelledby','ssd-sh-name');
+    dlg.innerHTML='<div class="sh" tabindex="-1"><button class="x" aria-label="Close">'+ico('<path d="M6 6l12 12M18 6 6 18"/>')+'</button>'+
+      '<div class="scroll"><div class="arch"><img alt=""></div><div class="hd"><p class="rl"></p><h2 id="ssd-sh-name"></h2></div><div class="bio"></div><div class="acts"></div></div>'+
+      '<div class="bar"><button class="pv" aria-label="Previous person">'+ico('<path d="M19 12H5M11 6l-6 6 6 6"/>')+'</button><span></span><button class="nx" aria-label="Next person">'+ico('<path d="M5 12h14M13 6l6 6-6 6"/>')+'</button></div></div>';
+    document.body.appendChild(dlg);
+    $('.x',dlg).onclick=close; $('.pv',dlg).onclick=function(){step(-1)}; $('.nx',dlg).onclick=function(){step(1)};
+    dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+    dlg.addEventListener('cancel',function(e){e.preventDefault();close()});
+    dlg.addEventListener('keydown',function(e){if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+  }
+  function fill(i){
+    var p=people[i]; cur=i;
+    var im=$('.arch img',dlg); im.src=p.img; im.alt=p.name;
+    $('.rl',dlg).textContent=p.role; $('#ssd-sh-name').textContent=p.name;
+    var bio=$('.bio',dlg), acts=$('.acts',dlg);
+    bio.innerHTML='<div class="sk" style="width:90%"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:55%"></div>'; acts.innerHTML='';
+    var k=ring.indexOf(p); $('.bar span',dlg).textContent=(k+1)+' of '+ring.length;
+    profile(p).then(function(r){
+      if(cur!==i)return;
+      bio.innerHTML=r.bio.map(function(t){return '<p>'+esc(t)+'</p>'}).join('');
+      acts.innerHTML=(r.mail&&first(p)?'<a class="mail" href="'+esc(r.mail)+'">'+MAIL+'Email '+esc(first(p))+'</a>':'')+
+        (r.ok&&r.bio.length?'<a class="prof" href="contributor/'+esc(p.slug)+'">Full profile</a>':'');
+    });
+  }
+  function open(i){
+    if(!dlg)build(); opener=document.activeElement; fill(i); $('.scroll',dlg).scrollTop=0;
+    if(!dlg.open){dlg.showModal();$('.sh',dlg).focus({preventScroll:true});document.documentElement.style.overflow='hidden';
+      requestAnimationFrame(function(){requestAnimationFrame(function(){dlg.classList.add('on')})})}
+  }
+  function step(d){var k=ring.indexOf(people[cur]);fill(ring[(k+d+ring.length)%ring.length].i);$('.scroll',dlg).scrollTop=0}
+  function close(){
+    dlg.classList.remove('on'); document.documentElement.style.overflow='';
+    setTimeout(function(){dlg.close();if(opener&&opener.focus)opener.focus({preventScroll:true})},reduce?0:320);
+  }
+
+  function tb(){var t=$('.topbar');root.style.setProperty('--ssd-tb',t&&getComputedStyle(t).position==='fixed'?t.offsetHeight+'px':'0px')}
+  tb(); addEventListener('resize',tb);
+
+  var last=-1,same=0,tries=0;
+  (function wait(){
+    var n=$$('section.block-contributors [data-listitem]').length;
+    if(n&&n===last)same++; else same=0; last=n;
+    if(n&&same>=2){render();return}
+    if(++tries<80)setTimeout(wait,150);
+  })();
+})();
+</script>
+
+    </div></div></section>
+    <div id="native-slot"></div>
+    </div></main>
+    <footer>© 2026 Springs Church · local mockup, not the live site</footer>
+    <div class="devbar"><a href="https://www.springs.church/a/" >Option A</a><a href="https://www.springs.church/b/" >Option B</a><a href="https://www.springs.church/c/" >Option C</a><a href="https://www.springs.church/d/" class=on>Option D</a><button id="devbar">ChurchCo blocks</button></div>
+    <script>
+    addEventListener('scroll',()=>document.querySelector('.topbar').classList.toggle('solid',scrollY>40),{passive:true});
+    // ChurchCo renders the team blocks a moment after load; simulate that.
+    setTimeout(()=>{document.getElementById('native-slot').outerHTML="<section class=\"tcc-block block-contributors\" data-block=\"true\"><div class=\"row-inner\"><div class=\"container\"><div class=\"row-defaults\"><div class=\"rich-wrap\"><h3>Our Leadership</h3><p>Get to know the heart of the pastors who guide our church family.</p></div></div><div class=\"row-content\"><div class=\"widget-list\"><div data-edit-list=\"true\"><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/michael-petillo\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/e14eda19-226f-41d6-a877-1f76fbaef3ee-/_MG_0289-3__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Michael &amp; Beth Petillo</h3><p>Lead Pastor + Elder</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/billy-coker\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/21d2385d-188f-416a-989e-97f255e70047-/_MG_0657-Edit__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Billy &amp; Danielle Coker</h3><p>Executive Pastor + Elder</p></div></div></div></div></div></div></div></div></section><section class=\"tcc-block block-contributors\" data-block=\"true\"><div class=\"row-inner\"><div class=\"container\"><div class=\"row-defaults\"><div class=\"rich-wrap\"><h3>Our Elders</h3><p>Get to know the elders who faithfully serve with wisdom and prayer.</p></div></div><div class=\"row-content\"><div class=\"widget-list\"><div data-edit-list=\"true\"><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/gary-barkalow\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/bae014f4-f107-4ee3-83f0-7fc5ff581af5-/_MG_0479-Edit-2__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Gary Barkalow</h3><p>Elder</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/andy-boucher\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/74b054c3-dea7-4825-a6b8-8a519fef58ca-/_MG_0831-Edit-3__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Andy Boucher</h3><p>Elder</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/tim-coen\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/c03b3b57-68c6-4561-a415-5a86441c080a-/_MG_0396-2__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Tim Coen</h3><p>Elder</p></div></div></div></div></div></div></div></div></section><section class=\"tcc-block block-contributors\" data-block=\"true\"><div class=\"row-inner\"><div class=\"container\"><div class=\"row-defaults\"><div class=\"rich-wrap\"><h3>Our Staff</h3><p>Get to know the dedicated staff who serve behind the scenes to help our church thrive in ministry and community.</p></div></div><div class=\"row-content\"><div class=\"widget-list\"><div data-edit-list=\"true\"><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/c262ad9e-eecd-4cd6-8aa2-59c62f7e0066-/_MG_0387-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Marlene Bernal</h3><p>Executive Assistant</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/f4b6975e-c056-41c4-9220-f447ae928db3-/_MG_0263-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Megan Boucher</h3><p>Kids + Middle School Coordinator</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/laura-coen\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/f38111d2-0df1-42c8-85d8-ad794ffccedb-/_MG_0426__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Laura Coen</h3><p>Missions Coordinator</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/shawna-daun\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/80d83942-301b-486a-ad44-8b54f2781d5c-/_MG_0795-Edit__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Shawna Daun</h3><p>Kids Administrator</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/2e21f4e2-7629-4008-b6ba-b8af285eab2f-/_MG_0187-3__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Michael Fratt</h3><p>Operations Director</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/cce1f97a-ad9d-411d-b4d9-d9a050cc6e6a-/_MG_0171-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Joshua Garner</h3><p>High School Director</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/32c3b52a-9a60-4bc5-bf05-4499fccf93b2-/_MG_0695-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Dana Hodge</h3><p>Worship Director</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/aubrey-hull\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/7187c0a7-b9dc-4c9a-a877-cebc7cb014e5-/App-photo_A-Hull__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Aubrey Hull</h3><p>Early Childhood Coordinator</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/9e690b14-a83b-427c-9dba-f80277c9de4e-/_MG_0448-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Ashton Kreps</h3><p>Executive Assistant</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/dd03b42d-1cf2-40e6-9fcb-57043a76238b-/_MG_0462-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Nick Kreps</h3><p>Production Director</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/badc042a-c5ef-4747-910d-a3dca5808abb-/_MG_0439-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Jackie Mathias</h3><p>Coffee Bar Manager</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/93a28486-2fad-4e41-89a1-ae89d153fcfe-/_MG_0365-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Ashley Moore</h3><p>Executive Assistant</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/61e6ac95-6276-45ea-95c0-6328f6a5d627-/_MG_0314-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Tommy Moore</h3><p>Kids + Middle School Director</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><a href=\"contributor/jordan-serio\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/33d51b10-066d-4775-bc6b-cf7b24c54661-/App-photo_J-Serio__mediumsquare__.webp\"></a></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Jordan Serio</h3><p>Young Adults Director</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/04dd9216-0113-4c29-8e41-8bfcfb073b1a-/_MG_0555-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Karen Woodyard</h3><p>Missions Director + Deacons</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/40b53b15-15f6-4364-8218-ffc490698ba6-/_MG_0207-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Vladimir Zadneprovskiy</h3><p>Facilities Director</p></div></div></div></div></div></div></div></div></section><section class=\"tcc-block block-contributors\" data-block=\"true\"><div class=\"row-inner\"><div class=\"container\"><div class=\"row-defaults\"><div class=\"rich-wrap\"><h3>Our Founding Pastors</h3><p>Discover the vision and heart of the pastors who laid the foundation.</p></div></div><div class=\"row-content\"><div class=\"widget-list\"><div data-edit-list=\"true\"><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/8ff4b7b8-b730-41ac-86bb-ce3fa0972c02-/1U9A2931%20copy__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Gary &amp; Kelly Wilkerson</h3><p>World Challenge</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/609087ae-5e81-4f59-b0ed-1b94ccd1d7c8-/TaylorsPhoto__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Adam &amp; Julie Taylor</h3><p>In Memoriam 1964 - 2012</p></div></div></div><div data-listitem=\"true\" class=\"shape-square\"><div class=\"feature image\"><img class=\"main aspect-square object-cover\" loading=\"lazy\" src=\"https://media.thechurchcoassets.com/accounts/4185/74764f5f-1638-4de0-9b92-3adfa41d4881-/DSC01969-2__mediumsquare__.webp\"></div><div class=\"content\"><div class=\"rich-wrap render-rich-text\"><h3>Patrick &amp; Alicia Dow</h3><p>Nicky Cruz Outreach</p></div></div></div></div></div></div></div></div></section>";},400);
+    document.getElementById('devbar').onclick=function(){
+      const s=[...document.querySelectorAll('.block-contributors')]; const show=s[0].style.display==='none';
+      s.forEach(x=>x.style.display=show?'':'none'); this.textContent=show?'Hide blocks':'ChurchCo blocks';
+      if(show)s[0].scrollIntoView({behavior:'smooth'});
+    };
+    </script></body></html>

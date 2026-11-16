@@ -16,6 +16,7 @@ OUT = os.path.join(HERE, "docs")  # GitHub Pages serves main:/docs
 PAGES = [
   ("home", "Home", "springs-home-site", "option-i.html", "Mockup · Option I", "Option I is the base. Open to small tweaks. \"Welcome home\" label is coming out.", "/"),
   ("about", "About", "springs-about-site", "preview-live.html", "New draft", "Vision, the four callings, the story since 2009, Connect Over Coffee, Plan a Visit.", "/about"),
+  ("visit", "Plan a Visit", "springs-visit-site", "preview-live.html", "New draft", "Your first Sunday start to finish, and a short form that goes to the Connect Team.", "/plan-a-visit"),
   ("beliefs", "Our Beliefs", "springs-beliefs-site", "preview-live.html", "New draft", "Same Statement of Faith wording (elders approve any change). Only typo and citation fixes, highlighted.", "/our-beliefs"),
   ("team", "Our Team", "springs-staff-site", "preview/d/index.html", "Mockup · Option D", "Open Doors: arched portraits and the \"I'd like to talk with someone about…\" finder.", "/our-staff"),
   ("events", "Events", "springs-events-site", "preview-live.html", "New draft", "Reads ChurchCo's own events, so the calendar stays current on its own. Add to Calendar on every event.", "/events"),
@@ -36,6 +37,31 @@ SECRET = re.compile(r"AIza[0-9A-Za-z_\-]{30,}|sk-[A-Za-z0-9]{20,}|gh[pousr]_[A-Z
 NOINDEX = '<meta name="robots" content="noindex,nofollow">'
 FONT_FALLBACK = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">'
 
+CHROME_SRC = os.path.join(HERE, "chrome")
+_ch = open(os.path.join(CHROME_SRC, "chrome.html"), encoding="utf-8").read()
+CH_HEADER = _ch.split("<!--SC-HEADER-->")[1].split("<!--/SC-HEADER-->")[0]
+CH_FOOTER = _ch.split("<!--SC-FOOTER-->")[1].split("<!--/SC-FOOTER-->")[0]
+
+def add_chrome(html, slug):
+    """Swap each preview's stand-in header/footer for the shared Springs chrome (Option I menu + SPRINGS. footer, mark centered)."""
+    up = "../_chrome"
+    if slug == "home":  # Option I already has this header/footer: use the mark in the middle and the Media label
+        html = html.replace('<a class="logo" href="#" aria-label="Springs Church home"><img src="img/logo-white.png" alt="Springs Church"></a>',
+                            '<a class="logo" href="#" aria-label="Springs Church home"><img src="img/mark-white.png" alt="Springs Church" style="width:46px;height:46px"></a>')
+        html = re.sub(r'(<a[^>]*data-l="sermons"[^>]*>)Sermons(</a>)', r'\1Media\2', html)
+        html = html.replace("https://www.springs.church/new-here", "/plan-a-visit")
+        return html
+    html = re.sub(r'<div class="topbar">.*?</div>', '', html, count=1, flags=re.S)
+    html = re.sub(r'<footer class="cc-ftr">.*?</footer>', '', html, count=1, flags=re.S)
+    if slug == "team":
+        html = re.sub(r'<header class="topbar">.*?</header>', '', html, count=1, flags=re.S)
+        html = re.sub(r'<footer>[^<]*local mockup[^<]*</footer>', '', html, count=1, flags=re.S)
+    html = html.replace("</head>", f'<link rel="stylesheet" href="{up}/chrome.css"></head>', 1)
+    html = re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + CH_HEADER.replace("{CHROME}", up), html, count=1)
+    i = html.rfind("</body>")
+    html = html[:i] + CH_FOOTER + f'<script src="{up}/chrome.js"></script>' + html[i:]
+    return html
+
 def rewrite_links(html, depth):
     up = "../" * depth
     def fix(m):
@@ -47,8 +73,9 @@ def rewrite_links(html, depth):
         return f'{attr}="https://www.springs.church{path}"'
     return re.sub(r'(href)="(/(?!/)[^"]*)"', fix, html)
 
-def finish_html(path, depth):
+def finish_html(path, depth, slug=None):
     s = open(path, encoding="utf-8").read()
+    if slug: s = add_chrome(s, slug)
     s = rewrite_links(s, depth)
     if "noindex" not in s:
         s = s.replace("<head>", "<head>" + NOINDEX + FONT_FALLBACK, 1) if "<head>" in s else NOINDEX + FONT_FALLBACK + s
@@ -76,7 +103,7 @@ def copy_page(slug, src, entry):
         if os.path.isdir(os.path.join(srcdir, "img")):
             shutil.copytree(os.path.join(srcdir, "img"), os.path.join(dst, "img"), dirs_exist_ok=True,
                             ignore=shutil.ignore_patterns("src", "*-orig.*", "*.mov", "*.mp4", "*.psd", "*.tif", "*.ARW"))
-    finish_html(os.path.join(dst, "index.html"), 1)
+    finish_html(os.path.join(dst, "index.html"), 1, slug)
     return True
 
 def hub(built):
@@ -116,6 +143,9 @@ def main():
         if name in ("data", "CNAME"): continue
         p = os.path.join(OUT, name)
         shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
+    os.makedirs(os.path.join(OUT, "_chrome"), exist_ok=True)
+    for f in ("chrome.css", "chrome.js"): shutil.copy(os.path.join(CHROME_SRC, f), os.path.join(OUT, "_chrome", f))
+    shutil.copy(os.path.join(DESK, "springs-home-site", "img", "mark-white.png"), os.path.join(OUT, "_chrome", "mark-white.png"))
     built = [p[0] for p in PAGES if copy_page(p[0], p[2], p[3])]
     open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(hub(built))
     open(os.path.join(OUT, "robots.txt"), "w").write("User-agent: *\nDisallow: /\n")

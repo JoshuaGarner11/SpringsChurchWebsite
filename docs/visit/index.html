@@ -1,0 +1,598 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan a Visit | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<style>html{scroll-behavior:auto}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
+.topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
+.topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
+@media (max-width:760px){.topbar span{display:none}}
+[data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
+.cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style><link rel="stylesheet" href="../_chrome/chrome.css"></head>
+<body data-website>
+<header class="sc-hdr" id="sc-hdr">
+  <div class="sc-in">
+    <div class="sc-l">
+      <button class="sc-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sc-menu"><i></i><i></i></button>
+      <nav class="sc-nav" aria-label="Main, left"><a href="../about/">About</a><a href="https://www.springs.church/media">Media</a></nav>
+    </div>
+    <a class="sc-mark" href="../home/" aria-label="Springs Church home"><img src="../_chrome/mark-white.png" alt=""></a>
+    <div class="sc-r">
+      <nav class="sc-nav" aria-label="Main, right"><a href="../events/">Events</a><a href="../give/">Give</a></nav>
+      <a class="sc-cta" href="../visit/">Plan a Visit</a>
+    </div>
+  </div>
+</header>
+<div class="sc-menu" id="sc-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="sc-in sc-menu-in">
+    <div class="sc-menu-top"><a class="sc-mark" href="../home/" aria-label="Springs Church home"><img src="../_chrome/mark-white.png" alt=""></a><button class="sc-close" type="button">Close</button></div>
+    <div class="sc-menu-grid">
+      <nav class="sc-main" aria-label="Menu">
+        <a style="--i:0" href="../visit/">Plan a Visit</a>
+        <a style="--i:1" href="../about/">About</a>
+        <a style="--i:2" href="https://www.springs.church/media">Media</a>
+        <a style="--i:3" href="../events/">Events</a>
+        <a style="--i:4" href="../connect/">Connect</a>
+        <a style="--i:5" href="../prayer/">Prayer</a>
+        <a style="--i:6" href="../give/">Give</a>
+      </nav>
+      <div class="sc-aside">
+        <div><h4>About</h4><a href="../about/">Who We Are</a><a href="../beliefs/">Our Beliefs</a><a href="../team/">Our Team</a></div>
+        <div><h4>Media</h4><a href="https://www.springs.church/sermons">Sermons</a><a href="https://www.springs.church/podcasts">Podcasts</a><a href="https://www.springs.church/stories">Stories</a><a href="https://www.springs.church/youversion">Bible App</a></div>
+        <div><h4>Connect</h4><a href="../groups/">Groups</a><a href="../serve/">Serve</a><a href="https://kids.springs.church">Kids</a><a href="https://youth.springs.church">Youth</a><a href="https://ya.springs.church">Young Adults</a><a href="../missions/">Missions</a><a href="../care/">Care</a></div>
+        <div><h4>Visit</h4><p>Sundays 10AM<br>Wednesdays 6:30PM<br>1515 Auto Mall Loop</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="tbd-toggle" onclick="document.getElementById('spv').classList.toggle('show-tbd')">Show to-confirm</button>
+<main><section class="tcc-block html-takeover"><!-- springs.church/plan-a-visit (NEW page) · ChurchCo HTML block 1 of 2 (TOP), above the native Form block "Plan a Visit", then HTML block 2 (BOTTOM).
+     Display: Default, Block Takeover ON for both HTML blocks. LOCAL DRAFT 11/15/2026. Source: ~/Desktop/springs-visit-site/churchco/visit-top-block.html.
+     Idea: a first Sunday, start to finish (facts from the Serve page's team list, CCB form #241, and the kids site), then a short
+     "Let Us Know You're Coming" form that goes to the Connect Team through ChurchCo's own Form block (later: a CCB form).
+     The Sunday buttons and adults/kids counters here fill the form's "Which Sunday" and "Who's coming" fields (matched by label).
+     If the Form block isn't on the page, an Email Our Office fallback appears. All CSS lives here; the script lives in the BOTTOM block.
+     <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook (10AM). -->
+<style>
+.tcc-block:has(:is(#spv,#spv-b)){padding:0!important;background:#111!important}
+.tcc-block:has(:is(#spv,#spv-b)) .container{max-width:none!important;padding:0!important}
+.tcc-block:has(:is(#spv,#spv-b)) .row-defaults{padding:0!important}
+.tcc-block:has(:is(#spv,#spv-b)) .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+:is(#spv,#spv-b){--ink:#0E0E0E;--ink-2:#444;--ink-3:#666;--gold:#D8C9A6;--gold-t:#7d6a3f;--soft:#F5F5F4;--sand:#F3EEE4;--line:rgba(14,14,14,.12);--shot:#444442;
+  --hdr:118px;--hd:gotham,'Montserrat',sans-serif;--bd:'Untitled Sans','proxima-nova',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,40px);--top:150px;
+  color:var(--ink);background:#fff;font:400 18px/1.6 var(--bd);text-align:left;-webkit-font-smoothing:antialiased}
+:is(#spv,#spv-b) *{box-sizing:border-box}
+:is(#spv,#spv-b) :is(h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,small,b,strong,blockquote,figure,figcaption,cite,fieldset,legend,label){margin:0;padding:0;letter-spacing:normal;text-transform:none;border:0;font-style:normal}
+:is(#spv,#spv-b) ul,:is(#spv,#spv-b) ol{list-style:none}
+:is(#spv,#spv-b) a{color:inherit;text-decoration:none}
+:is(#spv,#spv-b) img{display:block;max-width:100%}
+:is(#spv,#spv-b) :is(button,input,textarea){font:inherit;color:inherit}
+:is(#spv,#spv-b) ::selection{background:var(--gold);color:var(--ink)}
+:is(#spv,#spv-b) .wrap{max-width:calc(1160px + 2 * var(--pad));margin:0 auto;padding:0 var(--pad)}
+:is(#spv,#spv-b) svg.i{width:16px;height:16px;flex:none}
+:is(#spv,#spv-b) .tbd{transition:background .2s}
+:is(#spv,#spv-b).show-tbd .tbd{background:#fff3a6;box-shadow:0 0 0 3px #fff3a6;border-radius:3px;color:var(--ink)}
+:is(#spv,#spv-b) :is(p,li,dd){text-wrap:pretty}
+:is(#spv,#spv-b) [id^="spv-"]{scroll-margin-top:calc(var(--hdr) + 20px)}
+
+/* buttons + links: one set (same as the other redesigned pages) */
+:is(#spv,#spv-b) .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:10px;background:var(--ink);color:#fff;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+:is(#spv,#spv-b) .btn:hover{background:#333}
+:is(#spv,#spv-b) .btn:active{transform:scale(.98)}
+:is(#spv,#spv-b) .btn.light{background:#fff;color:var(--ink)}
+:is(#spv,#spv-b) .btn.light:hover{background:var(--gold)}
+:is(#spv,#spv-b) .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+:is(#spv,#spv-b) .btn.ghost:hover{background:#fff;color:var(--ink)}
+:is(#spv,#spv-b) .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.28)}
+:is(#spv,#spv-b) .btn.line:hover{background:var(--ink);color:#fff}
+:is(#spv,#spv-b) .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s;background:none;border:0;padding:0;cursor:pointer}
+:is(#spv,#spv-b) .tl:hover{text-decoration-color:currentColor}
+:is(#spv,#spv-b) :is(.btn,.tl,.fam a,.x,.chip,.step button,dd a,.fact a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+
+/* section header: uppercase H2 left, intro right */
+:is(#spv,#spv-b) .h2{font:600 clamp(28px,3.2vw,40px)/1.08 var(--hd);letter-spacing:-.015em;text-transform:uppercase;color:var(--ink)}
+:is(#spv,#spv-b) .sec{padding:clamp(72px,9vw,120px) 0}
+:is(#spv,#spv-b) .sec-h{display:grid;grid-template-columns:1fr 1.15fr;gap:20px clamp(24px,6vw,96px);align-items:end;margin-bottom:clamp(32px,4vw,52px)}
+:is(#spv,#spv-b) .sec-h p{color:var(--ink-2);max-width:36em}
+
+/* ---------- hero ---------- */
+:is(#spv,#spv-b) .top{position:relative;isolation:isolate;padding:var(--top) 0 0;background:#111;color:#fff}
+:is(#spv,#spv-b) .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:clamp(110px,13vw,190px);background:#fff;z-index:-1}
+:is(#spv,#spv-b) .top-in{display:grid;grid-template-columns:1fr 1.05fr;gap:28px clamp(32px,6vw,96px);align-items:end}
+:is(#spv,#spv-b) .top-in>*{min-width:0}
+:is(#spv,#spv-b) .top h1{font:600 clamp(52px,7.4vw,100px)/.92 var(--hd);letter-spacing:-.03em;text-wrap:balance}
+:is(#spv,#spv-b) .when{font:500 clamp(21px,2vw,27px)/1.3 var(--hd);letter-spacing:-.01em;margin-bottom:10px;color:#fff}
+:is(#spv,#spv-b) .when b{color:var(--gold);font-weight:600}
+:is(#spv,#spv-b) .where{font-size:17px;color:rgba(255,255,255,.7);margin-bottom:28px}
+:is(#spv,#spv-b) .acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+:is(#spv,#spv-b) .door{position:relative;margin-top:clamp(44px,5.5vw,72px);aspect-ratio:16/7;border-radius:20px;overflow:hidden;background:#222}
+:is(#spv,#spv-b) .door img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+@media (prefers-reduced-motion:no-preference){
+  :is(#spv,#spv-b).js .door{clip-path:inset(100% 0 0 0 round 20px);transform:translateY(28px)}
+  :is(#spv,#spv-b).js .door img{transform:scale(1.1)}
+  :is(#spv,#spv-b).js.ready .door{clip-path:inset(0 0 0 0 round 20px);transform:none;transition:clip-path 1.15s var(--ease) .12s,transform 1.15s var(--ease) .12s}
+  :is(#spv,#spv-b).js.ready .door img{transform:none;transition:transform 1.6s var(--ease) .12s}
+}
+
+/* ---------- your first sunday ---------- */
+:is(#spv,#spv-b) .day{border-top:1px solid var(--ink)}
+:is(#spv,#spv-b) .step{display:grid;grid-template-columns:minmax(120px,.42fr) minmax(0,1fr) minmax(0,.9fr);gap:16px clamp(24px,4vw,56px);align-items:start;padding:clamp(28px,3.4vw,40px) 0;border-bottom:1px solid var(--line)}
+:is(#spv,#spv-b) .step>*{min-width:0}
+:is(#spv,#spv-b) .step .t{font:600 13px/1.4 var(--hd);letter-spacing:.03em;color:var(--gold-t);padding-top:6px}
+:is(#spv,#spv-b) .step h3{font:600 clamp(22px,2.2vw,28px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:10px}
+:is(#spv,#spv-b) .step p{font-size:17px;line-height:1.6;color:var(--ink-2);max-width:32em}
+:is(#spv,#spv-b) .step p+p{margin-top:10px}
+:is(#spv,#spv-b) .step .more{margin-top:14px}
+:is(#spv,#spv-b) .step figure{aspect-ratio:3/2;border-radius:16px;overflow:hidden;background:var(--shot)}
+:is(#spv,#spv-b) .step figure img{width:100%;height:100%;object-fit:cover}
+:is(#spv,#spv-b) .step.kids figure img{object-position:60% 40%}
+:is(#spv,#spv-b) .step.pray figure img{object-position:50% 30%}
+
+/* ---------- let us know: our helper card on top, ChurchCo's Form block below (styled as one card) ---------- */
+:is(#spv,#spv-b) .plan{background:var(--sand);padding-bottom:0}
+:is(#spv,#spv-b) .plan .sec-h p a{font-weight:600}
+:is(#spv,#spv-b) .planbox{max-width:760px;margin:0 auto;background:#fff;border-radius:20px 20px 0 0;padding:clamp(22px,3vw,34px) clamp(22px,3vw,34px) 6px}
+:is(#spv,#spv-b) .planbox.solo{border-radius:20px;padding-bottom:clamp(22px,3vw,34px);box-shadow:0 18px 44px rgba(14,14,14,.07)}
+:is(#spv,#spv-b) fieldset+fieldset{margin-top:22px}
+:is(#spv,#spv-b) legend{display:block;font:600 15px/1.3 var(--hd);margin-bottom:10px}
+:is(#spv,#spv-b) .chips{display:flex;flex-wrap:wrap;gap:8px}
+:is(#spv,#spv-b) .chip{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--soft);font:600 14px/1 var(--hd);color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+:is(#spv,#spv-b) .chip:hover{background:#ebebe9}
+:is(#spv,#spv-b) .chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+:is(#spv,#spv-b) .who{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+:is(#spv,#spv-b) .count{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:56px;padding:6px 6px 6px 16px;border-radius:14px;background:var(--soft)}
+:is(#spv,#spv-b) .count span{font:600 15px/1.2 var(--hd)}
+:is(#spv,#spv-b) .count .ctl{display:flex;align-items:center;gap:6px}
+:is(#spv,#spv-b) .count button{width:40px;height:40px;border-radius:10px;border:0;background:#fff;font:600 20px/1 var(--hd);cursor:pointer;box-shadow:0 1px 2px rgba(14,14,14,.08)}
+:is(#spv,#spv-b) .count button:disabled{opacity:.35;cursor:default}
+:is(#spv,#spv-b) .count output{min-width:22px;text-align:center;font:600 18px/1 var(--hd);font-variant-numeric:tabular-nums}
+:is(#spv,#spv-b) .fallback{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+:is(#spv,#spv-b) .fallback[hidden]{display:none}
+:is(#spv,#spv-b) .fallback p{font-size:16px;color:var(--ink-2);margin-bottom:14px}
+
+/* ---------- for your family ---------- */
+:is(#spv,#spv-b) .fam{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+:is(#spv,#spv-b) .fam a{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:var(--sand);height:100%;transition:transform .35s var(--ease);-webkit-tap-highlight-color:transparent}
+:is(#spv,#spv-b) .fam figure{aspect-ratio:4/3;overflow:hidden;background:var(--shot)}
+:is(#spv,#spv-b) .fam img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+:is(#spv,#spv-b) .fam .body{display:flex;flex-direction:column;flex:1;padding:22px 24px 24px}
+:is(#spv,#spv-b) .fam h3{font:600 24px/1.15 var(--hd);letter-spacing:-.015em}
+:is(#spv,#spv-b) .fam .w{margin:6px 0 12px;font:600 14px/1.35 var(--hd);color:var(--gold-t)}
+:is(#spv,#spv-b) .fam p{font-size:17px;line-height:1.55;color:var(--ink-2)}
+:is(#spv,#spv-b) .fam .go{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase}
+:is(#spv,#spv-b) .fam .go svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+@media (hover:hover){:is(#spv,#spv-b) .fam a:hover img{transform:scale(1.035)}:is(#spv,#spv-b) .fam a:hover .go svg{transform:translateX(3px)}}
+
+/* ---------- getting here (the one dark band) ---------- */
+:is(#spv,#spv-b) .here{background:#111;color:#fff}
+:is(#spv,#spv-b) .here .h2{color:#fff}
+:is(#spv,#spv-b) .here-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
+:is(#spv,#spv-b) .here .h2{margin-bottom:18px}
+:is(#spv,#spv-b) .here .acts{margin-top:4px}
+:is(#spv,#spv-b) .facts{border-top:1px solid rgba(255,255,255,.3);margin-top:30px}
+:is(#spv,#spv-b) .facts div{display:grid;grid-template-columns:minmax(120px,.5fr) 1.6fr;gap:4px 24px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+:is(#spv,#spv-b) .facts dt{font:600 16px/1.4 var(--hd);color:#fff}
+:is(#spv,#spv-b) .facts dd{font-size:17px;line-height:1.55;color:rgba(255,255,255,.75)}
+:is(#spv,#spv-b) .facts dd a{font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.35)}
+:is(#spv,#spv-b) .facts dd a:hover{text-decoration-color:currentColor}
+:is(#spv,#spv-b) .map{aspect-ratio:4/3;border-radius:20px;overflow:hidden;background:#222}
+:is(#spv,#spv-b) .map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.3) contrast(1.02)}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  :is(#spv,#spv-b).js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
+  :is(#spv,#spv-b).js .rv.in{opacity:1;transform:none}
+}
+
+/* ---------- form dialog (CCB #578) ---------- */
+html.spv-lock{overflow:hidden}
+:is(#spv,#spv-b) dialog{border:0;padding:0;margin:auto;width:min(720px,calc(100vw - 16px));height:min(900px,calc(100dvh - 16px));max-height:none;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+:is(#spv,#spv-b) dialog[open]{display:flex;flex-direction:column;animation:spv-in .45s var(--ease)}
+:is(#spv,#spv-b) dialog::backdrop{background:rgba(8,8,8,.62)}
+@keyframes spv-in{from{opacity:0;transform:translateY(14px) scale(.985)}}
+:is(#spv,#spv-b) .dlg-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 12px 12px 22px;border-bottom:1px solid var(--line)}
+:is(#spv,#spv-b) .dlg-h b{font:600 17px/1.3 var(--hd)}
+:is(#spv,#spv-b) .x{all:unset;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--soft);cursor:pointer}
+:is(#spv,#spv-b) .x svg{width:18px;height:18px}
+:is(#spv,#spv-b) dialog iframe{flex:1;width:100%;border:0;background:#fff}
+:is(#spv,#spv-b) .thanks{display:none;padding:clamp(32px,5vw,52px) clamp(22px,4vw,44px);text-align:center}
+:is(#spv,#spv-b) dialog.done .thanks{display:block}
+:is(#spv,#spv-b) dialog.done iframe{display:none}
+:is(#spv,#spv-b) dialog.done{height:auto}
+:is(#spv,#spv-b) .thanks h3{font:600 24px/1.25 var(--hd);margin-bottom:10px;outline:0}
+:is(#spv,#spv-b) .thanks p{color:var(--ink-2);max-width:28em;margin:0 auto 24px}
+:is(#spv,#spv-b) .thanks .acts{justify-content:center}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  :is(#spv,#spv-b) .step{grid-template-columns:minmax(0,1fr) minmax(0,.9fr)}
+  :is(#spv,#spv-b) .step .t{grid-column:1/-1;padding-top:0}
+}
+@media (max-width:900px){
+  :is(#spv,#spv-b) .top-in,:is(#spv,#spv-b) .sec-h,:is(#spv,#spv-b) .here-in{grid-template-columns:1fr}
+  :is(#spv,#spv-b) .sec-h{align-items:start}
+  :is(#spv,#spv-b) .fam{grid-template-columns:1fr}
+  :is(#spv,#spv-b) .fam a{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+  :is(#spv,#spv-b) .fam figure{aspect-ratio:auto;min-height:100%}
+}
+@media (max-width:640px){
+  :is(#spv,#spv-b){--top:128px}
+  :is(#spv,#spv-b) .door{aspect-ratio:4/3}
+  :is(#spv,#spv-b) .step{grid-template-columns:1fr}
+  :is(#spv,#spv-b) .step figure{order:-1;aspect-ratio:16/9}
+  :is(#spv,#spv-b) .who{grid-template-columns:1fr}
+  :is(#spv,#spv-b) .fam a{display:flex}
+  :is(#spv,#spv-b) .fam figure{aspect-ratio:16/9;min-height:0}
+  :is(#spv,#spv-b) .facts div{grid-template-columns:1fr}
+  :is(#spv,#spv-b) .acts .btn{flex:1 1 auto}
+}
+
+/* ---------- ChurchCo's native Form block ("Plan a Visit"), restyled to sit under the helper card ---------- */
+body:has(#spv) section.block-form{background:#F3EEE4!important;padding:0 clamp(20px,5vw,40px) clamp(72px,9vw,120px)!important;margin:0!important;border-radius:0!important}
+body:has(#spv) section.block-form *,body:has(#spv) section.block-form *::before,body:has(#spv) section.block-form *::after{box-sizing:border-box}
+body:has(#spv) section.block-form .row-inner{opacity:1!important;transform:none!important;padding:0!important}
+body:has(#spv) section.block-form .container{max-width:760px!important;margin:0 auto!important;padding:0!important}
+body:has(#spv) section.block-form [class^="ThemedForm"]{background:#fff;color:#0E0E0E;border-radius:0 0 20px 20px;padding:20px clamp(22px,3vw,34px) clamp(22px,3vw,34px);box-shadow:0 18px 44px rgba(14,14,14,.07);font:400 17px/1.5 'proxima-nova',system-ui,sans-serif;text-align:left}
+body:has(#spv) section.block-form .tcc-form-element{margin:0 0 20px!important;padding:0!important}
+body:has(#spv) section.block-form .tcc-form-element>label,body:has(#spv) section.block-form legend{display:block;font:600 15px/1.3 gotham,'Montserrat',sans-serif!important;letter-spacing:0!important;text-transform:none!important;color:#0E0E0E!important;margin:0 0 8px!important}
+body:has(#spv) section.block-form .required{color:#7d6a3f!important}
+body:has(#spv) section.block-form [class^="ThemedInputDescription"]{display:block;font:400 14px/1.45 'proxima-nova',system-ui,sans-serif!important;color:#666!important;margin-top:6px}
+body:has(#spv) section.block-form :is(input[type="text"],input[type="email"],input[type="tel"],textarea){width:100%;min-height:50px;padding:12px 14px!important;border-radius:12px!important;border:1.5px solid rgba(14,14,14,.18)!important;background:#fff!important;color:#0E0E0E!important;font:400 17px/1.4 'proxima-nova',system-ui,sans-serif!important;box-shadow:none!important;transition:border-color .2s,box-shadow .2s}
+body:has(#spv) section.block-form textarea{min-height:96px;resize:vertical}
+body:has(#spv) section.block-form :is(input,textarea):focus{outline:0!important;border-color:#0E0E0E!important;box-shadow:0 0 0 3px rgba(216,201,166,.6)!important}
+body:has(#spv) section.block-form input::placeholder{color:#8a8a8a}
+/* the two fields our Sunday buttons and counters fill: kept in the form (they submit), hidden from view so nobody answers twice */
+body:has(#spv) section.block-form .tcc-form-element.spv-filled{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;margin:0!important;padding:0!important;border:0!important}
+body:has(#spv) section.block-form .submit-wrap{margin-top:6px;text-align:left}
+body:has(#spv) section.block-form .submit-wrap .button-action{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px!important;border:0!important;border-radius:10px!important;background:#0E0E0E!important;color:#fff!important;font:700 13px/1 gotham,'Montserrat',sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase!important;box-shadow:none!important;cursor:pointer;transition:background .2s}
+body:has(#spv) section.block-form .submit-wrap .button-action:hover{background:#333!important}
+body:has(#spv) section.block-form .submit-wrap .button-action:disabled{opacity:.45;cursor:default}
+body:has(#spv) section.block-form .submit-wrap .button-action .text{font:inherit!important;letter-spacing:inherit!important;color:inherit!important}
+body:has(#spv) section.block-form :is([class*="Success"],[class*="success"]){font:500 19px/1.5 gotham,'Montserrat',sans-serif;color:#0E0E0E;padding:8px 0}
+</style>
+
+<div id="spv">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="spv-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="spv-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="spv-mail" viewBox="0 0 24 24"><path d="M4 6h16v12H4z M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="top">
+    <div class="wrap">
+      <div class="top-in">
+        <h1>Plan a Visit</h1>
+        <div>
+          <p class="when" id="spv-when">Sundays at <b>10AM</b></p>
+          <p class="where">1515 Auto Mall Loop, Colorado Springs</p>
+          <div class="acts">
+            <a class="btn light" href="#spv-plan">Let Us Know You’re Coming</a>
+            <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+      <figure class="door"><img src="img/visit-greeter.jpg" alt="A greeter shakes hands with a guest in the Springs lobby" fetchpriority="high"></figure>
+    </div>
+  </header>
+
+  <!-- a first Sunday, start to finish (time labels, not step numbers) -->
+  <section class="sec" id="spv-sunday" aria-labelledby="spv-sunday-h">
+    <div class="wrap">
+      <div class="sec-h"><h2 class="h2" id="spv-sunday-h">Your First Sunday</h2></div>
+      <ol class="day">
+        <li class="step rv">
+          <p class="t">Before 10AM</p>
+          <div>
+            <h3>Arriving</h3>
+            <p><span class="tbd">Our Parking Team will point you to a spot and the right door. Inside, someone from our Connect Team will say hello, help you find a seat, and answer any questions.</span></p>
+          </div>
+          <div></div>
+        </li>
+        <li class="step kids rv">
+          <p class="t">Bringing kids?</p>
+          <div>
+            <h3>Kids Check-In</h3>
+            <p>Stop at the Kids check-in counter when you arrive. A friendly volunteer will get your family set up in a couple of minutes.</p>
+            <p>Your child gets a name tag and you get a matching pickup tag. Only the grown-up holding that tag can pick them up.</p>
+            <a class="tl more" href="https://kids.springs.church" target="_blank" rel="noopener">More for parents <svg class="i" aria-hidden="true"><use href="#spv-arr"/></svg></a>
+          </div>
+          <figure><img src="img/visit-kids-reading.jpg" alt="A Springs Kids volunteer reads a book with toddlers" loading="lazy"></figure>
+        </li>
+        <li class="step rv">
+          <p class="t">Before 10AM</p>
+          <div>
+            <h3>Coffee</h3>
+            <p><span class="tbd">Grab a cup at the coffee bar.</span> Want to talk with someone? Let’s Connect Over Coffee before service.</p>
+            <button class="tl more" type="button" data-form>Connect Over Coffee <svg class="i" aria-hidden="true"><use href="#spv-arr"/></svg></button>
+          </div>
+          <figure><img src="img/visit-coffee.jpg" alt="A barista hands a coffee across the counter at the Springs coffee bar" loading="lazy" style="object-position:55% 40%"></figure>
+        </li>
+        <li class="step rv">
+          <p class="t">10AM</p>
+          <div>
+            <h3>Worship and Teaching</h3>
+            <p>Spirit-filled worship and Biblical preaching. <span class="tbd">Kids are in their own rooms during service.</span></p>
+          </div>
+          <figure><img src="img/visit-worship.jpg" alt="The worship team leads the church on stage" loading="lazy"></figure>
+        </li>
+        <li class="step pray rv">
+          <p class="t">After service</p>
+          <div>
+            <h3>Prayer and Pickup</h3>
+            <p><span class="tbd">Our Prayer Team is at the altar after every service if you’d like someone to pray with you.</span></p>
+            <p>Bring your tag back to your child’s room to pick them up.</p>
+          </div>
+          <figure><img src="img/visit-prayer.jpg" alt="Two men pray together at the front after service" loading="lazy"></figure>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- let us know: our helper card fills the first two fields of ChurchCo's "Plan a Visit" Form block, which sits right below this block -->
+  <section class="sec plan" id="spv-plan" aria-labelledby="spv-plan-h">
+    <div class="wrap">
+      <div class="sec-h">
+        <h2 class="h2" id="spv-plan-h">Let Us Know You’re Coming</h2>
+        <p><span class="tbd">Tell our Connect Team which Sunday you’re coming, and someone will look for you at the door.</span> Rather talk first? Call <a class="tl" href="tel:+17194888331">(719) 488-8331</a>, Tuesday–Thursday, 9AM–5PM.</p>
+      </div>
+      <div class="planbox rv" id="spv-planbox">
+        <fieldset>
+          <legend>Which Sunday?</legend>
+          <div class="chips" id="spv-sundays" role="group" aria-label="Which Sunday"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Who’s coming?</legend>
+          <div class="who">
+            <div class="count"><span id="spv-ad-l">Adults</span><div class="ctl"><button type="button" data-step="ad,-1" aria-label="One fewer adult">−</button><output id="spv-ad" aria-labelledby="spv-ad-l">1</output><button type="button" data-step="ad,1" aria-label="One more adult">+</button></div></div>
+            <div class="count"><span id="spv-kd-l">Kids</span><div class="ctl"><button type="button" data-step="kd,-1" aria-label="One fewer child">−</button><output id="spv-kd" aria-labelledby="spv-kd-l">0</output><button type="button" data-step="kd,1" aria-label="One more child">+</button></div></div>
+          </div>
+        </fieldset>
+        <div class="fallback" id="spv-fallback" hidden>
+          <p>Email us your plans and we’ll watch for you.</p>
+          <a class="btn" id="spv-mailto" href="mailto:info@springs.church">Email Our Office</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</section><!-- PREVIEW ONLY: stand-in for ChurchCo's native Form block "Plan a Visit" (same class names ChurchCo renders: block-form,
+     tcc-form-element, ThemedForm…, ThemedInputDescription…, submit-wrap > button.button-action). Like the real one, it starts
+     with only the submit button and draws its fields ~0.8s later. ?form=none removes it to test the email fallback. -->
+<section class="tcc-block block-form" data-block="true" id="mock-form"><div class="row-inner"><div class="container"><div class="row-content" data-form="true"><div class="ThemedForm-mock">
+<div class="submit-wrap"><button type="button" class="button-action" disabled><span class="text">Let Us Know</span></button></div>
+</div></div></div></div></section>
+<script>
+(function () {
+  const sec = document.getElementById('mock-form');
+  if (new URLSearchParams(location.search).get('form') === 'none') { sec.remove(); return; }
+  const fields = `
+<div class="tcc-form-element"><label for="m1">Which Sunday are you planning on? <span class="required">*</span></label><input id="m1" type="text"></div>
+<div class="tcc-form-element"><label for="m2">Who's coming? <span class="required">*</span></label><input id="m2" type="text"></div>
+<div class="tcc-form-element"><label for="m3">Your name <span class="required">*</span></label><input id="m3" type="text"></div>
+<div class="tcc-form-element"><label for="m4">Email <span class="required">*</span></label><input id="m4" type="email"><span class="ThemedInputDescription-mock">So someone from our Connect Team can say hi before Sunday.</span></div>
+<div class="tcc-form-element"><label for="m5">Phone (optional)</label><input id="m5" type="tel"></div>
+<div class="tcc-form-element"><label for="m6">Kids' ages or grades (optional)</label><input id="m6" type="text"><span class="ThemedInputDescription-mock">Helps us get rooms ready.</span></div>
+<div class="tcc-form-element"><label for="m7">Anything we should know? (optional)</label><textarea id="m7"></textarea></div>
+<div class="submit-wrap"><button type="button" class="button-action"><span class="text">Let Us Know</span></button></div>`;
+  setTimeout(() => {
+    const host = sec.querySelector('[class^="ThemedForm"]');
+    host.innerHTML = fields;
+    host.querySelector('.button-action').addEventListener('click', () => {
+      host.innerHTML = '<div class="ThemedFormSuccess-mock">Thanks! We’ll look for you on Sunday.</div>';
+    });
+  }, 800);
+})();
+</script>
+<section class="tcc-block html-takeover"><!-- springs.church/plan-a-visit · ChurchCo HTML block 2 of 2 (BOTTOM), below the native Form block "Plan a Visit". Display: Default, Block Takeover ON.
+     Source: ~/Desktop/springs-visit-site/churchco/visit-bottom-block.html. Styles live in the TOP block. This block holds the page script
+     (runs after both blocks exist): next Sundays in Colorado time, the helper card that fills the Form block, reveals, map, Connect Over Coffee dialog. -->
+<div id="spv-b">
+  <!-- for your family -->
+  <section class="sec" aria-labelledby="spv-fam-h">
+    <div class="wrap">
+      <div class="sec-h"><h2 class="h2" id="spv-fam-h">For Your Family</h2></div>
+      <ul class="fam">
+        <li class="rv" style="--d:0"><a href="https://kids.springs.church" target="_blank" rel="noopener">
+          <figure><img src="img/visit-kids-sunday.jpg" alt="" loading="lazy" style="object-position:50% 50%"></figure>
+          <div class="body"><h3>Kids</h3><p class="w">Babies through grade 5 · Sundays 10AM and Wednesdays 6:30PM</p><p>Where your kids are known, safe, and loved.</p><span class="go">Springs Kids <svg aria-hidden="true"><use href="#spv-arr"/></svg></span></div>
+        </a></li>
+        <li class="rv" style="--d:1"><a href="https://youth.springs.church" target="_blank" rel="noopener">
+          <figure><img src="img/visit-youth.jpg" alt="" loading="lazy"></figure>
+          <div class="body"><h3>Youth</h3><p class="w">Grades 6–12 · Wednesdays 6:30PM</p><p>Faith for real life. Rooted for middle school and Anthem for high school.</p><span class="go">Springs Youth <svg aria-hidden="true"><use href="#spv-arr"/></svg></span></div>
+        </a></li>
+        <li class="rv" style="--d:2"><a href="https://ya.springs.church" target="_blank" rel="noopener">
+          <figure><img src="img/visit-ya.jpg" alt="" loading="lazy" style="object-position:50% 60%"></figure>
+          <div class="body"><h3>Young Adults</h3><p class="w">Fridays 7PM · The Garage</p><p>Life’s better with you in it.</p><span class="go">Springs Young Adults <svg aria-hidden="true"><use href="#spv-arr"/></svg></span></div>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- getting here -->
+  <section class="sec here" id="spv-here" aria-labelledby="spv-here-h">
+    <div class="wrap here-in">
+      <div class="rv">
+        <h2 class="h2" id="spv-here-h">Getting Here</h2>
+        <div class="acts">
+          <a class="btn light" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn ghost" href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">Watch Online</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Address</dt><dd>1515 Auto Mall Loop<br>Colorado Springs, CO 80920</dd></div>
+          <div><dt>Sundays</dt><dd>10AM. Live on <a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">YouTube</a> too.</dd></div>
+          <div><dt>Wednesdays</dt><dd>6:30PM. Prayer night, Awaken for kids, Rooted for middle school and Anthem for high school.</dd></div>
+          <div><dt>Questions</dt><dd><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a></dd></div>
+        </dl>
+      </div>
+      <div class="map rv" style="--d:1" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7742703143895!2d-104.80077632365287!3d38.951984943480724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87134c2ab7a98667%3A0xa4fc6fb6d4c0222b!2sSprings%20Church!5e0!3m2!1sen!2sus!4v1754926116624!5m2!1sen!2sus"></div>
+    </div>
+  </section>
+
+  <dialog id="spv-dlg" aria-labelledby="spv-dlg-t">
+    <div class="dlg-h"><b id="spv-dlg-t">Connect Over Coffee</b><button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#spv-x"/></svg></button></div>
+    <iframe id="spv-dlg-f" title="Connect Over Coffee form"></iframe>
+    <div class="thanks">
+      <h3 tabindex="-1">Thanks. We’ll see you for coffee.</h3>
+      <p><span class="tbd">Someone from our team will reach out soon to find a Sunday that works.</span></p>
+      <div class="acts"><button class="btn" type="button" data-close>Done</button></div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+(function () {
+  const R = document.getElementById('spv'), B = document.getElementById('spv-b');
+  if (!R || !B || B.dataset.ready) return;
+  B.dataset.ready = '1';
+  [R, B].forEach(el => el.classList.add('js'));
+  new MutationObserver(() => B.classList.toggle('show-tbd', R.classList.contains('show-tbd'))).observe(R, { attributes: true, attributeFilter: ['class'] });
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const OFFICE = 'info@springs.church';
+
+  /* ---------- the next Sundays, in Colorado time (?now=2026-11-22T09:00 previews) ---------- */
+  const q = new URLSearchParams(location.search);
+  const now = (() => { const t = q.get('now'); const d = t ? new Date(t + (/[zZ]|[+-]\d\d:?\d\d$/.test(t) ? '' : '-07:00')) : new Date(); return isNaN(d) ? new Date() : d; })();
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', year: 'numeric', month: 'numeric', day: 'numeric', weekday: 'short', hour: 'numeric', hourCycle: 'h23' }).formatToParts(now).map(x => [x.type, x.value]));
+  const DOW = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[p.weekday];
+  const first = DOW === 0 ? (+p.hour < 10 ? 0 : 7) : 7 - DOW;
+  const base = Date.UTC(+p.year, +p.month - 1, +p.day);
+  const sundays = [0, 1, 2, 3].map(i => new Date(base + (first + 7 * i) * 864e5));
+  const fmt = (d, o) => new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', ...o }).format(d);
+  const long = d => fmt(d, { weekday: 'long', month: 'long', day: 'numeric' });
+  const when = $('#spv-when');
+  if (first === 0) when.innerHTML = 'Today at <b>10AM</b>';
+  else { when.innerHTML = 'Next Sunday is <b></b> at 10AM'; $('b', when).textContent = fmt(sundays[0], { month: 'long', day: 'numeric' }); }
+
+  /* ---------- helper card ---------- */
+  const box = $('#spv-sundays');
+  box.innerHTML = sundays.map((d, i) => `<button type="button" class="chip" aria-pressed="${i === 0}" data-i="${i}">${i === 0 && first === 0 ? 'Today' : fmt(d, { month: 'short', day: 'numeric' })}</button>`).join('');
+  const st = { pick: 0, ad: 1, kd: 0 }, lim = { ad: [1, 12], kd: [0, 12] };
+  const plural = (c, one, many) => c + ' ' + (c === 1 ? one : many);
+  const sundayText = () => long(sundays[st.pick]);
+  const whoText = () => plural(st.ad, 'adult', 'adults') + (st.kd ? ', ' + plural(st.kd, 'child', 'children') : '');
+
+  /* ChurchCo's Form block renders after the page loads: find its fields by label text and fill them the React-friendly way */
+  const norm = t => (t || '').toLowerCase().replace(/[^a-z]/g, '');
+  const field = key => {
+    const el = $$('section.block-form .tcc-form-element').find(e => norm(($('label,legend', e) || {}).textContent).startsWith(key));
+    return el ? { wrap: el, input: $('input,textarea', el) } : null;
+  };
+  const setVal = (inp, v) => {
+    const proto = inp.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+    Object.getOwnPropertyDescriptor(proto, 'value').set.call(inp, v);
+    inp.dispatchEvent(new Event('input', { bubbles: true }));
+    inp.dispatchEvent(new Event('change', { bubbles: true }));
+  };
+  const typed = new WeakSet();   // once someone types in one of these fields, stop overwriting it
+  function fill() {
+    let found = false;
+    for (const [key, val] of [['whichsunday', sundayText()], ['whoscoming', whoText()]]) {
+      const f = field(key);
+      if (!f || !f.input) continue;
+      found = true;
+      if (!f.input.dataset.spvBound) {
+        f.input.dataset.spvBound = '1';
+        f.input.addEventListener('input', e => { if (e.isTrusted) typed.add(f.input); });
+      }
+      if (!typed.has(f.input) && f.input.value !== val) setVal(f.input, val);
+      f.wrap.classList.add('spv-filled');
+      f.input.tabIndex = -1;   // hidden from view, so keep it out of the Tab order too
+    }
+    return found;
+  }
+  function sync() {
+    $$('.chip', box).forEach(c => c.setAttribute('aria-pressed', String(+c.dataset.i === st.pick)));
+    for (const k of ['ad', 'kd']) {
+      $('#spv-' + k).textContent = st[k];
+      $(`[data-step="${k},-1"]`).disabled = st[k] <= lim[k][0];
+      $(`[data-step="${k},1"]`).disabled = st[k] >= lim[k][1];
+    }
+    const body = `Hi Springs, I'm planning to visit on ${sundayText()} at 10AM.\n\nComing: ${whoText()}\n\n`;
+    $('#spv-mailto').href = `mailto:${OFFICE}?subject=${encodeURIComponent('Planning a visit: ' + sundayText())}&body=${encodeURIComponent(body)}`;
+    fill();
+  }
+  box.addEventListener('click', e => { const c = e.target.closest('.chip'); if (!c) return; st.pick = +c.dataset.i; sync(); });
+  R.addEventListener('click', e => {
+    const b = e.target.closest('[data-step]'); if (!b) return;
+    const [k, d] = b.dataset.step.split(','); st[k] = Math.min(lim[k][1], Math.max(lim[k][0], st[k] + +d)); sync();
+  });
+  sync();
+  // keep filling while ChurchCo draws (or redraws) the form; show the email fallback if no form shows up
+  let formSeen = fill();
+  const showForm = () => { formSeen = true; $('#spv-fallback').hidden = true; $('#spv-planbox').classList.remove('solo'); };
+  if (formSeen) showForm();
+  new MutationObserver(() => { if (fill()) showForm(); }).observe(document.body, { childList: true, subtree: true });
+  setTimeout(() => { if (!formSeen) { $('#spv-fallback').hidden = false; $('#spv-planbox').classList.add('solo'); } }, $('section.block-form') ? 9000 : 2500);
+
+  /* ---------- in-page links ---------- */
+  document.addEventListener('click', e => {
+    const a = e.target.closest('#spv a[href^="#spv-"], #spv-b a[href^="#spv-"]'); if (!a) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1)); if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
+    if (el.id === 'spv-plan') setTimeout(() => $('.chip', box).focus({ preventScroll: true }), reduceMotion.matches ? 0 : 600);
+  });
+
+  /* ---------- reveals + lazy map ---------- */
+  const rv = [...$$('.rv', R), ...$$('.rv', B)];
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add('in'));
+  const map = $('.map', B);
+  const loadMap = () => { if (map.firstChild) return; const f = document.createElement('iframe'); f.src = map.dataset.map; f.title = 'Map to Springs Church'; f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; map.appendChild(f); };
+  if ('IntersectionObserver' in window) { const m2 = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { loadMap(); m2.disconnect(); } }, { rootMargin: '600px 0px' }); m2.observe(map); } else loadMap();
+
+  /* ---------- Connect Over Coffee: CCB form #578 in a dialog, thank-you when CCB redirects to springs.church ---------- */
+  const dlg = $('#spv-dlg'), frame = $('#spv-dlg-f');
+  const FORM = 'https://springschurch.ccbchurch.com/goto/forms/578/responses/new';
+  const landedHome = fr => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  document.addEventListener('click', e => {
+    const b = e.target.closest('#spv [data-form], #spv-b [data-form]'); if (!b) return;
+    e.preventDefault();
+    if (typeof dlg.showModal !== 'function') { window.open(FORM, '_blank', 'noopener'); return; }
+    dlg.classList.remove('done');
+    if (frame.getAttribute('src') !== FORM) frame.src = FORM;
+    dlg.showModal();
+    document.documentElement.classList.add('spv-lock');
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+  dlg.addEventListener('close', () => {
+    document.documentElement.classList.remove('spv-lock');
+    if (dlg.classList.contains('done')) { dlg.classList.remove('done'); frame.removeAttribute('src'); }
+  });
+  frame.addEventListener('load', () => {
+    if (!landedHome(frame)) return;
+    frame.src = 'about:blank';
+    dlg.classList.add('done');
+    $('.thanks h3', dlg).focus();
+  });
+
+  /* ---------- hero load-in ---------- */
+  const img = $('.door img', R); let done = false;
+  const ready = () => { if (done) return; done = true; requestAnimationFrame(() => R.classList.add('ready')); };
+  img.complete ? ready() : (img.addEventListener('load', ready), img.addEventListener('error', ready));
+  setTimeout(ready, 1500);
+})();
+</script>
+</section></main>
+<footer class="sc-ftr">
+  <div class="sc-in">
+    <div class="sc-ftr-top">
+      <div class="sc-visit">
+        <b>Sundays 10AM<br>Wednesdays 6:30PM</b>
+        <p>1515 Auto Mall Loop, Colorado Springs, CO 80920<br><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a><br>Office: Tuesday–Thursday, 9AM–5PM</p>
+        <a class="sc-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <div class="sc-cols">
+        <div><h4>About</h4><ul><li><a href="../about/">Who We Are</a></li><li><a href="../beliefs/">Our Beliefs</a></li><li><a href="../team/">Our Team</a></li><li><a href="https://www.springs.church/stories">Stories</a></li></ul></div>
+        <div><h4>Get Involved</h4><ul><li><a href="../groups/">Groups</a></li><li><a href="../serve/">Serve</a></li><li><a href="../missions/">Missions</a></li><li><a href="../prayer/">Prayer</a></li><li><a href="../care/">Care</a></li></ul></div>
+        <div><h4>Stay Connected</h4><ul><li><a href="https://www.youtube.com/@springs.church" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/springs__church/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/springschurch.co/" target="_blank" rel="noopener">Facebook</a></li><li><a href="../app/">The App</a></li></ul></div>
+      </div>
+    </div>
+    <p class="sc-wordmark" aria-hidden="true"></p>
+    <div class="sc-legal"><span>© 2026 Springs Church</span><nav aria-label="Footer"><a href="../contact/">Contact</a><a href="https://springschurch.ccbchurch.com/goto/login" target="_blank" rel="noopener">iConnect</a><a href="../give/">Give</a><a href="https://www.springs.church/privacy">Privacy</a></nav></div>
+  </div>
+</footer>
+<script src="../_chrome/chrome.js"></script></body></html>

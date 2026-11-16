@@ -74,6 +74,7 @@ def add_chrome(html, folder, depth):
         html = re.sub(r'<a([^>]*)data-l="sermons"([^>]*)>Sermons</a>', r'<a\1data-l="media"\2>Media</a>', html)
         html = html.replace("https://www.springs.church/new-here", "/plan-a-visit")
         html = re.sub(r'(<div class="announce" id="announce">).*?(<button)', r'\g<1>' + DRAFT_NOTE + r'\2', html, count=1, flags=re.S)
+        html = html.replace('</head>', '<style>.mock-switch{display:none!important}</style></head>', 1)  # mockup option switcher
         return html
     html = re.sub(r'<div class="topbar">.*?</div>', '', html, count=1, flags=re.S)
     html = re.sub(r'<footer class="cc-ftr">.*?</footer>', '', html, count=1, flags=re.S)

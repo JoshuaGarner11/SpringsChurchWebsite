@@ -1,26 +1,13 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-15T21:15-07:00",
- "hash": "4ba306851872ccfe",
+ "updated": "2026-11-16T05:45-07:00",
+ "hash": "d9d2cc581559c7de",
  "range": [
-  "2026-11-15",
-  "2027-03-15"
+  "2026-11-16",
+  "2027-03-16"
  ],
  "timezone": "America/Denver",
  "items": [
-  {
-   "id": "10993-2026-11-15",
-   "title": "Springs Men | Retreat 2026",
-   "desc": "Take Your Bearings is a retreat created for men who want to slow down long enough to pay attention—to God, to the condition of their own hearts, and to the unique work He is doing in this season of their lives.\n\nThroughout the weekend, we'll gather around God's Word, spend time in personal reflection, and engage in honest conversations with other men who are pursuing Christ. Between the formal sessions, there will be plenty of time to connect over meals, relax around campfires, enjoy recreation, and build friendships that encourage the journey ahead.\n\nThis isn't about escaping life. It's about stepping back so you can see it more clearly. Come away for a few days. Listen well. Examine your heart. Recognize God's invitation. Return home with greater clarity about your walk with Him and your place in His Kingdom.",
-   "start": "2026-11-15T00:00:00-07:00",
-   "end": "2026-11-15T23:59:59-07:00",
-   "allDay": true,
-   "venue": "Trail West Lodge",
-   "onCampus": false,
-   "group": "Springs Men",
-   "category": "Adult Ministries",
-   "type": "Open To All"
-  },
   {
    "id": "10376-2026-11-17",
    "title": "Silver Warriors (Ages 55+) | Seniors Group",
@@ -1098,6 +1085,19 @@
    "onCampus": false,
    "group": "Young Adults",
    "category": "Adult Ministries",
+   "type": "Open To All"
+  },
+  {
+   "id": "10376-2027-03-16",
+   "title": "Silver Warriors (Ages 55+) | Seniors Group",
+   "desc": "We seek to provide opportunities to learn from one another, to serve one another, to encourage one another, and to pray for one another. There is no set format but we will allow the Holy Spirit to guide and direct us each week. The primary meeting will be every Tuesday, but we expect to see smaller groups choose to meet over a meal, take an easy hike, or undertake a service project at different times and places.",
+   "start": "2027-03-16T10:00:00-06:00",
+   "end": "2027-03-16T12:00:00-06:00",
+   "allDay": false,
+   "venue": "Classroom 1-2",
+   "onCampus": false,
+   "group": "Silver Warriors (Ages 55+) | Seniors Group",
+   "category": "Connect Groups",
    "type": "Open To All"
   }
  ]

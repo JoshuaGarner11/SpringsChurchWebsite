@@ -30,6 +30,7 @@ KIDS_YOUTH = re.compile(r"\b(kids?|children|nursery|youth|students?|middle\s*sch
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 PHONE = re.compile(r"(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}")
 CHURCH_PHONE = re.compile(r"488[\s.-]?8331")
+STREET_ANY = re.compile(r"\b\d{2,6}\s+(?:[NSEW]\.?\s+)?(?:[A-Z][\w'.-]*\s+){1,4}(?:St|Street|Dr|Drive|Rd|Road|Ave|Avenue|Ln|Lane|Ct|Court|Way|Blvd|Boulevard|Loop|Cir|Circle|Pl|Place|Pkwy|Parkway|Trl|Trail|Hwy|Highway|Pt|Point|Ter|Terrace)\b\.?", re.I)
 
 
 def call(srv, **params):
@@ -61,6 +62,7 @@ def clean_desc(s):
     s = re.sub(r"<[^>]+>", "", s)
     s = EMAIL.sub(lambda m: m.group(0) if m.group(0).lower().endswith("@springs.church") else "", s)
     s = PHONE.sub(lambda m: m.group(0) if CHURCH_PHONE.search(m.group(0)) else "", s)
+    s = STREET_ANY.sub(lambda m: m.group(0) if CHURCH_ADDR.search(m.group(0)) else "", s)
     s = re.sub(r"[ \t]+", " ", s)
     s = re.sub(r"\n\s*\n+", "\n\n", s).strip()
     return s[:1200]
@@ -93,6 +95,9 @@ def build_events(root, stats):
         gname, gtype = text(it, "group_name"), text(it, "group_type")
         venue, on_campus, homeish = venue_of(text(it, "location"))
         if homeish or HOME_WORDS.search(f"{title} {gname} {gtype}"):
+            stats["dropped_home"] += 1
+            continue
+        if any(STREET_ANY.search(x) and not CHURCH_ADDR.search(x) for x in (title, venue, gname)):
             stats["dropped_home"] += 1
             continue
         date_s, st, et = text(it, "date"), text(it, "start_time"), text(it, "end_time")
@@ -148,6 +153,21 @@ def build_groups(root, stats):
     return out
 
 
+def leak_check(items):
+    """Count anything that still looks personal. Any hit = refuse to write (log shows counts only)."""
+    hits = {"email": 0, "phone": 0, "street": 0, "residence": 0}
+    def walk(v):
+        if isinstance(v, dict): [walk(x) for x in v.values()]
+        elif isinstance(v, list): [walk(x) for x in v]
+        elif isinstance(v, str):
+            hits["email"] += sum(1 for m in EMAIL.findall(v) if not m.lower().endswith("@springs.church"))
+            hits["phone"] += sum(1 for m in PHONE.findall(v) if not CHURCH_PHONE.search(m))
+            hits["street"] += sum(1 for m in STREET_ANY.findall(v) if not CHURCH_ADDR.search(m))
+            hits["residence"] += len(re.findall(r"\bresidence\b", v, re.I))
+    walk(items)
+    return {k: n for k, n in hits.items() if n}
+
+
 def write_if_changed(name, items, meta):
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, name)
@@ -189,6 +209,9 @@ def main():
     groups = build_groups(grp, stats)
     if not events and not groups:
         sys.exit("CCB returned no events and no groups; keeping the previous files.")
+    leaks = leak_check([events, groups])
+    if leaks:
+        sys.exit(f"Refusing to write: possible personal details left after cleanup {leaks}. Nothing was saved.")
     ch_e = write_if_changed("events.json", events, {"range": [today.isoformat(), end.isoformat()], "timezone": "America/Denver"})
     ch_g = write_if_changed("groups.json", groups, {})
     print("events kept {kept}, dropped at a home {dropped_home}, bad dates {dropped_bad_date}; "

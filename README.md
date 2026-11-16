@@ -24,3 +24,17 @@ unless the review domain is added to the kit's allowed domains in Adobe Fonts.
 - Everything here is already public on springs.church or its review copies, but git keeps history, so anything pushed stays retrievable.
 - Update = `python3 build.py` (secret scan must say clean) → commit → push.
 - Later (Josh 11/15): the plan is to move springs.church off ChurchCo; this repo can grow into the real site project.
+
+## CCB sync (calendar + groups)
+CCB is the master calendar. `.github/workflows/ccb-sync.yml` runs `scripts/ccb_sync.py` every hour (and on demand from the
+Actions tab) with the login in repo secrets `CCB_API_USER` / `CCB_API_PASS` (a website-only API user; the secrets are entered
+by Josh in GitHub settings and are never in the code). It calls `public_calendar_listing` (today + 120 days) and
+`group_search`, and writes `docs/data/events.json` and `docs/data/groups.json` only when the content changed.
+Served at https://joshuagarner11.github.io/SpringsChurchWebsite/data/events.json (GitHub Pages allows cross-site reads,
+so the ChurchCo Events block can use it via `data-events-src`).
+
+Public-safe rules (the repo and the job logs are public): whitelisted fields only; no leader names, phones or emails;
+events at a home (home groups, "Residence", or a non-church street address) dropped; venues are names only; descriptions
+lose HTML and any email/phone that isn't the church's; kids and student groups left out of groups.json; the log prints counts.
+Test the rules offline: `python3 scripts/test_ccb_sync.py scripts/ccb_sync.py`.
+Before a local build + push, run `git pull --rebase` (the sync job commits to main). build.py keeps docs/data.

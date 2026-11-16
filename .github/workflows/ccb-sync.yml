@@ -1,0 +1,48 @@
+# Pull the CCB public calendar + group finder every hour and publish public-safe JSON to docs/data/.
+# The CCB login lives in repo secrets (CCB_API_USER, CCB_API_PASS). This repo is public: the script writes and logs
+# only whitelisted, public-safe fields (see scripts/ccb_sync.py).
+name: CCB sync
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "write = update the JSON files; inspect = print field names and counts only"
+        type: choice
+        options: [write, inspect]
+        default: write
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ccb-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull from CCB
+        env:
+          CCB_API_USER: ${{ secrets.CCB_API_USER }}
+          CCB_API_PASS: ${{ secrets.CCB_API_PASS }}
+          CCB_SUBDOMAIN: springschurch
+          MODE: ${{ inputs.mode || 'write' }}
+        run: python3 scripts/ccb_sync.py --mode "$MODE"
+
+      - name: Commit if anything changed
+        if: ${{ (inputs.mode || 'write') == 'write' }}
+        run: |
+          git config user.name "springs-ccb-sync"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "CCB sync: update events and groups"
+          git pull --rebase --quiet origin main
+          git push --quiet origin HEAD:main

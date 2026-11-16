@@ -110,8 +110,12 @@ main section{{padding:56px 0 8px}}.grid{{display:grid;grid-template-columns:repe
 <footer class="w">Springs Church · 1515 Auto Mall Loop, Colorado Springs, CO 80920</footer></body></html>"""
 
 def main():
-    if os.path.exists(OUT): shutil.rmtree(OUT)
-    os.makedirs(OUT)
+    # Clear the old build but keep docs/data (written hourly by the CCB sync job) and any CNAME.
+    os.makedirs(OUT, exist_ok=True)
+    for name in os.listdir(OUT):
+        if name in ("data", "CNAME"): continue
+        p = os.path.join(OUT, name)
+        shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
     built = [p[0] for p in PAGES if copy_page(p[0], p[2], p[3])]
     open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(hub(built))
     open(os.path.join(OUT, "robots.txt"), "w").write("User-agent: *\nDisallow: /\n")

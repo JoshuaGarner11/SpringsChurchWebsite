@@ -1,19 +1,16 @@
 /* Shared content for the three home-page mockups.
-   Everything here is a snapshot of the live site / YouTube / events page (2026-10-08).
+   Everything here is a snapshot of the live site / YouTube / events page (sermons + events refreshed 2026-11-15).
    On ChurchCo these would come from native blocks (sermon, events), not hard-coded. */
 window.SPRINGS = {
   latest: {
-    title: 'The Tree Was Already Planted', speaker: 'Michael Petillo', date: 'October 11, 2026',
-    id: 'Jhc5A2zvaP4', watch: 'https://youtu.be/Jhc5A2zvaP4',
-    full: 'https://youtube.com/live/KY8wF8MS_HI', img: 'img/hero-1011.jpg'
+    title: 'The Imageless God', speaker: 'Michael Petillo', date: 'November 15, 2026',
+    id: 'Pux9AYf6dO8', watch: 'https://youtu.be/Pux9AYf6dO8', img: 'img/hero-1011.jpg'
   },
+  // Newest first, from the "Sunday Sermons" playlist (springs-sermons-site/fetch_sermons.py, 11/15/2026)
   sermons: [
-    { t: 'Tongue Tied', s: 'Billy Coker', id: 'q53zLIwMpgA' },
-    { t: 'Food for Faith', s: 'Michael Petillo', id: '_faAz-7cKlk' },
-    { t: 'Do You Want to Be Healed?', s: 'Neil Rhodes', id: 'IwX7ulBH6bA' },
-    { t: 'Looking for the Fourth Man', s: 'Michael Petillo', id: '93icTZvG2qY' },
-    { t: 'The Ache God Calls Good', s: 'Michael Petillo', id: 'UkXXVtBq3Lg' },
-    { t: 'The Ache God Calls Good', s: 'Michael Petillo', id: 'UkXXVtBq3Lg' }
+    { t: "You Can't Scare the Hell Out of People", s: 'Michael Petillo', id: 'F4lEL8bnik0' },
+    { t: 'Disruption', s: 'Nicky Cruz', id: 'zOvP-KGQ0eA' },
+    { t: 'The Cost of a Comfortable Church', s: 'Michael Petillo', id: 'u_kH54cwvpY' }
   ],
   // From springs.church/stories (real quotes from the testimony videos)
   stories: [
@@ -24,21 +21,14 @@ window.SPRINGS = {
     { n: 'Becky Phipps', t: 'Baptize, Not Bury', q: 'God promised me that I would baptize my child in this church, and not bury him.', img: 'img/s-becky.jpg', yt: 'nDEIRV-PPYA' },
     { n: 'Michael & Mary, with Nick', t: 'The Ice Cream Aisle', q: 'He injected my soul with His love through the words of a total stranger.', img: 'img/s-michael-mary.jpg', yt: 'uPBct6TKpOM' }
   ],
-  // From springs.church/events
+  // From springs.church/events (ChurchCo events block, 11/15/2026)
   events: [
-    { d: '2026-10-12', time: '6:30 PM', t: 'Springs Women | Pumpkin Painting', where: 'Main Lobby' },
-    { d: '2026-10-14', time: '6:30 PM', t: 'Membership Class', where: 'Green Room', step: true },
-    { d: '2026-10-15', time: '3:00 PM', t: 'Feeding Friends', where: 'Main Parking' },
-    { d: '2026-10-15', time: '6:30 PM', t: 'Why Stand With Israel Film', where: 'Kids Auditorium' },
-    { d: '2026-10-17', time: '1:00 PM', t: 'Shared Roots Seminar', where: 'Various Locations' },
-    { d: '2026-10-21', time: '6:00 PM', t: 'Fall Festival', where: 'Springs Church', big: true },
-    { d: '2026-10-24', time: '8:00 AM', t: 'Fall Cleaning', where: 'Springs Church' },
-    { d: '2026-10-24', time: '9:00 AM', t: 'High School | Pumpkin Patch', where: "Diana's Pumpkin Patch" },
-    { d: '2026-10-26', time: '6:30 PM', t: 'GriefShare | Loss of a Spouse', where: 'Classroom 1' },
-    { d: '2026-11-01', time: '10:00 AM', t: 'Water Baptism', where: 'Sanctuary', step: true },
-    { d: '2026-11-01', time: '10:00 AM', t: 'Nicky Cruz at Sunday Service', where: 'Sanctuary', big: true },
-    { d: '2026-11-03', time: '10:00 AM', t: 'Moms Group', where: 'Kids Auditorium' },
-    { d: '2026-11-13', time: '6:00 PM', t: 'Springs Men | Retreat', where: 'Trail West Lodge' }
+    { d: '2026-11-19', time: '3:00 PM', t: 'Feeding Friends', where: 'Main Parking' },
+    { d: '2026-12-01', time: '10:00 AM', t: 'Moms Group', where: 'Kids Auditorium' },
+    { d: '2026-12-05', time: '8:00 AM', t: 'Springs Men Breakfast', where: 'Classroom 1' },
+    { d: '2026-12-05', time: '1:00 PM', t: 'Springs Women | Christmas Tea', where: 'Main Lobby & Sanctuary' },
+    { d: '2026-12-09', time: '6:30 PM', t: 'Membership Class', where: 'Green Room', step: true },
+    { d: '2027-01-15', time: '5:00 PM', t: 'Youth | Here I Am Winter Retreat', where: 'Camp Elim', big: true }
   ],
   links: {
     media: 'https://www.springs.church/media',

@@ -500,7 +500,7 @@ section{position:relative}
   const x = S.latest, p = document.getElementById('player');
   document.getElementById('m-h').textContent = x.title;
   document.getElementById('m-sub').textContent = `Pastor ${x.speaker} · ${x.date}`;
-  document.getElementById('p-img').alt = `${x.speaker} preaching ${x.title}`;
+  const pimg = document.getElementById('p-img'); if (x.img) pimg.src = x.img; pimg.alt = `${x.speaker} preaching ${x.title}`;
   p.href = x.watch;
   const play = e => {
     if (e.metaKey || e.ctrlKey) return;

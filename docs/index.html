@@ -517,6 +517,22 @@ section{position:relative}
   const mw = document.getElementById('m-watch'); mw.href = x.watch; mw.addEventListener('click', play);
   document.getElementById('recent').innerHTML = S.sermons.slice(0, 3).map(s =>
     `<a href="https://youtu.be/${s.id}"><div class="ph"><img src="${S.thumb(s.id)}" alt="" loading="lazy"></div><div><b>${s.t}</b><span>${s.s}</span></div></a>`).join('');
+  // Newest sermons from data/sermons.json (kept current by the Sermon sync job on the draft site). Falls back to shared.js.
+  fetch('data/sermons.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(d => {
+    const it = d && d.items; if (!it || !it.length) return;
+    const n = it[0], pastors = ['Michael Petillo', 'Billy Coker'];
+    if (n.id !== x.id) {
+      Object.assign(x, { title: n.title, speaker: n.speaker, date: n.date, id: n.id, watch: 'https://youtu.be/' + n.id });
+      document.getElementById('m-h').textContent = x.title;
+      document.getElementById('m-sub').textContent = (pastors.includes(x.speaker) ? 'Pastor ' : '') + `${x.speaker} · ${x.date}`;
+      p.href = x.watch; mw.href = x.watch;
+      if (x.speaker !== 'Michael Petillo') pimg.src = `https://i.ytimg.com/vi/${x.id}/maxresdefault.jpg`;
+      pimg.alt = `${x.speaker} preaching ${x.title}`;
+    }
+    const known = new Set(S.sermons.map(s => s.id));
+    document.getElementById('recent').innerHTML = it.slice(1, 4).map(s =>
+      `<a href="https://youtu.be/${s.id}"><div class="ph"><img src="${known.has(s.id) ? S.thumb(s.id) : s.thumb}" alt="" loading="lazy"></div><div><b>${s.title.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))}</b><span>${s.speaker}</span></div></a>`).join('');
+  }).catch(() => {});
 
   // Next steps
   const steps = [

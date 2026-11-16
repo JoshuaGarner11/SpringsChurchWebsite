@@ -38,3 +38,9 @@ events at a home (home groups, "Residence", or a non-church street address) drop
 lose HTML and any email/phone that isn't the church's; kids and student groups left out of groups.json; the log prints counts.
 Test the rules offline: `python3 scripts/test_ccb_sync.py scripts/ccb_sync.py`.
 Before a local build + push, run `git pull --rebase` (the sync job commits to main). build.py keeps docs/data.
+
+## Sermon sync (Home's featured sermon)
+`.github/workflows/sermon-sync.yml` runs `scripts/sermon_sync.py` every two hours on Sundays and Mondays and twice a day the rest of the
+week (no secrets). It reads the public "Sunday Sermons" playlist (newest first) and the top four videos' pages, and writes
+`docs/data/sermons.json` when something changed. Home (option-i.html) fetches that file and swaps in the newest sermon (title, speaker,
+date, player) and the three before it; without the file it shows what's in shared.js. If YouTube answers oddly, the script keeps the last list.

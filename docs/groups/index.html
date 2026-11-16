@@ -238,6 +238,7 @@ html.sgr-lock{overflow:hidden}
   #sgr .acts .btn{flex:1 1 auto}
   #sgr .dlg-h{padding-left:16px;gap:8px}
 }
+#sgr .rot-top{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 </style>
 
 <div id="sgr">
@@ -457,6 +458,45 @@ html.sgr-lock{overflow:hidden}
   const one = () => { if (--left <= 0) ready(); };
   imgs.forEach(i => i.complete ? one() : (i.addEventListener('load', one), i.addEventListener('error', one)));
   setTimeout(ready, 1500);
+  /* ---------- hero photos keep moving: after the opening reveal, one random photo wipes to another from its pool every few
+     seconds (same bottom-up reveal as the opening). Never shows the same photo twice at once. Pauses off screen, in a
+     background tab and while hovered; off entirely for reduced motion. pools = one list for every slot, or one list per slot. ---------- */
+  function rotateHero(box, pools, perSlot) {
+    if (!box || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const slots = box.matches('figure') ? [box] : [...box.children].filter(el => el.querySelector('img'));
+    const imgOf = el => el.querySelector('img:not(.rot-top)');
+    const poolOf = i => (perSlot ? pools[i] : pools) || [];
+    const shown = () => slots.map(el => imgOf(el).getAttribute('src'));
+    const choices = i => poolOf(i).filter(p => !shown().includes(p.src));
+    let onScreen = false, hovered = false, busy = false, last = -1, timer = 0;
+    const schedule = () => { clearTimeout(timer); timer = setTimeout(step, 4200 + Math.random() * 2200); };
+    function step() {
+      if (!onScreen || hovered || busy || document.hidden) return schedule();
+      const open = slots.map((_, i) => i).filter(i => (slots.length === 1 || i !== last) && choices(i).length);
+      if (!open.length) return schedule();
+      const i = open[Math.floor(Math.random() * open.length)], c = choices(i), next = c[Math.floor(Math.random() * c.length)];
+      last = i; busy = true;
+      const pre = new Image(); pre.src = next.src;
+      const swap = () => {
+        const base = imgOf(slots[i]), top = base.cloneNode(false);
+        ['fetchpriority', 'loading', 'id'].forEach(a => top.removeAttribute(a));
+        top.src = next.src; top.alt = ''; top.classList.add('rot-top'); top.setAttribute('aria-hidden', 'true');
+        base.after(top);
+        const done = () => { base.src = next.src; base.alt = next.alt; top.remove(); busy = false; schedule(); };
+        if (!top.animate) return done();
+        top.animate([{ clipPath: 'inset(100% 0 0 0)', transform: 'scale(1.08)' }, { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }],
+          { duration: 1150, easing: 'cubic-bezier(.16,1,.3,1)' }).onfinish = done;
+      };
+      pre.decode ? pre.decode().then(swap, () => { busy = false; schedule(); }) : (pre.onload = swap);
+    }
+    new IntersectionObserver(es => { onScreen = es[0].isIntersecting; }, { threshold: 0.25 }).observe(box);
+    if (matchMedia('(hover: hover)').matches) {
+      box.addEventListener('mouseenter', () => { hovered = true; });
+      box.addEventListener('mouseleave', () => { hovered = false; });
+    }
+    setTimeout(schedule, 2400);   // let the opening reveal finish first
+  }
+  rotateHero(document.querySelector('#sgr .trio'), [{"src": "img/sgr-prayer.jpg", "alt": "A circle of adults praying together, hands on one another’s shoulders"}, {"src": "img/sgr-coffee.jpg", "alt": "A barista and a guest share a laugh at the Springs coffee bar"}, {"src": "img/sgr-serve.jpg", "alt": "Two volunteers smile beside boxes of produce at a food drive"}, {"src": "img/sgr-ya.jpg", "alt": "Springs Young Adults together at mini golf"}, {"src": "img/sgr-greeter.jpg", "alt": "A Springs greeter shaking hands with a guest in the lobby"}, {"src": "img/sgr-pray2.jpg", "alt": "A Springs prayer team member praying with a man after a service"}, {"src": "img/sgr-friends.jpg", "alt": "Three young women from Springs Young Adults smiling together"}, {"src": "img/sgr-trip.jpg", "alt": "Two young women from a Springs trip team laughing together outdoors"}], false);
 })();
 </script>
 </section></main>

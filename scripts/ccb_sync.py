@@ -33,7 +33,7 @@ CHURCH_PHONE = re.compile(r"488[\s.-]?8331")
 
 
 def call(srv, **params):
-    user, pw = os.environ.get("CCB_API_USER"), os.environ.get("CCB_API_PASS")
+    user, pw = (os.environ.get("CCB_API_USER") or "").strip(), (os.environ.get("CCB_API_PASS") or "").strip()  # pasted secrets can carry a newline
     if not user or not pw:
         print("CCB_API_USER / CCB_API_PASS are not both set yet (add them as repository secrets). Skipping this run.")
         sys.exit(0)
@@ -45,7 +45,9 @@ def call(srv, **params):
         root = ET.fromstring(r.read())
     err = root.find(".//errors/error")
     if err is not None:
-        sys.exit(f"CCB returned an error for {srv}: code {err.get('number') or err.get('code') or '?'}")
+        code = err.get('number') or err.get('code') or '?'
+        hint = {"002": " (invalid username or password: check the two secrets and that the API user is active)", "2": " (invalid username or password)"}.get(str(code), "")
+        sys.exit(f"CCB returned an error for {srv}: code {code}{hint}")
     return root
 
 

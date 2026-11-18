@@ -1,26 +1,13 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-17T21:15-07:00",
- "hash": "951c530fdb47fe39",
+ "updated": "2026-11-18T06:03-07:00",
+ "hash": "e470e5073cf8a310",
  "range": [
-  "2026-11-17",
-  "2027-03-17"
+  "2026-11-18",
+  "2027-03-18"
  ],
  "timezone": "America/Denver",
  "items": [
-  {
-   "id": "10376-2026-11-17",
-   "title": "Silver Warriors (Ages 55+) | Seniors Group",
-   "desc": "We seek to provide opportunities to learn from one another, to serve one another, to encourage one another, and to pray for one another. There is no set format but we will allow the Holy Spirit to guide and direct us each week. The primary meeting will be every Tuesday, but we expect to see smaller groups choose to meet over a meal, take an easy hike, or undertake a service project at different times and places.",
-   "start": "2026-11-17T10:00:00-07:00",
-   "end": "2026-11-17T12:00:00-07:00",
-   "allDay": false,
-   "venue": "Classroom 1-2",
-   "onCampus": false,
-   "group": "Silver Warriors (Ages 55+) | Seniors Group",
-   "category": "Connect Groups",
-   "type": "Open To All"
-  },
   {
    "id": "10369-2026-11-18",
    "title": "Middle School - Rooted",

@@ -396,7 +396,7 @@ section{position:relative}
       </div>
       <dl class="info rv">
         <div><dt>Sundays</dt><dd>10 AM<small>Worship + Springs Kids</small></dd></div>
-        <div><dt>Wednesdays</dt><dd>6:30 PM<small>Prayer night + Awaken</small></dd></div>
+        <div><dt>Wednesdays</dt><dd>6:30 PM<small>Prayer + Kids + Youth</small></dd></div>
         <div><dt>Location</dt><dd>1515 Auto Mall Loop<small>Colorado Springs, CO 80920</small></dd></div>
         <div class="go"><span class="live" id="live"><i></i><span></span></span><a class="btn btn-primary" href="#" data-l="directions">Get directions</a></div>
       </dl>
@@ -406,7 +406,6 @@ section{position:relative}
   <section class="sec welcome" aria-labelledby="w-h">
     <div class="container grid">
       <div class="copy">
-        <p class="eyebrow rv">Welcome home</p>
         <h2 class="h2 rv d1" id="w-h">Spirit-filled worship. Biblical preaching. Powerful prayer.</h2>
         <p class="lead rv d2">It started in 2009 with twelve people praying in a basement. Today we're a family of more than a thousand from every corner of Colorado Springs, still built on the same three things.</p>
         <p class="lead rv d2">Whether it's your first Sunday or your five-hundredth, there's a seat saved for you.</p>
@@ -422,8 +421,7 @@ section{position:relative}
   <section class="sec gather" aria-labelledby="g-h" style="padding-top:0">
     <div class="container">
       <div class="shead">
-        <div class="t"><p class="eyebrow rv">Gather with us</p><h2 class="h2 rv d1" id="g-h">Sundays and Wednesdays</h2></div>
-        <div class="d"><p class="lead rv d1">Two times a week, one family. Here's what each one looks like.</p></div>
+        <div class="t"><h2 class="h2 rv d1" id="g-h">Sundays and Wednesdays</h2></div>
       </div>
       <div class="cards">
         <a class="card rv" href="plan-a-visit/">
@@ -438,9 +436,9 @@ section{position:relative}
         <a class="card rv d1" href="#" data-l="prayer">
           <div class="ph"><img src="img/prayer-group.jpg" alt="A small group praying together after a service" loading="lazy"></div>
           <div class="body">
-            <div class="when"><span>Wednesdays · <b>6:30 PM</b></span><span>Awaken for kids</span></div>
+            <div class="when"><span>Wednesdays · <b>6:30 PM</b></span><span>Kids + Youth</span></div>
             <h3 class="h3">Wednesday Nights</h3>
-            <p>The night this church was built on. Adults gather to pray while kids have Awaken down the hall.</p>
+            <p>The night this church was built on. Adults gather to pray, kids have Awaken, and middle and high schoolers have Youth.</p>
             <span class="link">Send a prayer request <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 3.5L13.5 8 9 12.5"/></svg></span>
           </div>
         </a>
@@ -451,7 +449,7 @@ section{position:relative}
   <section class="sec watch dark" id="watch" aria-labelledby="m-h">
     <div class="container">
       <div class="shead">
-        <div class="t"><p class="eyebrow rv">This Sunday's message</p><h2 class="h2 rv d1" id="m-h"></h2></div>
+        <div class="t"><h2 class="h2 rv d1" id="m-h"></h2></div>
         <div class="d"><p class="lead rv d1" id="m-sub"></p><div class="btns rv d2"><a class="btn btn-primary" id="m-watch" href="#">Watch now</a><a class="btn btn-secondary" href="#" data-l="sermons">All sermons</a></div></div>
       </div>
       <a class="player ph rv" id="player" href="#">
@@ -465,7 +463,7 @@ section{position:relative}
   <section class="sec steps" aria-labelledby="s-h">
     <div class="container">
       <div class="shead">
-        <div class="t"><p class="eyebrow rv">Get involved</p><h2 class="h2 rv d1" id="s-h">Take your next step</h2></div>
+        <div class="t"><h2 class="h2 rv d1" id="s-h">Take your next step</h2></div>
         <div class="d row">
           <div class="arrows">
             <button class="prev" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8H3M7 3.5L2.5 8 7 12.5"/></svg></button>
@@ -480,7 +478,7 @@ section{position:relative}
   <section class="sec events" aria-labelledby="e-h">
     <div class="container">
       <div class="shead">
-        <div class="t"><p class="eyebrow rv">Calendar</p><h2 class="h2 rv d1" id="e-h">What's coming up</h2></div>
+        <div class="t"><h2 class="h2 rv d1" id="e-h">What's coming up</h2></div>
         <div class="d row"><a class="btn btn-secondary rv" href="#" data-l="events">All events</a></div>
       </div>
       <div class="ev-list rv" id="evs"></div>
@@ -492,7 +490,6 @@ section{position:relative}
       <div class="panel rv">
         <div class="ph"><img src="img/appdl.jpg" alt="The Springs Church app on a phone" loading="lazy"></div>
         <div class="copy">
-          <p class="eyebrow">Stay close all week</p>
           <h2 class="h2" id="a-h">Springs in your pocket</h2>
           <p class="lead">Sermons, events, giving and groups in one app, plus a weekly email so you never miss what's happening.</p>
           <div class="btns"><a class="btn btn-primary" href="#" data-l="app">Get the app</a><a class="btn btn-secondary" href="#" data-l="newsletter">Join the newsletter</a></div>
@@ -673,7 +670,7 @@ section{position:relative}
   ];
   const track = document.getElementById('track');
   track.innerHTML = steps.map(([t, tag, d, img, href, cta, pos]) =>
-    `<a class="card" href="${href}"><div class="ph"><img src="${img}" alt="" loading="lazy"${pos ? ` style="object-position:${pos}"` : ''}></div><div class="body"><span class="tag">${tag}</span><h3 class="h3">${t}</h3><p>${d}</p><span class="link">${cta} ${arrow}</span></div></a>`).join('');
+    `<a class="card" href="${href}"><div class="ph"><img src="${img}" alt="" loading="lazy"${pos ? ` style="object-position:${pos}"` : ''}></div><div class="body"><h3 class="h3">${t}</h3><p>${d}</p><span class="link">${cta} ${arrow}</span></div></a>`).join('');
   const prev = document.querySelector('.prev'), next = document.querySelector('.next');
   const by = () => track.querySelector('.card').getBoundingClientRect().width + 24;
   prev.onclick = () => track.scrollBy({ left: -by(), behavior: 'smooth' });

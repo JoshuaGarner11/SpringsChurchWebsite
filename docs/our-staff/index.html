@@ -318,16 +318,16 @@ html.sse-lock{overflow:hidden}
 
   /* ---------- the finder: topic -> the right people (ranked director/pastor first) ---------- */
   const TOPICS = [
-    ['My kids', p => /kids|early childhood/i.test(p.r)],
-    ['Middle school', p => /middle school/i.test(p.r)],
-    ['High school', p => /high school|youth/i.test(p.r)],
-    ['Young adults', p => /young adults/i.test(p.r)],
-    ['Getting connected', p => /\bfratt\b/i.test(p.n) || /operations/i.test(p.r)],
-    ['Worship + production', p => /worship|production/i.test(p.r)],
+    ['My Kids', p => /kids|early childhood/i.test(p.r)],
+    ['Middle School', p => /middle school/i.test(p.r)],
+    ['High School', p => /high school|youth/i.test(p.r)],
+    ['Young Adults', p => /young adults/i.test(p.r)],
+    ['Getting Connected', p => /\bfratt\b/i.test(p.n) || /operations/i.test(p.r)],
+    ['Worship + Production', p => /worship|production/i.test(p.r)],
     ['Missions', p => /missions/i.test(p.r)],
     ['Events', p => /events/i.test(p.r)],
-    ['Talking with a pastor', p => p.pastor],
-    ['Something else', p => /executive assistant/i.test(p.r)]
+    ['Talking with a Pastor', p => p.pastor],
+    ['Something Else', p => /executive assistant/i.test(p.r)]
   ];
   const rank = p => /pastor/i.test(p.r) ? 0 : /director/i.test(p.r) ? 1 : /coordinator|manager/i.test(p.r) ? 2 : 3;
   let topic = '';
@@ -448,7 +448,7 @@ html.sse-lock{overflow:hidden}
     const hits = people.filter(test).sort((a, b) => rank(a) - rank(b));
     hits.forEach(p => root.querySelector(`.row[data-i="${p.i}"]`).classList.add('hit'));
     idx.classList.add('dim');
-    if (label === 'Talking with a pastor') ans.innerHTML = `Email our pastors at <a href="mailto:${OFFICE}?subject=${encodeURIComponent('For our pastors')}">${OFFICE}</a>.`;
+    if (label === 'Talking with a Pastor') ans.innerHTML = `Email our pastors at <a href="mailto:${OFFICE}?subject=${encodeURIComponent('For our pastors')}">${OFFICE}</a>.`;
     else if (hits.length) ans.innerHTML = `Start with <button type="button" data-goto="${hits[0].i}">${esc(hits[0].n)}</button>, ${esc(hits[0].r)}` + (hits.length > 1 ? `, or ${hits.length - 1} more highlighted below.` : '.');
     else ans.innerHTML = `Email <a href="mailto:${OFFICE}">${OFFICE}</a> and we’ll point you to the right person.`;
     if (hits.length && !narrow.matches) show(hits[0].i);

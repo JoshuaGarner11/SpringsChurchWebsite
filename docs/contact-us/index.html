@@ -48,7 +48,7 @@
 <main><section class="tcc-block html-takeover"><!-- springs.church/contact-us ("Contact Us") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /contact-us untouched.
      Source of truth: ~/Desktop/springs-contact-site/churchco/contact-block.html (preview: preview-live.html via build-preview.py).
      Built from the Creative Board audit card "Contact Page" (Oct 29): tap-to-call number, office hours in stylebook format
-     (Tuesday–Thursday, 9AM–5PM) with a live open/closed line in Colorado time, and a "Send Us a Message" composer so the page's
+     (Tuesday–Thursday, 9AM–5PM; Monday by appointment only) with a live open/closed line in Colorado time, and a "Send Us a Message" composer so the page's
      search description ("send a message") is true. The composer only builds a mailto: link for the visitor's own email app.
      It collects nothing, stores nothing and sends nothing anywhere. Prayer, care and serving topics point to /prayer, /care and /serve,
      which have their own forms. Live copy kept: "Have a Question?" / "We’re here to listen, help, and connect with you."
@@ -249,7 +249,7 @@
         <article class="tile" style="--n:0">
           <div class="tile-h"><svg aria-hidden="true"><use href="#sct-phone"/></svg><h3>Call</h3></div>
           <a class="big" href="tel:+17194888331">(719) 488-8331</a>
-          <p>Tuesday–Thursday, 9AM–5PM</p>
+          <p>Tuesday–Thursday, 9AM–5PM<br>Monday by appointment only</p>
           <p class="now" data-now aria-live="polite" hidden><span></span></p>
           <div class="tile-act"><a class="btn" href="tel:+17194888331">Call Now</a></div>
         </article>
@@ -381,7 +381,7 @@
         <div><dt>Sundays</dt><dd><b>10AM</b>Worship and teaching. Springs Kids for babies through grade 5.</dd></div>
         <div><dt>Wednesdays</dt><dd><b>6:30PM</b>Prayer night. Awaken for kids, Rooted for middle school and Anthem for high school.</dd></div>
         <div><dt>Address</dt><dd>1515 Auto Mall Loop<br>Colorado Springs, CO 80920</dd></div>
-        <div><dt>Office</dt><dd><b>9AM–5PM</b>Tuesday–Thursday<br><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a></dd></div>
+        <div><dt>Office</dt><dd><b>9AM–5PM</b>Tuesday–Thursday<br>Monday by appointment only<br><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a></dd></div>
       </dl>
     </div>
   </section>
@@ -419,7 +419,7 @@
   } else rv.forEach(el => el.classList.add('in'));
   requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
 
-  /* office hours, live in Colorado time: Tuesday–Thursday, 9AM–5PM (?now=2026-11-17T10:00 previews a Colorado time) */
+  /* office hours, live in Colorado time: Tuesday–Thursday, 9AM–5PM, Monday by appointment only (?now=2026-11-17T10:00 previews a Colorado time) */
   const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const OPEN_DAYS = [2, 3, 4], OPEN = 9 * 60, CLOSE = 17 * 60;
   const denverNow = () => {
@@ -433,6 +433,7 @@
     const isOpen = d => OPEN_DAYS.includes(d);
     if (isOpen(day) && mins >= OPEN && mins < CLOSE) return [true, 'Open now until 5PM'];
     if (isOpen(day) && mins < OPEN) return [false, 'Opens today at 9AM'];
+    if (day === 1 && mins < CLOSE) return [false, 'Today by appointment only'];
     if (isOpen((day + 1) % 7)) return [false, 'Opens tomorrow at 9AM'];
     for (let k = 2; k <= 7; k++) if (isOpen((day + k) % 7)) return [false, `Opens ${DAYS[(day + k) % 7]} at 9AM`];
     return [false, 'Tuesday–Thursday, 9AM–5PM'];
@@ -508,7 +509,7 @@
     <div class="sc-ftr-top">
       <div class="sc-visit">
         <b>Sundays 10AM<br>Wednesdays 6:30PM</b>
-        <p>1515 Auto Mall Loop, Colorado Springs, CO 80920<br><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a><br>Office: Tuesday–Thursday, 9AM–5PM</p>
+        <p>1515 Auto Mall Loop, Colorado Springs, CO 80920<br><a href="tel:+17194888331">(719) 488-8331</a> · <a href="mailto:info@springs.church">info@springs.church</a><br>Office: Tuesday–Thursday, 9AM–5PM<br>Monday by appointment only</p>
         <a class="sc-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Springs+Church+1515+Auto+Mall+Loop+Colorado+Springs+CO+80920" target="_blank" rel="noopener">Get Directions</a>
       </div>
       <div class="sc-cols">

@@ -60,7 +60,7 @@ window.SPRINGS = {
     youtube: 'https://www.youtube.com/@springs.church'
   },
   address: ['1515 Auto Mall Loop', 'Colorado Springs, CO 80920'],
-  phone: '(719) 488-8331', email: 'info@springs.church', hours: 'Tue to Thu, 9 AM to 5 PM'
+  phone: '(719) 488-8331', email: 'info@springs.church', hours: 'Tuesday–Thursday, 9AM–5PM; Monday by appointment only'
 };
 
 /* Helpers */

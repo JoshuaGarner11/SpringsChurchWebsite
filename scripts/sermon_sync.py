@@ -136,6 +136,7 @@ def main():
         services = full_services(get(STREAMS))
     except Exception as e:
         print("Couldn't read the Live tab:", type(e).__name__, "- keeping the last Full Service links."); services = {}
+    print(f"Live tab: {len(services)} Full Service streams; springs.church photo: {'found' if photo else 'none'}")
     items, exact, estimated = [], 0, 0
     for e in top:
         if e["id"] in old and old[e["id"]].get("date"):

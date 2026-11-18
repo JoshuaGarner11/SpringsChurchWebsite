@@ -116,10 +116,33 @@ section{position:relative}
 .hero .container{position:relative}
 .mark{font:700 var(--m)/.8 var(--display);letter-spacing:-.035em;text-transform:uppercase;color:var(--cream);text-align:center;white-space:nowrap;position:relative;z-index:2;padding-top:clamp(12px,2vw,28px);pointer-events:none}
 .hero-card{position:relative;margin-top:calc(var(--m) * -.22);border-radius:var(--r-xl);height:clamp(400px,calc(100svh - 116px - var(--m) * .6 - 110px),660px);color:#fff}
-.hero-card.ph img{object-position:50% 40%}
 .hero-card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,18,16,.6) 0%,rgba(20,18,16,.12) 40%,rgba(20,18,16,0) 62%)}
-.hero-copy{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(56px,7vw,104px) 24px 0;gap:26px}
+.hero-copy{position:absolute;inset:0;z-index:2;display:grid;grid-template-rows:auto auto;align-content:start;justify-items:center;text-align:center;padding:clamp(56px,7vw,104px) 24px 0;row-gap:26px}
 .hero-copy p{font:700 clamp(14px,1.15vw,17px)/1.55 var(--display);letter-spacing:.12em;text-transform:uppercase;max-width:46ch}
+/* Hero rotation: the welcome photos take turns with the latest sermon. Only opacity and transform animate. */
+.slides{position:absolute;inset:0;z-index:0}
+.hero-card .sl{position:absolute;inset:0;margin:0;opacity:0;transform:scale(1.04);transition:opacity 1.1s var(--ease),transform 2.4s var(--ease)}
+.hero-card .sl.on{opacity:1;transform:none;z-index:1}
+.hero-card .sl.under{opacity:1;transform:none;transition:none}
+.hero-card .sl img{position:absolute;inset:0;object-position:var(--p,50% 40%);transition:none}
+.hero-copy>*{grid-column:1;transition:opacity .5s var(--ease) .2s,transform .7s var(--ease) .2s}
+.hero-copy .txt{grid-row:1;align-self:end;display:grid;justify-items:center;gap:14px;text-shadow:0 1px 22px rgba(0,0,0,.28)}
+.hero-copy .btns{grid-row:2}
+.hero-copy .off{opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .28s ease,transform .28s ease}
+.hero-copy h2{font:700 clamp(30px,3.4vw,50px)/1.04 var(--display);letter-spacing:-.02em;max-width:16ch;text-wrap:balance}
+.hero-nav{position:absolute;z-index:3;left:50%;bottom:84px;transform:translateX(-50%);width:max-content;white-space:nowrap;display:flex;align-items:center;gap:2px;padding:4px;border-radius:999px;background:rgba(20,18,16,.42);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.hero-nav button{position:relative;height:34px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:rgba(255,255,255,.72);font:700 11px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:color .2s,background .2s}
+.hero-nav button:hover{color:#fff}
+.hero-nav button[aria-current="true"]{color:#fff;background:rgba(255,255,255,.14)}
+.hero-nav button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.hero-nav .bar{position:absolute;left:16px;right:16px;bottom:5px;height:2px;border-radius:2px;background:rgba(255,255,255,.2);overflow:hidden;opacity:0}
+.hero-nav [aria-current="true"] .bar{opacity:1}
+.hero-nav .bar i{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.hero-nav [aria-current="true"] .bar i{animation:heroTick var(--dur,7s) linear forwards}
+.hero-nav.paused .bar i,html:not(.ready) .hero-nav .bar i{animation-play-state:paused}
+@keyframes heroTick{to{transform:scaleX(1)}}
+.hero-nav .pause{width:34px;padding:0;display:grid;place-items:center}
+.hero-nav .pause svg{width:12px;height:12px;fill:currentColor}
 
 /* Info bar: the practical stuff, structured */
 .info{position:relative;z-index:3;margin:-64px clamp(16px,3vw,40px) 0;background:var(--card);border-radius:var(--r-l);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr) auto;align-items:center}
@@ -266,7 +289,17 @@ section{position:relative}
   .announce{text-align:left;padding-right:52px;font-size:13px}
   .hero{background:linear-gradient(var(--char) 0 42%,var(--cream) 42%)}
   .hero-card{height:auto;aspect-ratio:4/5}
-  .hero-card.ph img{object-position:62% 50%}
+  .hero-card .sl img{object-position:var(--pm,var(--p))}
+  /* the sermon photo sits low on a navy backdrop so the title and buttons stay off the preacher's face */
+  /* bright photos get a soft top shade on phones, where the copy sits over sky or wall */
+  .hero-card .sl.shade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.4) 0%,rgba(20,18,16,.24) 45%,rgba(20,18,16,0) 72%)}
+  .hero-card .sl.low{background:#04193f}
+  .hero-card .sl.low img{top:auto;height:64%}
+  .hero-card .sl.low::after{content:"";position:absolute;left:0;right:0;top:36%;height:18%;background:linear-gradient(#04193f,rgba(4,25,63,0))}
+  #h-meta .sep{display:none}
+  #h-meta .who{display:block}
+  .hero-nav{bottom:54px}
+  .hero-nav button{padding:0 13px}
   .hero-copy{padding-top:40px}
   .hero-copy .btns{justify-content:center;gap:8px}
   .hero-copy .btn{height:44px;padding:0 16px;font-size:12px}
@@ -289,6 +322,7 @@ section{position:relative}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .rv,.js .mark,.js .hero-card,.js .wordmark span{opacity:1;transform:none}
+  .hero-nav .pause,.hero-nav .bar{display:none}
 }
 </style>
 <style>.mock-switch{display:none!important}</style></head>
@@ -338,14 +372,26 @@ section{position:relative}
   <section class="hero" aria-label="Welcome">
     <div class="container">
       <h1 class="mark" aria-label="Springs Church">Springs</h1>
-      <div class="hero-card ph">
-        <img src="img/lobby-coffee-three.jpg" alt="Three adults talking over coffee in the Springs lobby">
+      <div class="hero-card ph" id="hero" role="region" aria-roledescription="carousel" aria-label="Welcome and the latest sermon">
+        <div class="slides">
+          <figure class="sl on"><img src="img/lobby-coffee-three.jpg" alt="Three adults talking over coffee in the Springs lobby" fetchpriority="high" style="--p:50% 40%;--pm:62% 50%"></figure>
+        </div>
         <div class="hero-copy on-photo">
-          <p>A church family in Briargate, praying for Colorado Springs and the world.</p>
-          <div class="btns">
+          <div class="txt" data-k="welcome"><p>A church family in Briargate, praying for Colorado Springs and the world.</p></div>
+          <div class="btns" data-k="welcome">
             <a class="btn btn-primary" href="plan-a-visit/">Plan a visit</a>
             <a class="btn btn-secondary" href="#watch">Watch online</a>
           </div>
+          <div class="txt off" data-k="sermon" aria-hidden="true" inert><p id="h-meta"></p><h2 id="h-title"></h2></div>
+          <div class="btns off" data-k="sermon" aria-hidden="true" inert>
+            <a class="btn btn-primary" id="h-watch" href="#">Watch sermon</a>
+            <a class="btn btn-secondary" id="h-full" href="https://www.youtube.com/@springs.church/streams">Full service</a>
+          </div>
+        </div>
+        <div class="hero-nav" id="hero-nav">
+          <button type="button" data-go="welcome" aria-current="true">Welcome<span class="bar"><i></i></span></button>
+          <button type="button" data-go="sermon" aria-current="false">Latest sermon<span class="bar"><i></i></span></button>
+          <button type="button" class="pause" aria-label="Pause the slideshow" aria-pressed="false"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1.5" width="2.6" height="9" rx=".6"/><rect x="7.4" y="1.5" width="2.6" height="9" rx=".6"/></svg></button>
         </div>
       </div>
       <dl class="info rv">
@@ -515,6 +561,84 @@ section{position:relative}
   };
   p.addEventListener('click', play);
   const mw = document.getElementById('m-watch'); mw.href = x.watch; mw.addEventListener('click', play);
+
+  // Hero: the welcome photos take turns with the latest sermon, 7 s each. The bar in the active tab is the timer;
+  // pausing it (hover, keyboard focus, off screen, hidden tab, or the pause button) pauses the rotation.
+  const PASTORS = ['Michael Petillo', 'Billy Coker'];
+  const hero = document.getElementById('hero'), stage = hero.querySelector('.slides'), hnav = document.getElementById('hero-nav');
+  const hcopy = hero.querySelectorAll('.hero-copy [data-k]'), htabs = hnav.querySelectorAll('[data-go]'), hpause = hnav.querySelector('.pause');
+  const addSlide = o => {
+    const f = document.createElement('figure'), i = new Image();
+    f.className = 'sl' + (o.cls ? ' ' + o.cls : ''); f.setAttribute('aria-hidden', 'true');
+    i.alt = o.alt || ''; i.decoding = 'async'; i.style.setProperty('--p', o.p); i.style.setProperty('--pm', o.pm);
+    f.appendChild(i); stage.appendChild(f); o.el = f; o.img = i; return o;
+  };
+  const first = stage.querySelector('.sl');
+  const WELCOME = [{ el: first, img: first.querySelector('img') }].concat([
+    { src: 'img/building-truss-peak.jpg', alt: 'The Springs Church building and its logo, with Pikes Peak beyond the parking lot', p: '50% 58%', pm: '16% 50%', cls: 'shade' },
+    { src: 'img/worship-cross.jpg', alt: 'The church worshiping with hands raised as the band leads under a large cross', p: '50% 42%', pm: '40% 50%' },
+    { src: 'img/cafe-table-talk.jpg', alt: 'Two women talking at a café table in the lobby', p: '50% 72%', pm: '46% 50%', cls: 'shade' }
+  ].map(addSlide));
+  const SERMON = addSlide({ p: '50% 38%', pm: '85% 50%', cls: 'low' });
+  const want = o => {
+    if (!o.img.getAttribute('src') && o.src) o.img.src = o.src;
+    if (o.img.complete && o.img.naturalWidth) return Promise.resolve();
+    return new Promise(r => { o.img.addEventListener('load', r, { once: true }); o.img.addEventListener('error', r, { once: true }); setTimeout(r, 4000); });
+  };
+  const heroSermon = (s, photo) => {
+    const meta = document.getElementById('h-meta'); meta.textContent = '';
+    [['d', s.date.replace(/,\s*\d{4}$/, '')], ['sep', ' · '], ['who', (PASTORS.includes(s.speaker) ? 'Pastor ' : '') + s.speaker]].forEach(([c, t]) => {
+      const sp = document.createElement('span'); sp.className = c; sp.textContent = t; meta.appendChild(sp);
+    });
+    document.getElementById('h-title').textContent = s.title;
+    const hw = document.getElementById('h-watch'), hf = document.getElementById('h-full');
+    hw.href = s.watch;
+    if (g.live && g.name === 'Sunday Worship') { hf.textContent = 'Watch live'; hf.href = 'https://www.youtube.com/@springs.church/live'; }
+    else if (s.service) { hf.textContent = 'Full service'; hf.href = 'https://www.youtube.com/watch?v=' + s.service; }
+    const src = photo || (s.speaker === 'Michael Petillo' ? s.heroImg : 'img/worship-raised.jpg');
+    if (src && src !== SERMON.src) { SERMON.src = src; if (SERMON.img.getAttribute('src')) SERMON.img.src = src; }
+    SERMON.img.alt = `${PASTORS.includes(s.speaker) ? 'Pastor ' : ''}${s.speaker} preaching`;
+  };
+  heroSermon(x);
+  document.getElementById('h-watch').addEventListener('click', play);
+  let mode = 'welcome', w = 0, shown = WELCOME[0], busy = false;
+  const restartBar = () => { const i = hnav.querySelector('[aria-current="true"] .bar i'); if (i) { i.style.animation = 'none'; void i.offsetWidth; i.style.animation = ''; } };
+  const nextUp = () => mode === 'welcome' ? SERMON : WELCOME[(w + 1) % WELCOME.length];
+  const heroGo = async to => {
+    if (to === mode) return restartBar();
+    if (busy) return;
+    busy = true;
+    const target = to === 'sermon' ? SERMON : WELCOME[(w + 1) % WELCOME.length];
+    await want(target);
+    if (to === 'welcome') w = (w + 1) % WELCOME.length;
+    mode = to;
+    const prev = shown; shown = target;
+    prev.el.classList.add('under'); prev.el.classList.remove('on'); prev.el.setAttribute('aria-hidden', 'true');
+    target.el.classList.add('on'); target.el.removeAttribute('aria-hidden');
+    setTimeout(() => prev.el.classList.remove('under'), 1200);
+    hcopy.forEach(el => { const off = el.dataset.k !== mode; el.classList.toggle('off', off); el.inert = off; off ? el.setAttribute('aria-hidden', 'true') : el.removeAttribute('aria-hidden'); });
+    htabs.forEach(t => t.setAttribute('aria-current', String(t.dataset.go === mode)));
+    busy = false;
+    want(nextUp());   // fetch the next photo while this one shows
+  };
+  htabs.forEach(t => t.addEventListener('click', () => heroGo(t.dataset.go)));
+  hnav.addEventListener('animationend', e => { if (e.animationName === 'heroTick') heroGo(mode === 'welcome' ? 'sermon' : 'welcome'); });
+  const why = new Set();
+  const hold = (k, on) => { on ? why.add(k) : why.delete(k); hnav.classList.toggle('paused', why.size > 0); };
+  const PAUSE_SVG = hpause.innerHTML, PLAY_SVG = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.6v8.8a.6.6 0 0 0 .9.5l7-4.4a.6.6 0 0 0 0-1L3.9 1.1a.6.6 0 0 0-.9.5z"/></svg>';
+  hpause.addEventListener('click', () => {
+    const on = !why.has('user'); hold('user', on);
+    hpause.setAttribute('aria-pressed', String(on)); hpause.setAttribute('aria-label', on ? 'Play the slideshow' : 'Pause the slideshow');
+    hpause.innerHTML = on ? PLAY_SVG : PAUSE_SVG;
+  });
+  if (matchMedia('(hover: hover)').matches) {
+    hero.addEventListener('mouseenter', () => hold('hover', true)); hero.addEventListener('mouseleave', () => hold('hover', false));
+  }
+  hero.addEventListener('focusin', e => { if (e.target.matches(':focus-visible')) hold('focus', true); });
+  hero.addEventListener('focusout', e => { if (!hero.contains(e.relatedTarget)) hold('focus', false); });
+  new IntersectionObserver(([e]) => hold('away', !e.isIntersecting), { threshold: 0.2 }).observe(hero);
+  document.addEventListener('visibilitychange', () => hold('hidden', document.hidden));
+  addEventListener('load', () => want(nextUp()), { once: true });
   document.getElementById('recent').innerHTML = S.sermons.slice(0, 3).map(s =>
     `<a href="https://youtu.be/${s.id}"><div class="ph"><img src="${S.thumb(s.id)}" alt="" loading="lazy"></div><div><b>${s.t}</b><span>${s.s}</span></div></a>`).join('');
   // Newest sermons from data/sermons.json (kept current by the Sermon sync job on the draft site). Falls back to shared.js.
@@ -522,13 +646,15 @@ section{position:relative}
     const it = d && d.items; if (!it || !it.length) return;
     const n = it[0], pastors = ['Michael Petillo', 'Billy Coker'];
     if (n.id !== x.id) {
-      Object.assign(x, { title: n.title, speaker: n.speaker, date: n.date, id: n.id, watch: 'https://youtu.be/' + n.id });
+      Object.assign(x, { title: n.title, speaker: n.speaker, date: n.date, id: n.id, watch: 'https://youtu.be/' + n.id, service: n.service });
       document.getElementById('m-h').textContent = x.title;
       document.getElementById('m-sub').textContent = (pastors.includes(x.speaker) ? 'Pastor ' : '') + `${x.speaker} · ${x.date}`;
       p.href = x.watch; mw.href = x.watch;
       if (x.speaker !== 'Michael Petillo') pimg.src = `https://i.ytimg.com/vi/${x.id}/maxresdefault.jpg`;
       pimg.alt = `${x.speaker} preaching ${x.title}`;
     }
+    if (n.id === x.id && n.service) x.service = n.service;
+    heroSermon(x, d.photo);
     const known = new Set(S.sermons.map(s => s.id));
     document.getElementById('recent').innerHTML = it.slice(1, 4).map(s =>
       `<a href="https://youtu.be/${s.id}"><div class="ph"><img src="${known.has(s.id) ? S.thumb(s.id) : s.thumb}" alt="" loading="lazy"></div><div><b>${s.title.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))}</b><span>${s.speaker}</span></div></a>`).join('');

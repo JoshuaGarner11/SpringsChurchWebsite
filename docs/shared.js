@@ -4,7 +4,9 @@
 window.SPRINGS = {
   latest: {
     title: 'The Imageless God', speaker: 'Michael Petillo', date: 'November 15, 2026',
-    id: 'Pux9AYf6dO8', watch: 'https://youtu.be/Pux9AYf6dO8', img: 'img/hero-1011.jpg'
+    id: 'Pux9AYf6dO8', watch: 'https://youtu.be/Pux9AYf6dO8', img: 'img/preach-petillo-1115.jpg',
+    // hero photo = the one on the live springs.church hero that week; service = that Sunday's Full Service stream
+    heroImg: 'img/sermon-imageless-god.jpg', service: 'WjxighRMbW8'
   },
   // Newest first, from the "Sunday Sermons" playlist (springs-sermons-site/fetch_sermons.py, 11/15/2026)
   sermons: [

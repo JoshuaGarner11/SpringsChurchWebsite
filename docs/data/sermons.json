@@ -1,35 +1,40 @@
 {
  "source": "YouTube playlist PL0-75bzYYynk7GXBRfMBT-JD0AyuKTZIo via scripts/sermon_sync.py",
- "updated": "2026-11-16T06:06+00:00",
- "hash": "7168a2de5f377c82",
+ "updated": "2026-11-18T15:49+00:00",
+ "hash": "7254369ac0d83879",
+ "photo": "https://res.cloudinary.com/thechurchcov3production/image/fetch/f_auto/https://media.thechurchcoassets.com/accounts/4185/9481136a-06c0-468e-8bae-caa8bed0c3a9-./Springs-Imageless-God-hero-v3.jpg",
  "items": [
   {
    "id": "Pux9AYf6dO8",
    "title": "The Imageless God",
    "speaker": "Michael Petillo",
    "date": "November 15, 2026",
-   "thumb": "https://i.ytimg.com/vi/Pux9AYf6dO8/hqdefault.jpg"
+   "thumb": "https://i.ytimg.com/vi/Pux9AYf6dO8/hqdefault.jpg",
+   "service": "WjxighRMbW8"
   },
   {
    "id": "F4lEL8bnik0",
    "title": "You Can't Scare the Hell Out of People",
    "speaker": "Michael Petillo",
    "date": "November 8, 2026",
-   "thumb": "https://i.ytimg.com/vi/F4lEL8bnik0/hqdefault.jpg"
+   "thumb": "https://i.ytimg.com/vi/F4lEL8bnik0/hqdefault.jpg",
+   "service": "WF2vbayRiuw"
   },
   {
    "id": "zOvP-KGQ0eA",
    "title": "Disruption",
    "speaker": "Nicky Cruz",
    "date": "November 1, 2026",
-   "thumb": "https://i.ytimg.com/vi/zOvP-KGQ0eA/hqdefault.jpg"
+   "thumb": "https://i.ytimg.com/vi/zOvP-KGQ0eA/hqdefault.jpg",
+   "service": "bkz2Gm14nbg"
   },
   {
    "id": "u_kH54cwvpY",
    "title": "The Cost of a Comfortable Church",
    "speaker": "Michael Petillo",
    "date": "October 25, 2026",
-   "thumb": "https://i.ytimg.com/vi/u_kH54cwvpY/hqdefault.jpg"
+   "thumb": "https://i.ytimg.com/vi/u_kH54cwvpY/hqdefault.jpg",
+   "service": "LgV4vzXHduw"
   }
  ]
 }

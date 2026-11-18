@@ -1,13 +1,16 @@
-"""Keep the newest sermons current for the Home page: read the public "Sunday Sermons" YouTube playlist (newest first) and the top
-few videos' public pages, then write docs/data/sermons.json when something changed. No login, no API key, read-only.
+"""Keep the newest sermons current for the Home page: read the public "Sunday Sermons" YouTube playlist (newest first), the top
+few videos' public pages, and the channel's Live tab (for each sermon's "Full Service | <title> | <date>" stream), then write
+docs/data/sermons.json when something changed. No login, no API key, read-only.
 
 Runs from .github/workflows/sermon-sync.yml. If YouTube doesn't answer the way we expect (consent page, rate limit), it changes
 nothing and the Home page keeps showing the last good list.
 usage: python3 scripts/sermon_sync.py
 """
-import datetime as dt, hashlib, json, os, re, sys, time, urllib.error, urllib.request
+import datetime as dt, hashlib, html, json, os, re, sys, time, urllib.error, urllib.request
 
 PLAYLIST = "PL0-75bzYYynk7GXBRfMBT-JD0AyuKTZIo"
+STREAMS = "https://www.youtube.com/@springs.church/streams"
+SITE = "https://www.springs.church/"   # the live ChurchCo site; its hero carries the week's sermon photo
 TAKE = 4  # the featured sermon + the three before it
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs", "data", "sermons.json")
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128 Safari/537.36",
@@ -39,8 +42,8 @@ def video(vid):
             "thumb": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"}
 
 
-def playlist_items(page):
-    """newest-first entries from the playlist page itself: id, title, speaker and YouTube's "8h ago" style age"""
+def playlist_items_raw(page):
+    """newest-first lockups on a playlist or channel tab page: id, full title, metadata parts"""
     m = re.search(r"var ytInitialData\s*=\s*(\{.+?\});</script>", page, re.S)
     if not m: return []
     found = []
@@ -54,13 +57,49 @@ def playlist_items(page):
     out = []
     for v in found:
         md = ((v.get("metadata") or {}).get("lockupMetadataViewModel") or {})
-        title, _, speaker = ((md.get("title") or {}).get("content") or "").partition(" | ")
         rows = (((md.get("metadata") or {}).get("contentMetadataViewModel") or {}).get("metadataRows") or [])
         parts = [((p.get("text") or {}).get("content") or "") for r in rows for p in (r.get("metadataParts") or [])]
-        age = next((x for x in parts if re.search(r"\bago$", x)), "")
+        title = ((md.get("title") or {}).get("content") or "").strip()
         if v.get("contentId") and title:
-            out.append({"id": v["contentId"], "title": title.strip(), "speaker": speaker.strip(), "age": age})
+            out.append({"id": v["contentId"], "title": title, "parts": parts})
     return out
+
+
+def playlist_items(page):
+    """newest-first entries from the playlist page itself: id, title, speaker and YouTube's "8h ago" style age"""
+    out = []
+    for e in playlist_items_raw(page):
+        title, _, speaker = e["title"].partition(" | ")
+        age = next((x for x in e["parts"] if re.search(r"\bago$", x)), "")
+        out.append({"id": e["id"], "title": title.strip(), "speaker": speaker.strip(), "age": age})
+    return out
+
+
+def norm(t):
+    return re.sub(r"[^a-z0-9]+", "", (t or "").lower().replace("\u2019", "'"))
+
+
+def full_services(page):
+    """{normalized sermon title: stream id} for finished "Full Service | <title> | <date>" streams on the Live tab
+    (skips upcoming and still-live ones, which have no "Streamed ..." line yet)"""
+    out = {}
+    for e in playlist_items_raw(page):
+        parts = [p.strip() for p in e["title"].split("|")]
+        if len(parts) >= 2 and parts[0].lower() == "full service" and any(x.startswith("Streamed") for x in e["parts"]):
+            out.setdefault(norm(parts[1]), e["id"])
+    return out
+
+
+def live_sermon_photo():
+    """the photo on the live springs.church hero (the image ChurchCo preloads with high priority). While ChurchCo is live,
+    staff swap it every week, so Home's sermon panel follows it."""
+    page = get(SITE)
+    for tag in re.findall(r"<link\b[^>]*>", page):
+        if 'rel="preload"' in tag and 'as="image"' in tag and re.search(r'fetch[Pp]riority="high"', tag):
+            m = re.search(r'href="(https://[^"]+)"', tag)
+            if m and re.search(r"\.(jpe?g|png|webp)$", html.unescape(m.group(1)), re.I):
+                return html.unescape(m.group(1))
+    return None
 
 
 def sunday_from_age(age):
@@ -84,9 +123,19 @@ def main():
     if len(top) < TAKE:
         print(f"Playlist page looked wrong ({len(top)} entries) - keeping the last list."); return
     try:
-        old = {i["id"]: i for i in json.load(open(OUT, encoding="utf-8")).get("items", [])}
+        prev = json.load(open(OUT, encoding="utf-8"))
     except (OSError, ValueError):
-        old = {}
+        prev = {}
+    old = {i["id"]: i for i in prev.get("items", [])}
+    try:
+        photo = live_sermon_photo()
+    except Exception as e:
+        print("Couldn't read springs.church:", type(e).__name__); photo = None
+    photo = photo or prev.get("photo")
+    try:
+        services = full_services(get(STREAMS))
+    except Exception as e:
+        print("Couldn't read the Live tab:", type(e).__name__, "- keeping the last Full Service links."); services = {}
     items, exact, estimated = [], 0, 0
     for e in top:
         if e["id"] in old and old[e["id"]].get("date"):
@@ -98,16 +147,20 @@ def main():
             if v and v.get("date"): date = v["date"]; exact += 1
             else: date = sunday_from_age(e["age"]); estimated += 1
             time.sleep(1.5)
-        items.append({"id": e["id"], "title": e["title"], "speaker": e["speaker"], "date": date,
-                      "thumb": f"https://i.ytimg.com/vi/{e['id']}/hqdefault.jpg"})
-    body = json.dumps(items, sort_keys=True, ensure_ascii=False)
+        item = {"id": e["id"], "title": e["title"], "speaker": e["speaker"], "date": date,
+                "thumb": f"https://i.ytimg.com/vi/{e['id']}/hqdefault.jpg"}
+        service = services.get(norm(e["title"])) or (old.get(e["id"]) or {}).get("service")
+        if service: item["service"] = service   # the "Full Service" livestream of that Sunday
+        items.append(item)
+    body = json.dumps({"items": items, "photo": photo}, sort_keys=True, ensure_ascii=False)
     digest = hashlib.sha256(body.encode()).hexdigest()[:16]
-    if old and json.load(open(OUT, encoding="utf-8")).get("hash") == digest:
+    if prev.get("hash") == digest:
         print("sermons.json unchanged; newest:", items[0]["title"]); return
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"source": "YouTube playlist " + PLAYLIST + " via scripts/sermon_sync.py",
-                   "updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"), "hash": digest, "items": items},
+                   "updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"), "hash": digest,
+                   "photo": photo, "items": items},
                   f, ensure_ascii=False, indent=1)
         f.write("\n")
     print(f"sermons.json updated; newest: {items[0]['title']} | {items[0]['date']} (new dates: {exact} exact, {estimated} from upload age)")

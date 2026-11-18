@@ -6,7 +6,7 @@
 @media (max-width:760px){.topbar span{display:none}}
 [data-website] h2{font:300 1.2rem gotham;letter-spacing:-2px} [data-website] a{text-decoration:underline}
 .cc-ftr{background:#0E0E0E;color:#9a9a9a;text-align:center;padding:40px 20px 120px;font:700 11px gotham,sans-serif;letter-spacing:.1em}
-.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style><link rel="stylesheet" href="../_chrome/chrome.css"></head>
+.tbd-toggle{position:fixed;right:12px;top:100px;z-index:200;font:600 12px gotham,sans-serif;background:#fff3a6;color:#111;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}</style><style>.tcc-block:has(#sev) ~ section.block-events{display:none!important}</style><link rel="stylesheet" href="../_chrome/chrome.css"></head>
 <body data-website>
 <header class="sc-hdr" id="sc-hdr">
   <div class="sc-in">
@@ -209,6 +209,17 @@
 #sev .news p{font-size:16px;color:var(--ink-2)}
 #sev .news p a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
 
+/* host an event: guidelines come from CCB form #259 "Event Requests" (its intro + disclaimers) and the Care page (weddings, memorial services) */
+#sev .host{padding:clamp(56px,6vw,88px) 0}
+#sev .host-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start}
+#sev .host-l p{margin-top:16px;font-size:18px;line-height:1.55;color:var(--ink-2);max-width:40ch}
+#sev .host-go{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:28px}
+#sev .host-r>div{display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:6px 24px;padding:18px 0;border-top:1px solid var(--line)}
+#sev .host-r>div:last-child{border-bottom:1px solid var(--line)}
+#sev .host-r dt{font:600 16px/1.4 var(--hd);color:var(--ink)}
+#sev .host-r dd{margin:0;font-size:16px;line-height:1.55;color:var(--ink-2)}
+#sev .host-r dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+
 /* empty calendar: the hero card says so, the list section steps aside */
 #sev.is-empty .cal-sec,#sev.is-empty .flt,#sev.is-empty .top-l .count{display:none}
 
@@ -236,6 +247,7 @@
   #sev .wk h3{display:block}
   #sev .wk h3 b{display:block;margin-top:6px}
   #sev .wk .go{grid-column:2}
+  #sev .host-in{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   #sev{--top:128px}
@@ -262,6 +274,8 @@
   #sev .wk .go{grid-column:1}
   #sev .news{grid-template-columns:1fr}
   #sev .news .btn{width:100%}
+  #sev .host-r>div{grid-template-columns:1fr}
+  #sev .host-go .btn{width:100%}
 }
 </style>
 
@@ -320,6 +334,27 @@
         <div><b id="sev-news-h">Weekly Newsletter</b><p>Get the latest news and events from Springs Church. <span class="tbd">Questions about an event?</span> Call <a href="tel:+17194888331">(719) 488-8331</a> or email <a href="mailto:info@springs.church">info@springs.church</a>.</p></div>
         <a class="btn" href="https://eepurl.com/iUfGPA" target="_blank" rel="noopener">Sign Up</a>
       </div>
+    </div>
+  </section>
+
+  <!-- host an event: CCB form #259 "Event Requests" (public, replies within two weeks) -->
+  <section class="host" id="sev-host" aria-labelledby="sev-host-h">
+    <div class="wrap host-in">
+      <div class="host-l rv">
+        <h2 class="h2" id="sev-host-h">Host an Event?</h2>
+        <p><span class="tbd">Ministries, members and outside groups can request space at Springs for conferences, concerts, graduations, weddings and more.</span></p>
+        <div class="host-go">
+          <a class="btn" href="https://springschurch.ccbchurch.com/goto/forms/259/responses/new" target="_blank" rel="noopener">Request an Event</a>
+          <a class="tl tbd" href="mailto:events@springs.church">events@springs.church</a>
+        </div>
+      </div>
+      <dl class="host-r rv tbd" style="--d:1">
+        <div><dt>Ask Early</dt><dd>We reply within two weeks, so send your request well before your date.</dd></div>
+        <div><dt>Have the Details Ready</dt><dd>Date and times, how many people are coming, which rooms you’d like, setup and teardown time and catering.</dd></div>
+        <div><dt>Extras Aren’t Guaranteed</dt><dd>You can ask for tables, chairs, decor, sound, video or livestreaming. We’ll confirm what’s available.</dd></div>
+        <div><dt>Springs Ministry Events</dt><dd>Tell us if you need promotion or a registration form.</dd></div>
+        <div><dt>Weddings &amp; Funerals</dt><dd>Weddings are for members and regular attenders, with premarital preparation. Memorial services and receptions are for members. Our <a href="../care/">Care Team</a> helps plan both.</dd></div>
+      </dl>
     </div>
   </section>
 </div>

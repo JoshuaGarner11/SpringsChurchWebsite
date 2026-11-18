@@ -78,6 +78,8 @@ def add_chrome(html, folder, depth):
         return html
     html = re.sub(r'<div class="topbar">.*?</div>', '', html, count=1, flags=re.S)
     html = re.sub(r'<footer class="cc-ftr">.*?</footer>', '', html, count=1, flags=re.S)
+    if folder == "events":  # the block hides ChurchCo's own events list only on springs.church; hide the stand-in ("Mark Your Calendar") here too
+        html = html.replace("</head>", "<style>.tcc-block:has(#sev) ~ section.block-events{display:none!important}</style></head>", 1)
     if folder == "our-staff":
         html = re.sub(r'<header class="topbar">.*?</header>', '', html, count=1, flags=re.S)
         html = re.sub(r'<footer>[^<]*local mockup[^<]*</footer>', '', html, count=1, flags=re.S)

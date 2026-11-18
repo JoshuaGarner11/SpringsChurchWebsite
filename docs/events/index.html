@@ -218,7 +218,19 @@
 #sev .host-r>div:last-child{border-bottom:1px solid var(--line)}
 #sev .host-r dt{font:600 16px/1.4 var(--hd);color:var(--ink)}
 #sev .host-r dd{margin:0;font-size:16px;line-height:1.55;color:var(--ink-2)}
-#sev .host-r dd a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+#sev .host-r dd a,#sev .host-cols a{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(14,14,14,.3)}
+/* facility guidelines: GENERATED DRAFT from common church facility-use policies (Josh 11/18: "generate some for now"); replace with Springs' own */
+#sev .host-more{grid-column:1 / -1}
+#sev .host-more summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);font:600 18px/1.3 var(--hd);color:var(--ink);cursor:pointer}
+#sev .host-more summary::-webkit-details-marker{display:none}
+#sev .host-more summary::after{content:"";flex:none;width:14px;height:14px;background:linear-gradient(var(--ink),var(--ink)) center/14px 2px no-repeat,linear-gradient(var(--ink),var(--ink)) center/2px 14px no-repeat;transition:transform .3s var(--ease)}
+#sev .host-more[open] summary::after{transform:rotate(45deg)}
+#sev .host-more summary:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+#sev .host-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px clamp(24px,4vw,48px);padding:28px 0 8px}
+#sev .host-cols h3{font:600 16px/1.3 var(--hd);color:var(--ink);margin-bottom:12px}
+#sev .host-cols ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+#sev .host-cols li{position:relative;padding-left:18px;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+#sev .host-cols li::before{content:"";position:absolute;left:0;top:.78em;width:8px;height:1.5px;background:var(--ink-3)}
 
 /* empty calendar: the hero card says so, the list section steps aside */
 #sev.is-empty .cal-sec,#sev.is-empty .flt,#sev.is-empty .top-l .count{display:none}
@@ -248,6 +260,7 @@
   #sev .wk h3 b{display:block;margin-top:6px}
   #sev .wk .go{grid-column:2}
   #sev .host-in{grid-template-columns:1fr}
+  #sev .host-cols{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   #sev{--top:128px}
@@ -349,12 +362,46 @@
         </div>
       </div>
       <dl class="host-r rv tbd" style="--d:1">
-        <div><dt>Ask Early</dt><dd>We reply within two weeks, so send your request well before your date.</dd></div>
+        <div><dt>Ask Early</dt><dd>Send requests at least 30 days ahead, and earlier for weddings and large events. We reply within two weeks.</dd></div>
         <div><dt>Have the Details Ready</dt><dd>Date and times, how many people are coming, which rooms you’d like, setup and teardown time and catering.</dd></div>
         <div><dt>Extras Aren’t Guaranteed</dt><dd>You can ask for tables, chairs, decor, sound, video or livestreaming. We’ll confirm what’s available.</dd></div>
         <div><dt>Springs Ministry Events</dt><dd>Tell us if you need promotion or a registration form.</dd></div>
         <div><dt>Weddings &amp; Funerals</dt><dd>Weddings are for members and regular attenders, with premarital preparation. Memorial services and receptions are for members. Our <a href="../care/">Care Team</a> helps plan both.</dd></div>
       </dl>
+      <!-- GENERATED DRAFT (11/18): general church facility-use guidelines for staff to replace; every line is to-confirm -->
+      <details class="host-more rv">
+        <summary>Facility Guidelines</summary>
+        <div class="host-cols tbd">
+          <div>
+            <h3>Booking</h3>
+            <ul>
+              <li>A request isn’t a reservation. Your date is held once we confirm it.</li>
+              <li>Church services and Springs ministry events come first, so Sunday mornings and Wednesday nights are usually unavailable.</li>
+              <li>Outside groups may be asked to cover costs like custodial, security or tech staff. We’ll share any costs before we confirm.</li>
+              <li>Outside organizations may need to provide a certificate of liability insurance.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>On Campus</h3>
+            <ul>
+              <li>Events should fit <a href="../our-beliefs/">what we believe</a> and our mission.</li>
+              <li>No alcohol, tobacco, vaping or illegal drugs anywhere on campus.</li>
+              <li>Your group supervises any kids who come. Springs Kids rooms aren’t included unless we arrange it.</li>
+              <li>Food and drinks stay in approved spaces. Caterers must be licensed, and kitchen use is by arrangement.</li>
+              <li>No tape, nails, glitter or confetti on walls and floors. Open flames need approval.</li>
+              <li>Sound, lights, video and livestreaming are run by Springs tech staff or approved volunteers.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Wrapping Up</h3>
+            <ul>
+              <li>Plan setup and teardown inside your reserved time.</li>
+              <li>Leave rooms the way you found them, with trash out and tables and chairs back in place.</li>
+              <li>Let us know right away if your plans or numbers change, or if you need to cancel.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
     </div>
   </section>
 </div>

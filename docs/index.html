@@ -153,10 +153,9 @@ section{position:relative}
 .info dd{font:700 22px/1.15 var(--display);letter-spacing:-.01em}
 .info dd small{display:block;font:500 15px/1.4 var(--body);color:var(--ink-3);letter-spacing:0;margin-top:4px}
 .info .go{display:flex;flex-direction:column;gap:10px;align-items:stretch}
-.live{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--body);color:var(--ink-2)}
-.live i{width:8px;height:8px;border-radius:50%;background:#3f9d5a}
-.live.on i{background:#d0412b;animation:pulse 1.5s infinite}
-@keyframes pulse{50%{opacity:.3}}
+.next{font:500 15px/1.4 var(--body);color:var(--ink-3);text-align:center}
+.next b{font-weight:700;color:var(--ink)}
+.next a{font-weight:700;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 
 /* Welcome */
 .welcome .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);align-items:center}
@@ -399,7 +398,7 @@ section{position:relative}
         <div><dt>Sundays</dt><dd>10 AM<small>Worship + Springs Kids</small></dd></div>
         <div><dt>Wednesdays</dt><dd>6:30 PM<small>Prayer + Kids + Youth</small></dd></div>
         <div><dt>Location</dt><dd>1515 Auto Mall Loop<small>Colorado Springs, CO 80920</small></dd></div>
-        <div class="go"><span class="live" id="live"><i></i><span></span></span><a class="btn btn-primary" href="#" data-l="directions">Get directions</a></div>
+        <div class="go"><p class="next" id="live" aria-live="polite"></p><a class="btn btn-primary" href="#" data-l="directions">Get directions</a></div>
       </dl>
     </div>
   </section>
@@ -537,8 +536,14 @@ section{position:relative}
 
   // Live / next
   const g = S.nextGathering(), live = document.getElementById('live');
-  live.querySelector('span').textContent = g.live ? `${g.name} is live now` : `${g.name} ${g.label}`;
-  if (g.live) live.classList.add('on');
+  // plain text, no status dot: "Wednesday Night in 9h 39m", or a link to the stream while a service is on
+  if (g.live) {
+    const a = document.createElement('a'); a.href = 'https://www.youtube.com/@springs.church/live';
+    a.textContent = `${g.name} is live. Watch now`; live.appendChild(a);
+  } else {
+    const b = document.createElement('b'); b.textContent = g.label;
+    live.append(`${g.name} `, b);
+  }
 
   // Message
   const x = S.latest, p = document.getElementById('player');

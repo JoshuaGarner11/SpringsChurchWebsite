@@ -115,9 +115,7 @@
 #sct a.big:hover{text-decoration-color:var(--gold)}
 #sct .big small{display:block;margin-top:4px;font:400 17px/1.4 var(--bd);letter-spacing:normal;color:var(--ink-2)}
 #sct .tile p:not(.big){margin-top:10px;font-size:17px;line-height:1.5;color:var(--ink-2)}
-#sct .now{display:flex;align-items:center;gap:9px;font-weight:600;color:var(--ink)!important}
-#sct .now i{flex:none;width:9px;height:9px;border-radius:50%;background:#9a958b}
-#sct .now.open i{background:var(--ok);box-shadow:0 0 0 4px rgba(46,125,79,.16)}
+#sct .now{font-weight:600;color:var(--ink)!important}
 #sct .tile-act{margin-top:auto;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
 @media (prefers-reduced-motion:no-preference){
   #sct .top h1,#sct .top .lede{animation:sct-up 1s var(--ease) both}
@@ -252,7 +250,7 @@
           <div class="tile-h"><svg aria-hidden="true"><use href="#sct-phone"/></svg><h3>Call</h3></div>
           <a class="big" href="tel:+17194888331">(719) 488-8331</a>
           <p>Tuesday–Thursday, 9AM–5PM</p>
-          <p class="now" data-now aria-live="polite" hidden><i aria-hidden="true"></i><span></span></p>
+          <p class="now" data-now aria-live="polite" hidden><span></span></p>
           <div class="tile-act"><a class="btn" href="tel:+17194888331">Call Now</a></div>
         </article>
         <article class="tile" style="--n:1">

@@ -1,26 +1,13 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-19T20:08-07:00",
- "hash": "51ec3f6f01cf2be0",
+ "updated": "2026-11-20T04:28-07:00",
+ "hash": "b2024107219fb78f",
  "range": [
-  "2026-11-19",
-  "2027-03-19"
+  "2026-11-20",
+  "2027-03-20"
  ],
  "timezone": "America/Denver",
  "items": [
-  {
-   "id": "11000-2026-11-19",
-   "title": "Broadmoor Waltz Lessons | Co-Ed Activity Group",
-   "desc": "Looking to brush up your dancing skills? In sixteen weeks, learn how to pattern waltz for fun and for free. Couples will learn twelve choreographed waltz dances used by The Broadmoor Waltz Club.",
-   "start": "2026-11-19T18:30:00-07:00",
-   "end": "2026-11-19T20:30:00-07:00",
-   "allDay": false,
-   "venue": "Springs Church",
-   "onCampus": true,
-   "group": "Broadmoor Waltz Lessons | Co-Ed Activity Group",
-   "category": "Connect Groups",
-   "type": "Open To All"
-  },
   {
    "id": "10461-2026-11-20",
    "title": "Friday Prayer | Men's Group",

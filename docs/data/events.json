@@ -1,7 +1,7 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-19T05:57-07:00",
- "hash": "757080987b50fc31",
+ "updated": "2026-11-19T20:08-07:00",
+ "hash": "51ec3f6f01cf2be0",
  "range": [
   "2026-11-19",
   "2027-03-19"
@@ -266,6 +266,32 @@
    "onCampus": false,
    "group": "Young Adults",
    "category": "Adult Ministries",
+   "type": "Open To All"
+  },
+  {
+   "id": "11091-2026-12-12",
+   "title": "Revelation Wellness | Women's Activity Group",
+   "desc": "Ladies, have you ever felt like your body is something you need to fix, hide, or constantly work on? Our culture tells us our bodies are too much, not enough, too old, too young… just never quite right. But God speaks a better word. Join Laura Schwarz, a certified Revelation Wellness Instructor and Health Coach, for the How to Love God & Your Body Meet Up for a life-giving time of worship, biblical teaching, and movement that brings joy instead of judgment. Together we'll learn what it means to love God and our bodies in a way that brings freedom and hope.",
+   "start": "2026-12-12T09:15:00-07:00",
+   "end": "2026-12-12T10:15:00-07:00",
+   "allDay": false,
+   "venue": "Kids' Auditorium",
+   "onCampus": false,
+   "group": "Revelation Wellness | Women's Activity Group",
+   "category": "Connect Groups",
+   "type": "Open To All"
+  },
+  {
+   "id": "11225-2026-12-14",
+   "title": "Monday Night \"Meating Chili Cookoff\" | Men's Activity Group",
+   "desc": "Monday \"Meating\" is serving up a Chili Cook-Off! Join other guys for food, football and fellowship on Monday, December 14 at 6PM in the Kids Auditorium. Whether you're here for the hard-hitting plays, the chili competition, or just some great company, there's a spot on the roster for you.\n\nBring your appetite and bring a friend! When you register, let us know whether you're bringing chili or a side to share.",
+   "start": "2026-12-14T17:30:00-07:00",
+   "end": "2026-12-14T22:00:00-07:00",
+   "allDay": false,
+   "venue": "",
+   "onCampus": true,
+   "group": "Monday Night \"Meating\" | Men's Activity Group",
+   "category": "Connect Groups",
    "type": "Open To All"
   },
   {

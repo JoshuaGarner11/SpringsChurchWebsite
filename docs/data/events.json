@@ -1,39 +1,13 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-20T04:28-07:00",
- "hash": "b2024107219fb78f",
+ "updated": "2026-11-21T02:43-07:00",
+ "hash": "41f42f77ce11f46e",
  "range": [
-  "2026-11-20",
-  "2027-03-20"
+  "2026-11-21",
+  "2027-03-21"
  ],
  "timezone": "America/Denver",
  "items": [
-  {
-   "id": "10461-2026-11-20",
-   "title": "Friday Prayer | Men's Group",
-   "desc": "\"Iron Sharpens Iron\" (Proverbs 27:17)\n\nAn informal fellowship of men committed to prayer for each other, our families, the Lord's church, and our nation. We develop friendships and encourage one another to know and serve Jesus, unified in our belief that God hears and answers prayer.\n\nOn-line participation is available for those who are not able to join us in person.",
-   "start": "2026-11-20T06:00:00-07:00",
-   "end": "2026-11-20T07:30:00-07:00",
-   "allDay": false,
-   "venue": "Prayer Room",
-   "onCampus": false,
-   "group": "Friday Prayer | Men's Group",
-   "category": "Connect Groups",
-   "type": "Open To All"
-  },
-  {
-   "id": "10995-2026-11-20",
-   "title": "Young Adults | Friday Service",
-   "desc": "",
-   "start": "2026-11-20T18:30:00-07:00",
-   "end": "2026-11-20T21:00:00-07:00",
-   "allDay": false,
-   "venue": "Garage/YA Room",
-   "onCampus": false,
-   "group": "Young Adults",
-   "category": "Adult Ministries",
-   "type": "Open To All"
-  },
   {
    "id": "11193-2026-11-22",
    "title": "Springs Friends | Thanksgiving Party",

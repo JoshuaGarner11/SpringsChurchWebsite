@@ -1,10 +1,10 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-21T02:43-07:00",
- "hash": "41f42f77ce11f46e",
+ "updated": "2026-11-22T04:14-07:00",
+ "hash": "eafda69b020a99ea",
  "range": [
-  "2026-11-21",
-  "2027-03-21"
+  "2026-11-22",
+  "2027-03-22"
  ],
  "timezone": "America/Denver",
  "items": [
@@ -1241,6 +1241,19 @@
    "onCampus": false,
    "group": "Young Adults",
    "category": "Adult Ministries",
+   "type": "Open To All"
+  },
+  {
+   "id": "11292-2027-03-22",
+   "title": "Grief Share | Support Group",
+   "desc": "As Jesus walks through life with us, one of the most difficult times we face is losing someone dear to us, a spouse, a child, a parent, a friend. GriefShare is a safe, welcoming support group where people understand the difficult emotions of grief and provide guidance, help, and encouragement after the death of a loved one. Springs Church will host a 13-week GriefShare support group on Monday nights, beginning January 4. Please join us and others going through the grief process, receiving peace and comfort the Lord provides.",
+   "start": "2027-03-22T18:30:00-06:00",
+   "end": "2027-03-22T20:00:00-06:00",
+   "allDay": false,
+   "venue": "Office Conference Room",
+   "onCampus": false,
+   "group": "Grief Share | Support Group",
+   "category": "Connect Groups",
    "type": "Open To All"
   }
  ]

@@ -1,9 +1,17 @@
 {
  "source": "YouTube playlist PL0-75bzYYynk7GXBRfMBT-JD0AyuKTZIo via scripts/sermon_sync.py",
- "updated": "2026-11-18T15:49+00:00",
- "hash": "7254369ac0d83879",
- "photo": "https://res.cloudinary.com/thechurchcov3production/image/fetch/f_auto/https://media.thechurchcoassets.com/accounts/4185/9481136a-06c0-468e-8bae-caa8bed0c3a9-./Springs-Imageless-God-hero-v3.jpg",
+ "updated": "2026-11-23T03:07+00:00",
+ "hash": "d894210bdd2d0e7c",
+ "photo": "https://res.cloudinary.com/thechurchcov3production/image/fetch/f_auto/https://media.thechurchcoassets.com/accounts/4185/c4c72bfc-181a-481a-b534-3bc3335f49e9-./Springs-hero-2026-11-22__largepreview__.webp",
  "items": [
+  {
+   "id": "N9K6QfkVNjI",
+   "title": "When the Silent Father Speaks",
+   "speaker": "Michael Petillo",
+   "date": "November 22, 2026",
+   "thumb": "https://i.ytimg.com/vi/N9K6QfkVNjI/hqdefault.jpg",
+   "service": "xFfLuTcNhdw"
+  },
   {
    "id": "Pux9AYf6dO8",
    "title": "The Imageless God",
@@ -27,14 +35,6 @@
    "date": "November 1, 2026",
    "thumb": "https://i.ytimg.com/vi/zOvP-KGQ0eA/hqdefault.jpg",
    "service": "bkz2Gm14nbg"
-  },
-  {
-   "id": "u_kH54cwvpY",
-   "title": "The Cost of a Comfortable Church",
-   "speaker": "Michael Petillo",
-   "date": "October 25, 2026",
-   "thumb": "https://i.ytimg.com/vi/u_kH54cwvpY/hqdefault.jpg",
-   "service": "LgV4vzXHduw"
   }
  ]
 }

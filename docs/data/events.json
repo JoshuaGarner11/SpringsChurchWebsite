@@ -1,26 +1,13 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-22T04:14-07:00",
- "hash": "eafda69b020a99ea",
+ "updated": "2026-11-23T00:41-07:00",
+ "hash": "941c101d7976c4b9",
  "range": [
-  "2026-11-22",
-  "2027-03-22"
+  "2026-11-23",
+  "2027-03-23"
  ],
  "timezone": "America/Denver",
  "items": [
-  {
-   "id": "11193-2026-11-22",
-   "title": "Springs Friends | Thanksgiving Party",
-   "desc": "Springs Friends will host a Thanksgiving party organized by Kari Aho and Dawn Sousa",
-   "start": "2026-11-22T10:00:00-07:00",
-   "end": "2026-11-22T12:00:00-07:00",
-   "allDay": false,
-   "venue": "Creative Wing",
-   "onCampus": false,
-   "group": "Springs Friends | Special Needs Group",
-   "category": "Connect Groups",
-   "type": "Open To All"
-  },
   {
    "id": "10376-2026-11-24",
    "title": "Silver Warriors (Ages 55+) | Seniors Group",
@@ -1253,6 +1240,19 @@
    "venue": "Office Conference Room",
    "onCampus": false,
    "group": "Grief Share | Support Group",
+   "category": "Connect Groups",
+   "type": "Open To All"
+  },
+  {
+   "id": "10376-2027-03-23",
+   "title": "Silver Warriors (Ages 55+) | Seniors Group",
+   "desc": "We seek to provide opportunities to learn from one another, to serve one another, to encourage one another, and to pray for one another. There is no set format but we will allow the Holy Spirit to guide and direct us each week. The primary meeting will be every Tuesday, but we expect to see smaller groups choose to meet over a meal, take an easy hike, or undertake a service project at different times and places.",
+   "start": "2027-03-23T10:00:00-06:00",
+   "end": "2027-03-23T12:00:00-06:00",
+   "allDay": false,
+   "venue": "Classroom 1-2",
+   "onCampus": false,
+   "group": "Silver Warriors (Ages 55+) | Seniors Group",
    "category": "Connect Groups",
    "type": "Open To All"
   }

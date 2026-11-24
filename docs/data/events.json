@@ -1,10 +1,10 @@
 {
  "source": "CCB (Pushpay ChMS) via scripts/ccb_sync.py",
- "updated": "2026-11-23T00:41-07:00",
- "hash": "941c101d7976c4b9",
+ "updated": "2026-11-24T08:49-07:00",
+ "hash": "3215b02397797a51",
  "range": [
-  "2026-11-23",
-  "2027-03-23"
+  "2026-11-24",
+  "2027-03-24"
  ],
  "timezone": "America/Denver",
  "items": [
@@ -1254,6 +1254,32 @@
    "onCampus": false,
    "group": "Silver Warriors (Ages 55+) | Seniors Group",
    "category": "Connect Groups",
+   "type": "Open To All"
+  },
+  {
+   "id": "10369-2027-03-24",
+   "title": "Middle School - Rooted",
+   "desc": "The Springs Church / Tent Area\n\n Colorado Springs CO\n\nStudents can be dropped off at the starting at 6:15pm. Service will be in the Tent Area.\n\nFor pick-up, students will be in the Tent Area.",
+   "start": "2027-03-24T18:30:00-06:00",
+   "end": "2027-03-24T20:30:00-06:00",
+   "allDay": false,
+   "venue": "Tent",
+   "onCampus": false,
+   "group": "Rooted Middle School Student Ministry",
+   "category": "Student Ministries",
+   "type": "Open To All"
+  },
+  {
+   "id": "10460-2027-03-24",
+   "title": "Springs High School",
+   "desc": "High School Youth Group",
+   "start": "2027-03-24T18:30:00-06:00",
+   "end": "2027-03-24T20:00:00-06:00",
+   "allDay": false,
+   "venue": "Staff Cleaning Crew",
+   "onCampus": false,
+   "group": "Anthem Youth",
+   "category": "Student Ministries",
    "type": "Open To All"
   }
  ]

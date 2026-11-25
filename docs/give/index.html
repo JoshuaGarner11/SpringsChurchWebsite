@@ -234,15 +234,18 @@
 #sg .gcard>p{color:var(--ink-2)}
 #sg .gcard .kick{color:var(--ink)}
 #sg .gcard h2{margin-top:auto}
-#sg .prints{position:relative;flex:1;min-height:clamp(300px,31vw,420px);margin:0 0 clamp(28px,3vw,40px)}
-#sg .print{position:absolute;width:64%;padding:10px 10px 0;background:#fff;border-radius:4px;box-shadow:0 2px 4px rgba(40,25,5,.08),0 14px 30px rgba(40,25,5,.14);transition:transform 1s var(--ease),opacity .8s var(--ease);opacity:0}
+#sg .prints{position:relative;flex:1;min-height:clamp(420px,36vw,540px);margin:0 0 clamp(28px,3vw,40px)}
+#sg .print{position:absolute;width:72%;padding:10px 10px 0;background:#fff;border-radius:4px;box-shadow:0 2px 4px rgba(40,25,5,.08),0 14px 30px rgba(40,25,5,.14);transition:transform 1s var(--ease),opacity .8s var(--ease);opacity:0}
 #sg .print img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
 #sg .print figcaption{padding:10px 2px 12px;font:700 11px/1 var(--hd);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
-#sg .print.a{left:0;bottom:2%;transform:translate(-14px,24px) rotate(0)}
-#sg .print.b{right:0;top:2%;transform:translate(14px,24px) rotate(0)}
+#sg .print.b{right:-2%;top:0;transform:translate(14px,24px) rotate(0)}
+#sg .print.c{left:-2%;top:30%;z-index:1;transform:translate(-14px,24px) rotate(0)}
+#sg .print.a{right:-2%;bottom:0;transform:translate(14px,24px) rotate(0)}
+#sg .print.b figcaption,#sg .print.a figcaption{text-align:right}
 #sg .gcard.seen .print{opacity:1}
-#sg .gcard.seen .print.a{transform:rotate(-4deg);transition-delay:.15s}
-#sg .gcard.seen .print.b{transform:rotate(3.5deg);transition-delay:.3s}
+#sg .gcard.seen .print.b{transform:rotate(3.5deg);transition-delay:.15s}
+#sg .gcard.seen .print.c{transform:rotate(-4deg);transition-delay:.3s}
+#sg .gcard.seen .print.a{transform:rotate(2deg);transition-delay:.45s}
 #sg .gcard.seen .print:hover{transform:rotate(0) translateY(-4px);z-index:2;transition-delay:0s}
 
 /* ---------- other ways ---------- */
@@ -312,8 +315,8 @@
   #sg .pcard img{aspect-ratio:16/10}
   #sg .plist{grid-template-columns:1fr;padding:4px 18px}
   #sg .why .cols{grid-template-columns:1fr}
-  #sg .prints{min-height:clamp(250px,72vw,330px)}
-  #sg .print{width:62%}
+  #sg .prints{min-height:clamp(400px,128vw,560px)}
+  #sg .print{width:66%}
   #sg .waygrid{grid-template-columns:1fr}
   #sg .way,#sg .way+.way{padding:22px 0 6px;border-left:0}
   #sg .way+.way{border-top:1px solid var(--line);margin-top:0}
@@ -490,8 +493,9 @@
       </article>
       <article class="gcard rv">
         <div class="prints">
-          <figure class="print a"><img src="img/food-drive.jpg" alt="A Springs volunteer handing out groceries at the summer food drive" loading="lazy" style="object-position:55% 35%"><figcaption>Colorado Springs</figcaption></figure>
           <figure class="print b"><img src="img/cruz-guatemala.jpg" alt="Amanda Cruz hugging a young girl in Guatemala" loading="lazy" style="object-position:50% 30%"><figcaption>Guatemala</figcaption></figure>
+          <figure class="print c"><img src="img/trip-embrace.jpg" alt="Two men embracing outside a home on a Springs mission trip" loading="lazy" style="object-position:50% 40%"><figcaption><span class="tbd">Mission Trips</span></figcaption></figure>
+          <figure class="print a"><img src="img/food-drive.jpg" alt="A Springs volunteer handing out groceries at the summer food drive" loading="lazy" style="object-position:55% 35%"><figcaption>Colorado Springs</figcaption></figure>
         </div>
         <h2 class="hd2">Generosity</h2>
         <p class="kick">We give from the overflow of all He's given us.</p>

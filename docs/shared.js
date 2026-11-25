@@ -47,6 +47,7 @@ window.SPRINGS = {
     youth: 'https://youth.springs.church/',
     ya: 'https://ya.springs.church/',
     missions: 'missions/',
+    care: 'care/',
     about: 'about/',
     stories: 'https://www.springs.church/stories',
     beliefs: 'our-beliefs/',

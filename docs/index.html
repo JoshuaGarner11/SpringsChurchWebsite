@@ -3,12 +3,15 @@
 <head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Springs Church · Option I</title>
+<title>Springs Church | Colorado Springs, CO</title><meta name="description" content="Springs Church is a family in Briargate, praying for Colorado Springs and the world. Sundays 10AM and Wednesdays 6:30PM at 1515 Auto Mall Loop."><script type="application/ld+json">{"@context":"https://schema.org","@type":"Church","name":"Springs Church","url":"https://www.springs.church/",
+"logo":"https://www.springs.church/_chrome/mark-white.png","telephone":"+1-719-488-8331","email":"info@springs.church",
+"address":{"@type":"PostalAddress","streetAddress":"1515 Auto Mall Loop","addressLocality":"Colorado Springs","addressRegion":"CO","postalCode":"80920","addressCountry":"US"},
+"sameAs":["https://www.youtube.com/@springs.church","https://www.instagram.com/springs__church/","https://www.facebook.com/springschurch.co/"]}</script>
 <link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="shared.js"></script>
+<script src="shared.js?v=20261125"></script>
 <style>
 /* Option I, "Open Door, refined": E's look, rebuilt as a system.
    One type voice (Gotham + Proxima), one grid, one button set, one card, one section-header pattern,
@@ -88,7 +91,8 @@ section{position:relative}
 .hdr .r{justify-content:flex-end}
 .hdr nav a{opacity:.82;transition:opacity .2s}
 .hdr nav a:hover{opacity:1}
-.hdr .logo img{height:28px;width:auto}
+.hdr .logo img{width:46px;height:46px;transition:transform .4s var(--ease)}
+.hdr .logo:hover img{transform:rotate(-8deg)}
 .hdr .btn{height:42px;padding:0 20px;font-size:12px}
 .burger{width:28px;height:14px;display:grid;align-content:space-between;background:none;border:0;cursor:pointer;padding:0}
 .burger i{display:block;height:2px;background:#fff;border-radius:2px;transform-origin:left;transition:transform .3s var(--ease)}
@@ -99,7 +103,7 @@ section{position:relative}
 .menu{position:fixed;inset:0;z-index:60;background:var(--char);color:var(--on-dark);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
 .menu.open{opacity:1;visibility:visible}
 .menu .top{display:flex;justify-content:space-between;align-items:center;height:76px}
-.menu .top img{height:26px}
+.menu .top img{width:40px;height:40px;transform-origin:0 0}
 .menu .top button{background:none;border:0;color:inherit;font:700 12px var(--display);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 .menu-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-top:32px;flex:1}
 .menu nav.main{display:grid;gap:4px;align-content:start}
@@ -324,6 +328,22 @@ section{position:relative}
   .js .rv,.js .mark,.js .hero-card,.js .wordmark span{opacity:1;transform:none}
   .hero-nav .pause,.hero-nav .bar{display:none}
 }
+
+/* Holiday schedule: a sand tray tucked under the info card; items drop off after their day */
+.hol{position:relative;z-index:2;margin:-24px clamp(16px,3vw,40px) 0;padding:46px 28px 26px;background:var(--sand);border-radius:0 0 var(--r-l) var(--r-l);display:grid;gap:20px}
+.hol[hidden]{display:none}
+.hol-h{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.hol-h h2{font:700 22px/1.15 var(--display);letter-spacing:-.01em}
+.hol-h .link{color:var(--accent)}
+.hol-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px 20px}
+.hol-list li{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center}
+.hol-list .d{width:56px;height:56px;border-radius:var(--r-m);background:var(--card);display:grid;place-content:center;text-align:center;font:700 10px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.hol-list .d b{display:block;font-size:20px;letter-spacing:-.02em;color:var(--ink);margin:3px 0 2px}
+.hol-list .now .d{background:var(--char);color:var(--on-dark-2)}.hol-list .now .d b{color:var(--on-dark)}
+.hol-list .t{font:700 16px/1.25 var(--display);letter-spacing:-.005em}
+.hol-list .t small{display:block;font:500 15px/1.35 var(--body);color:var(--ink-3);margin-top:3px;letter-spacing:0}
+.hol-list .off .t small{color:var(--accent);font-weight:600}
+@media (max-width:760px){.hol{margin:-20px 10px 0;padding:40px 20px 22px}.hol-list{grid-template-columns:1fr}.hdr .logo img{width:40px;height:40px}}
 </style>
 <style>.mock-switch{display:none!important}</style></head>
 <body>
@@ -338,7 +358,7 @@ section{position:relative}
       <nav aria-label="Primary left"><a href="about/">About</a></nav>
       <nav aria-label="Primary left 2"><a href="#" data-l="media">Media</a></nav>
     </div>
-    <a class="logo" href="./" aria-label="Springs Church home"><img src="img/mark-white.png" alt="Springs Church" style="width:46px;height:46px"></a>
+    <a class="logo" href="./" aria-label="Springs Church home"><img src="img/mark-white.png" alt=""></a>
     <div class="r">
       <nav aria-label="Primary right"><a href="#" data-l="events">Events</a></nav>
       <nav aria-label="Primary right 2"><a href="#" data-l="give">Give</a></nav>
@@ -349,7 +369,7 @@ section{position:relative}
 
 <div class="menu" id="menu" role="dialog" aria-label="Menu">
   <div class="container" style="display:flex;flex-direction:column;height:100%">
-    <div class="top"><img src="img/logo-white.png" alt="Springs Church"><button class="close">Close</button></div>
+    <div class="top"><img src="img/mark-white.png" alt=""><button class="close">Close</button></div>
     <div class="menu-grid">
       <nav class="main">
         <a style="--i:0" href="plan-a-visit/">Plan a visit</a>
@@ -377,7 +397,7 @@ section{position:relative}
           <figure class="sl on"><img src="img/lobby-coffee-three.jpg" alt="Three adults talking over coffee in the Springs lobby" fetchpriority="high" style="--p:50% 40%;--pm:62% 50%"></figure>
         </div>
         <div class="hero-copy on-photo">
-          <div class="txt" data-k="welcome"><p>A church family in Briargate, praying for Colorado Springs and the world.</p></div>
+          <div class="txt" data-k="welcome"><p>Springs Church is a family in Briargate, praying for Colorado Springs and the world.</p></div>
           <div class="btns" data-k="welcome">
             <a class="btn btn-primary" href="plan-a-visit/">Plan a visit</a>
             <a class="btn btn-secondary" href="#watch">Watch online</a>
@@ -400,6 +420,10 @@ section{position:relative}
         <div><dt>Location</dt><dd>1515 Auto Mall Loop<small>Colorado Springs, CO 80920</small></dd></div>
         <div class="go"><p class="next" id="live" aria-live="polite"></p><a class="btn btn-primary" href="#" data-l="directions">Get directions</a></div>
       </dl>
+      <section class="hol rv d1" id="hol" aria-labelledby="hol-h" hidden>
+        <div class="hol-h"><h2 id="hol-h">Holiday Schedule</h2><a class="link" id="hol-inv" href="https://www.springs.church/christmas">Invite a Friend <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+        <ul class="hol-list" id="hol-list"></ul>
+      </section>
     </div>
   </section>
 
@@ -545,6 +569,18 @@ section{position:relative}
     live.append(`${g.name} `, b);
   }
 
+  // Holiday schedule
+  const hols = S.holidaysAhead ? S.holidaysAhead() : [], hol = document.getElementById('hol');
+  if (hols.length) {
+    const today = S.todayISO();
+    document.getElementById('hol-inv').href = S.holidayInvite;
+    document.getElementById('hol-list').innerHTML = hols.map(h => {
+      const f = S.fmt(h.d), now = h.d === today;
+      return `<li class="${h.off ? 'off' : ''}${now ? ' now' : ''}"><span class="d">${f.mon}<b>${f.day}</b>${now ? 'Today' : f.dow}</span><span class="t">${h.t}<small>${h.s}</small></span></li>`;
+    }).join('');
+    hol.hidden = false;
+  }
+
   // Message
   const x = S.latest, p = document.getElementById('player');
   document.getElementById('m-h').textContent = x.title;
@@ -596,7 +632,7 @@ section{position:relative}
     document.getElementById('h-title').textContent = s.title;
     const hw = document.getElementById('h-watch'), hf = document.getElementById('h-full');
     hw.href = s.watch;
-    if (g.live && g.name === 'Sunday Worship') { hf.textContent = 'Watch live'; hf.href = 'https://www.youtube.com/@springs.church/live'; }
+    if (g.live && g.kind === 'sun') { hf.textContent = 'Watch live'; hf.href = 'https://www.youtube.com/@springs.church/live'; }
     else if (s.service) { hf.textContent = 'Full service'; hf.href = 'https://www.youtube.com/watch?v=' + s.service; }
     const src = photo || (s.speaker === 'Michael Petillo' ? s.heroImg : 'img/worship-raised.jpg');
     if (src && src !== SERMON.src) { SERMON.src = src; if (SERMON.img.getAttribute('src')) SERMON.img.src = src; }
@@ -669,7 +705,7 @@ section{position:relative}
     ['Springs Kids', 'Ministries', 'Where your kids are known, safe, and loved.', 'img/kids.jpg', L.kids, 'Learn more'],
     ['Youth', 'Ministries', 'Faith for real life. Rooted for middle school and Anthem for high school.', 'img/youth.jpg', L.youth, 'Learn more'],
     ['Young Adults', 'Ministries', 'Life’s better with you in it.', 'img/ya.jpg', L.ya, 'Learn more'],
-    ['Join a Group', 'Community', 'The best way to know people and be known. Find one that fits.', 'img/s-nielsen-family.jpg', L.groups, 'Find a group'],
+    ['Join a Group', 'Community', 'The best way to know people and be known. Find one that fits.', 'img/lobby-friends.jpg', L.groups, 'Find a group'],
     ['Serve', 'Community', 'Find where you fit. Serving is the fastest way to know people here.', 'img/coffee-barista.jpg', L.serve, 'Start serving'],
     ['Go on Mission', 'Missions', 'From our own neighborhood to the nations. Missions start where you are.', 'img/s-cruz-portrait-close.jpg', L.missions, 'Learn more', '50% 25%'],
     ['Hear Their Stories', 'Stories', 'Real people from our church, telling what God has done.', 'img/s-reed-embrace.jpg', L.stories, 'Watch stories']
@@ -700,6 +736,23 @@ section{position:relative}
   bg.onclick = () => { menu.classList.add('open'); bg.setAttribute('aria-expanded', 'true'); };
   menu.querySelector('.close').onclick = close;
   addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+  // The header icon travels into the menu's corner as it opens, and back as it closes. Transform only.
+  const fromIc = document.querySelector('.hdr .logo img'), toIc = menu.querySelector('.top img');
+  let wasOpen = false, fly;
+  new MutationObserver(() => {
+    const open = menu.classList.contains('open');
+    if (open === wasOpen) return; wasOpen = open;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (fly) fly.cancel();
+    const a = fromIc.getBoundingClientRect(), t = toIc.getBoundingClientRect();
+    if (!a.width || !t.width) return;
+    const away = `translate(${a.left - t.left}px, ${a.top - t.top}px) scale(${a.width / t.width})`, home = 'translate(0, 0) scale(1)';
+    fly = toIc.animate(open ? [{ transform: away }, { transform: home }] : [{ transform: home }, { transform: away }],
+      { duration: open ? 560 : 360, easing: open ? 'cubic-bezier(.22,1,.36,1)' : 'cubic-bezier(.4,0,.2,1)' });
+    fromIc.getAnimations().forEach(x => x.cancel());
+    if (open) fromIc.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 360, fill: 'forwards' });
+  }).observe(menu, { attributes: true, attributeFilter: ['class'] });
 
   const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.rv, .wordmark').forEach(el => io.observe(el));

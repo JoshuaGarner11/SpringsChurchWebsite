@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Missions | Springs Church (ChurchCo preview)</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
+<title>Missions | Springs Church</title><link rel="stylesheet" href="https://use.typekit.net/ktn0utw.css">
 <style>html{scroll-behavior:smooth}body{margin:0;background:#fff;font-family:proxima-nova,sans-serif}
 .topbar{position:absolute;top:0;left:0;right:0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:100;color:#fff}
 .topbar img{height:26px}.topbar span{font:700 12px gotham,sans-serif;letter-spacing:.06em}
@@ -395,6 +395,24 @@ html.sm-lock{overflow:hidden}
   #sm *,#sm *::before{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
 #sm .rot-top{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+
+/* 60 Days of Prayer banner (prison ministry, 11/19/2026 to 1/17/2027). Shows only through END, then hides itself. */
+#sm .ppb{padding:clamp(40px,5vw,64px) 0 0}
+#sm .ppb[hidden]{display:none}
+#sm .ppb-card{display:grid;grid-template-columns:260px 1fr auto;align-items:center;gap:28px clamp(24px,3vw,40px);padding:16px clamp(20px,3vw,36px) 16px 16px;border-radius:16px;background:var(--sand)}
+#sm .ppb-card>*{min-width:0}
+#sm .ppb-pic{aspect-ratio:3/2;border-radius:10px;overflow:hidden;background:#2a2a2a}
+#sm .ppb-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+#sm .ppb h2{font:600 clamp(22px,2.2vw,28px)/1.15 var(--hd);letter-spacing:-.01em;color:var(--ink)}
+#sm .ppb p{margin-top:8px;font-size:16.5px;line-height:1.5;color:var(--ink-2);max-width:36em}
+#sm .ppb .ppb-count{margin-top:10px;font:600 14px/1.3 var(--hd);letter-spacing:.01em;color:var(--gold-t)}
+#sm .ppb .ppb-count:empty{display:none}
+@media (max-width:900px){
+  #sm .ppb-card{grid-template-columns:1fr;padding:12px 12px 22px}
+  #sm .ppb-card>div:not(.ppb-pic){padding:0 10px}
+  #sm .ppb-pic{aspect-ratio:16/9}
+  #sm .ppb .btn{justify-self:start;margin-left:10px}
+}
 </style>
 
 <div id="sm">
@@ -419,6 +437,37 @@ html.sm-lock{overflow:hidden}
       </div>
     </div>
   </section>
+
+  <!-- 60 Days of Prayer banner: links to the hidden /prisonprayer sign-up page -->
+  <section class="ppb" id="sm-ppb" aria-labelledby="sm-ppb-h" hidden>
+    <div class="wrap">
+      <div class="ppb-card">
+        <div class="ppb-pic"><img src="img/prison-bibles-1400.webp" alt="Men in a prison classroom holding study Bibles from the Bible rewards program" loading="lazy" decoding="async"></div>
+        <div>
+          <h2 id="sm-ppb-h">60 Days of Prayer for Our Prison Ministry</h2>
+          <p>Pick a day between November 19 and January 17 to pray for the men at Four Mile and Arrowhead Correctional Centers.</p>
+          <p class="ppb-count" data-ppb="count"></p>
+        </div>
+        <a class="btn" href="https://www.springs.church/prisonprayer">Pick Your Day</a>
+      </div>
+    </div>
+  </section>
+  <script>
+  (() => {
+    const el = document.getElementById('sm-ppb');
+    if (!el || el.dataset.ready) return;
+    el.dataset.ready = '1';
+    const END = '2027-01-17', API = 'https://script.google.com/macros/s/AKfycbyqnSqeECHZ41oPZiRmxeslHygdI1w2DcUAkzwldd1hjUgIL2PKkFfD7kW_kCm8AmLtVA/exec';
+    const q = new URLSearchParams(location.search).get('ppb-date');
+    const today = /^\d{4}-\d{2}-\d{2}$/.test(q || '') ? q : new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    if (today > END) return;
+    el.hidden = false;
+    fetch(API, { cache: 'no-store' }).then(r => r.json()).then(d => {
+      const n = Object.values(d.days || {}).filter(a => a.length).length;
+      if (n) el.querySelector('[data-ppb="count"]').textContent = n + ' of 60 days covered so far';
+    }).catch(() => {});
+  })();
+  </script>
 
   <!-- we go out together -->
   <section class="together" id="sm-psg" aria-labelledby="sm-psg-h">

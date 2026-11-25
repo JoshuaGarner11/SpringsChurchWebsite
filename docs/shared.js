@@ -94,21 +94,45 @@ window.SPRINGS = {
     return { isLive, label };
   };
 
-  // Next gathering (Sun 10:00, Wed 18:30 MT). Live window ~ first 110 min.
-  S.nextGathering = () => {
+  // Holiday schedule (same items as the live springs.church holiday bar). Each item drops off after its day;
+  // the home page hides the whole strip once none are left. off = no regular service that day.
+  S.holidays = [
+    { d: '2026-11-25', t: 'Thanksgiving Week', s: 'No Wednesday Service', off: true },
+    { d: '2026-12-20', t: 'Christmas Sunday', s: '10AM · Kids Choir', name: 'Christmas Sunday' },
+    { d: '2026-12-24', t: 'Christmas Eve', s: 'Candlelight · 2PM & 4PM', at: [840, 960], name: 'Christmas Eve' },
+    { d: '2026-12-30', t: "New Year's Week", s: 'No Wednesday Service', off: true },
+  ];
+  S.holidayInvite = 'https://www.springs.church/christmas';
+  const denverNow = () => {
     const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
-      timeZone: 'America/Denver', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+      timeZone: 'America/Denver', year: 'numeric', month: 'numeric', day: 'numeric', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
     }).formatToParts(new Date()).map(x => [x.type, x.value]));
-    const now = DOW.indexOf(p.weekday) * 1440 + (Number(p.hour) % 24) * 60 + Number(p.minute);
-    const slots = [{ at: 600, name: 'Sunday Worship', when: 'Sunday at 10 AM' },
-                   { at: 3 * 1440 + 1110, name: 'Wednesday Night', when: 'Wednesday at 6:30 PM' }];
-    for (const s of slots) if (now >= s.at && now < s.at + 110) return { ...s, live: true, label: 'Live now' };
-    let best = null;
-    for (const s of slots) { let d = s.at - now; if (d <= 0) d += 7 * 1440; if (!best || d < best.d) best = { ...s, d }; }
-    const d = Math.floor(best.d / 1440), h = Math.floor((best.d % 1440) / 60), m = best.d % 60;
-    best.label = d > 0 ? `in ${d}d ${h}h` : h > 0 ? `in ${h}h ${m}m` : `in ${m}m`;
-    best.today = d === 0 && best.d < 1440;
-    return best;
+    return { utc: Date.UTC(+p.year, +p.month - 1, +p.day), dow: DOW.indexOf(p.weekday), min: (Number(p.hour) % 24) * 60 + Number(p.minute) };
+  };
+  S.todayISO = () => new Date(denverNow().utc).toISOString().slice(0, 10);
+  S.holidaysAhead = () => { const t = S.todayISO(); return S.holidays.filter(h => h.d >= t); };
+
+  // Next gathering in Mountain Time: Sun 10:00, Wed 18:30, minus holiday cancellations, plus holiday services.
+  // Live window ~ first 110 min.
+  S.nextGathering = () => {
+    const n = denverNow();
+    for (let off = 0; off <= 21; off++) {
+      const iso = new Date(n.utc + off * 864e5).toISOString().slice(0, 10), dow = (n.dow + off) % 7;
+      const h = S.holidays.find(x => x.d === iso), slots = [];
+      if (dow === 0) slots.push({ at: 600, name: (h && h.name) || 'Sunday Worship', kind: 'sun' });
+      if (dow === 3 && !(h && h.off)) slots.push({ at: 1110, name: 'Wednesday Night', kind: 'wed' });
+      if (h && h.at) h.at.forEach(at => slots.push({ at, name: h.name, kind: 'special' }));
+      slots.sort((a, b) => a.at - b.at);
+      for (const s of slots) {
+        const d = off * 1440 + s.at - n.min;
+        if (d <= 0 && d > -110) return { ...s, live: true, label: 'Live now' };
+        if (d > 0) {
+          const dd = Math.floor(d / 1440), hh = Math.floor((d % 1440) / 60), mm = d % 60;
+          return { ...s, d, label: dd > 0 ? `in ${dd}d ${hh}h` : hh > 0 ? `in ${hh}h ${mm}m` : `in ${mm}m`, today: off === 0 };
+        }
+      }
+    }
+    return { name: 'Sunday Worship', kind: 'sun', label: '' };
   };
   S.storyOfWeek = () => {
     const wk = Math.floor((Date.now() / 864e5 + 4) / 7); // changes every Sunday-ish

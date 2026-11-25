@@ -9,15 +9,32 @@
 
   const burger = hdr.querySelector('.sc-burger');
   let lastFocus = null;
+  // The header icon travels into the menu's corner as it opens, and back as it closes. Transform only.
+  const fromIc = hdr.querySelector('.sc-mark img'), toIc = menu.querySelector('.sc-menu-top .sc-mark img');
+  let fly;
+  const flyIcon = opening => {
+    if (!fromIc || !toIc || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (fly) fly.cancel();
+    fromIc.getAnimations().forEach(x => x.cancel());
+    const a = fromIc.getBoundingClientRect(), t = toIc.getBoundingClientRect();
+    if (!a.width || !t.width) return;
+    toIc.style.transformOrigin = '0 0';
+    const away = `translate(${a.left - t.left}px, ${a.top - t.top}px) scale(${a.width / t.width})`, home = 'translate(0, 0) scale(1)';
+    fly = toIc.animate(opening ? [{ transform: away }, { transform: home }] : [{ transform: home }, { transform: away }],
+      { duration: opening ? 560 : 300, easing: opening ? 'cubic-bezier(.22,1,.36,1)' : 'cubic-bezier(.4,0,.2,1)' });
+    if (opening) fromIc.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 360, fill: 'forwards' });
+  };
   const open = () => {
     lastFocus = document.activeElement;
     menu.hidden = false;
+    flyIcon(true);
     requestAnimationFrame(() => menu.classList.add('sc-open'));
     burger.setAttribute('aria-expanded', 'true');
     document.documentElement.classList.add('sc-lock');
     menu.querySelector('.sc-close').focus();
   };
   const close = () => {
+    flyIcon(false);
     menu.classList.remove('sc-open');
     burger.setAttribute('aria-expanded', 'false');
     document.documentElement.classList.remove('sc-lock');

@@ -69,8 +69,7 @@ def rewrite_links(text, depth, js=False):
 def add_chrome(html, folder, depth):
     up = "../" * depth + "_chrome"
     if folder == "":  # Option I keeps its own header/footer: mark in the middle, "Media", Plan a Visit, draft note in the bar
-        html = html.replace('<a class="logo" href="#" aria-label="Springs Church home"><img src="img/logo-white.png" alt="Springs Church"></a>',
-                            '<a class="logo" href="./" aria-label="Springs Church home"><img src="img/mark-white.png" alt="Springs Church" style="width:46px;height:46px"></a>')
+        html = html.replace('<a class="logo" href="#" aria-label="Springs Church home">', '<a class="logo" href="./" aria-label="Springs Church home">', 1)
         html = re.sub(r'<a([^>]*)data-l="sermons"([^>]*)>Sermons</a>', r'<a\1data-l="media"\2>Media</a>', html)
         html = html.replace("https://www.springs.church/new-here", "/plan-a-visit")
         html = re.sub(r'(<div class="announce" id="announce">).*?(<button)', r'\g<1>' + DRAFT_NOTE + r'\2', html, count=1, flags=re.S)
@@ -89,10 +88,34 @@ def add_chrome(html, folder, depth):
     return html[:i] + CH_FOOTER + f'<script src="{up}/chrome.js"></script>' + html[i:]
 
 
+# Search: page titles, descriptions, and the church's details as schema.org data (Home + About). Draft stays noindex.
+SEO = {
+  "": ("Springs Church | Colorado Springs, CO",
+       "Springs Church is a family in Briargate, praying for Colorado Springs and the world. Sundays 10AM and Wednesdays 6:30PM at 1515 Auto Mall Loop."),
+  "about": ("About Springs Church | Colorado Springs, CO",
+            "Springs Church exists to ignite a passion for Christ and to equip believers for His mission in Colorado Springs and the world. Spirit-filled worship, biblical preaching, and powerful prayer."),
+}
+CHURCH_LD = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"Church","name":"Springs Church","url":"https://www.springs.church/",
+"logo":"https://www.springs.church/_chrome/mark-white.png","telephone":"+1-719-488-8331","email":"info@springs.church",
+"address":{"@type":"PostalAddress","streetAddress":"1515 Auto Mall Loop","addressLocality":"Colorado Springs","addressRegion":"CO","postalCode":"80920","addressCountry":"US"},
+"sameAs":["https://www.youtube.com/@springs.church","https://www.instagram.com/springs__church/","https://www.facebook.com/springschurch.co/"]}</script>'''
+
+
+def add_seo(html, folder):
+    html = re.sub(r"<title>([^<]*?) \(ChurchCo preview\)</title>", r"<title>\1</title>", html, count=1)
+    if folder in SEO:
+        title, desc = SEO[folder]
+        html = re.sub(r"<title>[^<]*</title>", f"<title>{title}</title>", html, count=1)
+        html = re.sub(r'<meta name="description"[^>]*>', "", html)
+        html = html.replace("</title>", f'</title><meta name="description" content="{desc}">' + CHURCH_LD, 1)
+    return html
+
+
 def finish_html(path, depth, folder=None):
     s = open(path, encoding="utf-8").read()
     if folder is not None:
         s = add_chrome(s, folder, depth)
+        s = add_seo(s, folder)
     s = rewrite_links(s, depth)
     if "noindex" not in s:
         s = s.replace("<head>", "<head>" + NOINDEX + FONT_FALLBACK, 1) if "<head>" in s else NOINDEX + FONT_FALLBACK + s

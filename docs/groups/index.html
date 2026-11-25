@@ -45,14 +45,13 @@
 </div>
 
 <button class="tbd-toggle" onclick="document.getElementById('sgr').classList.toggle('show-tbd')">Show to-confirm</button>
-<main><section class="tcc-block html-takeover"><!-- springs.church/groups ("Following Jesus Together") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT 11/15/2026; live /groups untouched.
+<main><section class="tcc-block html-takeover"><!-- springs.church/groups ("Following Jesus Together") · one ChurchCo Custom HTML block (Display: Default, Block Takeover ON). LOCAL DRAFT; live /groups untouched.
      Source of truth: ~/Desktop/springs-groups-site/churchco/groups-block.html (preview: preview-live.html via build-preview.py).
-     Built from the Trello audit card for /groups (Website Updates, audit Oct 29): "All Groups" now goes to the CCB group finder
-     (it went to the events page), the stray link on the "Women" heading is gone (each type is one link now), Men and Women stay
-     on group_type only (with department_id=20 the Women list drops the Moms Group, which CCB files under Adult Ministries; Men is
-     the same either way: checked 11/15), the leader requirements stay word for word but are marked to confirm, and Submit Interest
-     (CCB form #686) opens in place. Group lists open in a dialog (CCB's finder allows framing) with an Open in New Tab escape hatch;
-     no group names are hard-coded here, so nothing goes stale. Words are the church's own (live /groups, FAQ, form #686).
+     11/25/2026: Join a Group is a live group finder. creative@springs.church's Apps Script (apps-script/Code.gs) reads CCB's public
+     group list every hour and serves it as JSON; this block draws the cards, filters and details from it (textContent only, no
+     leader names or contact info in the feed). Ask to Join opens the group's CCB sign-up form, or CCB's list for that group type,
+     in the dialog, so every join request still lands in CCB. https://script.google.com/macros/s/AKfycbzlDpf9kZ5rtbSxpg9fkGmb5Mn4oEt3MV3e57I9reIu5v5pj_yMMqG4cmRT0EzukQeh_A/exec is filled in by the builds (feed-url.txt).
+     Earlier version with the six type cards: churchco/groups-block.v1-type-cards-2026-11-25.bak.html.
      <span class="tbd"> = new wording or facts to confirm. Times follow the Springs stylebook (10AM, 6:30PM). -->
 <style>
 .tcc-block:has(#sgr){padding:0!important;background:#111!important}
@@ -89,7 +88,7 @@
 #sgr .btn.line:hover{background:var(--ink);color:#fff}
 #sgr .tl{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(14,14,14,.3);transition:text-decoration-color .2s}
 #sgr .tl:hover{text-decoration-color:currentColor}
-#sgr :is(.btn,.tl,.gt,.x,summary,.faq-more a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
+#sgr :is(.btn,.tl,.x,summary,.faq-more a):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px;border-radius:4px}
 #sgr :is(.top,.faq-sec) :is(.btn,.tl,summary,a):focus-visible{outline-color:var(--gold)}
 
 /* one section-header pattern: uppercase H2 left, intro right */
@@ -124,20 +123,67 @@
   #sgr.js.ready .trio img{transform:none;transition:transform 1.6s var(--ease);transition-delay:calc(var(--n) * 90ms + 160ms)}
 }
 
-/* ---------- group types: one card component ---------- */
-#sgr .types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,18px)}
-#sgr .types>li{min-width:0}
-#sgr .gt{display:flex;flex-direction:column;height:100%;min-height:clamp(176px,14vw,196px);padding:clamp(22px,2.2vw,28px);border-radius:20px;background:var(--sand);color:var(--ink);transition:background .25s,box-shadow .3s var(--ease);-webkit-tap-highlight-color:transparent}
-#sgr .gt h3{font:600 clamp(22px,2vw,26px)/1.15 var(--hd);letter-spacing:-.015em;margin-bottom:10px}
-#sgr .gt p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:26em}
-#sgr .gt .more{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:22px;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase}
-#sgr .gt .more svg{width:14px;height:14px;transition:transform .3s var(--ease)}
-@media (hover:hover){#sgr .gt:hover{background:#ece5d6}#sgr .gt:hover .more svg{transform:translateX(3px)}}
-#sgr .types .all{grid-column:1/-1}
-#sgr .all .gt{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;min-height:0}
-#sgr .all .gt>div{flex:1 1 320px;min-width:0}
-#sgr .all .gt .more{margin:0;padding:0 24px;min-height:50px;border-radius:10px;background:var(--ink);color:#fff;transition:background .2s}
-@media (hover:hover){#sgr .all .gt:hover .more{background:#333}}
+/* ---------- group finder ---------- */
+#sgr .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#sgr .fbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+#sgr .chips{display:flex;flex-wrap:wrap;gap:8px}
+#sgr .chips button,#sgr .tog{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;background:var(--soft);font:600 14px/1 var(--hd);letter-spacing:.005em;color:var(--ink);cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,transform .2s var(--ease);-webkit-tap-highlight-color:transparent}
+#sgr .chips button:active,#sgr .tog:active{transform:scale(.97)}
+@media (hover:hover){#sgr .chips button:hover,#sgr .tog:hover{background:#e9e8e5}}
+#sgr .chips button[aria-pressed=true],#sgr .tog[aria-pressed=true]{background:var(--ink);color:#fff}
+#sgr .chips small{font:inherit;opacity:.55}
+#sgr .fsel{display:flex;flex-wrap:wrap;gap:8px}
+#sgr .fsel label{position:relative;display:block}
+#sgr .fsel label::after{content:"";position:absolute;right:16px;top:50%;width:7px;height:7px;border:solid var(--ink);border-width:0 1.75px 1.75px 0;transform:translateY(-70%) rotate(45deg);pointer-events:none}
+#sgr .fsel select{appearance:none;-webkit-appearance:none;min-height:40px;padding:0 40px 0 16px;border:0;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.2);font:600 14px/1 var(--hd);color:var(--ink);cursor:pointer;max-width:100%}
+#sgr .fsel select:hover{box-shadow:inset 0 0 0 1.5px rgba(14,14,14,.45)}
+#sgr .tog svg{width:15px;height:15px;margin-left:-4px}
+#sgr :is(.chips button,.tog,.fsel select,.gc h3 button):focus-visible{outline:2px solid var(--gold-t);outline-offset:3px}
+#sgr .fcount{margin:18px 0 20px;font-size:15px;color:var(--ink-3)}
+#sgr .glist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,22px)}
+#sgr .gc{position:relative;display:flex;flex-direction:column;min-width:0;border-radius:20px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+@media (hover:hover){#sgr .gc:not(.sk):hover{box-shadow:inset 0 0 0 1px rgba(14,14,14,.2),0 18px 40px -18px rgba(14,14,14,.28);transform:translateY(-2px)}#sgr .gc:hover .pic img{transform:scale(1.03)}}
+#sgr .gc .pic{aspect-ratio:16/10;background:var(--sand);overflow:hidden;display:grid;place-items:center}
+#sgr .gc .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .6s var(--ease)}
+#sgr .pic b{font:600 15px/1 var(--hd);color:var(--gold-t)}
+#sgr .gc .bd{display:flex;flex-direction:column;flex:1;padding:20px 22px 22px}
+#sgr .gc h3{font:600 21px/1.2 var(--hd);letter-spacing:-.01em}
+#sgr .gc h3 button{all:unset;cursor:pointer;border-radius:4px}
+#sgr .gc h3 button::after{content:"";position:absolute;inset:0;border-radius:20px}
+#sgr .gc .kind{margin-top:4px;font-size:15px;color:var(--ink-3)}
+#sgr .gc .meta{display:flex;flex-direction:column;gap:2px;margin-top:14px;font-size:15px;line-height:1.45;color:var(--ink)}
+#sgr .gc .meta span{display:block}
+#sgr .gc .ds{margin-top:12px;font-size:15px;line-height:1.55;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#sgr .gc .go{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:18px;font:700 13px/1 var(--hd);letter-spacing:.05em;text-transform:uppercase}
+#sgr .gc .go svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+@media (hover:hover){#sgr .gc:hover .go svg{transform:translateX(3px)}}
+#sgr .gc.sk{min-height:400px;background:var(--soft);box-shadow:none}
+@media (prefers-reduced-motion:no-preference){
+  #sgr .gc.sk{animation:sgr-pulse 1.4s ease-in-out infinite alternate}
+  #sgr .glist.fresh .gc{animation:sgr-fade .5s var(--ease) both;animation-delay:calc(var(--i,0) * 40ms)}
+}
+@keyframes sgr-pulse{to{opacity:.55}}
+#sgr :is(.fempty,.ferr,.ferr-ns){padding:48px 24px;border-radius:20px;background:var(--soft);text-align:center}
+#sgr :is(.fempty,.ferr) p{margin-bottom:18px;color:var(--ink-2)}
+#sgr [hidden]{display:none!important}
+
+/* group details */
+#sgr dialog.gd{width:min(640px,calc(100vw - 16px));height:auto;max-height:calc(100dvh - 16px)}
+#sgr .gd .x{position:absolute;top:12px;right:12px;z-index:2;background:rgba(255,255,255,.92);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+#sgr .gd-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+#sgr .gd-pic{aspect-ratio:16/9;background:var(--sand);display:grid;place-items:center;overflow:hidden}
+#sgr .gd-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+#sgr .gd-in{padding:24px clamp(22px,4vw,36px) 8px}
+#sgr .gd-in h3{font:600 clamp(24px,3vw,30px)/1.15 var(--hd);letter-spacing:-.015em;outline:0}
+#sgr .gd-kind{margin-top:4px;color:var(--ink-3)}
+#sgr .gd-meta{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:20px 0;padding:16px 0;border-block:1px solid var(--line);font-size:16px}
+#sgr .gd-meta dt{font:700 12px/1.9 var(--hd);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+#sgr .gd-desc p{color:var(--ink-2);font-size:17px}
+#sgr .gd-desc p+p{margin-top:12px}
+#sgr .gd-desc a{text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+#sgr .gd-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px clamp(22px,4vw,36px) 20px;border-top:1px solid var(--line);background:#fff}
+#sgr .gd-note{flex:1 1 220px;font-size:14px;line-height:1.45;color:var(--ink-3)}
+#sgr .dlg-note{padding:10px 22px;background:var(--sand);font-size:15px;line-height:1.45}
 
 /* young adults clubs */
 #sgr .ya{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center;margin-top:clamp(56px,7vw,96px)}
@@ -214,7 +260,7 @@ html.sgr-lock{overflow:hidden}
 
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
-  #sgr .types{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #sgr .glist{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:900px){
   #sgr .top-in,#sgr .sec-h,#sgr .ya,#sgr .lead-in{grid-template-columns:1fr}
@@ -228,12 +274,15 @@ html.sgr-lock{overflow:hidden}
   #sgr .top h1{font-size:clamp(46px,13vw,60px)}
   #sgr .trio{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:auto;aspect-ratio:1/1.02}
   #sgr .trio figure:nth-child(1){grid-column:1/3}
-  #sgr .types{grid-template-columns:1fr;gap:10px}
-  #sgr .gt{min-height:0;padding:20px 22px}
-  #sgr .gt h3{font-size:21px;margin-bottom:6px}
-  #sgr .gt p{font-size:16px}
-  #sgr .gt .more{padding-top:16px}
-  #sgr .all .gt .more{flex:1 1 100%;justify-content:center}
+  #sgr .glist{grid-template-columns:1fr;gap:14px}
+  #sgr .fbar{margin:0 calc(var(--pad) * -1);padding:0 0 16px}
+  #sgr .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:2px var(--pad);scroll-padding:0 var(--pad)}
+  #sgr .chips::-webkit-scrollbar{display:none}
+  #sgr .fsel{padding:0 var(--pad);width:100%}
+  #sgr .fsel label{flex:1 1 0;min-width:0}
+  #sgr .fsel select{width:100%}
+  #sgr .gc.sk{min-height:340px}
+  #sgr .gd-acts .btn{flex:1 1 100%}
   #sgr .faq summary{padding:20px 0;font-size:18px}
   #sgr .acts .btn{flex:1 1 auto}
   #sgr .dlg-h{padding-left:16px;gap:8px}
@@ -283,29 +332,31 @@ html.sgr-lock{overflow:hidden}
           <p>None of us desires to be an island. Connecting with like-minded friends is vital for our growth as Christ-followers. That’s why we provide a variety of groups from which to choose. Whether you need a small group Bible study, a shared hobby group, somewhere to serve, or an outreach opportunity, we’ve got a place for you. Check out our Connect Groups below and join the rest of us as we walk out this journey together as friends.</p>
         </div>
       </div>
-      <ul class="types">
-        <li class="rv" style="--d:0"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=134" target="_blank" rel="noopener" data-list="Adult Groups">
-          <h3>Adult</h3><p><span class="tbd">Home groups, Bible studies and support groups for adults.</span></p>
-          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-        <li class="rv" style="--d:1"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=133" target="_blank" rel="noopener" data-list="Co-Ed Activity Groups">
-          <h3>Co-Ed Activity</h3><p><span class="tbd">Shared hobbies and activities for men and women together.</span></p>
-          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-        <li class="rv" style="--d:2"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=135" target="_blank" rel="noopener" data-list="Family Groups">
-          <h3>Family</h3><p><span class="tbd">Groups for couples, parents and the whole family.</span></p>
-          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-        <li class="rv" style="--d:0"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?group_type=88" target="_blank" rel="noopener" data-list="Men’s Groups">
-          <h3>Men</h3><p><span class="tbd">Prayer, Bible study, mentorship and breakfast with other men.</span></p>
-          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-        <li class="rv" style="--d:1"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?group_type=87" target="_blank" rel="noopener" data-list="Women’s Groups">
-          <h3>Women</h3><p><span class="tbd">Bible studies, home groups and activity groups for women.</span></p>
-          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-        <li class="rv" style="--d:2"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=92" target="_blank" rel="noopener" data-list="Young Adult Groups">
-          <h3>Young Adult</h3><p><span class="tbd">Clubs and groups for young adults, from coffee to hiking.</span></p>
-          <span class="more">View Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-        <li class="all rv"><a class="gt" href="https://springschurch.ccbchurch.com/goto/groups/public" target="_blank" rel="noopener" data-list="All Connect Groups">
-          <div><h3>All Groups</h3><p><span class="tbd">Browse every Connect Group and filter by meeting day, time and area of town.</span></p></div>
-          <span class="more">View All Groups <svg aria-hidden="true"><use href="#sgr-arr"/></svg></span></a></li>
-      </ul>
+      <!-- group finder: CCB's public groups, refreshed hourly by creative@'s Apps Script (apps-script/Code.gs). Rendered with
+           textContent only (never innerHTML). No leader names or contact info are in the feed. -->
+      <div class="finder" id="sgr-find" data-feed="https://script.google.com/macros/s/AKfycbzlDpf9kZ5rtbSxpg9fkGmb5Mn4oEt3MV3e57I9reIu5v5pj_yMMqG4cmRT0EzukQeh_A/exec">
+        <div class="fbar">
+          <div class="chips" role="group" aria-label="Group type"><button type="button" aria-pressed="true" data-type="">All Groups</button></div>
+          <div class="fsel">
+            <label><span class="sr">Meeting day</span><select data-f="day"><option value="">Any Day</option></select></label>
+            <label><span class="sr">Area of town</span><select data-f="area"><option value="">Anywhere</option></select></label>
+            <button type="button" class="tog" aria-pressed="false" data-f="care">Childcare</button>
+          </div>
+        </div>
+        <p class="fcount" aria-live="polite"></p>
+        <ul class="glist" aria-busy="true">
+          <li class="gc sk"></li><li class="gc sk"></li><li class="gc sk"></li>
+        </ul>
+        <div class="fempty" hidden>
+          <p>No groups match those filters.</p>
+          <button type="button" class="btn line" data-clear>Clear Filters</button>
+        </div>
+        <div class="ferr" hidden>
+          <p>The group list didn’t load. You can still browse every group on CCB.</p>
+          <a class="btn" href="https://springschurch.ccbchurch.com/goto/groups/public" target="_blank" rel="noopener" data-list="All Connect Groups">See All Groups</a>
+        </div>
+        <noscript><p class="ferr-ns"><a class="btn" href="https://springschurch.ccbchurch.com/goto/groups/public" target="_blank" rel="noopener">See All Groups</a></p></noscript>
+      </div>
 
       <!-- young adults clubs (ya.springs.church) -->
       <div class="ya">
@@ -316,7 +367,7 @@ html.sgr-lock{overflow:hidden}
           <ul class="clubs" aria-label="Clubs"><li>Coffee</li><li>Hiking</li><li>Books</li><li>Board Games</li><li>Supper Clubs</li></ul>
           <div class="acts">
             <a class="btn" href="https://ya.springs.church">Visit Young Adults</a>
-            <a class="tl" href="https://springschurch.ccbchurch.com/goto/groups/public/?department_id=20&amp;group_type=92" target="_blank" rel="noopener" data-list="Young Adult Groups">View Young Adult Groups <svg class="i" aria-hidden="true"><use href="#sgr-arr"/></svg></a>
+            <a class="tl" href="#sgr-find" data-show-type="Young Adult">View Young Adult Groups <svg class="i" aria-hidden="true"><use href="#sgr-arr"/></svg></a>
           </div>
         </div>
       </div>
@@ -377,13 +428,31 @@ html.sgr-lock{overflow:hidden}
     </div>
   </section>
 
+  <dialog id="sgr-gd" class="gd" aria-labelledby="sgr-gd-t">
+    <button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#sgr-x"/></svg></button>
+    <div class="gd-scroll">
+      <div class="gd-pic"><img alt="" id="sgr-gd-img"></div>
+      <div class="gd-in">
+        <h3 id="sgr-gd-t" tabindex="-1"></h3>
+        <p class="gd-kind"></p>
+        <dl class="gd-meta"></dl>
+        <div class="gd-desc"></div>
+      </div>
+    </div>
+    <div class="gd-acts">
+      <button type="button" class="btn" data-join>Ask to Join</button>
+      <p class="gd-note"></p>
+    </div>
+  </dialog>
+
   <dialog id="sgr-dlg" aria-labelledby="sgr-dlg-t">
     <div class="dlg-h"><b id="sgr-dlg-t">Lead a Group</b><a class="tl" id="sgr-dlg-o" href="https://springschurch.ccbchurch.com/goto/forms/686/responses/new" target="_blank" rel="noopener">Open in New Tab</a><button class="x" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#sgr-x"/></svg></button></div>
+    <p class="dlg-note" id="sgr-dlg-note" hidden></p>
     <iframe id="sgr-dlg-f" title="Connect Group Leader Interest form"></iframe>
     <div class="thanks">
       <div class="ok"><svg aria-hidden="true"><use href="#sgr-ok"/></svg></div>
-      <h3 tabindex="-1" data-form-t="Thanks for raising your hand." data-list-t="Thanks for reaching out.">Thanks for raising your hand.</h3>
-      <p><span class="tbd" data-form-t="We’ll contact you soon to schedule a time to meet." data-list-t="The group leader will be in touch about next steps.">We’ll contact you soon to schedule a time to meet.</span></p>
+      <h3 tabindex="-1">Thanks for raising your hand.</h3>
+      <p><span class="tbd">We’ll contact you soon to schedule a time to meet.</span></p>
       <div class="acts"><button class="btn" type="button" data-close>Done</button></div>
     </div>
   </dialog>
@@ -419,29 +488,41 @@ html.sgr-lock{overflow:hidden}
   /* One dialog for both: CCB group lists (data-list, wide) and the Lead a Group interest form #686 (data-form).
      CCB sends people back to springs.church after a form is sent, so catch that and say thanks.
      Cmd/Ctrl/Shift-click keeps the normal new-tab link. */
-  const dlg = $('#sgr-dlg'), frame = $('#sgr-dlg-f'), title = $('#sgr-dlg-t'), out = $('#sgr-dlg-o');
+  const dlg = $('#sgr-dlg'), frame = $('#sgr-dlg-f'), title = $('#sgr-dlg-t'), out = $('#sgr-dlg-o'), note = $('#sgr-dlg-note');
   const FORM = 'https://springschurch.ccbchurch.com/goto/forms/686/responses/new';
+  const THANKS = {
+    form: ['Thanks for raising your hand.', 'We’ll contact you soon to schedule a time to meet.'],
+    list: ['Thanks for reaching out.', 'The group leader will be in touch about next steps.'],
+    join: ['Thanks for signing up.', 'The group leader will be in touch about next steps.']
+  };
   const landedHome = fr => { try { const h = fr.contentWindow.location.host; return !!h && h === location.host; } catch (_) { return false; } };
+  const lock = on => document.documentElement.classList.toggle('sgr-lock', on);
+  function openCcb(o) {
+    dlg.classList.remove('done');
+    dlg.classList.toggle('wide', !!o.wide);
+    title.textContent = o.title;
+    frame.title = o.frameTitle || o.title;
+    out.href = o.src;
+    note.textContent = o.note || '';
+    note.hidden = !o.note;
+    const t = THANKS[o.mode] || THANKS.list;
+    dlg.querySelector('.thanks h3').textContent = t[0];
+    dlg.querySelector('.thanks p span').textContent = t[1];
+    if (frame.getAttribute('src') !== o.src) frame.src = o.src;
+    dlg.showModal();
+    dlg.querySelector('.x').focus();
+    lock(true);
+  }
   root.addEventListener('click', e => {
     const b = e.target.closest('[data-list],[data-form]');
     if (!b || typeof dlg.showModal !== 'function' || e.metaKey || e.ctrlKey || e.shiftKey || e.button > 0) return;
     e.preventDefault();
-    const isForm = b.hasAttribute('data-form');
-    const src = isForm ? FORM : b.href;
-    dlg.classList.remove('done');
-    dlg.classList.toggle('wide', !isForm);
-    title.textContent = isForm ? 'Lead a Group' : b.dataset.list;
-    frame.title = isForm ? 'Connect Group Leader Interest form' : b.dataset.list + ' on CCB';
-    out.href = src;
-    dlg.querySelectorAll('[data-form-t]').forEach(el => { el.textContent = isForm ? el.dataset.formT : el.dataset.listT; });
-    if (frame.getAttribute('src') !== src) frame.src = src;
-    dlg.showModal();
-    dlg.querySelector('.x').focus();
-    document.documentElement.classList.add('sgr-lock');
+    if (b.hasAttribute('data-form')) openCcb({ src: FORM, title: 'Lead a Group', frameTitle: 'Connect Group Leader Interest form', mode: 'form' });
+    else openCcb({ src: b.href, title: b.dataset.list, frameTitle: b.dataset.list + ' on CCB', wide: true, mode: 'list' });
   });
   dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
   dlg.addEventListener('close', () => {
-    document.documentElement.classList.remove('sgr-lock');
+    lock(false);
     if (dlg.classList.contains('done')) { dlg.classList.remove('done'); frame.removeAttribute('src'); }
   });
   frame.addEventListener('load', () => {
@@ -450,6 +531,196 @@ html.sgr-lock{overflow:hidden}
     dlg.classList.add('done');
     dlg.querySelector('.thanks h3').focus();
   });
+
+  /* ---------- group finder ----------
+     Feed = creative@'s Apps Script web app (CCB's public group list, refreshed hourly). A copy is kept in this browser so a
+     repeat visit draws at once, then the fresh list replaces it. Everything is written with textContent / DOM nodes. */
+  const fd = $('#sgr-find');
+  const list = fd.querySelector('.glist'), count = fd.querySelector('.fcount'), chips = fd.querySelector('.chips');
+  const selDay = fd.querySelector('[data-f=day]'), selArea = fd.querySelector('[data-f=area]'), care = fd.querySelector('[data-f=care]');
+  const gd = $('#sgr-gd');
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const KEY = 'sgr-groups-v1';
+  let feed = null, groups = [], f = { type: '', day: '', area: '', care: false }, current = null;
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const place = a => a.replace(/^Springs Church Building$/i, 'Springs Church');
+  const when = g => [g.day, g.time].filter(Boolean).join(' · ');
+  const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's');
+
+  function picture(g, large) {
+    const box = el('div', large ? 'gd-pic' : 'pic');
+    const src = large ? g.imgLarge || g.img : g.img;
+    const fallback = () => { box.textContent = ''; box.append(el('b', '', g.type + ' Group')); };
+    if (!src) { fallback(); return box; }
+    const img = el('img');
+    img.alt = '';
+    img.loading = large ? 'eager' : 'lazy';
+    img.decoding = 'async';
+    if (!large && g.imgLarge && g.imgLarge !== g.img) { img.srcset = g.img + ' 448w, ' + g.imgLarge + ' 1024w'; img.sizes = '(max-width:640px) 92vw, (max-width:1000px) 46vw, 380px'; }
+    img.src = src;
+    img.onerror = fallback;    // photo links from CCB expire after 7 days; a stale cached copy falls back cleanly
+    box.append(img);
+    return box;
+  }
+
+  function card(g, i) {
+    const li = el('li', 'gc');
+    li.style.setProperty('--i', Math.min(i, 9));
+    const bd = el('div', 'bd'), h = el('h3'), b = el('button', '', g.name);
+    b.type = 'button';
+    b.dataset.id = g.id;
+    h.append(b);
+    bd.append(h);
+    if (g.kind) bd.append(el('p', 'kind', g.kind));
+    const meta = el('p', 'meta');
+    [when(g), g.area && place(g.area), g.childcare && 'Childcare provided'].filter(Boolean).forEach(t => meta.append(el('span', '', t)));
+    if (meta.childNodes.length) bd.append(meta);
+    if (g.desc) bd.append(el('p', 'ds', g.desc.replace(/\s*\n+\s*/g, ' ')));
+    const go = el('span', 'go', 'Details ');
+    go.insertAdjacentHTML('beforeend', '<svg aria-hidden="true"><use href="#sgr-arr"/></svg>');
+    go.setAttribute('aria-hidden', 'true');
+    bd.append(go);
+    li.append(picture(g), bd);
+    return li;
+  }
+
+  function matches(g) {
+    return (!f.type || g.type === f.type) &&
+      (!f.day || (f.day === 'varies' ? g.weekday < 0 : g.weekday === Number(f.day))) &&
+      (!f.area || g.area === f.area) &&
+      (!f.care || g.childcare);
+  }
+
+  function draw(animate) {
+    const shown = groups.filter(matches);
+    list.textContent = '';
+    list.classList.toggle('fresh', !!animate);
+    shown.forEach((g, i) => list.append(card(g, i)));
+    list.removeAttribute('aria-busy');
+    count.textContent = plural(shown.length, 'Group');
+    fd.querySelector('.fempty').hidden = shown.length > 0;
+    chips.querySelectorAll('button').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.type === f.type)));
+  }
+
+  function options(sel, items, first) {
+    const keep = sel.value;
+    sel.textContent = '';
+    sel.append(new Option(first, ''));
+    items.forEach(([v, t]) => sel.append(new Option(t, v)));
+    sel.value = items.some(([v]) => v === keep) ? keep : '';
+  }
+
+  function load(data, animate) {
+    if (!data || !Array.isArray(data.groups) || !data.groups.length) return false;
+    feed = data;
+    groups = data.groups;
+    chips.textContent = '';
+    [''].concat(data.types || []).forEach(t => {
+      const b = el('button', '', t || 'All Groups');
+      b.type = 'button';
+      b.dataset.type = t;
+      const n = t ? groups.filter(g => g.type === t).length : groups.length;
+      b.append(' ', el('small', '', String(n)));
+      chips.append(b);
+    });
+    const wd = [...new Set(groups.map(g => g.weekday).filter(d => d >= 0))].sort((a, b) => a - b).map(d => [String(d), DAYS[d]]);
+    if (groups.some(g => g.weekday < 0)) wd.push(['varies', 'Day Varies']);
+    options(selDay, wd, 'Any Day');
+    options(selArea, [...new Set(groups.map(g => g.area).filter(Boolean))].sort().map(a => [a, place(a)]), 'Anywhere');
+    f.day = selDay.value; f.area = selArea.value;
+    if (f.type && !(data.types || []).includes(f.type)) f.type = '';
+    fd.querySelector('.ferr').hidden = true;
+    draw(animate);
+    return true;
+  }
+
+  chips.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; f.type = b.dataset.type; draw(true); });
+  selDay.addEventListener('change', () => { f.day = selDay.value; draw(true); });
+  selArea.addEventListener('change', () => { f.area = selArea.value; draw(true); });
+  care.addEventListener('click', () => { f.care = !f.care; care.setAttribute('aria-pressed', String(f.care)); draw(true); });
+  fd.querySelector('[data-clear]').addEventListener('click', () => {
+    f = { type: '', day: '', area: '', care: false };
+    selDay.value = selArea.value = '';
+    care.setAttribute('aria-pressed', 'false');
+    draw(true);
+  });
+  root.addEventListener('click', e => {
+    const a = e.target.closest('[data-show-type]');
+    if (!a) return;
+    e.preventDefault();
+    f.type = a.dataset.showType;
+    if (groups.length) draw(true);
+    fd.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  /* details */
+  function linkify(p, text) {
+    text.split(/(https?:\/\/[^\s)]+)/).forEach((part, i) => {
+      if (i % 2) { const a = el('a', '', part.replace(/[.,]$/, '')); a.href = a.textContent; a.target = '_blank'; a.rel = 'noopener'; p.append(a, part.slice(a.textContent.length)); }
+      else if (part) p.append(part);
+    });
+  }
+  function details(g) {
+    current = g;
+    gd.querySelector('.gd-pic').replaceWith(picture(g, true));
+    gd.querySelector('h3').textContent = g.name;
+    const kind = gd.querySelector('.gd-kind');
+    kind.textContent = g.kind || g.type + ' Group';
+    const dl = gd.querySelector('.gd-meta');
+    dl.textContent = '';
+    [['When', when(g)], ['Where', g.area && place(g.area)], ['Childcare', g.childcare ? 'Provided' : ''], ['Type', g.type]]
+      .filter(r => r[1]).forEach(([k, v]) => dl.append(el('dt', '', k), el('dd', '', v)));
+    const desc = gd.querySelector('.gd-desc');
+    desc.textContent = '';
+    (g.desc || '').split(/\n{2,}/).forEach(par => { if (!par.trim()) return; const p = el('p'); linkify(p, par.replace(/\n/g, ' ')); desc.append(p); });
+    gd.querySelector('.gd-note').textContent = g.form
+      ? 'Opens the group’s sign-up form.'
+      : 'Opens the ' + g.type + ' list on CCB. Tap Join on ' + g.name + ' to send the leader a note.';
+    gd.querySelector('.gd-scroll').scrollTop = 0;
+    gd.showModal();
+    lock(true);
+    gd.querySelector('h3').focus();
+  }
+  list.addEventListener('click', e => {
+    const b = e.target.closest('.gc h3 button');
+    if (!b || typeof gd.showModal !== 'function') return;
+    const g = groups.find(x => String(x.id) === b.dataset.id);
+    if (g) details(g);
+  });
+  gd.addEventListener('click', e => { if (e.target === gd || e.target.closest('[data-close]')) gd.close(); });
+  gd.addEventListener('close', () => { if (!dlg.open) lock(false); });
+  gd.querySelector('[data-join]').addEventListener('click', () => {
+    const g = current;
+    if (!g) return;
+    gd.close();
+    if (g.form) openCcb({ src: g.form, title: g.name, frameTitle: g.name + ' sign-up form', mode: 'join' });
+    else openCcb({ src: g.list, title: g.type + ' Groups', frameTitle: g.type + ' groups on CCB', wide: true, mode: 'list',
+      note: 'Find ' + g.name + ' below and tap Join to send the leader a note.' });
+  });
+
+  /* load: this browser's copy first, then the live feed */
+  let cached = null;
+  try { cached = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (_) {}
+  const hadCache = load(cached, true);
+  const url = fd.dataset.feed;
+  const ctrl = 'AbortController' in window ? new AbortController() : null;
+  const stop = setTimeout(() => ctrl && ctrl.abort(), 15000);
+  fetch(url, ctrl ? { signal: ctrl.signal } : {})
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      clearTimeout(stop);
+      if (hadCache && feed && data.updated === feed.updated) return;
+      if (!load(data, !hadCache)) throw new Error('empty');
+      try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (_) {}
+    })
+    .catch(() => {
+      if (hadCache) return;
+      list.textContent = '';
+      list.removeAttribute('aria-busy');
+      count.textContent = '';
+      fd.querySelector('.fbar').hidden = true;
+      fd.querySelector('.ferr').hidden = false;
+    });
 
   /* hero load-in once the photos are ready (or after 1.5s) */
   const imgs = $$('.trio img');
